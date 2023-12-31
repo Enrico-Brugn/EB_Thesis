@@ -1,4 +1,15 @@
 *.acn
 *.aux
 *.auxlock
-*.
+*.bcf
+*fdb_latexmk
+*.fls
+*.glo
+*.ist
+*.lof
+*.log
+*.lot
+*.material-glo
+*.out
+*.pdf
+*.xml
