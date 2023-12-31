@@ -1,0 +1,273 @@
+\chapter{Template Assisted Selective Epitaxy}
+\label{chap:tase}
+
+The concept of \acf{tase} is relatively simple, consisting in the growth of III-V material in an enclosed \acf{sio2} template from a \acf{si} seed \cite{Schmid2015, borgTASEp2018}. However, its experimental implementation to achieve a finished sample is lengthy. Thirty-five process steps (three of which are \acf{ebl} steps and one of which is an optical lithography step) involving 13 tools, four characterisation methods, and around 30 different chemicals are required to transform a \acf{soi} wafer into a chip with III-V \acs{tase}-grown nanostructures ready for further study. 
+
+
+\section{Substrate and Preprocessing}
+\label{sec:substrate_preprocessing}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=0.5, rotate=-90]
+        \begin{scope}[xshift=-11cm]
+            \clip[draw] (9.9987cm,2.13mm) arc [start angle=1.20, end angle=358.8, radius=10cm] -- (9.8935cm,-1.065mm) arc [start angle=-135, end angle=-225, radius=1.5mm] -- cycle;
+            \draw[step=6.5cm, very thin] (-12.9cm, -12.9cm) grid (12.9cm,12.9cm);
+            \draw[step=2cm, red, very thin, xshift=-0.25cm, yshift=-0.25cm] (-6cm, 0cm) grid (0cm, -6cm);
+            \draw[step=2cm, red, very thin, xshift=-0.25cm, yshift=0.25cm] (-6cm, 0cm) grid (0cm, 6cm);
+            \draw[step=2cm, red, very thin, xshift=0.25cm, yshift=0.25cm] (6cm, 0cm) grid   (0cm, 6cm);
+            \draw[step=2cm, red, very thin, xshift=0.25cm, yshift=-0.25cm] (6cm, 0cm) grid (0cm, -6cm);
+        \end{scope}
+        \draw (-11cm, -11.5cm) -- (-11cm, -12.5cm);
+        \draw (-4.5cm, -11.5cm) -- (-4.5cm, -12.5cm);
+        \draw (-11cm, -12cm) -- (-4.5cm, -12cm) node[midway, anchor=east] {\qty{65}{\mm}};
+        
+        \draw (-15.25cm, -11.5cm) -- (-15.25cm, -12.5cm);
+        \draw (-13.25cm, -11.5cm) -- (-13.25cm, -12.5cm);
+        \draw (-15.25cm, -12cm) -- (-13.25cm, -12cm) node[midway, anchor=east] {\qty{20}{\mm}};
+        
+        \draw[-stealth] (-11cm, 12cm) node[anchor=south] {\hkl<0 0 1>} -- ++ (0:3cm) node[anchor=north] {\hkl<-1 1 0>};
+        \draw[-stealth] (-11cm, 12cm) -- ++ (90:3cm) node[anchor=west] {\hkl<-1 -1 0>};
+        \fill[black] (-11cm, 12cm) circle [radius=4pt];
+        
+        \begin{scope}[xshift=11cm]
+            \clip[draw] (9.9987cm,2.13mm) arc [start angle=1.20, end angle=358.8, radius=10cm] -- (9.8935cm,-1.065mm) arc [start angle=-135, end angle=-225, radius=1.5mm] -- cycle;
+            \draw[step=6cm, very thin] (-11.9,-11.9) grid (11.9,11.9);
+            \draw[step=2cm, red, very thin] (-5.95cm, -5.95cm) grid (-0.05cm, -0.05cm);
+            \draw[step=2cm, red, very thin] (-5.95cm, 0.05cm) grid (-0.05cm, 5.95cm);
+            \draw[step=2cm, red, very thin] (0.05cm, 0.05cm) grid (5.95cm, 5.95cm);
+            \draw[step=2cm, red, very thin] (0.05cm, -5.95cm) grid (5.95cm, -0.05cm);
+        \end{scope}
+        \draw (11cm, -11.5cm) -- (11cm, -12.5cm);
+        \draw (17cm, -11.5cm) -- (17cm, -12.5cm);
+        \draw (11cm, -12cm) -- (17cm, -12cm) node[midway, anchor=east] {\qty{60}{\mm}};
+        \draw (7cm, -11.5cm) -- (7cm, -12.5cm);
+        \draw (9cm, -11.5cm) -- (9cm, -12.5cm);
+        \draw (7cm, -12cm) -- (9cm, -12cm) node[midway, anchor=east] {\qty{20}{\mm}};
+
+        \draw[-stealth] (11cm, 12cm) node[anchor=south] {\hkl<1 1 0>} -- ++ (0:3cm)     node[anchor=north] {\hkl<-1 1 0>};
+        \draw[-stealth] (11cm, 12cm) -- ++ (90:3cm) node[anchor=west] {\hkl<0 0 1>};
+        \draw[-stealth] (11cm, 12cm) -- ++ (35.3:3cm) node[anchor=north west] {\hkl<-1 1 1>};
+        \fill[black] (11cm, 12cm) circle [radius=4pt];
+        
+        \draw[dashed] (-11cm, -10cm) -- (22.5cm, -10cm);
+        \draw[dashed] (-11cm, 10cm) -- (22.5cm, 10cm);
+        \draw (22.5cm, 10cm) -- (23.5cm, 10cm);
+        \draw (22.5cm, -10cm) -- (23.5cm, -10cm);
+        \draw (23cm, -10cm) -- (23cm, 10cm) node[midway, anchor=north] {\qty{200}{\mm}};
+    \end{tikzpicture}
+    \caption{In-plane and perpendicular directions; and dimensions for the two wafers. \qtyproduct{6.5 x 6.5}{\cm} and \qtyproduct{6 x 6}{\cm} dicing is shown in black and the following \qtyproduct{2 x 2}{\cm} cuts in red.}
+    \label{fig:8in_wafers}
+\end{figure}
+
+\Acs{tase} uses the \acs{soi} wafer as its starting substrate: this is a \acs{si}/\acs{sio2}/\acs{si} wafer in which a thick \acl{si} backplate supports a thin buried \acl{sio2} layer and an even thinner \acl{si} device layer (figure \ref{fig:wafer_thicknesses}). Two different 8-inch wafers (figure \ref{fig:8in_wafers}) were used in this work:
+\begin{enumerate}
+    \item the \hkl<0 0 1> wafer: figure \ref{001} shows the \qty{2}{\um} thick buried oxide and \qty{220}{\nm} thick \hkl<0 0 1> oriented \acl{si} device layer. Figure \ref{fig:8in_wafers}(top) shows how this wafer was diced in four \qtyproduct{6.5 x 6.5}{cm} dices, plus edge pieces, and that there are no in-plane \hkl<1 1 1> directions in this wafer.
+    \item the \hkl<0 0 1> wafer: figure \ref{110} shows the \qty{150}{\nm} thick buried oxide and \qty{70}{\nm} thick \hkl<1 1 0> oriented \acl{si} device layer. Figure \ref{fig:8in_wafers}(bottom) shows how this wafer was diced in four \qtyproduct{6 x 6}{cm} dices, plus edge pieces.
+\end{enumerate}
+
+\begin{figure}
+    \centering
+    \subcaptionbox{\label{001}}{
+        \begin{tikzpicture}
+            \begin{scope}[scale=0.05]
+                \filldraw[fill=Si_green] (0cm, 0cm) rectangle (40cm, 22mm);
+                \filldraw[fill=SiO2_blue] (0cm, -20cm) rectangle (40cm, 0cm);
+                \draw[decorate,decoration={brace, raise=1pt}] (0cm, -20cm) -- (0cm, 0mm) node[midway, anchor=east]{\qty{2}{\um}};
+                \filldraw[fill=Si_green] (0cm, -58.6cm) decorate [decoration=zigzag] {-- (40cm, -58.6cm)} -- (40cm, -20cm) -- (0cm, -20cm) --cycle;
+                \draw[orange, thick] (38.5cm, -1cm) rectangle (41.5cm, 3cm);
+            \end{scope}
+                \begin{scope}
+                    \clip (1.9cm, -3cm) rectangle (3cm, 1cm);
+                    \draw[orange] (1.925cm, 0.15cm) -- (3cm, 1cm);
+                    \draw[orange] (2.075cm, 0.15cm) -- (6cm, 1cm);
+                    \draw[orange] (2.075cm, -0.05) -- (6cm, -3cm);
+                    \draw[orange] (1.925cm, -0.05) -- (3cm, -3cm);
+                \end{scope}
+            \begin{scope}[xshift=0.5cm, yshift=-2cm]
+                \clip (2.5cm, -1cm) rectangle (5.5cm, 3cm);
+                \filldraw[fill=Si_green] (0cm, 0cm) rectangle (4cm, 22mm);
+                \draw[decorate,decoration={brace, mirror, raise=1pt}] (4cm, 0cm) -- (4cm, 22mm) node[midway, anchor=west]{\qty{220}{\nm}};
+                \filldraw[fill=SiO2_blue] (0cm, -20cm) -- (4cm, -20cm) -- (4cm, 0cm) -- (0mm,0mm) -- cycle;
+                \draw[orange, thick] (2.5cm, -1cm) rectangle (5.5cm, 3cm);
+            \end{scope}
+        \end{tikzpicture}
+    }
+    \subcaptionbox{\label{110}}{
+        \begin{tikzpicture}
+            \begin{scope}[scale=0.05]
+                \filldraw[fill=Si_green] (0cm, 0cm) rectangle (40cm, 7mm);
+                \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (40cm, 0cm);
+                \filldraw[fill=Si_green] (0cm, -40cm) decorate [decoration=zigzag] {-- (40cm, -40cm)} -- (40cm, -15mm) -- (0cm, -15mm) --cycle;
+                \draw[red, thick] (-1.5cm,-2cm) rectangle (1.5cm,2cm);
+            \end{scope}
+            \begin{scope}
+                \clip (-1cm, -2.1cm) rectangle (1mm, 2cm);
+                \draw[red] (-0.075cm, 1mm) -- (-4cm, 1.9cm);
+                \draw[red] (0.075cm, 1mm) -- (-1cm, 1.9cm);
+                \draw[red] (0.075cm, -1mm) -- (-1cm, -2.1cm);
+                \draw[red] (-0.075cm, -1mm) -- (-4cm, -2.1cm);
+            \end{scope}
+            \begin{scope}[xshift=-2.5cm, yshift=-0.1cm]
+                \clip (-1.5cm, -2cm) rectangle (1.5cm, 2cm);
+                \filldraw[fill=Si_green] (0cm, 0cm) rectangle (4cm, 7mm);
+                \draw[decorate,decoration={brace, raise=1pt}] (0cm, 0cm) -- (0cm, 7mm) node[midway, anchor=east]{\qty{70}{\nm}};
+                \draw[decorate,decoration={brace, raise=1pt}] (0cm, -15mm) -- (0cm, 0mm) node[midway, anchor=east]{\qty{150}{\nm}};
+                \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (4cm, 0cm);
+                \filldraw[fill=Si_green] (0cm, -3cm) decorate [decoration=zigzag] {-- (4cm, -3cm)} -- (4cm, -15mm) -- (0cm, -15mm) --cycle;
+                \draw[red, thick] (-1.5cm, -2cm) rectangle (1.5cm, 2cm);
+            \end{scope}
+
+        \end{tikzpicture}
+    }
+    \caption{Drawing of the layer stack of the two \acs{soi} wafers showing different thicknesses, \acs{si} is represented in green and \acs{sio2} in light blue. The cross-section of the \hkl<0 0 1> wafer is shown in \subref{001} with a magnified insert showing the \qty{220}{\nm} - thick \acs{si} device layer. The layer thicknesses in \subref{110} are proportional to the ones in \subref{001} highlighting how thin the \acs{sio2} (\qty{150}{\nm}) and \acs{si} (\qty{70}{\nm}) layers are in comparison.}
+    \label{fig:wafer_thicknesses}
+\end{figure}
+
+The tool responsible carried out the dicing cuts at a wafer dicing machine. Every dice is designed to be further divided into nine identical \qtyproduct{2 x 2}{cm} smaller dice that, in turn, contain the \acs{ebl} write regions. This means that every large dice produces nine smaller sample dice that all include the same nanostructure designs but can be grown separately: this considers the possibility of error or damage to some of the smaller dice during processing. The first wafer was cut in \qtyproduct{6.5 x 6.5}{cm} dice for ease of handling at the \acs{ebl} machine. However, it was found that this presented issues with other tools at later steps. Therefore the dice dimensions were reduced to \qtyproduct{6 x 6}{cm} for the second wafer. Figures \ref{fig:markers}, \ref{fig:litho1}, and \ref{fig:litho2} show schematic drawings of the primary process steps as they appear when applied to the \hkl<1 1 0> wafer, but the process steps are the same on the \hkl<0 0 1> wafer.
+ \par 
+The device layer defines the shape of the \acl{si} seeds and III-V nanostructures. To do so, two lithography steps are needed, one defining the geometry of the wires and one opening the template oxide that encases them. The alignment between these two steps is critical. Much like the definition of the nanostructures themselves, it requires an accuracy of the order of the nanometre on a dice size of \qty{2}{cm}. This resolution is only available with \acf{ebl} lithography in a research environment. A third \acs{ebl} lithography step is introduced to ensure correct alignment. Markers that the \acs{ebl} machine will use to determine the position of the sample with the necessary accuracy are defined in this process step. While I created the mask designs and provided the substrate ready for exposure, given its high degree of complexity, automation, and workload, the machine was loaded and operated by the tool responsible.
+\par
+The creation of the alignment markers constitutes an important pre-processing step. A \qty{10}{nm} thick \acs{sio2} protective layer is deposited on top of the device layer using \acf{pecvd} before sputtering a \qty{100}{\nm} \acf{w} layer on top of the wafer (figure \ref{W_deposition}). The sputtering tool was operated by the responsible for the tool. \Acl{w} is used to achieve high contrast in the electron microscopy image that the \acs{ebl} machine uses to orient itself on the sample. A negative photoresist is spun before submitting the wafer for the first \acs{ebl} run. During this step, the \acs{ebl} markers are defined in the resist, which, after development, acts as a mask that protects only certain areas of the \acl{w} layer. \Acf{rie} is used to remove the unprotected \acl{w}: this leaves well-defined markers on the wafer (figure \ref{W_markers}).  
+
+\begin{figure}
+    \centering
+    \subcaptionbox{Sputtered \acs{w}.\label{W_deposition}}{
+    \begin{tikzpicture}
+        \filldraw[fill=W_gray] (0cm, 8mm) rectangle (4cm, 1.8cm);
+        \filldraw[fill=SiO2_blue] (0cm, 7mm) rectangle (4cm, 8mm);
+        \filldraw[fill=Si_green] (0cm, 0cm) rectangle (4cm, 7mm);
+        \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (4cm, 0cm);
+    \end{tikzpicture}
+    }
+    \subcaptionbox{\acs{w} markers.\label{W_markers}}{
+    \begin{tikzpicture}
+        \filldraw[fill=red] (1.5cm, 1.8) rectangle (2.5cm, 3cm);
+        \filldraw[fill=W_gray] (1.5cm, 8mm) rectangle (2.5cm, 1.8cm);
+        \filldraw[fill=SiO2_blue] (0cm, 7mm) rectangle (4cm, 8mm);
+        \filldraw[fill=Si_green] (0cm, 0cm) rectangle (4cm, 7mm);
+        \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (4cm, 0cm);
+    \end{tikzpicture}
+    }
+    \subcaptionbox{\acs{w} markers encased in a \acs{sio2} layer.\label{marker_protection_layer}}{
+    \begin{tikzpicture} [scale=0.5]
+        \filldraw[fill=SiO2_blue] (-5cm, 0.7cm) -- (1.5cm, 0.7cm) -- (9cm, 0.7cm)  -- (9cm, 3.7cm) -- (5.5cm, 3.7cm) -- (5.5cm, 4.8cm) -- (-1.5cm, 4.8cm) -- (-1.5cm, 3.7cm) -- (-5cm, 3.7cm) -- cycle;
+        \filldraw[fill=W_gray] (1.5cm, 8mm) rectangle (2.5cm, 1.8cm);
+        \filldraw[fill=SiO2_blue] (1.5cm, 7mm) rectangle (2.5cm, 8mm);
+        \filldraw[fill=Si_green] (-5cm, 0cm) rectangle (9cm, 7mm);
+        \filldraw[fill=SiO2_blue] (-5cm, -15mm) rectangle (9cm, 0cm);
+    \end{tikzpicture}
+    } 
+    \subcaptionbox{Definition of the marker protection area.\label{mp_optolitho}}{
+    \begin{tikzpicture} [scale=0.5]
+        \filldraw[fill=red] (-1.5cm, 4.7cm) rectangle (5.5cm, 5.7cm);
+        \filldraw[fill=SiO2_blue] (-5cm, 0.7cm) -- (1.5cm, 0.7cm) -- (9cm, 0.7cm)  -- (9cm, 3.7cm) -- (5.5cm, 3.7cm) -- (5.5cm, 4.8cm) -- (-1.5cm, 4.8cm) -- (-1.5cm, 3.7cm) -- (-5cm, 3.7cm) -- cycle;
+        \filldraw[fill=W_gray] (1.5cm, 8mm) rectangle (2.5cm, 1.8cm);
+        \filldraw[fill=Si_green] (-5cm, 0cm) rectangle (9cm, 7mm);
+        \filldraw[fill=SiO2_blue] (-5cm, -15mm) rectangle (9cm, 0cm);
+    \end{tikzpicture}
+    }
+    \subcaptionbox{The excess \acs{sio2} is etched away. \label{mp_completed}}{
+    \begin{tikzpicture} [scale=0.5]
+        \filldraw[fill=SiO2_blue] (-1.5cm, 0.7cm) -- (5.5cm, 0.7cm) -- (5.5cm, 3.7cm) -- (5.5cm, 4.8cm) -- (-1.5cm, 4.8cm) -- (-1.5cm, 3.7cm) -- cycle;
+        \filldraw[fill=W_gray] (1.5cm, 8mm) rectangle (2.5cm, 1.8cm);
+        \filldraw[fill=Si_green] (-5cm, 0cm) rectangle (9cm, 7mm);
+        \filldraw[fill=SiO2_blue] (-5cm, -15mm) rectangle (9cm, 0cm);
+    \end{tikzpicture}
+    }
+    \caption{Drawings showing the fabrication process of the \acs{w} markers and marker protection. The sputtered \acs{w} layer \subref{W_deposition} is first patterned \subref{W_markers} and then encased in \qty{300}{\nm}-thick \acs{sio2} layer \subref{marker_protection_layer}. The marker protection area is defined through optical lithography \subref{mp_optolitho}, and then the excess \acs{sio2} is removed \subref{mp_completed}.}
+    \label{fig:markers}
+\end{figure}
+
+\par
+The alignment markers are then protected from the next aggressive etching steps that follow in the \acs{tase} process by depositing a \qty{300}{\nm} thick \acl{sio2} layer on the entire wafer with \acs{pecvd}. This protective layer is then annealed at \qty{750}{\degreeCelsius} for \qty{300}{s} to improve its resistance to etching (Figure \ref{marker_protection_layer}). This cover shields both the alignment markers and the device layer. However, the device layer must be accessible to define the nanostructures that will form the base of the \acs{tase} process. Optical lithography is used to pattern openings in a positive optical resist, leaving only the areas of the \acs{sio2} film above the \acl{w} markers masked (Figure \ref{mp_optolitho}). After development, the \acl{sio2} layer can be removed in correspondence with these openings using a diluted \acf{hf} solution (figure \ref{mp_completed}), uncovering most of the device \acs{si} layer. Reflectometry can ascertain the presence and thickness of the device \acs{si} layer, thereby evaluating the health of the wafer after the pre-processing steps.
+\par
+This concludes the initial steps that prepare the wafer to go through the \acs{tase} process. In the following illustrations (figures \ref{fig:litho1} and \ref{fig:litho2}), the \acl{w} markers and their oxide protection are omitted as they will not be affected by the following process steps in a process-relevant manner. Still, they are not removed and are the basis for alignment in the next lithography steps.
+
+
+\section{Nanostructure Definition and Template Deposition}
+\label{sec:nanostructure-def_template-dep}
+\begin{figure}
+    \centering
+    \subcaptionbox{\acs{hsq} layer on top of the wafer after exposure.\label{L1_exposed_resist}}{
+    \begin{tikzpicture}
+        \filldraw[fill=red] (0cm, 7mm) rectangle (10cm, 10mm);
+        \filldraw[fill=SiO2_blue] (3cm, 7mm) rectangle (7cm, 10mm);
+        \filldraw[fill=Si_green] (0cm, 0cm) rectangle (10cm, 7mm);
+        \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (10cm, 0cm);
+    \end{tikzpicture}
+    }
+    \subcaptionbox{Nanostructure geometry transferred onto the \acs{si} device layer.\label{L1_nanostructure}}{
+    \begin{tikzpicture}
+        \filldraw[fill=SiO2_blue] (3cm, 7mm) rectangle (7cm, 9mm);
+        \filldraw[fill=Si_green] (3cm, 0cm) rectangle (7cm, 7mm);
+        \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (10cm, 0cm);
+    \end{tikzpicture}
+    }
+    \subcaptionbox{\acs{si} nanostructures encased in the template oxide.\label{L1_template}}{
+    \begin{tikzpicture}
+        \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (8cm, 10mm) -- (8cm, 17mm) -- (7cm, 17mm) -- (7cm, 19mm) -- (3cm, 19mm) -- (3cm, 17mm) -- (2cm, 17mm) -- (2cm, 10mm) -- (0cm, 10mm) -- cycle;
+        \filldraw[fill=Si_green] (3cm, 0cm) rectangle (7cm, 7mm);
+        \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (10cm, 0cm);
+    \end{tikzpicture}
+    }
+    \caption{Drawings showing \subref{L1_exposed_resist} the \acs{hsq} layer after exposure (red unexposed, blue exposed), \subref{L1_nanostructure} the nanostructures as defined in the device \acs{si} layer, and \subref{L1_template} the nanostructures encased in the template oxide.}
+    \label{fig:litho1}
+\end{figure}
+
+The first step of the \acs{tase} process is to define the geometry of the seed and the nanostructure. An \acs{ebl} mask is designed using mask design software, such as L-Edit, and has to be then transferred onto the device \acs{si} layer: practically, this is accomplished using \acf{hsq} as a resist. This negative \acs{ebl} resist allows for very high-precision pattern transfer through \acs{ebl} lithography. After development, \acs{hsq} leaves a thin layer of \acl{sio2} covering the area corresponding to the nanostructures that will be fabricated (figure \ref{L1_exposed_resist}). The unprotected device layer \acl{si} is removed using \ce{HBr}-based \acf{icp} etching. The resulting \acl{si} nanostructures reflect the geometry of both the \acl{si} seed and the III-V wire that will be grown (Figure \ref{L1_nanostructure}). 
+\par
+The template \acl{sio2} is then deposited and encases the \acl{si} nanostructures as illustrated in figure \ref{L1_template}. The template deposition step is particularly delicate as the template oxide must closely follow the geometry of the \acl{si} nanostructures. \Acf{ald} enables this level of precision. With this method, the template oxide grows in steps: first, a complete layer of oxygen atoms is deposited, followed by an entire layer of \acl{si} atoms, and so on. Although time-consuming, this growth allows the template oxide to closely follow the geometry of the silicon nanostructures and grow in an ordered manner, resulting in strong etch resistance. 
+
+
+
+\section{Etch-Back and Growth}
+\label{etch_growth}
+\begin{figure}
+    \centering
+    \subcaptionbox{Openings patterned on a positive resist layer.
+    \label{L2_resist}}{
+        \begin{tikzpicture}
+            \filldraw[fill=red] (0cm, 10mm) -- (7cm, 10mm) -- (7cm, 27mm) -- (0cm, 27mm) -- cycle;
+            \filldraw[fill=red] (9cm, 10mm) -- (10cm, 10mm) -- (10cm, 27mm) -- (9cm, 27mm) -- cycle;
+            \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (9cm, 10mm) -- (9cm, 17mm) -- (8cm, 17mm) -- (8cm, 19mm) -- (2cm, 19mm) -- (2cm, 17mm) -- (1cm, 17mm) -- (1cm, 10mm) -- (0cm, 10mm) -- cycle;
+            \filldraw[fill=Si_green] (2cm, 0cm) rectangle (8cm, 7mm);
+            \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
+        \end{tikzpicture}
+    }
+    \subcaptionbox{Etch down of the template \acs{sio2} and device \acs{si} to reach the buried oxide layer.
+    \label{L2_open}}{
+        \begin{tikzpicture}
+            \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (7cm, 0mm) -- (7cm, 19mm) -- (2cm, 19mm) -- (2cm, 17mm) -- (1cm, 17mm) -- (1cm, 10mm) -- (0cm, 10mm) -- cycle;
+            \filldraw[fill=SiO2_blue] (9cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (9cm, 10mm) -- cycle;
+            \filldraw[fill=Si_green] (2cm, 0cm) rectangle (7cm, 7mm);
+            \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
+        \end{tikzpicture}
+    }
+    \subcaptionbox{Etch back of the \acs{si} to create the seed.
+    \label{L2_etchback}}{
+        \begin{tikzpicture}
+            \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (2cm, 0mm)-- (2cm, 7mm) -- (7cm, 7mm) -- (7cm, 19mm) -- (2cm, 19mm) -- (2cm, 17mm) -- (1cm, 17mm) -- (1cm, 10mm) -- (0cm, 10mm) -- cycle;
+            \filldraw[fill=SiO2_blue] (9cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (9cm, 10mm) -- cycle;
+            \filldraw[fill=Si_green] (2cm, 0cm) -- (2cm, 7mm) -- (3.5cm, 7mm) -- (3.5cm, 0mm) -- cycle;
+            \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
+        \end{tikzpicture}
+    }
+    \subcaptionbox{A III-V crystal (orange) was grown from the \acs{si} seed.
+    \label{L2_growth}}{
+        \begin{tikzpicture}
+            \filldraw[fill=orange] (3.5cm, 7mm) -- (3.5cm, 0mm) -- (6cm, 0mm) -- (6cm, 7mm) -- cycle;
+            \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (2cm, 0mm)-- (2cm, 7mm) -- (7cm, 7mm) -- (7cm, 19mm) -- (2cm, 19mm) -- (2cm, 17mm) -- (1cm, 17mm) -- (1cm, 10mm) -- (0cm, 10mm) -- cycle;
+            \filldraw[fill=SiO2_blue] (9cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (9cm, 10mm) -- cycle;
+            \filldraw[fill=Si_green] (2cm, 0cm) -- (2cm, 7mm) -- (3.5cm, 7mm) -- (3.5cm, 0mm) -- cycle;
+            \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
+        \end{tikzpicture}
+    }
+    \caption{Drawings showing the last steps of the \acs{tase} process. A positive resist layer is patterned \subref{L2_resist} and used as a mask for the \acs{rie} etch-down of holes in the template \acs{sio2}, exposing a vertical and flat \acs{si} surface \subref{L2_open}. \acs{tmah} etch-back \subref{L2_etchback} and \acs{mocvd} growth follow, creating a III-V nanostructure (orange) in the place previously occupied by \acs{si} \subref{L2_growth}.}
+    \label{fig:litho2}
+\end{figure}
+
+The last lithography step involves defining the opening areas in the template oxide through which the etch back and growth occur. Holes are defined in a positive resist layer (Figure \ref{L2_resist}). After \acs{ebl} exposure and development, \acs{rie} is used to etch the template oxide and the device \acl{si} underneath through these holes, with good vertical selectivity (Figure \ref{L2_open}). After opening the template, each \qtyproduct{6.5 x 6.5}{\cm} or \qtyproduct{6 x 6}{\cm} dice is further cut into smaller \qtyproduct{2 x 2}{cm} dice that will then be etched back and grown singularly as described in the following paragraphs.
+\par
+Excess \acl{si} to be substituted with III-V material is removed using a \qty{2.5}{\%_{V\per\V}} \acf{tmah}/\ce{H2O} solution heated at \qty{80}{\degreeCelsius}. This solution has a reliable etch-back speed of \qty{60}{\nm\per\minute}.  The etch back proceeds from the template openings to leave only the seed area inside an empty \acl{sio2} template where the III-V crystal will grow (Figure \ref{L2_etchback}). \Acs{tmah} is specifically chosen because it has good selectivity to \acs{si}, therefore leaving the \acs{sio2} template mostly unaffected. A small amount of template etching still takes place and must be considered when etching multiple micrometres of \acs{si} by depositing a thicker template oxide in previous fabrication steps. Another advantage of \acs{tmah} etching is that it results in \acl{si} seeds terminated by \hkl{1 1 1} facets that avoid antiphase boundary formation during \acf{mocvd} \cite{Kunert2018}. After etching, the chip is ready for III-V material growth, pre-growth surface treatment steps include a dip in a 2:1 \acf{h2so4} / \acf{h2o2} solution to remove organic contaminants and a further \qty{10}{s} dip in a diluted \acs{hf} solution to remove the native oxide layer. 
+\par
+Before growth and in the chamber, the chip is also thermally treated at \qty{780}{\degreeCelsius} for \qty{3}{\minute} in an \acs{as} atmosphere to facilitate oxygen desorption from the \acs{si} seed. The nucleation of the III-V material is selective to the \acl{si} seeds. This means that the growth of the III-V nanostructures is limited to the areas defined in the previous lithography steps (Figure \ref{L2_growth}). At the beginning of this project, the DESIGN-EID consortium chose the \acf{ingaas} / \acf{inp} material system, and these are the III-V semiconductors that I grew in the templates using \acs{mocvd}.

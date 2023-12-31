@@ -1,0 +1,225 @@
+% This template was written by John Davies <john.davies@glasgow.ac.uk> 2017-02-06
+% It matches the university specification at the time of writing
+%   for the widths of the page margins and one-and-a-half line spacing
+% You may want to include more packages, particularly for heavy mathematics
+% Please let me know if you find any errors or wish to suggest improvements
+
+\documentclass[12pt,titlepage,oneside]{book} %
+\usepackage[T1]{fontenc} % modern encoding
+% Comment out the next three lines of LaTeX if you wish to use Computer Modern fonts
+%   (this is the default for LaTeX)
+% Make sure your TeX installation produces a good pdf with these fonts.
+% The following three lines are a good alternative if you don't use much mathematics
+
+%%% For IBM Plex
+
+%\usepackage{fourier}
+%\usepackage{plex-sans}
+%\usepackage{plex-serif}
+%\usepackage{plex-mono}
+
+%\makeatletter
+%\@for\@tempa:=a,b,c,d,e,h,i,k,l,m,n,o,q,r,s,t,u,v,w,x\do{%
+%\MTsetmathskips{\@tempa}{0.5mu}{0.5mu}}%
+%\makeatother
+
+%%\MTsetmathskips{f}{2.5mu}{0.5mu}
+%\MTsetmathskips{g}{1.5mu}{0.5mu}
+%\MTsetmathskips{j}{2.5mu}{0.5mu}
+%\MTsetmathskips{p}{1.5mu}{0mu}
+%\MTsetmathskips{y}{1.5mu}{0.5mu}
+%\MTsetmathskips{z}{1mu}{0.5mu}
+
+%%%
+%%% for Times
+
+\usepackage{mathptmx}  % uses Times for text and mathematics
+\usepackage[scaled]{helvet} %  Helvetica for sanserif, scaled 95% by default
+\usepackage{courier}  % courier for typewriter font, pretty ugly but available
+
+%%%
+\usepackage[basic,italic,symbolgreek]{mathastext}
+% Otherwise the stix package offers more options and symbols
+% \usepackage{stix}  % uses Times for text and a range of fonts for mathematics
+% End of choices for fonts
+\usepackage{graphicx}  % standard package for importing graphics files
+% \usepackage{cite}  % improves the format of numerical citations, such as [1-3] INCOMPATIBLE WITH biblatex
+\usepackage[top=1.8cm, bottom=1.8cm,left=4.0cm,right=1.5cm]{geometry}
+% These margins are the university guidelines
+\usepackage[onehalfspacing]{setspace}  % gives one-and-a-half line spacing
+% Double spacing is another option and can be changed in the text
+
+% User-added packages
+
+\usepackage{rotating}
+\usepackage{environ}
+\usepackage{shellesc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[free-standing-units]{siunitx}
+\DeclareSIUnit\nmmin{\nano\metre\per\minute}
+\usepackage[version = 4]{mhchem}
+\usepackage{miller}
+\usepackage{array} % Make prettier tables
+\usepackage[labelformat = simple]{subcaption}
+\renewcommand\thesubfigure{(\Alph{subfigure})}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+%%%%%%  biblatex
+\usepackage[sorting = none, maxbibnames = 1]{biblatex} % Imports biblatex
+\addbibresource{Bibliography.bib} % Points to the bibliography file
+\AtEveryBibitem{%
+    \clearfield{note}
+    \ifentrytype{online}{}{% Remove URL except for @online
+        \clearfield{url}
+    }
+    \ifentrytype{book}{}{% Remove issn except for @book
+        \clearfield{issn}
+    }
+}
+
+
+
+
+%%%%%%  tikz
+\usepackage{tikz}
+\tikzset{every picture/.style={/utils/exec={\sffamily}}}
+\usetikzlibrary{external, calc, positioning, plotmarks, datavisualization, decorations.pathmorphing, decorations.pathreplacing, decorations.text, 3d} 
+\tikzexternalize[prefix=figures/] 
+% colour
+\definecolor{Si_green}{rgb}{0.411765, 0.745098, 0.580392}
+\definecolor{SiO2_blue}{rgb}{0.678431, 0.847058, 0.901961}
+\definecolor{W_gray}{rgb}{0.462745, 0.474510, 0.501961}
+\definecolor{cb1_orange}{rgb}{0.961, 0.475, 0.227}
+\definecolor{cb1_purple}{rgb}{0.663, 0.353, 0.631}
+\definecolor{cb1_light_blue}{rgb}{0.522, 0.753, 0.976}
+\definecolor{cb1_dark_blue}{rgb}{0.059, 0.125, 0.502}
+% 3D styles
+\tikzstyle{isometric} = [x = {(0.710cm, -0.410cm)}, y={(0cm, 0.820cm)}, z={(-0.710cm, -0.410cm)}]
+\tikzstyle{manual}    = [x = {(1cm,0cm)},           y={(0cm, 1cm)},     z={(0.4cm, 0.7cm)}]
+\tikzstyle{dimetric}  = [x={(0.935cm,-0.118cm)},    y={(0cm, 0.943cm)}, z={(-0.354cm,- 0.312cm)}]
+% plots
+%\usepackage{pgf-pie}
+\usepackage{pgfplots}
+\pgfplotsset{
+  compat=newest,
+  xlabel near ticks,
+  ylabel near ticks
+}
+
+
+%%%%%%  Glossary and acronyms
+\usepackage[acronym, shortcuts, nonumberlist]{glossaries} % Imports the Glossaries package
+\newignoredglossary{ignore}
+\newglossary*{material}{Elements, Chemicals, and Materials}
+\newglossary*{technique}{Characterization and Fabrication Techniques}
+\makeglossaries 
+
+% List of all defined acronyms
+\newacronym{design}{DESIGN-EID}{Defect Simulation and Material Growth of III-V Nanostructures - European Industrial Doctorate Program}
+\newacronym{wp}{WP}{work package}
+\newacronym{esr}{ESR}{early stage researcher}
+\newacronym{eu}{EU}{European Union}
+\newacronym{ibm}{IBM}{International Business Machines Corporation}
+\newacronym{brnc}{BRNC}{Binning and Rohrer Nanoscience Center}
+\newacronym{gms}{GMS}{Gatan Microscopy Suite}
+\newacronym{fft}{FFT}{fast Fourier transform}
+\newacronym[type = technique]{tase}{TASE}{template assisted selective epitaxy}
+\newacronym[type = technique]{sag}{SAG}{selective area growth}
+\newacronym[type = technique]{art}{ART}{aspect ratio trapping}
+\newacronym[type = technique]{cmos}{CMOS}{complementary metal oxide semiconductor}
+\newacronym[type = technique]{stem_m}{STEM}{scanning transmission electron microscopy} % _m for method
+\newacronym[type = ignore]{stem_i}{STEM}{scanning transmission electron microscope} % _i for tool
+\newacronym[type = technique]{tem_m}{TEM}{transmission electron microscopy} % _m for method
+\newacronym[type = ignore]{tem_i}{TEM}{transmission electron microscope} % _i for tool
+\newacronym[type = technique]{pecvd}{PECVD}{plasma-enhanced chemical vapour deposition}
+\newacronym[type = technique]{rie}{RIE}{reactive ion etching}
+\newacronym[type = technique]{icp}{ICP}{inductively-coupled plasma}
+\newacronym[type = technique]{fib}{FIB}{focused ion beam}
+\newacronym[type = technique]{eds}{EDS}{energy dispersive X-Ray spectroscopy}
+\newacronym[type = technique]{eels}{EELS}{electron energy loss spectroscopy}
+\newacronym[type = technique]{sem_m}{SEM}{scanning electron microscopy}
+\newacronym[type = technique]{bf}{BF}{bright field}
+\newacronym[type = technique]{adf}{ADF}{annular dark field}
+\newacronym[type = technique]{haadf}{HAADF}{high angle annular dark field}
+\newacronym[type = ignore]{sem_i}{SEM}{scanning electron microscope}
+\newacronym[type = technique]{mocvd}{MOCVD}{metal-organic chemical vapor deposition}
+\newacronym[type = technique]{ebl}{EBL}{electron beam lithography}
+\newacronym[type = technique]{ald}{ALD}{atomic layer deposition}
+\newacronym[type = material]{soi}{SOI}{silicon on insulator}
+\newacronym[type = material]{ingaas}{\ce{InGaAs}}{indium-gallium arsenide}
+\newacronym[type = material]{inp}{\ce{InP}}{indium phosphide}
+\newacronym[type = material]{inas}{\ce{InAs}}{indium arsenide}
+\newacronym[type = material]{gaas}{\ce{GaAs}}{gallium arsenide}
+\newacronym[type = material]{tmin}{\ce{TMIn}}{trimethyl indium}
+\newacronym[type = material]{tmga}{\ce{TMGa}}{trimethyl gallium}
+\newacronym[type = material]{tbas}{\ce{TBAs}}{\textit{tert}-butyl arsine}
+\newacronym[type = material]{tbp}{\ce{TBP}}{\textit{tert}-butyl phosphine}
+\newacronym[type = material]{sio2}{\ce{SiO2}}{silicon oxide}
+\newacronym[type = material]{hf}{\ce{HF}}{hydrofluoric acid}
+\newacronym[type = material]{hsq}{\ce{HSQ}}{hydrogen silsesquioxane}
+\newacronym[type = material]{tmah}{\ce{TMAH}}{tetramethylammonium hydroxide}
+\newacronym[type = material]{h2so4}{\ce{H2SO4}}{sulfuric acid}
+\newacronym[type = material]{h2o2}{\ce{H2O2}}{peroxide}
+\newacronym[type = material]{si}{\ce{Si}}{silicon}
+\newacronym[type = material]{in}{\ce{In}}{indium}
+\newacronym[type = material]{ga}{\ce{Ga}}{gallium}
+\newacronym[type = material]{as}{\ce{As}}{arsenic}
+\newacronym[type = material]{p}{\ce{P}}{phosphorus}
+\newacronym[type = material]{w}{\ce{W}}{tungsten}
+\newacronym[type = material]{rtp}{\ce{RTP}}{rotational twin plane}
+\newacronym[type = material]{qw}{\ce{QW}}{quantum well}
+
+%%%%%%  Actual document
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{3cm}  % Need the * or the space is swallowed at the top of the page
+\bfseries\Large
+Thesis Title\\
+\vspace{3cm}
+\normalfont\large
+Enrico Brugnolotto\\
+\vspace{2cm}
+Submitted in fulfilment of the requirements for the\\
+Degree of Doctor of Philosophy\\
+\vspace{2cm}
+School of Engineering\\
+College of Science and Engineering\\
+University of Glasgow\\
+\vspace{1cm}
+\includegraphics[scale=0.125]{GlaLogo.pdf}
+\\
+\vspace{1cm}
+% Insert month and year of date deposited with the library for the final version
+Month 2024
+\end{titlepage}
+\frontmatter  % Turn off chapter numbering. Use roman page numbers
+\include{0_Abstract/abstract.tex}
+\tableofcontents
+\listoftables
+\listoffigures
+\printglossaries
+%\include{0_Abstract/acknowledgements.tex}
+%\include{0_Abstract/declaration.tex}
+
+\mainmatter % Turn on chapter numbering, reset page numbers, and use Arabic
+%\include{1_Introduction/introduction.tex}
+%\include{2_Literature_Review/Literature_Review}
+\include{3_Growth/Growth}
+\include{4_Crystalline_properties/Crystalline_properties}
+%\include{5_Machine_Learning/Machine_learning}
+%\include{6_Conclusions/Conclusions}
+
+\appendix
+%\include{U_Appendixes/TASE.tex}
+%\include{U_Appendixes/Tools.tex}
+
+\backmatter  % Turn off chapter numbering
+
+\printbibliography
+
+\end{document}
