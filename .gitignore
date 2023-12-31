@@ -13,3 +13,7 @@
 *.out
 *.pdf
 *.xml
+*.gz
+*.technique-glo
+*.toc
+*.md5
