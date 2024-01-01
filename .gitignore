@@ -17,3 +17,5 @@
 *.technique-glo
 *.toc
 *.md5
+*.latexmk
+*.bbl
