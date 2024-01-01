@@ -11,11 +11,10 @@
 *.lot
 *.material-glo
 *.out
-*.pdf
+main.pdf
 *.xml
 *.gz
 *.technique-glo
 *.toc
-*.md5
 *.latexmk
 *.bbl
