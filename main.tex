@@ -171,6 +171,10 @@
 \newacronym[type = material]{rtp}{\ce{RTP}}{rotational twin plane}
 \newacronym[type = material]{qw}{\ce{QW}}{quantum well}
 
+
+\usepackage{verbatim,shellesc}
+\ShellEscape{cp /usr/local/share/latexmk/LatexMk ./LatexMk}
+
 %%%%%%  Actual document
 
 \begin{document}
@@ -209,7 +213,7 @@ Month 2024
 \mainmatter % Turn on chapter numbering, reset page numbers, and use Arabic
 %\include{1_Introduction/introduction.tex}
 %\include{2_Literature_Review/Literature_Review}
-\include{3_Growth/Growth}
+%\include{3_Growth/Growth}
 \include{4_Crystalline_properties/Crystalline_properties}
 %\include{5_Machine_Learning/Machine_learning}
 %\include{6_Conclusions/Conclusions}
