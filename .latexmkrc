@@ -1,3 +1,5 @@
+# Shell Escape (Write 18)
+$pdflatex='pdflatex -shell-escape';
 # Settings
 $xdvipdfmx = "xdvipdfmx -z 6 -i dvipdfmx-unsafe.cfg -o %D %O %S";
 # Workaround to allow pstricks transparency (https://github.com/overleaf/issues/issues/3449)
