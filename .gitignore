@@ -15,8 +15,14 @@ main.pdf
 output.pfd
 *.xml
 *.gz
+.acr
+.alg
+.blg
+.glg
+.gls
 *.technique-glo
 *.toc
 *.latexmk
 *.latexmkrc
 *.bbl
+/figures/*
