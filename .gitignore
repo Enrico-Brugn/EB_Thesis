@@ -22,7 +22,6 @@ output.pfd
 .gls
 *.technique-glo
 *.toc
-*.latexmk
-*.latexmkrc
+*.latexmkrcBACKUP
 *.bbl
 /figures/*
