@@ -12,9 +12,11 @@
 *.material-glo
 *.out
 main.pdf
+output.pfd
 *.xml
 *.gz
 *.technique-glo
 *.toc
 *.latexmk
+*.latexmkrc
 *.bbl
