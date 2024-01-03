@@ -27,4 +27,5 @@ output.pdf
 *.toc
 *.latexmkrcBACKUP
 *.bbl
+*.ipynb
 /figures/*
