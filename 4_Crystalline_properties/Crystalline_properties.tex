@@ -265,7 +265,7 @@ A compromise can be found by cutting the sample with a \qty{30}{\degree} tilt in
     \label{fig:s4_recipe_STEM}
 \end{sidewaysfigure}
 
-The recipe in Figure~\ref{subfig:recipe4} was kept similar to that used in sample 3 (Figure~\ref{subfig:recipe3}) for the initial experiment on the new \hkl<1 1 0> substrate. The main adjustments concern the deposition times. The initial growth steps, were changed from \qty{480}{\second} and \qty{180}{\second} to \qty{200}{\second} for both \acs{ingaas} and \acs{inp}, respectively. The deposition times for \acs{ingaas} quantum wells were lowered from \qty{30}{\second} to \qty{20}{\second} in anticipation of the smaller area of the growth front. Simultaneously, the duration of \acs{inp} barrier steps was increased from \qty{180}{\second} to \qty{200}{\second}.
+The recipe in Figure~\ref{subfig:recipe4} was kept similar to that used in sample 3 (Figure~\ref{subfig:recipe3}) for the initial experiment on the new \hkl<1 1 0> substrate. It contains a looped segment for the creation of \acs{ingaas} quantum wells between \acs{inp} barrier layers. The main adjustments concern the deposition times. The initial growth steps, were changed from \qty{480}{\second} and \qty{180}{\second} to \qty{200}{\second} for both \acs{ingaas} and \acs{inp}, respectively. The deposition times for \acs{ingaas} quantum wells were lowered from \qty{30}{\second} to \qty{20}{\second} in anticipation of the smaller area of the growth front. Simultaneously, the duration of \acs{inp} barrier steps was increased from \qty{180}{\second} to \qty{200}{\second}.
 
 The most important change concerned the post-\acs{ingaas} hold step. Here, \acs{as} precursor flow step time was reduced from \qty{15}{s} to \qty{10}{s} and the following \acs{p} precursor flow step time increased from \qty{5}{s} to \qty{10}{s}. This change was made to address the \acs{as} profile seen in the \acs{inp} layer of the sample 3 (Figure~\ref{subfig:s3_V_linesc}). By reducing the \acs{as} precursor flow time in the hold step it was hoped that the \acs{as} contamination in the first nanometres of the \acs{inp} layer would be reduced or, in the best case, eliminated in sample 4.
 
@@ -308,21 +308,88 @@ The discrepancy between the size of the \acs{ingaas} and \acs{inp} pre-well laye
 
 Consequently, when examining the total growth rate of the nanowires before the first quantum well the two values are within each other's error at \qty[separate-uncertainty=true]{23.6 (0.3)}{\nano\metre\per\minute} and \qty[separate-uncertainty=true]{23.7 (0.1)}{\nano\metre\per\minute}, respectively. Since the amount of material introduced in the reactor was the same for both wires, this would support the theory that a complex growth front forms in one of the two wires and then is simplified to a single \hkl{1 1 1} facet by the \acs{inp} layer. In this scenario \acs{inp} and \acs{ingaas} layers could be one behind the other in the path of the electron beam. Another option is that the "missing" \acs{inp} could have been removed during the \acs{fib} thinning of the lamella. During this process, part of the nanowire's material is also removed; therefore, the III-V semiconductor film seen in the \acs{stem_m} image is only a portion of the entire wire.
 
-Both the \acs{ingaas} well and \acs{inp} growth rates increase as the growth front approaches the opening of the template. This trend is not very pronounced for the \acs{inp} layers of the nanowire cut with the standard cross-section procedure but is more pronounced in the \qty{30}{\degree} cross-section sample. This results in a higher total growth rate for the latter nanowire, with nearly \qty{2}{\nano\metre\per\minute} of difference. This difference, which develops in the latter, precursor-switching-rich, part of the recipe, where the growth front is nearer to the template opening, could indicate a limited competition between neighbouring nanowires or a precursor concentration gradient in the reactor in the moments immediately following the precursor switches.
+Both the \acs{ingaas} well and \acs{inp} growth rates increase as the growth front approaches the opening of the template. This trend is not very pronounced for the \acs{inp} layers of the nanowire cut with the standard cross-section procedure but is more pronounced in the \qty{30}{\degree} cross-section sample. This results in a higher total growth rate for the latter nanowire, with nearly \qty{2}{\nano\metre\per\minute} of difference. This difference, which develops in the latter, precursor-switching-rich, part of the recipe, when the growth front is nearer to the template opening, could indicate a limited competition between neighbouring nanowires or a precursor concentration gradient in the reactor in the moments immediately following the precursor switches.
 \par
 
-
-
-
-
-
-
-
-
-
-
-
 \subsection{Compositional analysis}
+
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        III-element \acs{eds} map. Red \acs{in}, blue \acs{ga}
+        \label{subfig:s4_0deg_IIImap_wells}
+        }{
+        \includegraphics[width=0.48\textwidth]{4_Crystalline_properties/Fig/s4_0deg_IIImap_wells.pdf}
+    }
+    \subcaptionbox{
+        V-element \acs{eds} map. Red \acs{as}, blue \acs{p}
+        \label{subfig:s4_0deg_Vmap_wells}
+        }{
+        \includegraphics[width=0.48\textwidth]{4_Crystalline_properties/Fig/s4_0deg_Vmap_wells.pdf}
+    }
+    \caption{\acs{eds} maps of the quantum well region of the \qty{0}{\degree} sample in Figure~\ref{subfig:s4_OV}. The seed is out of frame on the left of the images.}
+    \label{fig:s4_0deg_EDS_maps_wells}
+\end{figure}
+
+Figure~\ref{fig:s4_0deg_EDS_maps_wells} shows the \acs{eds} maps. The elements \acl{ga} and \acl{p} are colour-coded in blue while \acl{in} and \acl{as} are colour-coded in red. Two \acs{ingaas} quantum wells are visible on both maps, showing the same nanowire area. 
+
+The III-element map shows how \acl{ga} is well-segregated into the \acs{ingaas} layers. However, a difference between the leading and trailing edges of the quantum wells is visible once more when examining the V-element map. Indeed, while the leading edge is sharp, a light red shading is present in the \acl{p} region after the trailing edge. This is an indication of an \acl{as} contamination in the \acs{inp} barrier layer.
+
+\begin{figure}
+    \centering
+    \subcaptionbox{
+    \acs{eds} linescan: III atomic percentage vs position.
+    \cite{Brugnolotto2023}.
+    \label{subfig:s4_III_0deg_linesc}
+    }{\begin{tikzpicture}
+        \begin{axis}[
+            width = 0.8\textwidth,
+            height = 5cm,
+            xlabel = Position (nm),
+            ylabel = Composition (atomic \%),
+            table/col sep=comma,
+            %title = III element composition,
+            legend pos=outer north east,
+            ymin=0, ymax=100,
+            xmin = 0, xmax=230
+        ]
+    \addplot [cb1_orange,] table[x=nm,y=Ga] {3_Growth/s4_III_0deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=In] {3_Growth/s4_III_0deg_linesc.csv};
+    \addlegendentry{Ga}
+    \addlegendentry{In}
+    \end{axis}
+
+    \end{tikzpicture}
+    }
+    \subcaptionbox{
+    \acs{eds} linescan: V atomic percentage vs position.
+    \label{subfig:s4_V_0deg_linesc}
+    }{\begin{tikzpicture}
+        \begin{axis}[
+            width = 0.8\textwidth,
+            height = 5cm,
+            xlabel = Position (nm),
+            ylabel = Composition (atomic \%),
+            table/col sep=comma,
+            %title = V element composition,
+            legend pos=outer north east,
+            ymin=0, ymax=100,
+            xmin = 0, xmax=230
+        ]
+    \addplot [cb1_orange,] table[x=nm,y=As] {3_Growth/s4_V_0deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=P] {3_Growth/s4_V_0deg_linesc.csv};
+    \addlegendentry{As}
+    \addlegendentry{P}
+    \end{axis}
+
+    \end{tikzpicture}
+    }
+    \caption{\acs{eds} linescans for the \subref{subfig:s3_III_linesc} III elements and \subref{subfig:s3_V_linesc} V elements across a quantum well. 0 is before the well itself on the side of the \acs{si} seed, and higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed.}
+    \label{fig:s4_0deg_linescans}
+\end{figure}
+
+
+
 
 \subsection{Photoluminescence data}
 
@@ -358,9 +425,13 @@ Both the \acs{ingaas} well and \acs{inp} growth rates increase as the growth fro
 
 %In the previous examples, a <001> device layer SOI was used as a growth substrate, where a multi-faceted growth front can develop, leading to poor geometric control, composition variations for ternaries, and in any case, a heterointerface which is not perpendicular to the growth direction, which is an undesirable situation for device fabrication. This can be circumvented using a Si wafer orientation with vertical {111} crystal planes as available on an <110> SOI wafer—
 
-hfigure 5. A shows a BF-STEM image of a nanowire with vertical and well-defined hetero-interfaces. 
+%hfigure 5. A shows a BF-STEM image of a nanowire with vertical and well-defined hetero-interfaces. 
 
-A similar level of As background impurities is present after each InGaAs segment, as shown in Figure 5. B, while Figure 5. C shows how Ga is well confined to the respective layer. The high-resolution BF-STEM image in Figure 5.D shows the heterointerface between the 85-nm-thick InP on the image's left- and right-hand side and the 14-nm-thick InGaAs quantum well structure that appears as a dark layer in the middle of the image. The extracted <111>B growth rates are 25.5 nm/min for InP and 42.9 nm/min for InGaAs, respectively. This marks an increase in growth rate attributed to the different template shapes, as template height was reduced from 220 nm to 70 nm—figure 5. E shows the composition profiles for the III- and group elements across the quantum well region. The presence of As impurities immediately after the quantum well layer is again noticeable on the right side of the V element map, as the As and P concentration profiles are asymmetric. This asymmetry is evident when compared with the symmetric composition profiles for the III-group elements, which maintain the interface quality observed in the sample shown in Figure 4. The III composition profile Figure 5. E highlights how the InxGa1-xAs composition is more prosperous in Indium, having an x = 0.60. As the flows into the reactor were not altered from the sample shown in Figure 4, this composition change can also be attributed to the different template geometry.
+A similar level of As background impurities is present after each InGaAs segment, as shown in Figure 5. B, while Figure 5. C shows how Ga is well confined to the respective layer. 
+
+%The high-resolution BF-STEM image in Figure 5.D shows the heterointerface between the 85-nm-thick InP on the image's left- and right-hand side and the 14-nm-thick InGaAs quantum well structure that appears as a dark layer in the middle of the image. The extracted <111>B growth rates are 25.5 nm/min for InP and 42.9 nm/min for InGaAs, respectively. This marks an increase in growth rate attributed to the different template shapes, as template height was reduced from 220 nm to 70 nm—
+
+figure 5. E shows the composition profiles for the III- and group elements across the quantum well region. The presence of As impurities immediately after the quantum well layer is again noticeable on the right side of the V element map, as the As and P concentration profiles are asymmetric. This asymmetry is evident when compared with the symmetric composition profiles for the III-group elements, which maintain the interface quality observed in the sample shown in Figure 4. The III composition profile Figure 5. E highlights how the InxGa1-xAs composition is more prosperous in Indium, having an x = 0.60. As the flows into the reactor were not altered from the sample shown in Figure 4, this composition change can also be attributed to the different template geometry.
 \section{article 2}
 \begin{figure}
     \centering
