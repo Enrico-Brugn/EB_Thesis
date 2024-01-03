@@ -399,21 +399,38 @@ As the precursor flows were not altered from those of previous samples, the V / 
 
 \begin{figure}
     \centering
+    %\begin{tikzpicture}
+    %    \begin{axis}[
+    %        width = 0.8\textwidth,
+    %        height = 5cm,
+    %        xlabel = Wavelegth (nm),
+    %        ylabel = Intensity (A.U.),
+    %        table/col sep=comma,
+            %title = Photoluminescence Spectrum,
+    %        legend pos=outer north east,
+    %        ymin=0, ymax=1000,
+    %        xmin = 1268.8, xmax=1600.3
+    %        ]
+    %        \addplot [cb1_dark_blue,] table[x=wavelength,y=intensity] {4_Crystalline_properties/csv/s4_pl.csv};
+    %        \addlegendentry{Intensity}
+    %    \end{axis}
+    %\end{tikzpicture}
     \begin{tikzpicture}
         \begin{axis}[
             width = 0.8\textwidth,
             height = 5cm,
-            xlabel = Wavelegth (nm),
-            ylabel = Intensity (A.U.),
+            xlabel = Position (nm),
+            ylabel = Composition (atomic \%),
             table/col sep=comma,
-            %title = Photoluminescence Spectrum,
+            %title = V element composition,
             legend pos=outer north east,
-            ymin=0, ymax=1000,
-            xmin = 1268.8, xmax=1600.3
-            ]
-            \addplot [cb1_dark_blue,] table[x=wavelength,y=intensity] {4_Crystalline_properties/csv/s4_pl.csv};
-            \addlegendentry{Intensity}
-        \end{axis}
+            ymin=0, ymax=100,
+            xmin = 0, xmax=230
+        ]
+    \addplot [cb1_orange,] table[x=wavelength,y=intensity] {4_Crystalline_properties/csv/s4_pl.csv};
+    \addlegendentry{As}
+    \end{axis}
+
     \end{tikzpicture}
     \caption{Caption}
     \label{fig:s4_pl}
