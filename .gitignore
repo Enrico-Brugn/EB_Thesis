@@ -28,4 +28,5 @@ output.pdf
 *.latexmkrcBACKUP
 *.bbl
 *.ipynb
+*.synctex(busy)
 /figures/*
