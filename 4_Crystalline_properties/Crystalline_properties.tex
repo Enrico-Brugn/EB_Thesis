@@ -339,7 +339,6 @@ The III-element map shows how \acl{ga} is well-segregated into the \acs{ingaas} 
     \centering
     \subcaptionbox{
     \acs{eds} linescan: III atomic percentage vs position.
-    \cite{Brugnolotto2023}.
     \label{subfig:s4_III_0deg_linesc}
     }{\begin{tikzpicture}
         \begin{axis}[
@@ -353,8 +352,8 @@ The III-element map shows how \acl{ga} is well-segregated into the \acs{ingaas} 
             ymin=0, ymax=100,
             xmin = 0, xmax=230
         ]
-    \addplot [cb1_orange,] table[x=nm,y=Ga] {3_Growth/s4_III_0deg_linesc.csv};
-    \addplot [cb1_dark_blue,] table[x=nm,y=In] {3_Growth/s4_III_0deg_linesc.csv};
+    \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Crystalline_properties/csv/s4_III_0deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Crystalline_properties/csv/s4_III_0deg_linesc.csv};
     \addlegendentry{Ga}
     \addlegendentry{In}
     \end{axis}
@@ -376,15 +375,15 @@ The III-element map shows how \acl{ga} is well-segregated into the \acs{ingaas} 
             ymin=0, ymax=100,
             xmin = 0, xmax=230
         ]
-    \addplot [cb1_orange,] table[x=nm,y=As] {3_Growth/s4_V_0deg_linesc.csv};
-    \addplot [cb1_dark_blue,] table[x=nm,y=P] {3_Growth/s4_V_0deg_linesc.csv};
+    \addplot [cb1_orange,] table[x=nm,y=As] {4_Crystalline_properties/csv/s4_V_0deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Crystalline_properties/csv/s4_V_0deg_linesc.csv};
     \addlegendentry{As}
     \addlegendentry{P}
     \end{axis}
 
     \end{tikzpicture}
     }
-    \caption{\acs{eds} linescans for the \subref{subfig:s3_III_linesc} III elements and \subref{subfig:s3_V_linesc} V elements across a quantum well. 0 is before the well itself on the side of the \acs{si} seed, and higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed.}
+    \caption{\acs{eds} linescans for the \subref{subfig:s4_III_0deg_linesc} III elements and \subref{ssubfig:s4_V_0deg_linesc} V elements across all three quantum well of the \qty{0}{\degree} sample seen in Figure~\ref{subfig:s4_OV}. The origin of the x-axis is situated before the first well, and is the closest point to the \acs{si} seed, and higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed.}
     \label{fig:s4_0deg_linescans}
 \end{figure}
 
