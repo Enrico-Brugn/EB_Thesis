@@ -1,4 +1,4 @@
-\chapter{Crystalline properties of TASE-grown nanowires}
+\chapter{Properties of TASE-grown nanowires}
 \label{chap:properties}
 
 The critical growth mechanisms and single-facet \hkl{111}\(_B\) growth front stabilisation method were explored and developed in Chapter~\ref{chap:growth}. However, the lack of in-plane \hkl{1 1 1} directions in the \hkl(0 0 1) \acf{soi} wafer on which growth was carried out complicates the analysis of the growth results. The two possible \hkl{1 1 1} facets are tilted and, therefore, yield calculations and contacting of devices become more complex, as the process through which one of the facets is selected for stabilisation is dependent on the shape and orientation of the nucleating crystal on the \acs{si} seed.
@@ -255,13 +255,13 @@ A compromise can be found by cutting the sample with a \qty{30}{\degree} tilt in
     \acs{bf}-\acs{stem_m} overview images of two nanowires from sample 4. The wire on the left was cut with a regular cross-section, while the wire on the right was cut with a \qty{30}{\degree} cross-section.
     \label{subfig:s4_OV}
     }{
-    \includegraphics[width = 0.48\textwidth]{4_Crystalline_properties/Fig/s4_OV.pdf}
+    \includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s4_OV.pdf}
     }
     \subcaptionbox{
     High-resolution \acs{bf}-\acs{stem_m} images of the first \acl{qw} for both wires in \subref{subfig:s4_OV} with \acs{fft} inserts.
     \label{subfig:s4_HR}
     }{
-    \includegraphics[width = 0.48\textwidth]{4_Crystalline_properties/Fig/s4_HR.pdf}
+    \includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s4_HR.pdf}
     }
     \caption{Growth recipe and \acs{bf}-\acs{stem_m} images of sample 4. The III-V material appears dark due to channelling contrast, with \acs{ingaas} being the darkest of the two III-V materials. \subref{subfig:recipe4} shows the growth recipe. \subref{subfig:s4_OV} shows overview images of the normal cross-section and \qty{30}{\degree} cross-section. \subref{subfig:s4_HR} shows high-resolution images of the first \acl{qw} for both wires in \subref{subfig:s4_OV} with inserts showing the calculated \acs{fft}s}
     \label{fig:s4_recipe_STEM}
@@ -321,13 +321,13 @@ Both the \acs{ingaas} well and \acs{inp} growth rates increase as the growth fro
         III-element \acs{eds} map. Red \acs{in}, blue \acs{ga}
         \label{subfig:s4_0deg_IIImap_wells}
         }{
-        \includegraphics[width=0.48\textwidth]{4_Crystalline_properties/Fig/s4_0deg_IIImap_wells.pdf}
+        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/s4_0deg_IIImap_wells.pdf}
     }
     \subcaptionbox{
         V-element \acs{eds} map. Red \acs{as}, blue \acs{p}
         \label{subfig:s4_0deg_Vmap_wells}
         }{
-        \includegraphics[width=0.48\textwidth]{4_Crystalline_properties/Fig/s4_0deg_Vmap_wells.pdf}
+        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/s4_0deg_Vmap_wells.pdf}
     }
     \caption{\acs{eds} maps of the \acl{qw} region of the \qty{0}{\degree} sample in Figure~\ref{subfig:s4_OV}. The seed is out of frame on the left of the images.}
     \label{fig:s4_0deg_EDS_maps_wells}
@@ -354,8 +354,8 @@ The III-element map shows how \acl{ga} is well-segregated into the \acs{ingaas} 
             ymin=0, ymax=100,
             xmin = 0, xmax=230
         ]
-    \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Crystalline_properties/csv/s4_III_0deg_linesc.csv};
-    \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Crystalline_properties/csv/s4_III_0deg_linesc.csv};
+    \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/s4_III_0deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/s4_III_0deg_linesc.csv};
     \addlegendentry{Ga}
     \addlegendentry{In}
     \end{axis}
@@ -377,8 +377,8 @@ The III-element map shows how \acl{ga} is well-segregated into the \acs{ingaas} 
             ymin=0, ymax=100,
             xmin = 0, xmax=230
         ]
-    \addplot [cb1_orange,] table[x=nm,y=As] {4_Crystalline_properties/csv/s4_V_0deg_linesc.csv};
-    \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Crystalline_properties/csv/s4_V_0deg_linesc.csv};
+    \addplot [cb1_orange,] table[x=nm,y=As] {4_Properties/csv/s4_V_0deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Properties/csv/s4_V_0deg_linesc.csv};
     \addlegendentry{As}
     \addlegendentry{P}
     \end{axis}
@@ -413,7 +413,7 @@ As the precursor flows were not altered from those of previous samples, the V / 
             ymin=0, ymax=1000,
             xmin = 1268.8, xmax=1600.3
             ]
-            \addplot [cb1_dark_blue,] table[x=wavelength,y=intensity] {4_Crystalline_properties/csv/s4_pl.csv};
+            \addplot [cb1_dark_blue,] table[x=wavelength,y=intensity] {4_Properties/csv/s4_pl.csv};
             \addlegendentry{Sample 4}
         \end{axis}
     \end{tikzpicture}
@@ -494,7 +494,7 @@ As such, it becomes important to minimise the length of this nucleation layer as
     \label{subfig:SEM_array}
     }{
     \begin{tikzpicture}
-        \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Crystalline_properties/Fig/SEM_array.pdf}};
+        \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/SEM_array.pdf}};
         \node [white] at (5, -3) {\qty{4}{\micro\metre}};
         \node [white, rotate=24] at (-4, 1.6) {\acs{si}};
         \node [white, rotate=24] at (-3.1, 1.9) {III-V};
@@ -506,7 +506,7 @@ As such, it becomes important to minimise the length of this nucleation layer as
     \acs{bf}-\acs{stem_m} overview images of a nanowires from sample 5.
     \label{subfig:s5_OV}
     }{
-    \includegraphics[width = 0.48\textwidth]{4_Crystalline_properties/Fig/s5_OV.pdf}
+    \includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s5_OV.pdf}
     }
     \caption{\acs{mocvd} recipe and growth results for sample 5. \subref{subfig:recipe5} shows the \acs{mocvd} growth recipe. \subref{subfig:SEM_array} shows an \acs{sem_m} image of an array of nanowires. The image was recorded with the stage tilted \qty{52}{\degree}. An in-plane \hkl<1 1 0> direction runs parallel to the bottom margin of the image. \subref{subfig:s5_OV} sho3ws a \acs{bf}-\acs{stem_m} overview images of a nanowires. The \acs{si} seed is on the left of the III-V nanowire.}
     \label{fig:s5_recipe_microscopy}
@@ -532,8 +532,8 @@ As such, it becomes important to minimise the length of this nucleation layer as
             ymin=0, ymax=100,
             xmin = 0, xmax=230
         ]
-    \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Crystalline_properties/csv/s5_III_0deg_linesc.csv};
-    \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Crystalline_properties/csv/s5_III_0deg_linesc.csv};
+    \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/s5_III_0deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/s5_III_0deg_linesc.csv};
     \addlegendentry{Ga}
     \addlegendentry{In}
     \end{axis}
@@ -555,8 +555,8 @@ As such, it becomes important to minimise the length of this nucleation layer as
             ymin=0, ymax=100,
             xmin = 0, xmax=230
         ]
-    \addplot [cb1_orange,] table[x=nm,y=As] {4_Crystalline_properties/csv/s5_V_0deg_linesc.csv};
-    \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Crystalline_properties/csv/s5_V_0deg_linesc.csv};
+    \addplot [cb1_orange,] table[x=nm,y=As] {4_Properties/csv/s5_V_0deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Properties/csv/s5_V_0deg_linesc.csv};
     \addlegendentry{As}
     \addlegendentry{P}
     \end{axis}
@@ -584,17 +584,19 @@ As such, it becomes important to minimise the length of this nucleation layer as
             ymin=0, ymax=1000,
             xmin = 1268.8, xmax=1600.3
             ]
-            \addplot [cb1_dark_blue,] table[x=wavelength,y=intensity] {4_Crystalline_properties/csv/s4_pl.csv};
-            \addplot [cb1_orange,] table[x=wavelength,y=intensity] {4_Crystalline_properties/csv/s5_pl.csv};
+            \addplot [cb1_dark_blue,] table[x=wavelength,y=intensity] {4_Properties/csv/s4_pl.csv};
+            \addplot [cb1_orange,] table[x=wavelength,y=intensity] {4_Properties/csv/s5_pl.csv};
             \addlegendentry{Sample 4}
             \addlegendentry{Sample 5}
         \end{axis}
     \end{tikzpicture}
     \caption{Photoluminescence spectra of two nanowires from samples 4 and 5. These spectra were kindly recorded by Markus Scherrer.}
-    \label{fig:s4_pl}
+    \label{fig:s5_pl}
 \end{figure}
 
-\paragraph{Photoluminescence analysis}
+\paragraph{Photoluminescence analysis} Figure~\ref{fig:s5_pl} compares a photoluminescence spectrum recorded for sample 5 with the one shown in Figure~\ref{fig:s4_pl}. The measurement conditions were left largely unchanged. The main differences were the sample temperature, which was \qty{-100}{\kelvin}, and the excitation wavelength, set at \qty{1060}{\nano\metre}. Therefore, despite the small change in wavelength, the laser pulse was fired to excite the \acs{ingaas} material layer.
+
+As expected from the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, the emission peak moves to a lower wavelength.
 \par
 
 
@@ -602,9 +604,11 @@ As such, it becomes important to minimise the length of this nucleation layer as
 
 
 
-\section{Merge Structures}
+\subsection{Merge Structures}
 
 \section{Growth of Strained Heterolayers}
+\subsection{Arsenides and phosphides}
+\subsection{antimonides}
 
 
 
@@ -638,7 +642,7 @@ As such, it becomes important to minimise the length of this nucleation layer as
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{4_Crystalline_properties/From_Article2/Figure4.pdf}
+    \includegraphics[width=\textwidth]{4_Properties/From_Article2/Figure4.pdf}
     \caption{Characterisation results for sample 1. (a) BF-STEM image of the cross-section of one of the nanowires and corresponding schematic composition drawing. (b) growth rates of \acs{ingaas}, in orange, and \acs{inp}, in dark blue. Error bars on all x coordinates, and y coordinates of the \acs{inp} series, are smaller than the graphical markers. (c) composition profiles calculated from an EDS line scan recorded on the location and with the direction marked by the red arrow in (a).}
     \label{fig:growth_rates}
 \end{figure}
@@ -651,7 +655,7 @@ A growth rate analysis is shown in Figure~\ref{fig:growth_rates}.b, revealing a 
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{4_Crystalline_properties/From_Article2/Figure5.pdf}
+    \includegraphics[width=\textwidth]{4_Properties/From_Article2/Figure5.pdf}
     \caption{Analysis of sample 2. (a) BF-STEM image of the III-V nanowire, \num{9} lines corresponding to the arsenide layers and corresponding schematic drawing with coloured layers indicating the design composition. Composition profiles for the 7th (b), 8th (c), and 9th (d) wells are calculated from EDS line scans carried out across the respective quantum well from left to right, in the direction parallel to the growth axis.}
     \label{fig:composition}
 \end{figure}
@@ -666,7 +670,7 @@ The growth rates of the \acs{ingaas} and \acs{inp} layers were assessed with a p
 
 \begin{figure}
     \centering
-    \includegraphics{4_Crystalline_properties/From_Article2/Figure6.png}
+    \includegraphics{4_Properties/From_Article2/Figure6.png}
     \caption{STEM analysis of quantum wells created in wide structures from the multiple nucleation sites. (a) Top-view schematic of the structure. b) Plane-view image showing five adjacent structures (c) ADF-STEM image of one structure. (d) High-resolution BF-STEM image of a single quantum well.}
     \label{fig:plane_view}
 \end{figure}
@@ -677,7 +681,7 @@ Figure~\ref{fig:plane_view}.b shows a BF-STEM plane-view image of five adjacent 
 
 \begin{figure}
     \centering
-    \includegraphics[width = \textwidth]{4_Crystalline_properties/From_Article2/merging_analysis.pdf}
+    \includegraphics[width = \textwidth]{4_Properties/From_Article2/merging_analysis.pdf}
     \caption{TEM analysis of the sampvisualisedFINITIVE FIGURE. PLEASE HEINZ, SEND RAW TEM IMAGES)}
     \label{fig:TEM}
 \end{figure}
