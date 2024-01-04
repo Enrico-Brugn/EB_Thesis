@@ -563,12 +563,37 @@ As such, it becomes important to minimise the length of this nucleation layer as
 
     \end{tikzpicture}
     }
-    \caption{\acs{eds} linescan compositional data (in percentage) for the \subref{subfig:s5_III_0deg_linesc} III elements and \subref{subfig:s5_V_0deg_linesc} V elements across all three \acl{qw} of the \qty{0}{\degree} sample seen in Figure~\ref{subfig:s5_OV}. The origin of the x-axis is situated before the first well and is the closest point to the \acs{si} seed. Higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed.}
+    \caption{\acs{eds} linescan compositional data (in percentage) for the \subref{subfig:s5_III_0deg_linesc} III elements and \subref{subfig:s5_V_0deg_linesc} V elements across all three \acl{qw} of the sample seen in Figure~\ref{subfig:s5_OV}. The origin of the x-axis is situated before the first well and is the closest point to the \acs{si} seed. Higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed.}
     \label{fig:s5_0deg_linescans}
 \end{figure}
 
 \paragraph{\acs{eds} analysis}
 \par
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width = 0.8\textwidth,
+            height = 5cm,
+            xlabel = Wavelegth (nm),
+            ylabel = Intensity (a.u.),
+            table/col sep=comma,
+            %title = Photoluminescence Spectrum,
+            legend pos=outer north east,
+            ymin=0, ymax=1000,
+            xmin = 1268.8, xmax=1600.3
+            ]
+            \addplot [cb1_dark_blue,] table[x=wavelength,y=intensity] {4_Crystalline_properties/csv/s4_pl.csv};
+            \addplot [cb1_orange,] table[x=wavelength,y=intensity] {4_Crystalline_properties/csv/s5_pl.csv};
+            \addlegendentry{Sample 4}
+            \addlegendentry{Sample 5}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Photoluminescence spectra of two nanowires from samples 4 and 5. These spectra were kindly recorded by Markus Scherrer.}
+    \label{fig:s4_pl}
+\end{figure}
+
 \paragraph{Photoluminescence analysis}
 \par
 
