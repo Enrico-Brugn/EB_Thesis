@@ -284,6 +284,7 @@ The comparison between the two wires at high resolution in Figure~\ref{subfig:s4
 
 Both samples grew from silicon seeds that appear (in print) towards the centre of the image and grew out toward the margins. The initial \acs{ingaas} nucleation layer gives way to a lighter \acs{inp} layer in both lamellae, however, the length of this layer appears different. This could be due to a different shape of the nucleation \acs{ingaas}'s growth front. A trace of the complexity of this interface is seen at the bottom of the first well of the \qty{30}{\degree} cross-section. The bottom of this heterostructure appears bent towards the seed, suggesting that the \acs{inp} layer did not have enough time to grow to annihilate all the non-\hkl{1 1 1} facets.
 
+\sisetup{detect-all = true}
 \begin{table}[]
     \centering
     \caption{Growth rates for each heterolayer in the two nanowires in Figure~\ref{fig:s4_recipe_STEM}}.
@@ -299,10 +300,11 @@ Both samples grew from silicon seeds that appear (in print) towards the centre o
         \acs{inp} barrier 2 & \num[separate-uncertainty=true]{19.7 (0.2)} & \num[separate-uncertainty=true]{23.6 (0.1)} \\
         \acs{ingaas} well 3 & \num[separate-uncertainty=true]{43 (1)} & \num[separate-uncertainty=true]{39.1 (0.9)} \\
         \acs{inp} barrier 3 & \num[separate-uncertainty=true]{20.0 (0.2)} & \num[separate-uncertainty=true]{25.0 (0.1)} \\ \hline
-        \textbf{wire total} & \num[separate-uncertainty=true]{22.5 (0.2)} & \num[separate-uncertainty=true]{24.4 (0.2)} \\ \hline \hline
+        \textbf{wire total} & \textbf{\num[separate-uncertainty=true]{22.5 (0.2)}} & \textbf{\num[separate-uncertainty=true]{24.4 (0.2)}} \\ \hline \hline
     \end{tabular}
     \label{tab:s4_growth_rates}
 \end{table}
+\sisetup{detect-all = false}
 
 \paragraph{Growth rates} The growth rates for each material layer in the wires of Figure~\ref{fig:s4_recipe_STEM} are summarised in Table~\ref{tab:s4_growth_rates}. These values were calculated by taking seven repeated measurements of each layer thickness perpendicularly to each heterointerface and are therefore comparable to the \hkl{1 1 1} growth rates of sample 3 (Table~\ref{tab:sample3_growth_rates}).
 
@@ -429,7 +431,7 @@ One of the nanowires at the edge of one of the comb structures shown in Figure~\
 
 As such, it becomes important to minimise the length of this nucleation layer as much as possible if the photoluminescence spectrum of the \acs{ingaas} heterostructures is to be recorded.
 
-\section{Minimization of Nucleation Layer Thickness}
+\section{Minimisation of Nucleation Layer Thickness}
 
 \begin{sidewaysfigure}
     \centering
@@ -503,7 +505,7 @@ As such, it becomes important to minimise the length of this nucleation layer as
     \end{tikzpicture}
     }
     \subcaptionbox{
-    \acs{bf}-\acs{stem_m} overview images of a nanowires from sample 5.
+    \acs{bf}-\acs{stem_m} overview image of a nanowire from sample 5.
     \label{subfig:s5_OV}
     }{
     \includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s5_OV.pdf}
@@ -511,6 +513,25 @@ As such, it becomes important to minimise the length of this nucleation layer as
     \caption{\acs{mocvd} recipe and growth results for sample 5. \subref{subfig:recipe5} shows the \acs{mocvd} growth recipe. \subref{subfig:SEM_array} shows an \acs{sem_m} image of an array of nanowires. The image was recorded with the stage tilted \qty{52}{\degree}. An in-plane \hkl<1 1 0> direction runs parallel to the bottom margin of the image. \subref{subfig:s5_OV} sho3ws a \acs{bf}-\acs{stem_m} overview images of a nanowires. The \acs{si} seed is on the left of the III-V nanowire.}
     \label{fig:s5_recipe_microscopy}
 \end{sidewaysfigure}
+
+After examining the photoluminescence results of sample 4 (Figure~\ref{fig:s4_pl}) the recipe was adjusted to minimise the effect of the \acs{ingaas} nucleation layer. Previous experience in the research group at \acs{ibm} Research Europe - Zurich has shown that this layer, grown with a target composition of \ce{In0_.53Ga0_.47As}, has a positive effect on the nucleation yield of III-Vs on \acs{si}. However, once nucleation is achieved, it does not serve a further purpose in the experiments described in this chapter. 
+
+Given its possible negative impact on the photoluminescence analysis of the samples, a new \acf{mocvd} recipe was created, shown in Figure~\ref{subfig:recipe5}. The step time for the nucleation \acs{ingaas} layer was reduced to \qty{30}{\second}. The deposition time of the \acs{inp} stabilisation layer was increased to \qty{450}{\second} to keep the \acs{ingaas} \acl{qw}s far from the nucleation layer. This was also meant to ensure the stabilisation of the single-facet \hkl{1 1 1} growth front, to avoid situations such as the one seen in the \qty{30}{\degree} cross-section of sample 4 (Figure~\ref{subfig:s4_OV}), where the first quantum well followed a multi-faceted growth front. 
+
+Part of one of the nanowire arrays designed in Figure~\ref{subfig:110_design2} was imaged at a \qty{52}{\degree} angle with \acs{sem_m}. The resulting image is shown in Figure~\ref{subfig:SEM_array}. The various elements of the \acs{tase} structures are visible. Various \acs{si} seeds are anchored to each rectangular \acs{si} backbone. The III-V semiconductor nanowires appear as the brighter segments after the seeds. The empty templates follow the III-V material, ending in the opening of the template visible in the centre of the image created by the \acf{icp} etching. 
+
+Already in Figure~\ref{subfig:SEM_array}, the low competitiveness of the growth process is qualitatively inferable, as the length of the nanowires in the middle of the array is not noticeably different from that of the nanowires at the edges.
+
+Figure~\ref{subfig:s5_OV} shows a \acs{bf}-\acs{stem_m} image of a nanowire from sample 5. The \acs{si} seed is on the left of the image. The variable thickness of the lamella, manifested by the decreasing height (from left to right) of the top platinum layer, leftover from \acs{fib} sample preparation, contributes to a progressive darkening of the \acs{inp} stabilisation layer towards the seed. Furthermore, the absence of a hold step after the nucleation layer makes the heterointerface between the arsenide and phosphide layer more "blurred". These factors make the now thin \acs{ingaas} layer not immediately identifiable by channelling contrast, unlike in Figure~\ref{subfig:s4_OV}.
+
+All visible heterointerfaces, including the final facet of the nanowire exposed to the protective platinum on the right of the image, appear sharp in this image. The heterointerfaces also give the reader a snapshot of the growth front, which is composed of a single \hkl{1 1 1} facet after the \acs{inp} stabilisation layer.
+
+
+
+
+
+
+
 
 \paragraph{Growth rate}
 \par
@@ -594,9 +615,11 @@ As such, it becomes important to minimise the length of this nucleation layer as
     \label{fig:s5_pl}
 \end{figure}
 
-\paragraph{Photoluminescence analysis} Figure~\ref{fig:s5_pl} compares a photoluminescence spectrum recorded for sample 5 with the one shown in Figure~\ref{fig:s4_pl}. The measurement conditions were left largely unchanged. The main differences were the sample temperature, which was \qty{-100}{\kelvin}, and the excitation wavelength, set at \qty{1060}{\nano\metre}. Therefore, despite the small change in wavelength, the laser pulse was fired to excite the \acs{ingaas} material layer.
+\paragraph{Photoluminescence analysis} Figure~\ref{fig:s5_pl} compares a photoluminescence spectrum recorded for sample 5 with the one shown in Figure~\ref{fig:s4_pl}. The measurement conditions were left largely unchanged. The main differences were the sample temperature, which was \qty{-100}{\kelvin}, and the excitation wavelength, set at \qty{1060}{\nano\metre}. Therefore, despite the small change in wavelength, the material targeted for analysis remained \acs{ingaas}.
 
-As expected from the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, the emission peak moves to a lower wavelength.
+The emission peak of the \acl{qw}s is found at a lower wavelength compared to that of the peak of sample 4. This could be due to the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, however, as the peak is much narrower for this sample, a quantum well effect could be present. Unfortunately, due to the noise level of the \acs{eds} composition profiles, it is difficult to attribute the spectral changes to either of these changes.
+
+REWRITE LAST
 \par
 
 
@@ -608,9 +631,11 @@ As expected from the higher \acl{in} concentration seen in Figure~\ref{subfig:s5
 
 \section{Growth of Strained Heterolayers}
 \subsection{Arsenides and phosphides}
+\subsubsection{stress analysis}
+\subsection{Growth in a competitive environment}
 \subsection{antimonides}
 
-
+\section{Discussion and future developments}
 
 
 
