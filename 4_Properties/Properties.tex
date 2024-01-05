@@ -290,7 +290,7 @@ Both samples grew from silicon seeds that appear (in print) towards the centre o
     \caption{Growth rates for each heterolayer in the two nanowires in Figure~\ref{fig:s4_recipe_STEM}}.
     \begin{tabular}{l|c c}
          & \multicolumn{2}{c}{growth rates (\nmmin)} \\
-        heterolayer & \qty{0}{\degree} cross-section & \qty{30}{\degree} cross-section \\ \hline
+        material layer & \qty{0}{\degree} cross-section & \qty{30}{\degree} cross-section \\ \hline
         \acs{ingaas} nucleation & \num[separate-uncertainty=true]{29.0 (0.2)} & \num[separate-uncertainty=true]{42.4 (0.3)} \\
         \acs{inp} stabilisation & \num[separate-uncertainty=true]{18.3 (0.1)} & \num[separate-uncertainty=true]{4.7 (0.2)} \\ \hline
         \textbf{pre-wells layers} & \textbf{\num[separate-uncertainty=true]{23.7 (0.1)}} & \textbf{\num[separate-uncertainty=true]{23.6 (0.3)}} \\ \hline
@@ -526,15 +526,28 @@ Figure~\ref{subfig:s5_OV} shows a \acs{bf}-\acs{stem_m} image of a nanowire from
 
 All visible heterointerfaces, including the final facet of the nanowire exposed to the protective platinum on the right of the image, appear sharp in this image. The heterointerfaces also give the reader a snapshot of the growth front, which is composed of a single \hkl{1 1 1} facet after the \acs{inp} stabilisation layer.
 
+\begin{table}
+    \centering
+    \caption{Growth rates for the superlattice region of sample 5.}
+    \begin{tabular}{c|c c c c c c}
+       & \multicolumn{3}{c}{\acs{ingaas}} & \multicolumn{3}{c}{\acs{inp}} \\
+       material layer & well 1 & well 2 & well 3 & barrier 1 & barrier 2 & barrier 3 \\ \hline
+       growth rates (\nmmin) & \num[separate-uncertainty=true]{43 (3)} & \num[separate-uncertainty=true]{39 (2)} & \num[separate-uncertainty=true]{44 (4)} & \num[separate-uncertainty=true]{28.0 (0.2)} & \num[separate-uncertainty=true]{30.2 (0.1)} & \num[separate-uncertainty=true]{32.7 (0.2)} \\ \hline \hline
+    \end{tabular}
+    \label{tab:s5_growth_rates}
+\end{table}
 
+\paragraph{Growth rate} The growth rate calculation methodology remains unchanged for this sample and consists of taking the average of \num{7} repeated measurements of layer thickness perpendicularly to each subsequent heterointerface. The error expresses the \qty{95}{\%} confidence interval around the growth rate value, and the deposition time is assumed to be error-free.
 
-
-
-
-
-
-\paragraph{Growth rate}
+Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material layer in the \acs{ingaas}-\acs{inp} quantum well structure. The \acs{ingaas} growth rates remain similar to those calculated for sample 4, despite the halving of the \acs{ingaas} deposition time. Conversely, the \acs{inp} growth rate is higher by between \qty{7}{\nmmin} and \qty{10}{\nmmin}, despite the fact that the \acs{inp} deposition step time was not altered from that of recipe 4.
 \par
+
+
+
+
+
+
+
 
 \begin{figure}
     \centering
