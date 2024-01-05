@@ -539,7 +539,7 @@ All visible heterointerfaces, including the final facet of the nanowire exposed 
 
 \paragraph{Growth rate} The growth rate calculation methodology remains unchanged for this sample and consists of taking the average of \num{7} repeated measurements of layer thickness perpendicularly to each subsequent heterointerface. The error expresses the \qty{95}{\%} confidence interval around the growth rate value, and the deposition time is assumed to be error-free.
 
-Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material layer in the \acs{ingaas}-\acs{inp} quantum well structure. The \acs{ingaas} growth rates remain similar to those calculated for sample 4, despite the halving of the \acs{ingaas} deposition time. Conversely, the \acs{inp} growth rate is higher by between \qty{7}{\nmmin} and \qty{10}{\nmmin}, despite the fact that the \acs{inp} deposition step time was not altered from that of recipe 4.
+Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material layer in the \acs{ingaas}-\acs{inp} quantum well structure. The \acs{ingaas} growth rates remain similar to those calculated for sample 4, despite the halving of the \acs{ingaas} deposition time. Conversely, the \acs{inp} growth rate is higher by between \qty{7}{\nmmin} and \qty{10}{\nmmin}, despite the fact that the \acs{inp} deposition step time was not altered from that of recipe 4. This discrepancy could indicate a 
 \par
 
 
@@ -564,7 +564,7 @@ Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material la
             %title = III element composition,
             legend pos=outer north east,
             ymin=0, ymax=100,
-            xmin = 0, xmax=230
+            xmin = 0, xmax=348.61
         ]
     \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/s5_III_0deg_linesc.csv};
     \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/s5_III_0deg_linesc.csv};
@@ -587,7 +587,7 @@ Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material la
             %title = V element composition,
             legend pos=outer north east,
             ymin=0, ymax=100,
-            xmin = 0, xmax=230
+            xmin = 0, xmax=348.61
         ]
     \addplot [cb1_orange,] table[x=nm,y=As] {4_Properties/csv/s5_V_0deg_linesc.csv};
     \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Properties/csv/s5_V_0deg_linesc.csv};
