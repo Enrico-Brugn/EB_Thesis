@@ -196,7 +196,7 @@ A compromise can be found by cutting the sample with a \qty{30}{\degree} tilt in
 \begin{sidewaysfigure}
     \centering
     \subcaptionbox{
-    Growth recipe for sample 4 \cite{Brugnolotto2023}. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed 10 times. The quantum well growth loop was executed three times.
+    Growth recipe for sample 4 \cite{Brugnolotto2023}. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed 10 times. The \acl{qw} growth loop was executed three times.
     \label{subfig:recipe4}
     }{
     \begin{tikzpicture}
@@ -399,7 +399,7 @@ The V-element composition profile of Figure~\ref{subfig:s4_V_0deg_linesc} was ca
 
 As the precursor flows were not altered from those of previous samples, the V / III ratios remain as in Table~\ref{tab:sample1_ratios}. The higher concentration of \acl{ga} in the \acl{qw}s could therefore be caused by the change in the geometry of the template given by the difference in device layer thickness of the \hkl<1 1 0> \acs{soi} wafer.
 
-\subsection{Photoluminescence data}
+\subsection{Photoluminescence analysis}
 
 \begin{figure}
     \centering
@@ -436,7 +436,7 @@ As such, it becomes important to minimise the length of this nucleation layer as
 \begin{sidewaysfigure}
     \centering
     \subcaptionbox{
-    Growth recipe for sample 4 \cite{Brugnolotto2023_2}. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed 10 times. The quantum well growth loop was executed three times.
+    Growth recipe for sample 4 \cite{Brugnolotto2023_2}. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed 10 times. The \acl{qw} growth loop was executed three times.
     \label{subfig:recipe5}
     }{
     \begin{tikzpicture}
@@ -516,7 +516,7 @@ As such, it becomes important to minimise the length of this nucleation layer as
 
 After examining the photoluminescence results of sample 4 (Figure~\ref{fig:s4_pl}) the recipe was adjusted to minimise the effect of the \acs{ingaas} nucleation layer. Previous experience in the research group at \acs{ibm} Research Europe - Zurich has shown that this layer, grown with a target composition of \ce{In0_.53Ga0_.47As}, has a positive effect on the nucleation yield of III-Vs on \acs{si}. However, once nucleation is achieved, it does not serve a further purpose in the experiments described in this chapter. 
 
-Given its possible negative impact on the photoluminescence analysis of the samples, a new \acf{mocvd} recipe was created, shown in Figure~\ref{subfig:recipe5}. The step time for the nucleation \acs{ingaas} layer was reduced to \qty{30}{\second}. The deposition time of the \acs{inp} stabilisation layer was increased to \qty{450}{\second} to keep the \acs{ingaas} \acl{qw}s far from the nucleation layer. This was also meant to ensure the stabilisation of the single-facet \hkl{1 1 1} growth front, to avoid situations such as the one seen in the \qty{30}{\degree} cross-section of sample 4 (Figure~\ref{subfig:s4_OV}), where the first quantum well followed a multi-faceted growth front. 
+Given its possible negative impact on the photoluminescence analysis of the samples, a new \acf{mocvd} recipe was created, shown in Figure~\ref{subfig:recipe5}. The step time for the nucleation \acs{ingaas} layer was reduced to \qty{30}{\second}. The deposition time of the \acs{inp} stabilisation layer was increased to \qty{450}{\second} to keep the \acs{ingaas} \acl{qw}s far from the nucleation layer. This was also meant to ensure the stabilisation of the single-facet \hkl{1 1 1} growth front, to avoid situations such as the one seen in the \qty{30}{\degree} cross-section of sample 4 (Figure~\ref{subfig:s4_OV}), where the first \acl{qw} followed a multi-faceted growth front. 
 
 Part of one of the nanowire arrays designed in Figure~\ref{subfig:110_design2} was imaged at a \qty{52}{\degree} angle with \acs{sem_m}. The resulting image is shown in Figure~\ref{subfig:SEM_array}. The various elements of the \acs{tase} structures are visible. Various \acs{si} seeds are anchored to each rectangular \acs{si} backbone. The III-V semiconductor nanowires appear as the brighter segments after the seeds. The empty templates follow the III-V material, ending in the opening of the template visible in the centre of the image created by the \acf{icp} etching. 
 
@@ -539,15 +539,10 @@ All visible heterointerfaces, including the final facet of the nanowire exposed 
 
 \paragraph{Growth rate} The growth rate calculation methodology remains unchanged for this sample and consists of taking the average of \num{7} repeated measurements of layer thickness perpendicularly to each subsequent heterointerface. The error expresses the \qty{95}{\%} confidence interval around the growth rate value, and the deposition time is assumed to be error-free.
 
-Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material layer in the \acs{ingaas}-\acs{inp} quantum well structure. The \acs{ingaas} growth rates remain similar to those calculated for sample 4, despite the halving of the \acs{ingaas} deposition time. Conversely, the \acs{inp} growth rate is higher by between \qty{7}{\nmmin} and \qty{10}{\nmmin}, despite the fact that the \acs{inp} deposition step time was not altered from that of recipe 4. This discrepancy could indicate a 
+Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material layer in the \acs{ingaas}-\acs{inp} \acl{qw} structure. The \acs{ingaas} growth rates remain similar to those calculated for sample 4, despite the halving of the \acs{ingaas} deposition time. Conversely, the \acs{inp} growth rate is higher by between \qty{7}{\nmmin} and \qty{10}{\nmmin}, despite the fact that the \acs{inp} deposition step time was not altered from that of recipe 4. 
+
+This discrepancy in growth rate evolution for the \acs{inp} and \acs{ingaas} layers could indicate a small dependency of the growth rate on deposition time. This can be due to the time required to exchange the precursor molar fractions in the template becoming less and less negligible as the step time lowers.
 \par
-
-
-
-
-
-
-
 
 \begin{figure}
     \centering
@@ -601,7 +596,11 @@ Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material la
     \label{fig:s5_0deg_linescans}
 \end{figure}
 
-\paragraph{\acs{eds} analysis}
+\paragraph{\acs{eds} analysis} An \acs{eds} linescan measurement was carried out across the \acs{inp}-\acs{ingaas} \acl{qw} region. After elaboration with the \acf{gms}, the two composition profiles, one for III elements, and the other for V elements, is reported in Figure~\ref{fig:s5_0deg_linescans}. The linescan was recorded starting from before the first \acl{qw} and moved across the superlattice towards the end of the wire, stopping after the third \acl{qw}.
+
+Figure~\ref{subfig:s5_III_0deg_linesc} shows a graph of the concentration, in atomic percentage, of \acl{ga} and \acl{in}, calculated from the relative intensity of their respective L\(_\alpha\) lines and their \acs{eds} cross-section. Unlike previous samples, the \acl{ga} contamination following the \acs{ingaas} \acl{qw} is absent in the starting portion of the \acs{inp} well. The lower overall concentration of \acl{ga} in the \acl{qw} could, however, simply make a trailing \acl{ga} contamination too small to be noticeable above the \qty{10}{\%} noise level affecting the concentration measurement. The composition of the quantum well can be estimated at approximately \ce{In0_.4Ga0_.6As}.
+
+The concentrations of \acl{as} and \acl{p} in Figure~\ref{subfig:s5_V_0deg_linesc} were calculated from their respective K\(_\alpha\) lines. The noise level is around \qty{20}{\%}, however, the presence of a post-\acs{ingaas} \acl{as} contamination in the \acs{inp} barrier layer remains clearly distinguishable from the background noise. 
 \par
 
 \begin{figure}
@@ -628,9 +627,9 @@ Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material la
     \label{fig:s5_pl}
 \end{figure}
 
-\paragraph{Photoluminescence analysis} Figure~\ref{fig:s5_pl} compares a photoluminescence spectrum recorded for sample 5 with the one shown in Figure~\ref{fig:s4_pl}. The measurement conditions were left largely unchanged. The main differences were the sample temperature, which was \qty{-100}{\kelvin}, and the excitation wavelength, set at \qty{1060}{\nano\metre}. Therefore, despite the small change in wavelength, the material targeted for analysis remained \acs{ingaas}.
+\paragraph{Photoluminescence analysis} Figure~\ref{fig:s5_pl} compares a photoluminescence spectrum recorded for sample 5 with that shown in Figure~\ref{fig:s4_pl}. The measurement conditions were left largely unchanged. The main differences were the sample temperature, which was \qty{-100}{\kelvin}, and the excitation wavelength, set at \qty{1060}{\nano\metre}. Therefore, despite the small change in wavelength, the material targeted for analysis remained \acs{ingaas}.
 
-The emission peak of the \acl{qw}s is found at a lower wavelength compared to that of the peak of sample 4. This could be due to the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, however, as the peak is much narrower for this sample, a quantum well effect could be present. Unfortunately, due to the noise level of the \acs{eds} composition profiles, it is difficult to attribute the spectral changes to either of these changes.
+The emission peak of the \acl{qw}s is found at a lower wavelength compared to that of the peak of sample 4. This could be due to the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, however, as the peak is much narrower for this sample, a \acl{qw} effect could be present. Unfortunately, due to the noise level of the \acs{eds} composition profiles, it is difficult to attribute the spectral changes to either of these changes.
 
 REWRITE LAST
 \par
