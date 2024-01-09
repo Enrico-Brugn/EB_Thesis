@@ -529,19 +529,19 @@ All visible heterointerfaces, including the final facet of the nanowire exposed 
 \begin{table}
     \centering
     \caption{Growth rates for the superlattice region of sample 5.}
-    \begin{tabular}{c|c c c c c c}
-       & \multicolumn{3}{c}{\acs{ingaas}} & \multicolumn{3}{c}{\acs{inp}} \\
+    \begin{tabular}{c|c c c|c c c}
+       & \multicolumn{3}{c}{\acs{ingaas}} & \multicolumn{3}{|c}{\acs{inp}} \\
        material layer & well 1 & well 2 & well 3 & barrier 1 & barrier 2 & barrier 3 \\ \hline
        growth rates (\nmmin) & \num[separate-uncertainty=true]{43 (3)} & \num[separate-uncertainty=true]{39 (2)} & \num[separate-uncertainty=true]{44 (4)} & \num[separate-uncertainty=true]{28.0 (0.2)} & \num[separate-uncertainty=true]{30.2 (0.1)} & \num[separate-uncertainty=true]{32.7 (0.2)} \\ \hline \hline
     \end{tabular}
     \label{tab:s5_growth_rates}
 \end{table}
 
-\paragraph{Growth rate} The growth rate calculation methodology remains unchanged for this sample and consists of taking the average of \num{7} repeated measurements of layer thickness perpendicularly to each subsequent heterointerface. The error expresses the \qty{95}{\%} confidence interval around the growth rate value, and the deposition time is assumed to be error-free.
+\paragraph{Growth rate} The growth rate calculation methodology remains unchanged for this sample and consists of taking the average of \num{7} repeated measurements of layer thickness perpendicularly to each subsequent heterointerface. The error expresses the \qty{95}{\%} confidence interval around the growth rate value and it is assumed that the deposition time is error-free.
 
-Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material layer in the \acs{ingaas}-\acs{inp} \acl{qw} structure. The \acs{ingaas} growth rates remain similar to those calculated for sample 4, despite the halving of the \acs{ingaas} deposition time. Conversely, the \acs{inp} growth rate is higher by between \qty{7}{\nmmin} and \qty{10}{\nmmin}, despite the fact that the \acs{inp} deposition step time was not altered from that of recipe 4. 
+Table~\ref{tab:s5_growth_rates} summarises the growth rates for each material layer in the \acs{ingaas}-\acs{inp} \acl{qw} structure. The \acs{ingaas} growth rates remain similar to those calculated for sample 4, despite the halving of the \acs{ingaas} deposition time. On the contrary, \acs{inp} growth rate is higher by between \qty{7}{\nmmin} and \qty{10}{\nmmin}, despite the fact that the \acs{inp} deposition step time was not altered from the recipe used for sample 4 (Figure~\ref{subfig:recipe4}). 
 
-This discrepancy in growth rate evolution for the \acs{inp} and \acs{ingaas} layers could indicate a small dependency of the growth rate on deposition time. This can be due to the time required to exchange the precursor molar fractions in the template becoming less and less negligible as the step time lowers.
+This discrepancy in growth rate evolution for the \acs{inp} and \acs{ingaas} layers could indicate a small dependency of the growth rate on deposition time. This may be due to the time required to exchange the precursor molar fractions in the template becoming less and less negligible as the step time lowers.
 \par
 
 \begin{figure}
@@ -598,9 +598,11 @@ This discrepancy in growth rate evolution for the \acs{inp} and \acs{ingaas} lay
 
 \paragraph{\acs{eds} analysis} An \acs{eds} linescan measurement was carried out across the \acs{inp}-\acs{ingaas} \acl{qw} region. After elaboration with the \acf{gms}, the two composition profiles, one for III elements, and the other for V elements, is reported in Figure~\ref{fig:s5_0deg_linescans}. The linescan was recorded starting from before the first \acl{qw} and moved across the superlattice towards the end of the wire, stopping after the third \acl{qw}.
 
-Figure~\ref{subfig:s5_III_0deg_linesc} shows a graph of the concentration, in atomic percentage, of \acl{ga} and \acl{in}, calculated from the relative intensity of their respective L\(_\alpha\) lines and their \acs{eds} cross-section. Unlike previous samples, the \acl{ga} contamination following the \acs{ingaas} \acl{qw} is absent in the starting portion of the \acs{inp} well. The lower overall concentration of \acl{ga} in the \acl{qw} could, however, simply make a trailing \acl{ga} contamination too small to be noticeable above the \qty{10}{\%} noise level affecting the concentration measurement. The composition of the quantum well can be estimated at approximately \ce{In0_.4Ga0_.6As}.
+Figure~\ref{subfig:s5_III_0deg_linesc} shows a graph of the concentration, in atomic percentage, of \acl{ga} and \acl{in}, calculated from the relative intensity of their respective L\(_\alpha\) lines and their \acs{eds} cross-section. Unlike previous samples, the \acl{ga} contamination following the \acs{ingaas} \acl{qw} is absent in the starting portion of the \acs{inp} well. The lower overall concentration of \acl{ga} in the \acl{qw} could, however, simply make a trailing \acl{ga} contamination too small to be noticeable above the \qty{10}{\%} noise level that affects the concentration measurement. The composition of the quantum well can be estimated at approximately \ce{In0_.4Ga0_.6As}.
 
-The concentrations of \acl{as} and \acl{p} in Figure~\ref{subfig:s5_V_0deg_linesc} were calculated from their respective K\(_\alpha\) lines. The noise level is around \qty{20}{\%}, however, the presence of a post-\acs{ingaas} \acl{as} contamination in the \acs{inp} barrier layer remains clearly distinguishable from the background noise. 
+The atomic percentage concentrations of \acl{as} and \acl{p} in Figure~\ref{subfig:s5_V_0deg_linesc} were calculated from their respective K\(_\alpha\) lines. The noise level is around \qty{20}{\%}. The presence of a post-\acs{ingaas} \acl{as} contamination in the \acs{inp} barrier layer remains distinguishable from background noise. This is particularly evident when looking at the steepness of the arsenic peaks at each arsenide-phosphide interface. The leading interface is almost vertical while the trailing interface curves down more gently.
+
+These repeated observations (Figures~\ref{fig:s3_linescans}, \ref{fig:s4_0deg_linescans}, and \ref{fig:s5_0deg_linescans}) point to an \acs{ingaas} to \acs{inp} heterointerface definition limitation inherent to the stacking of the material layers. Although the changes in the hold step following the \acs{ingaas} layer did not contribute to the interface definition, they did solve the III-element integration delay issue, as the \acl{as} and \acs{ga} profile remain reliably synced in multiple growth runs.
 \par
 
 \begin{figure}
@@ -627,9 +629,9 @@ The concentrations of \acl{as} and \acl{p} in Figure~\ref{subfig:s5_V_0deg_lines
     \label{fig:s5_pl}
 \end{figure}
 
-\paragraph{Photoluminescence analysis} Figure~\ref{fig:s5_pl} compares a photoluminescence spectrum recorded for sample 5 with that shown in Figure~\ref{fig:s4_pl}. The measurement conditions were left largely unchanged. The main differences were the sample temperature, which was \qty{-100}{\kelvin}, and the excitation wavelength, set at \qty{1060}{\nano\metre}. Therefore, despite the small change in wavelength, the material targeted for analysis remained \acs{ingaas}.
+\paragraph{Photoluminescence analysis} Figure~\ref{fig:s5_pl} compares a photoluminescence spectrum recorded for sample 5 with that recorded for sample 4 and shown in Figure~\ref{fig:s4_pl}. The measurement conditions were left largely unchanged. The main alterations affected the sample temperature, which was \qty{-100}{\kelvin} instead of \qty{-200}{\kelvin}, and the excitation wavelength, set at \qty{1060}{\nano\metre} instead of \qty{1060}{\nano\metre}. Therefore, despite the small change in wavelength, the material targeted for analysis remained \acs{ingaas}.
 
-The emission peak of the \acl{qw}s is found at a lower wavelength compared to that of the peak of sample 4. This could be due to the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, however, as the peak is much narrower for this sample, a \acl{qw} effect could be present. Unfortunately, due to the noise level of the \acs{eds} composition profiles, it is difficult to attribute the spectral changes to either of these changes.
+The emission peak of the \acl{qw}s is found at a wavelength lower than that of the peak of sample 4. This could be due to the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, however, as the peak is much narrower for this sample, a \acl{qw} effect could be present. Unfortunately, due to the noise level of the \acs{eds} composition profiles, it is difficult to attribute the spectral changes to either of these changes.
 
 REWRITE LAST
 \par
@@ -640,6 +642,14 @@ REWRITE LAST
 
 
 \subsection{Merge Structures}
+
+
+
+
+
+
+
+
 
 \section{Growth of Strained Heterolayers}
 \subsection{Arsenides and phosphides}
@@ -672,8 +682,6 @@ REWRITE LAST
 %figure 5. E shows the composition profiles for the III- and group elements across the quantum well region. The presence of As impurities immediately after the quantum well layer is again noticeable on the right side of the V element map, as the As and P concentration profiles are asymmetric. This asymmetry is evident when compared with the symmetric composition profiles for the III-group elements, which maintain the interface quality observed in the sample shown in Figure 4. The III composition profile Figure 5. E highlights how the InxGa1-xAs composition is more prosperous in Indium, having an x = 0.60. As the flows into the reactor were not altered from the sample shown in Figure 4, this composition change can also be attributed to the different template geometry.
 
 \section{article 2}
-
-\section{Growth rate stability and merging of nanostructures during growth}
 
 \subsection{Heterointerfaces and growth rate in nanowires}
 
