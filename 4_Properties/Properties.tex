@@ -191,7 +191,7 @@ The most obvious \hkl<1 1 0> direction perpendicular to the \hkl<1 1 1> template
 
 A compromise can be found by cutting the sample with a \qty{30}{\degree} tilt in the stage resulting in the cutting planes drawn on the nanowire on the right in Figure~\ref{fig:110_FIB}. Referring to the direction legend in Figure~\ref{fig:110_FIB}, these expose the \hkl(1 0 1) facet, part of the family of \hkl{1 1 0} facets which all share the same symmetry in the zincblende phase (space group \num{216}) \cite{wyckoff1963crystal, osti_gaas_zb, osti_inas_zb, osti_inp_zb}. This "\qty{30}{\degree} cut" allows an analysis of the evolution of the growth front comparable to the simple cross-section cut used in the previous chapter (Figure~\ref{subfig:FIB_cut_strategy}). Still, tilt means that any material layers not perpendicular to the growth front will appear warped, and, similarly, horizontal and tilted heterointerfaces will be shaded in \acs{eds} analysis. Therefore, a limited use of the regular \qty{90}{\degree} cross section was kept at the beginning for the experiments with the \hkl<1 1 0> wafer.
 
-\section{Application the growth recipe on the new substrate}
+\section{Application of the growth recipe on the new substrate}
 
 \begin{sidewaysfigure}
     \centering
@@ -282,7 +282,7 @@ An evident advantage of the \qty{30}{\degree} cut in combination with the \hkl<1
 
 The comparison between the two wires at high resolution in Figure~\ref{subfig:s4_HR} also highlights the amount of structural information available when viewing a \hkl{1 1 0} plane (on the right) compared to a \hkl{1 1 2} plane (on the left). The presence of \acs{rtp}s is evident in the \qty{30}{\degree} cross-section both in the \acs{bf}-\acs{stem_m} image and in its \acf{fft} in the insert. The \acs{rtp}s have manifested as horizontal lines in the frequency domain. In contrast, both the \hkl{1 1 2} \acs{bf}-\acs{stem_m} image and its \acf{fft} do not contain any trace of this type of defect.
 
-Both samples grew from silicon seeds that appear (in print) towards the centre of the image and grew out toward the margins. The initial \acs{ingaas} nucleation layer gives way to a lighter \acs{inp} layer in both lamellae, however, the length of this layer appears different. This could be due to a different shape of the nucleation \acs{ingaas}'s growth front. A trace of the complexity of this interface is seen at the bottom of the first well of the \qty{30}{\degree} cross-section. The bottom of this heterostructure appears bent towards the seed, suggesting that the \acs{inp} layer did not have enough time to grow to annihilate all the non-\hkl{1 1 1} facets.
+Both samples grew from \acl{si} seeds that appear (in print) towards the centre of the image and grew out toward the margins. The initial \acs{ingaas} nucleation layer gives way to a lighter \acs{inp} layer in both lamellae, however, the length of this layer appears different. This could be due to a different shape of the nucleation \acs{ingaas}'s growth front. A trace of the complexity of this interface is seen at the bottom of the first well of the \qty{30}{\degree} cross-section. The bottom of this heterostructure appears bent towards the seed, suggesting that the \acs{inp} layer did not have enough time to grow to annihilate all the non-\hkl{1 1 1} facets.
 
 \sisetup{detect-all = true}
 \begin{table}[]
@@ -644,6 +644,7 @@ The emission peak of the \acl{qw}s is found at a wavelength lower than that of t
     }{
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.35\textwidth]{4_Properties/Fig/SEM_merge_bulk.pdf}};
+            \draw[|-|, white] (0.3,-2) -- (2,-2)  node[midway, anchor=south, white] {\qty{500}{\nano\metre}};
         \end{tikzpicture}
     }
     \subcaptionbox{
@@ -652,19 +653,74 @@ The emission peak of the \acl{qw}s is found at a wavelength lower than that of t
     }{
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.61\textwidth]{4_Properties/Fig/SEM_merge_lamella.pdf}};
+            \draw[|-|, white] (1.5,-2) -- (3.7,-2)  node[midway, anchor=south, white] {\qty{500}{\nano\metre}};
         \end{tikzpicture}
     }
     \caption{\acs{sem_m} image of merge structures taken \subref{subfig:SEM_merge_bulk} before and \subref{subfig:SEM_merge_lamella} during \acs{fib} lamella cut-out and thinning.}
     \label{fig:SEM_merge}
 \end{figure}
 
-In addition to the nanowire arrays (Figure~\ref{subfig:SEM_array}), sample 5 contained the multi-seed structures shown in Figure~\ref{fig:SEM_merge}.
+In addition to the nanowire arrays (Figure~\ref{subfig:SEM_array}), sample 5 contained the multi-seed structures shown in Figure~\ref{fig:SEM_merge}. These structures were processed (template opening, sacrificial \acl{si} etch-back, and \acs{mocvd} growth) at the same time as the arrays seen in the previous section. In these multi-seed structures, three seed regions are provided for III-V nucleation. The template design then forces the three growing crystals into a larger template area where they can come into contact with each other and merge. This type of structure is expected to introduce defects at the merging locations, even in the case of simultaneous nucleation on all three seeds \cite{Mauthe2021}.
 
+Various avenues of stress relaxation in epitaxially grown III-V crystals induce alterations in their lattice, making the merging of two different crystals a prime defect-nucleating event \cite{Jacobsson2015}. The nucleation of defects is common even in situations where lattice rotations follow the symmetry rules of the crystals \cite{Rossi2023}. If small (\qty{1}{\degree} to \qty{5}{\degree}) tilt of the III-V crystalline axis from the \hkl<1 1 1> axis occurs to relax stress, as seen in sample 4 (Figure~\ref{subfig:s4_OV}) it is expected to lead to a similar defect-nucleating situation.
 
+Figure~\ref{subfig:SEM_merge_bulk} shows the merge structures as they appear after \acs{mocvd} growth. In this top-down \acs{sem_m} image, the templates are orientated along an in-plane \hkl<1 1 1> direction and present a single \hkl{1 1 1} end facet. The III-V material can be seen filling the areas corresponding to the three seeds without any noticeable voids. 
 
+The \acs{sem_m} image in Figure~\ref{subfig:SEM_merge_lamella} shows the same structures already seen in Figure~\ref{subfig:SEM_merge_bulk} in the final phases of \acs{fib} processing. The lamella was cut using the "plane view" technique (Figure~\ref{fig:110_FIB} left) to access multiple structures simultaneously on a \hkl<1 1 0> viewing axis at the \acs{stem_m}. Three lighter lines are already visible in each structure with \acs{sem_m} at this magnification level.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{4_Properties/Fig/merge_OV.pdf}
+    \caption{\acs{bf}-\acs{stem_m} overview image of the lamella containing five merge structures. The thinning damaged the leftmost structure \cite{Brugnolotto2023_2}.}
+    \label{fig:merge_ov}
+\end{figure}
 
+In Figure~\ref{fig:merge_ov}, each structure's three \acl{si} seeds appear at the top of the lamella. The (comparatively) electron transparent \acs{sio2} template outlines each of the five III-V structures. The \acs{fib} thinning partially damaged the leftmost structure, as too much material was removed from the seed area at the top left most of the lamella. The varying thickness of the lamella can be inferred by the darkness of the platinum layer between the III-V structure. Despite the best efforts made during \acs{fib} lamella preparation, the lamella is slightly thicker towards the bottom of the image, but this does not affect the quality of the image in the structure area, at this magnification level.
 
+The first three structures have \qty{50}{\nano\metre} wide seed areas, while the two on the right have \qty{70}{\nano\metre} wide seeds. This small structural difference does not result in any appreciable change in the final III-V crystals, which all follow the template shape. The three lines corresponding to the arsenide layers are better visible in this \acs{bf}-\acs{stem_m} image, and all appear at the same distance from the \acs{si} seed.
+
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        \acs{bf}-\acs{stem_m} overview image.
+        \label{subfig:STEM_merge_structure_ov}
+    }{
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/merge_structure_OV.pdf}};
+            \node[anchor=south, white] at (3.4,1.1) {\num{1}};
+            \node[anchor=south, white] at (3.4,-0.5) {\num{2}};
+            \node[anchor=south, white] at (3.4,-2.2) {\num{3}};
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        \acs{df}-\acs{tem_m} overview image.
+        \label{subfig:TEM_merge_structure_ov}
+    }{
+        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/TEM_merge_structure_OV.pdf}
+    }
+    \subcaptionbox{
+        Seed 1.
+        \label{subfig:STEM_merge_seed1}
+    }{
+        \includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed1.pdf}
+    }
+    \subcaptionbox{
+        Seed 2.
+        \label{subfig:STEM_merge_seed2}
+    }{
+        \includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed2.pdf}
+    }
+    \subcaptionbox{
+        Seed 3.
+        \label{subfig:STEM_merge_seed3}
+    }{
+        \includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed3.pdf}
+    }
+    \caption{\subref{subfig:STEM_merge_structure_ov} \acs{bf}-\acs{stem_m} and \subref{subfig:TEM_merge_structure_ov} \acs{df}-\acs{tem_m} overview images of a single merge structure. \subref{subfig:STEM_merge_seed1}, \subref{subfig:STEM_merge_seed2} and \subref{subfig:STEM_merge_seed3} are \acs{bf}-\acs{stem_m} of the the nucleation areas 1, 2, and 3 as marked in \subref{subfig:STEM_merge_structure_ov}, respectively.}
+    \label{fig:merge_ov_seeds}
+\end{figure}
+
+The presence of three heterolayers is confirmed in the single-structure \acs{bf}-\acs{stem_m} and \acl{df} \acl{tem_m} (\acs{df}-\acs{tem_m}) overviews of Figures~\ref{subfig:STEM_merge_structure_ov} and \ref{subfig:TEM_merge_structure_ov}.
 
 
 
