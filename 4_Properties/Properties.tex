@@ -598,7 +598,7 @@ This discrepancy in growth rate evolution for the \acs{inp} and \acs{ingaas} lay
 
 \paragraph{\acs{eds} analysis} An \acs{eds} linescan measurement was carried out across the \acs{inp}-\acs{ingaas} \acl{qw} region. After elaboration with the \acf{gms}, the two composition profiles, one for III elements, and the other for V elements, is reported in Figure~\ref{fig:s5_0deg_linescans}. The linescan was recorded starting from before the first \acl{qw} and moved across the superlattice towards the end of the wire, stopping after the third \acl{qw}.
 
-Figure~\ref{subfig:s5_III_0deg_linesc} shows a graph of the concentration, in atomic percentage, of \acl{ga} and \acl{in}, calculated from the relative intensity of their respective L\(_\alpha\) lines and their \acs{eds} cross-section. Unlike previous samples, the \acl{ga} contamination following the \acs{ingaas} \acl{qw} is absent in the starting portion of the \acs{inp} well. The lower overall concentration of \acl{ga} in the \acl{qw} could, however, simply make a trailing \acl{ga} contamination too small to be noticeable above the \qty{10}{\%} noise level that affects the concentration measurement. The composition of the quantum well can be estimated at approximately \ce{In0_.4Ga0_.6As}.
+Figure~\ref{subfig:s5_III_0deg_linesc} shows a graph of the concentration, in atomic percentage, of \acl{ga} and \acl{in}, calculated from the relative intensity of their respective L\(_\alpha\) lines and their \acs{eds} cross-section. Unlike previous samples, the \acl{ga} contamination following the \acs{ingaas} \acl{qw} is absent in the starting portion of the \acs{inp} well. The lower overall concentration of \acl{ga} in the \acl{qw} could, however, simply make a trailing \acl{ga} contamination too small to be noticeable above the \qty{10}{\%} noise level that affects the concentration measurement. The composition of the \acl{qw} can be estimated at approximately \ce{In0_.4Ga0_.6As}.
 
 The atomic percentage concentrations of \acl{as} and \acl{p} in Figure~\ref{subfig:s5_V_0deg_linesc} were calculated from their respective K\(_\alpha\) lines. The noise level is around \qty{20}{\%}. The presence of a post-\acs{ingaas} \acl{as} contamination in the \acs{inp} barrier layer remains distinguishable from background noise. This is particularly evident when looking at the steepness of the arsenic peaks at each arsenide-phosphide interface. The leading interface is almost vertical while the trailing interface curves down more gently.
 
@@ -722,10 +722,31 @@ The first three structures have \qty{50}{\nano\metre} wide seed areas, while the
 
 The nucleation areas of this structure are shown in high-resolution \acs{bf}-\acs{stem_m} images in Figures~\ref{subfig:STEM_merge_seed1}, \ref{subfig:STEM_merge_seed2}, and \ref{subfig:STEM_merge_seed3}. The \acl{si} seed is visible at the top of the images. The \acs{si} / III-V interface is well defined, showing the epitaxial relationship between the two lattices. The crystal appears to have nucleated towards the centre of the \acs{si} seed surface at all three nucleation sites. The \acs{ingaas} nucleation layer appears lighter in correspondence to the corners of the seed surface, likely due to a smaller amount of material in that area. As the crystal grows, it fills the \qty{50}{\nano\metre} wide template within the first 25 atomic bilayers.
 
-The presence of an initial \acs{ingaas} followed by the \acs{inp} stabilisation layer within all three nucleation areas confirms that the simultaneous nucleation of three crystals has occurred for each structure. Once they outgrew the \acs{sio2} separators, these crystals must merge in the following template region. As seen in both Figures~\ref{subfig:STEM_merge_structure_ov} and \ref{subfig:TEM_merge_structure_ov}, the template is completely filled with III-V material, which has grown into the shape of the template. This excludes the formation of voids in this growth regime; however, the nucleation of point, line, and plane defects is still possible in the areas where the three crystals have come into contact with each other.
+The presence of an initial \acs{ingaas} followed by the \acs{inp} stabilisation layer within all three nucleation areas confirms that the simultaneous nucleation of three crystals has occurred for each structure. Once they outgrew the \acs{sio2} separators, these crystals must merge in the following template region. As seen in both Figures~\ref{subfig:STEM_merge_structure_ov} and \ref{subfig:TEM_merge_structure_ov}, the template is completely filled with III-V material, which has grown into the shape of the template. This excludes the formation of voids in this growth regime; however, the nucleation of point, line, and plane defects is still possible in the areas where the three crystals have come into contact with each other. 
+
+It is important to note that this occurs even though the thickness of the \acs{ingaas} layer is different in the three seed regions. Seed one has a \acs{ingaas} thickness of \qty[separate-uncertainty=true]{28.3 (0.8)}{\nano\metre}, seed two shows a \qty[separate-uncertainty=true]{24.4 (0.3)}{\nano\metre} thick \acs{ingaas} nucleation layer, and the third nucleation layer has a length of \qty[separate-uncertainty=true]{23.1 (0.9)}{\nano\metre}. All three numbers are the result of averaging seven repeated measurements, and their errors represent the \qty{95}{\%} confidence interval. 
 
 The presence of three heterolayers for each structure is reflected in the single-structure \acs{bf}-\acs{stem_m} and \acl{df} \acl{tem_m} (\acs{df}-\acs{tem_m}) overviews of Figures~\ref{subfig:STEM_merge_structure_ov} and \ref{subfig:TEM_merge_structure_ov}. They are arsenide heterostructures, as shown by the contrast with the surrounding \acs{inp}, delimited by two single-facet \hkl{1 1 1} heterointerfaces. The similarity of these heterostructures to those seen in single nucleation nanowires, such as those in Figures~\ref{subfig:s5_OV} and \ref{subfig:s4_OV}, suggests that a highly ordered growth dynamic takes place in the template.
 
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        \acs{bf}-\acs{tem_m} image of a likely merging region.
+        \label{subfig:merge_region}
+    }{
+        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/merge_region.pdf}
+    }
+    \subcaptionbox{
+        \acs{bf}-\acs{stem_m} image of a \acl{qw}.
+        \label{subfig:merge_qw}
+    }{
+        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/merge_qw.pdf}
+    }
+    \caption{High resolution microscopy images for lattice analysis. \subref{subfig:merge_region} shows a \acs{df}-\acs{tem_m} image the region immediately after one of the spacers between the seed areas (visible in the bottom right of the image). \subref{subfig:merge_qw} shows a high-resolution \acs{bf}-\acs{tem_m} image of the first \acl{qw} (counting from the nucleation areas) in the common part of the template.}
+    \label{fig:merge_high-res}
+\end{figure}
+
+Figure~\ref{subfig:merge_region} shows a magnified \acs{bf}-\acs{tem_m} image of the area immediately after the \acs{sio2} separation between the nucleation regions 2 and 3 as marked in Figure~\ref{subfig:STEM_merge_structure_ov}.
 
 
 
@@ -735,6 +756,8 @@ The presence of three heterolayers for each structure is reflected in the single
 
 
 
+
+\paragraph{Growth rate}
 \section{Growth of Strained Heterolayers}
 \subsection{Arsenides and phosphides}
 \subsubsection{stress analysis}
@@ -747,25 +770,37 @@ The presence of three heterolayers for each structure is reflected in the single
 
 
 
-%\section{article1}
-%\begin{figure}
-%    \centering
-%    \includegraphics[width=\textwidth]{3_Growth/ICMOVPEXXFig5.png}
-%    \caption{STEM image and EDS maps of a lamella cut from one of the nanowires grown on a <110> SOI. A) Overview of the BF-STEM image of the nanowire. The silicon seed is on the left, and silicon oxide is on the top and bottom. The entire heterostructure stack is visible due to channelling contrast: InGaAs appear darker than InP. B) Color-coded EDS map of the region highlighted by the red square in (A): in red In concentration and blue Ga concentration. C) Color-coded EDS map of the region highlighted by the red square in (A): red As concentration and blue P concentration. D) High-resolution BF-STEM detail of the 10-nm-thick InGaAs well. E) EDS line-scan spectra recorded across the InGaAs and highlighted in (D) by the red arrow showing scan direction.}
-%    \label{fig:ICMOVPEXXFig5}
-%\end{figure}
 
-%In the previous examples, a <001> device layer SOI was used as a growth substrate, where a multi-faceted growth front can develop, leading to poor geometric control, composition variations for ternaries, and in any case, a heterointerface which is not perpendicular to the growth direction, which is an undesirable situation for device fabrication. This can be circumvented using a Si wafer orientation with vertical {111} crystal planes as available on an <110> SOI wafer—
-
-%hfigure 5. A shows a BF-STEM image of a nanowire with vertical and well-defined hetero-interfaces. 
-
-%A similar level of As background impurities is present after each InGaAs segment, as shown in Figure 5. B, while Figure 5. C shows how Ga is well confined to the respective layer. 
-
-%The high-resolution BF-STEM image in Figure 5.D shows the heterointerface between the 85-nm-thick InP on the image's left- and right-hand side and the 14-nm-thick InGaAs quantum well structure that appears as a dark layer in the middle of the image. The extracted <111>B growth rates are 25.5 nm/min for InP and 42.9 nm/min for InGaAs, respectively. This marks an increase in growth rate attributed to the different template shapes, as template height was reduced from 220 nm to 70 nm—
-
-%figure 5. E shows the composition profiles for the III- and group elements across the quantum well region. The presence of As impurities immediately after the quantum well layer is again noticeable on the right side of the V element map, as the As and P concentration profiles are asymmetric. This asymmetry is evident when compared with the symmetric composition profiles for the III-group elements, which maintain the interface quality observed in the sample shown in Figure 4. The III composition profile Figure 5. E highlights how the InxGa1-xAs composition is more prosperous in Indium, having an x = 0.60. As the flows into the reactor were not altered from the sample shown in Figure 4, this composition change can also be attributed to the different template geometry.
 
 \section{article 2}
+\subsection{\texorpdfstring{Growth of wide \acl{qw} structures from multiple \acs{si} seeds}{Growth of wide quantum well structures from multiple Si seeds}}
+
+\begin{figure}
+    \centering
+    \includegraphics{4_Properties/From_Article2/Figure6.png}
+    \caption{STEM analysis of quantum wells created in wide structures from the multiple nucleation sites. (a) Top-view schematic of the structure. b) Plane-view image showing five adjacent structures (c) ADF-STEM image of one structure. (d) High-resolution BF-STEM image of a single quantum well.}
+    \label{fig:plane_view}
+\end{figure}
+
+%To demonstrate the robustness of the developed epitaxy process as well as growth recipes, we fabricated test structures of larger width. Furthermore, the template contains not only one \acs{si} nucleation area, but three. Thus the III-V crystal is nucleated in three points simultaneously and develops into short nanowires. These nanowires are then forced to merge into one large platelet of well-defined geometry. The schematic of the structure is illustrated in Figure~\ref{fig:plane_view}.a.
+%\par
+%Figure~\ref{fig:plane_view}.b shows a BF-STEM plane-view image of five adjacent structures after STEM lamella preparation. The image shows a high consistency in the overall size of the grown structures and in the presence of the overall \num{15} quantum wells. A single structure is shown in Figure~\ref{fig:plane_view}.c using annular dark field (ADF-)STEM. The three light grey lines correspond to the \acs{ingaas} quantum wells. 
+The high-resolution BF-STEM image in Figure~\ref{fig:plane_view}.d shows one of these quantum wells appearing in darker grey, with additional contrast from alternating stacking sequences forming twin planes which are commonly observed for \hkl<111>\(_B\) growth\cite{Johansson2006}. The quantum well runs uniformly throughout the entire width of the structure, indicating that the growth at this position took place on a single \hkl{111} plane. No other crystal defects were detected in STEM mode. To increase the sensitivity to detect structural defects, standard TEM analysis was performed as well (Figure~\ref{fig:TEM}).
+
+\begin{figure}
+    \centering
+    \includegraphics[width = \textwidth]{4_Properties/From_Article2/merging_analysis.pdf}
+    \caption{TEM analysis of the sampvisualisedFINITIVE FIGURE. PLEASE HEINZ, SEND RAW TEM IMAGES)}
+    \label{fig:TEM}
+\end{figure}
+
+No propagating dislocations or anti-boundary defects from merging the three initial crystals could be detected. However, this does not exclude the presence of lattice defects which could not be visualised under these imaging conditions. It is unlikely for the three crystal lattices to merge in a perfect registry without the formation of defects\cite{Jacobsson2015, Rossi2023}. However, here the resulting defects remain confined: growth of smooth quantum wells that extend straight across the entire width of the structure would otherwise be impossible.
+\par
+These observations can be explained by the specific sample geometry, growth directions, and material properties involved. The experiment is arranged in such a way that a \hkl{111} growth front dominates, and no other growth planes are formed. This is achieved by setting a growth condition favouring slow growth along the main \hkl<111> direction and fast growth in the \hkl<110> directions. Under these conditions, efficient step flow occurs on the \hkl{111} facets. In such a configuration, the first wire to extend into the widening template section would spill over the spacre-stabilisesg it from the neighbouring wires and find itself supported on the other wire's \hkl{111} surface. Due to the efficient step flow on the \hkl{111} facets, mismatches of a few monolayers among the three wires are quickly resolved by the formation of one large growth surface that re-stabilises a single \hkl{111} growth front. A single crystal is established beyond these merging points, and growth can extend further into the template cavity.
+\par
+These structures share strong indications of local growth rate uniformity and simultaneous nucleation. The \num{5.7} width-to-height aspect ratio of the design \qtyproduct{400 x 70}{nm} cross-section is higher than the \num{5} width-to-height aspect ratio (\qtyproduct{3000 x 500}{nm} cross-section) used by \citeauthor{Han2020} and shows a marked improvement in the control of shape and thickness of internal heterostructures. Further, our growth (carried out at \qty{580}{\degreeCelsius}) results are consistent with those obtained homoepitaxially at \qty{570}{\degreeCelsius} with a width-to-height cross-section of \num{20} by \citeauthor{Goswami2020}.
+
+
 
 \subsection{Heterointerfaces and growth rate in nanowires}
 
@@ -795,28 +830,21 @@ The \acs{ingaas} segment, with a target composition of \ce{In0_.53Ga0_.47As}, gr
 \par
 The growth rates of the \acs{ingaas} and \acs{inp} layers were assessed with a process analogous to the one used for the growth rates of sample 1. The \acs{inp} growth rates is \qty[separate-uncertainty=true]{23.8 (0.3)}{\nano\metre\per\minute} between the first \acs{inas} and the first \acs{ingaas} wells and \qty[separate-uncertainty=true]{24.0 (0.4)}{\nano\metre\per\minute} between the third \acs{inas} and the third \acs{ingaas} wells. The \acs{ingaas} growth rates are \qty[separate-uncertainty=true]{39 (3)}{\nano\metre\per\minute} for the first \acs{ingaas} well and \qty[separate-uncertainty=true]{44 (2)}{\nano\metre\per\minute} for the third \acs{ingaas} well. All values are averaged from repeated measurements, and errors are given with 95\% certainty. Thus, the growth rates of samples 1 and 2 are comparable for these materials.
 
-\subsection{\texorpdfstring{Growth of wide quantum well structures from multiple \acs{si} seeds}{Growth of wide quantum well structures from multiple Si seeds}}
 
-\begin{figure}
-    \centering
-    \includegraphics{4_Properties/From_Article2/Figure6.png}
-    \caption{STEM analysis of quantum wells created in wide structures from the multiple nucleation sites. (a) Top-view schematic of the structure. b) Plane-view image showing five adjacent structures (c) ADF-STEM image of one structure. (d) High-resolution BF-STEM image of a single quantum well.}
-    \label{fig:plane_view}
-\end{figure}
+%\section{article1}
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=\textwidth]{3_Growth/ICMOVPEXXFig5.png}
+%    \caption{STEM image and EDS maps of a lamella cut from one of the nanowires grown on a <110> SOI. A) Overview of the BF-STEM image of the nanowire. The silicon seed is on the left, and silicon oxide is on the top and bottom. The entire heterostructure stack is visible due to channelling contrast: InGaAs appear darker than InP. B) Color-coded EDS map of the region highlighted by the red square in (A): in red In concentration and blue Ga concentration. C) Color-coded EDS map of the region highlighted by the red square in (A): red As concentration and blue P concentration. D) High-resolution BF-STEM detail of the 10-nm-thick InGaAs well. E) EDS line-scan spectra recorded across the InGaAs and highlighted in (D) by the red arrow showing scan direction.}
+%    \label{fig:ICMOVPEXXFig5}
+%\end{figure}
 
-To demonstrate the robustness of the developed epitaxy process as well as growth recipes, we fabricated test structures of larger width. Furthermore, the template contains not only one \acs{si} nucleation area, but three. Thus the III-V crystal is nucleated in three points simultaneously and develops into short nanowires. These nanowires are then forced to merge into one large platelet of well-defined geometry. The schematic of the structure is illustrated in Figure~\ref{fig:plane_view}.a.
-\par
-Figure~\ref{fig:plane_view}.b shows a BF-STEM plane-view image of five adjacent structures after STEM lamella preparation. The image shows a high consistency in the overall size of the grown structures and in the presence of the overall \num{15} quantum wells. A single structure is shown in Figure~\ref{fig:plane_view}.c using annular dark field (ADF-)STEM. The three light grey lines correspond to the \acs{ingaas} quantum wells. The high-resolution BF-STEM image in Figure~\ref{fig:plane_view}.d shows one of these quantum wells appearing in darker grey, with additional contrast from alternating stacking sequences forming twin planes which are commonly observed for \hkl<111>\(_B\) growth\cite{Johansson2006}. The quantum well runs uniformly throughout the entire width of the structure, indicating that the growth at this position took place on a single \hkl{111} plane. No other crystal defects were detected in STEM mode. To increase the sensitivity to detect structural defects, standard TEM analysis was performed as well (Figure~\ref{fig:TEM}).
+%In the previous examples, a <001> device layer SOI was used as a growth substrate, where a multi-faceted growth front can develop, leading to poor geometric control, composition variations for ternaries, and in any case, a heterointerface which is not perpendicular to the growth direction, which is an undesirable situation for device fabrication. This can be circumvented using a Si wafer orientation with vertical {111} crystal planes as available on an <110> SOI wafer—
 
-\begin{figure}
-    \centering
-    \includegraphics[width = \textwidth]{4_Properties/From_Article2/merging_analysis.pdf}
-    \caption{TEM analysis of the sampvisualisedFINITIVE FIGURE. PLEASE HEINZ, SEND RAW TEM IMAGES)}
-    \label{fig:TEM}
-\end{figure}
+%hfigure 5. A shows a BF-STEM image of a nanowire with vertical and well-defined hetero-interfaces. 
 
-No propagating dislocations or anti-boundary defects from merging the three initial crystals could be detected. However, this does not exclude the presence of lattice defects which could not be visualised under these imaging conditions. It is unlikely for the three crystal lattices to merge in a perfect registry without the formation of defects\cite{Jacobsson2015, Rossi2023}. However, here the resulting defects remain confined: growth of smooth quantum wells that extend straight across the entire width of the structure would otherwise be impossible.
-\par
-These observations can be explained by the specific sample geometry, growth directions, and material properties involved. The experiment is arranged in such a way that a \hkl{111} growth front dominates, and no other growth planes are formed. This is achieved by setting a growth condition favouring slow growth along the main \hkl<111> direction and fast growth in the \hkl<110> directions. Under these conditions, efficient step flow occurs on the \hkl{111} facets. In such a configuration, the first wire to extend into the widening template section would spill over the spacre-stabilisesg it from the neighbouring wires and find itself supported on the other wire's \hkl{111} surface. Due to the efficient step flow on the \hkl{111} facets, mismatches of a few monolayers among the three wires are quickly resolved by the formation of one large growth surface that re-stabilises a single \hkl{111} growth front. A single crystal is established beyond these merging points, and growth can extend further into the template cavity.
-\par
-These structures share strong indications of local growth rate uniformity and simultaneous nucleation. The \num{5.7} width-to-height aspect ratio of the design \qtyproduct{400 x 70}{nm} cross-section is higher than the \num{5} width-to-height aspect ratio (\qtyproduct{3000 x 500}{nm} cross-section) used by \citeauthor{Han2020} and shows a marked improvement in the control of shape and thickness of internal heterostructures. Further, our growth (carried out at \qty{580}{\degreeCelsius}) results are consistent with those obtained homoepitaxially at \qty{570}{\degreeCelsius} with a width-to-height cross-section of \num{20} by \citeauthor{Goswami2020}.
+%A similar level of As background impurities is present after each InGaAs segment, as shown in Figure 5. B, while Figure 5. C shows how Ga is well confined to the respective layer. 
+
+%The high-resolution BF-STEM image in Figure 5.D shows the heterointerface between the 85-nm-thick InP on the image's left- and right-hand side and the 14-nm-thick InGaAs quantum well structure that appears as a dark layer in the middle of the image. The extracted <111>B growth rates are 25.5 nm/min for InP and 42.9 nm/min for InGaAs, respectively. This marks an increase in growth rate attributed to the different template shapes, as template height was reduced from 220 nm to 70 nm—
+
+%figure 5. E shows the composition profiles for the III- and group elements across the quantum well region. The presence of As impurities immediately after the quantum well layer is again noticeable on the right side of the V element map, as the As and P concentration profiles are asymmetric. This asymmetry is evident when compared with the symmetric composition profiles for the III-group elements, which maintain the interface quality observed in the sample shown in Figure 4. The III composition profile Figure 5. E highlights how the InxGa1-xAs composition is more prosperous in Indium, having an x = 0.60. As the flows into the reactor were not altered from the sample shown in Figure 4, this composition change can also be attributed to the different template geometry.
