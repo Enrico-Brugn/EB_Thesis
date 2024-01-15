@@ -3,11 +3,14 @@
 
 For over a decade, research on monolithic integration of III-V semiconductors has been conducted at \acs{ibm} Research Europe - Zurich. The \acf{tase} method was thought of and developed during this long research effort \cite{borgTASEp2018, Mauthe2021}. \acs{tase} was then applied to integrate emitting and absorbing electronic elements, such as lasing microdisks and nanowire-based photodetectors. As I joined \acs{ibm}, research on both of these device architectures was still ongoing, and, as I was familiarising myself with the tools necessary to conduct my research in the first months of my PhD, I had the opportunity to cooperate with other team members on their projects \cite{Tiwari2021}. Dr. Wen led one such project and aimed to create a single nanowire photodetector. In the end, the project achieved its goal, as seen in \cite{Wen2022}. However, one particular aspect that still needed improvement if the single sample shown in the paper was to be reproducible was the control of the growth front morphology.
 
-Controlling the morphology of the growth front is essential for several reasons. The first is that by ensuring a specific shape of the various heterolayers, the metal-to-semiconductor contact regions can be determined more accurately, aiding in further process steps. The second reason contends with the different integration rates of III elements on different facets. This was already explored by researchers who showed a marked dependence of the atomic fraction of the III element in \acs{ingaas} from the facet on which it was grown \cite{Borg2019}.
+Controlling the morphology of the growth front is essential for several reasons. The first is that by ensuring a specific shape of the various heterolayers, the metal-to-semiconductor contact regions can be determined more accurately, aiding in further process steps. The second reason has to do with the different integration rates of III elements on different facets. This was already explored by researchers who showed a marked dependence of the atomic fraction of the III element in \acs{ingaas} from the facet on which it was grown \cite{Borg2019}.
 
 \begin{figure}
     \centering
-    \includegraphics[width = \textwidth]{3_Growth/wen.pdf}
+    \begin{tikzpicture}
+        \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width = \textwidth]{3_Growth/wen.pdf}}
+        \node[fill=white] at (0, 0) {(A)};
+    \end{tikzpicture}
     \caption{Structural and compositional analysis of a nanowire detector carried out by Wen \textit{et al.} Adapted from \cite{Wen2022} licensed under CC BY 4.0 \cite{CCBY40}.}
     \label{fig:wen}
 \end{figure}
