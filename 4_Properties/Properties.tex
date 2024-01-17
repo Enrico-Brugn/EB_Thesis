@@ -880,10 +880,62 @@ The \qty{30}{\degree} cross-section of a nanowire grown with this revised recipe
 
 The seed surface consists of a single \hkl{1 1 1} facet resulting from the selective etching of \acs{si} carried out with \acs{tmah} before deposition. This surface forms a \qty{90}{\degree} angle with the wafer plane, but, as can be seen in the highlight in Figure \ref{subfig:s6_wire_OV}, the first quantum well, and indeed all the others, are tilted \qty{3}{\degree} off the perpendicular. A slight rotation of the growing lattice compared to the seed's lattice orientation can occur during epitaxy, as it is a way for the growing crystal to compensate for some of the stress caused by lattice mismatch. Despite the \qty{3}{\degree} rotation the stabilisation of the \hkl{1 1 1} facet is achieved during the initial \acs{inp} deposition and maintained along the entirety of the wire.
 
+\paragraph{High resolution analysis}
 
 
 
 
+
+
+
+
+\begin{figure}
+    \centering
+    \tikzsetnextfilename{s6_growth_rates}
+    \begin{tikzpicture}
+        \begin{axis}[%
+            width = 0.8\textwidth,
+            height = 6cm,
+            xlabel = Position (nm),
+            ylabel = Growth Rates (\nmmin),
+            table/col sep=semicolon,
+            error bars/y dir = both, 
+            error bars/y explicit,
+            error bars/x dir = both, 
+            error bars/x explicit,
+            legend pos=outer north east,
+        ]
+        \addplot [cb1_dark_blue,
+                only marks,
+                /pgf/number format/read comma as period,
+                ] 
+                table[
+                        x=Position,
+                        y=Barrier Growth Rate,
+                        x error = P_err,
+                        y error = BG_err
+                        ] {4_Properties/csv/barrierGR.csv};
+        \addlegendentry{InP Barrier }
+        \addplot [cb1_orange,
+                only marks,
+                /pgf/number format/read comma as period,
+                ] 
+                table[
+                        x=Position,
+                        y=Well Growth Rate,
+                        x error = P_err,
+                        y error = WG_err
+                        ] {4_Properties/csv/barrierGR.csv};
+        \addlegendentry{InGaAs Well}
+        \end{axis}
+
+    \end{tikzpicture}
+    \caption{\acs{ingaas} and \acs{inp} material layer growth rates as a function of their distance from the \acs{si} seed surface. Both x and y error bars are present but they are smaller than the markers, except for those on the growth rate of \acs{ingaas}.}
+    \label{fig:s6_growth_rates}
+\end{figure}
+
+\paragraph{Growth rate}
+\paragraph{\acs{eds} analysis}
 
 
 
