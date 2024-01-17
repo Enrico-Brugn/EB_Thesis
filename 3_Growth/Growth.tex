@@ -7,6 +7,7 @@ Controlling the morphology of the growth front is essential for several reasons.
 
 \begin{figure}
     \centering
+    \tikzsetnextfilename{wen}
     \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width = \textwidth]{3_Growth/wen.pdf}};
         \node[fill=white] at (-7.6, -0.3) {(A)};
@@ -70,6 +71,7 @@ Initial growth experiments focussed on nanowires, one of the simplest geometries
     \hkl(0 0 1) in-plane crystalline directions.
     \label{subfig:001wafer_directions}
     }{
+        \tikzsetnextfilename{001wafer_directions}
         \begin{tikzpicture}
             \begin{scope}[scale=0.22]
                 \draw (45:11cm) -- (45:13cm);
@@ -90,6 +92,7 @@ Initial growth experiments focussed on nanowires, one of the simplest geometries
     Microstructure designs.
     \label{subfig:enterprise_design}
     }{
+        \tikzsetnextfilename{enterprise_design}
         \begin{tikzpicture}
             \begin{scope}[scale=0.1]
                 \draw (20, 1) -- ++ (10, 0) -- ++ (-26.6:4.445) -- ++ (0, -6) -- ++ (4, 0) -- ++ (0, 20) -- ++ (-4, 0) -- ++ (0, -6) -- ++ (26.6:-4.445) -- ++ (-10, 0) -- cycle;
@@ -110,6 +113,7 @@ Initial growth experiments focussed on nanowires, one of the simplest geometries
     \acs{si} seed area before growth.
     \label{subfig:enterprise_etchback}
     }{
+        \tikzsetnextfilename{enterprise_etchback}
         \begin{tikzpicture}
             \filldraw[fill=Si_green] (2cm, 0cm) -- (2cm, 22mm) -- (3.5cm, 22mm) -- ++ (-35.3:3.8cm) node[midway, anchor=west]{\rotatebox{-35.3}{\hkl{1 1 1}}} --  node[midway, anchor=south] {\acs{si}} cycle;
             \filldraw[fill=SiO2_blue] (0cm, -10mm) -- (10cm, -10mm) -- (10cm, 0cm) -- (2cm, 0mm)-- (2cm, 22mm) -- (10cm, 22mm) -- (10cm, 32mm) -- (0cm, 32mm) --  node[midway, anchor=west] {\acs{sio2}} cycle; 
@@ -137,6 +141,7 @@ Figure~\ref{subfig:enterprise_etchback} shows the situation of the \acs{si} seed
     Growth recipe \cite{Brugnolotto2023}.
     \label{subfig:recipe1}
     }{
+        \tikzsetnextfilename{recipe1}
     \begin{tikzpicture}
     \begin{scope}
     % lines
@@ -178,7 +183,9 @@ Figure~\ref{subfig:enterprise_etchback} shows the situation of the \acs{si} seed
     \subcaptionbox{
     \qty{52}{\degree} tilted image of III-V nanowires.
     \label{subfig:comb_sample1}
-    }{\begin{tikzpicture}
+    }{
+        \tikzsetnextfilename{comb_sample1}
+    \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.6\textwidth]{3_Growth/Comb_Array_001.pdf}};
         \draw [|-|, white, very thick] (-4.6, -4) -- (-1, -4) node [midway, anchor=south] {\qty{1}{\micro\metre}};
         \draw [|-|] (-4.8, -5.5) -- (-0.4, -5.5) node [midway, anchor=north]{\acs{si} backbone and seed};
@@ -215,7 +222,9 @@ The \acs{sem_m} image in Figure~\ref{subfig:comb_sample1} shows a comb array wit
     \subcaptionbox{
         \acs{sem_m} image of an electron transparent lamella \cite{Brugnolotto2023}.
         \label{subfig:FIB_cut}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{FIB_cut}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{3_Growth/FIB_Cut.pdf}};
             \node [text=white,] at (-2, -2.5) {\acs{sio2}};
             \node [text=white] at (2, 0.3) {\acs{sio2}};
@@ -228,7 +237,9 @@ The \acs{sem_m} image in Figure~\ref{subfig:comb_sample1} shows a comb array wit
     \subcaptionbox{
         Cutting strategy for a cross section in a \hkl(0 0 1) substrate.
         \label{subfig:FIB_cut_strategy}
-        }{\begin{tikzpicture}[isometric]
+        }{
+        \tikzsetnextfilename{FIB_cut_strategy}
+        \begin{tikzpicture}[isometric]
             \path [fill=red!50!, fill opacity=0.3] (-0.5, -0.3, 0.5) -- (-0.5, 1.5, 0.5) -- (5.5, 1.5, 0.5) -- (5.5, -0.3, 0.5) -- cycle;
             \path [fill=red!50!, fill opacity=0.3] (-0.5, -0.3, 1.5) -- (-0.5, 1.5, 1.5) -- (5.5, 1.5, 1.5) -- (5.5, -0.3, 1.5) -- cycle;
             
@@ -269,7 +280,9 @@ The objective of the cut strategy shown in Figure~\ref{subfig:FIB_cut_strategy} 
     \subcaptionbox{
         \acs{bf}-\acs{stem_m} overview of a III-V nanowire cross-section.
         \label{subfig:sample1_cross-sec}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{sample1_cross-sec}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{3_Growth/Sample1_Overview.pdf}};
             \draw [red] (1.25, -1.63) -- (2.9, 0.5); %1.65, 2.13
             \draw [red, dashed] (0.95, 1.93) -- (2.9, 0.5) -- (3.35, 1.1) -- (2.2, 1.93);
@@ -288,21 +301,27 @@ The objective of the cut strategy shown in Figure~\ref{subfig:FIB_cut_strategy} 
     \subcaptionbox{
         \acs{eds} map: red-\acs{in}, green-\acs{si}, blue-\acs{ga}.
         \label{subfig:s1_III_EDS}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s1_III_EDS}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s1_III_EDS.pdf}};
         \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{eds} map: red-\acs{as}, green-\acs{p}, blue-\acs{in}.
         \label{subfig:s1_V_EDS}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s1_V_EDS}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s1_V_EDS.pdf}};
         \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{bf}-\acs{stem_m} detail of the \acs{si}/\acs{ingaas} interface.
         \label{subfig:si-ingaas_s1}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{si-ingaas_s1}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/Si_interface_sample1.pdf}};
             \node [white] at (2, -1) {\acs{ingaas}};
             \node at (-3, 3) {\acs{si}};
@@ -347,6 +366,7 @@ Regarding growth dynamics, the main finding from the sample in Figure~\ref{fig:s
     Growth recipe for sample 2 \cite{Brugnolotto2023}.
     \label{subfig:recipe2}
     }{
+        \tikzsetnextfilename{recipe2}
     \begin{tikzpicture}
     \begin{scope}
     % lines
@@ -388,7 +408,9 @@ Regarding growth dynamics, the main finding from the sample in Figure~\ref{fig:s
     \subcaptionbox{
         \acs{sem_m} image of the lamella for sample 2.
         \label{subfig:FIB_cut_2}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{FIB_cut_2}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = \textwidth]{3_Growth/Sample2_FIB.pdf}};
             \node [text=white,] at (0, -2.5) {\acs{sio2}};
             \node [text=white] at (0, 0.2) {\acs{sio2}};
@@ -420,21 +442,27 @@ It is interesting to notice how the contrast of the III-V / upper \acs{sio2} lay
     \subcaptionbox{
         \acs{bf}-\acs{stem_m} image of the right wire of sample 2 \cite{Brugnolotto2023}.
         \label{subfig:s2_r_ov}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s2_r_ov}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = \textwidth]{3_Growth/S2_right_overview.pdf}};
         \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{eds} map: red-\acs{in}, blue-\acs{ga} \cite{Brugnolotto2023}.
         \label{subfig:s2_III_ov_EDS}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s2_III_ov_EDS}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s2_III_ov_EDS.pdf}};
         \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{eds} map: red-\acs{as}, blue-\acs{p} \cite{Brugnolotto2023}.
         \label{subfig:s2_V_ov_EDS}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s2_V_ov_EDS}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s2_V_ov_EDS.pdf}};
         \end{tikzpicture}
     }
@@ -457,28 +485,36 @@ An example of how the different growth rates for each facet family affect the sh
     \subcaptionbox{
         High-Res \acs{bf}-\acs{stem_m} image of the \acs{inp} layer \cite{Brugnolotto2023}.
         \label{subfig:s2_thick_heterostructure}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s2_thick_heterostructure}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s2_thick_Heterostructure.pdf}};
         \end{tikzpicture}
     }
     \subcaptionbox{
         High-Res \acs{bf}-\acs{stem_m} image of the III-\acs{p} layer.
         \label{subfig:s2_V_thin_heterostructure}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s2_V_thin_heterostructure}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s2_thin_Heterostructure.pdf}};
         \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{eds} map of the \acs{p} concentration.
         \label{subfig:s2_int2_P}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s2_int2_P}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s2_int2_P.pdf}};
         \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{eds} map of the \acs{in} concentration.
         \label{subfig:s2_int2_In}
-        }{\begin{tikzpicture}
+        }{
+        \tikzsetnextfilename{s2_int2_In}
+        \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s2_int2_In.pdf}};
         \end{tikzpicture}
     }
@@ -508,7 +544,9 @@ These two diffusion routes are illustrated in Figure~\ref{subfig:diffusion_mecha
     \subcaptionbox{
     The main findings from the first two samples are represented schematically. From left to right, the stabilisation of the \hkl{1 1 1} growth front during \acs{inp} growth, the thin phosphide heterolayers, III-element composition intermixing, and the diffusion-driven integration delay are shown.
     \label{fig:issues}
-    }{\begin{tikzpicture}
+    }{
+        \tikzsetnextfilename{issues}
+    \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/issues.pdf}};
     \end{tikzpicture}
     }
@@ -516,6 +554,7 @@ These two diffusion routes are illustrated in Figure~\ref{subfig:diffusion_mecha
     Diffusion mechanisms inside the \acs{sio2} interface. Bulk materials are labelled, with the two \acs{sio2} template layers above and below the III-V wire. The precursors are represented by black (III-element precursors) and grey (V-element precursors) circles. \cite{Brugnolotto2023}.
     \label{subfig:diffusion_mechanisms}
     }{
+        \tikzsetnextfilename{diffusion_mechanisms}
         \begin{tikzpicture}
             \filldraw[fill=red] (0cm, 0cm) -- node[midway, anchor = west] {III-V} (0cm, 22mm) -- (2cm, 22mm) -- ++ (-35.3:3.8cm) --  cycle;
             \filldraw[fill=SiO2_blue] (0cm, -10mm) -- (11cm, -10mm) -- (11cm, 0cm) -- (0cm, 0mm) --  node[midway, anchor=west] {\acs{sio2}} cycle;
@@ -540,6 +579,7 @@ These two diffusion routes are illustrated in Figure~\ref{subfig:diffusion_mecha
     Growth recipe for sample 3 \cite{Brugnolotto2023}. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material.
     \label{subfig:recipe3}
     }{
+        \tikzsetnextfilename{recipe3}
     \begin{tikzpicture}
     \begin{scope}
     % lines
@@ -597,6 +637,7 @@ These two diffusion routes are illustrated in Figure~\ref{subfig:diffusion_mecha
 \end{sidewaysfigure}
 
 \section{Implementation of a revised switching sequence}
+
 To address the issues identified in Figure~\ref{fig:issues}, several modifications were made to the \acs{mocvd} growth recipe, resulting in the revised step sequence shown in Figure~\ref{subfig:recipe3}. In this graphic, the segments drawn with dashed lines are represented with a \num{0.1} time scale to maintain a reasonable size for the picture. The main additions to the recipe are the "hold steps": moments at the end of each layer deposition segment when the flow of III precursors was halted, leaving only a V-element atmosphere in the background. The \qty{5}{s}-long \acl{p} hold step was introduced after the \acl{as} hold step and the \acs{ingaas} deposition step in the looped recipe segment to promote a change in the atmosphere inside the template for the following \acs{inp} deposition step. The rationale for its introduction here but not in the previous arsenide-to-phosphide step is that the smaller size and weight of the \acl{p} atom would give it a higher mobility and a lower chance to diffuse as an adsorbate compared to the bulkier, heavier \acl{as} atom. 
 
 A second modification affected the length of the material deposition segments, which was adjusted to consider the lower growth rate of \acs{inp} compared with \acs{ingaas}. As the looped segment was repeated twice for the next growth run, this recipe will theoretically result in the correct barrier/well material layers alternating to create two \acs{ingaas} \acl{qw}s in series in a \acs{inp} matrix. The V/III ratios and the \qty{580}{\degreeCelsius} growth temperature are kept constant to continue to benefit from the stabilisation of the single \hkl{1 1 1} facet growth front that occurs during \acs{inp} deposition.
@@ -618,6 +659,7 @@ The \acs{bf}-\acs{stem_m} image in Figure~\ref{fig:s3_ov} gives a better view of
 
 \begin{figure}
     \centering
+    \tikzsetnextfilename{s3_QW_HR}
     \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.5\textwidth]{3_Growth/s3_QW_HR.pdf}};
     \end{tikzpicture}
@@ -633,28 +675,36 @@ The \acs{bf}-\acs{stem_m} image in Figure~\ref{fig:s3_ov} gives a better view of
     \subcaptionbox{
     \acs{eds} map: Red-\acs{in} Green-\acs{si} Blue-\acs{ga}
     \label{subfig:s3_III_map}
-    }{\begin{tikzpicture}
+    }{
+    \tikzsetnextfilename{s3_III_map}
+    \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s3_III_map.pdf}};
     \end{tikzpicture}
     }
     \subcaptionbox{
     \acs{eds} map: Red-\acs{as} Green-\ce{O} Blue-\acs{p}
     \label{subfig:s3_V_map}
-    }{\begin{tikzpicture}
+    }{
+    \tikzsetnextfilename{s3_V_map}
+    \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s3_V_map.pdf}};
     \end{tikzpicture}
     }
     \subcaptionbox{
     \acs{eds} map: Red-\acs{in} Blue-\acs{ga} \cite{Brugnolotto2023}
     \label{subfig:s3_III_map_wells}
-    }{\begin{tikzpicture}
+    }{
+    \tikzsetnextfilename{s3_III_map_wells}
+    \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s3_III_map_wells.pdf}};
     \end{tikzpicture}
     }
     \subcaptionbox{
     \acs{eds} map: Red-\acs{as} Blue-\acs{p} \cite{Brugnolotto2023}
     \label{subfig:s3_V_map_wells}
-    }{\begin{tikzpicture}
+    }{
+    \tikzsetnextfilename{s3_V_map_wells}
+    \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.45\textwidth]{3_Growth/s3_V_map_wells.pdf}};
     \end{tikzpicture}
     }
@@ -673,7 +723,9 @@ The arsenide layers in the V map are confirmed to perfectly coincide with the \a
     \subcaptionbox{
     \acs{eds} linescan: III atomic percentage vs position \cite{Brugnolotto2023}.
     \label{subfig:s3_III_linesc}
-    }{\begin{tikzpicture}
+    }{
+    \tikzsetnextfilename{s3_III_linesc}
+    \begin{tikzpicture}
         \begin{axis}[
             width = 0.8\textwidth,
             height = 5cm,
@@ -696,7 +748,9 @@ The arsenide layers in the V map are confirmed to perfectly coincide with the \a
     \subcaptionbox{
     \acs{eds} linescan: V atomic percentage vs position \cite{Brugnolotto2023}.
     \label{subfig:s3_V_linesc}
-    }{\begin{tikzpicture}
+    }{
+    \tikzsetnextfilename{s3_V_linesc}
+    \begin{tikzpicture}
         \begin{axis}[
             width = 0.8\textwidth,
             height = 5cm,
