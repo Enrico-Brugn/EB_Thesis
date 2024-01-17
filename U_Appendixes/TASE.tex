@@ -8,6 +8,7 @@ The concept of \acf{tase} is relatively simple, consisting in the growth of III-
 \label{sec:substrate_preprocessing}
 \begin{figure}
     \centering
+    \tikzsetnextfilename{8in_wafers}
     \begin{tikzpicture}[scale=0.5, rotate=-90]
         \begin{scope}[xshift=-11cm]
             \clip[draw] (9.9987cm,2.13mm) arc [start angle=1.20, end angle=358.8, radius=10cm] -- (9.8935cm,-1.065mm) arc [start angle=-135, end angle=-225, radius=1.5mm] -- cycle;
@@ -68,6 +69,7 @@ The concept of \acf{tase} is relatively simple, consisting in the growth of III-
 \begin{figure}
     \centering
     \subcaptionbox{\label{001}}{
+        \tikzsetnextfilename{001}
         \begin{tikzpicture}
             \begin{scope}[scale=0.05]
                 \filldraw[fill=Si_green] (0cm, 0cm) rectangle (40cm, 22mm);
@@ -93,6 +95,7 @@ The concept of \acf{tase} is relatively simple, consisting in the growth of III-
         \end{tikzpicture}
     }
     \subcaptionbox{\label{110}}{
+        \tikzsetnextfilename{110}
         \begin{tikzpicture}
             \begin{scope}[scale=0.05]
                 \filldraw[fill=Si_green] (0cm, 0cm) rectangle (40cm, 7mm);
@@ -132,6 +135,7 @@ The creation of the alignment markers constitutes an important pre-processing st
 \begin{figure}
     \centering
     \subcaptionbox{Sputtered \acs{w}.\label{W_deposition}}{
+        \tikzsetnextfilename{W_deposition}
     \begin{tikzpicture}
         \filldraw[fill=W_gray] (0cm, 8mm) rectangle (4cm, 1.8cm);
         \filldraw[fill=SiO2_blue] (0cm, 7mm) rectangle (4cm, 8mm);
@@ -140,6 +144,7 @@ The creation of the alignment markers constitutes an important pre-processing st
     \end{tikzpicture}
     }
     \subcaptionbox{\acs{w} markers.\label{W_markers}}{
+        \tikzsetnextfilename{W_markers}
     \begin{tikzpicture}
         \filldraw[fill=red] (1.5cm, 1.8) rectangle (2.5cm, 3cm);
         \filldraw[fill=W_gray] (1.5cm, 8mm) rectangle (2.5cm, 1.8cm);
@@ -149,6 +154,7 @@ The creation of the alignment markers constitutes an important pre-processing st
     \end{tikzpicture}
     }
     \subcaptionbox{\acs{w} markers encased in a \acs{sio2} layer.\label{marker_protection_layer}}{
+        \tikzsetnextfilename{marker_protection_layer}
     \begin{tikzpicture} [scale=0.5]
         \filldraw[fill=SiO2_blue] (-5cm, 0.7cm) -- (1.5cm, 0.7cm) -- (9cm, 0.7cm)  -- (9cm, 3.7cm) -- (5.5cm, 3.7cm) -- (5.5cm, 4.8cm) -- (-1.5cm, 4.8cm) -- (-1.5cm, 3.7cm) -- (-5cm, 3.7cm) -- cycle;
         \filldraw[fill=W_gray] (1.5cm, 8mm) rectangle (2.5cm, 1.8cm);
@@ -158,6 +164,7 @@ The creation of the alignment markers constitutes an important pre-processing st
     \end{tikzpicture}
     } 
     \subcaptionbox{Definition of the marker protection area.\label{mp_optolitho}}{
+        \tikzsetnextfilename{mp_optolitho}
     \begin{tikzpicture} [scale=0.5]
         \filldraw[fill=red] (-1.5cm, 4.7cm) rectangle (5.5cm, 5.7cm);
         \filldraw[fill=SiO2_blue] (-5cm, 0.7cm) -- (1.5cm, 0.7cm) -- (9cm, 0.7cm)  -- (9cm, 3.7cm) -- (5.5cm, 3.7cm) -- (5.5cm, 4.8cm) -- (-1.5cm, 4.8cm) -- (-1.5cm, 3.7cm) -- (-5cm, 3.7cm) -- cycle;
@@ -167,6 +174,7 @@ The creation of the alignment markers constitutes an important pre-processing st
     \end{tikzpicture}
     }
     \subcaptionbox{The excess \acs{sio2} is etched away. \label{mp_completed}}{
+        \tikzsetnextfilename{mp_completed}
     \begin{tikzpicture} [scale=0.5]
         \filldraw[fill=SiO2_blue] (-1.5cm, 0.7cm) -- (5.5cm, 0.7cm) -- (5.5cm, 3.7cm) -- (5.5cm, 4.8cm) -- (-1.5cm, 4.8cm) -- (-1.5cm, 3.7cm) -- cycle;
         \filldraw[fill=W_gray] (1.5cm, 8mm) rectangle (2.5cm, 1.8cm);
@@ -189,6 +197,7 @@ This concludes the initial steps that prepare the wafer to go through the \acs{t
 \begin{figure}
     \centering
     \subcaptionbox{\acs{hsq} layer on top of the wafer after exposure.\label{L1_exposed_resist}}{
+        \tikzsetnextfilename{L1_exposed_resist}
     \begin{tikzpicture}
         \filldraw[fill=red] (0cm, 7mm) rectangle (10cm, 10mm);
         \filldraw[fill=SiO2_blue] (3cm, 7mm) rectangle (7cm, 10mm);
@@ -197,6 +206,7 @@ This concludes the initial steps that prepare the wafer to go through the \acs{t
     \end{tikzpicture}
     }
     \subcaptionbox{Nanostructure geometry transferred onto the \acs{si} device layer.\label{L1_nanostructure}}{
+        \tikzsetnextfilename{L1_nanostructure}
     \begin{tikzpicture}
         \filldraw[fill=SiO2_blue] (3cm, 7mm) rectangle (7cm, 9mm);
         \filldraw[fill=Si_green] (3cm, 0cm) rectangle (7cm, 7mm);
@@ -204,6 +214,7 @@ This concludes the initial steps that prepare the wafer to go through the \acs{t
     \end{tikzpicture}
     }
     \subcaptionbox{\acs{si} nanostructures encased in the template oxide.\label{L1_template}}{
+        \tikzsetnextfilename{L1_template}
     \begin{tikzpicture}
         \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (8cm, 10mm) -- (8cm, 17mm) -- (7cm, 17mm) -- (7cm, 19mm) -- (3cm, 19mm) -- (3cm, 17mm) -- (2cm, 17mm) -- (2cm, 10mm) -- (0cm, 10mm) -- cycle;
         \filldraw[fill=Si_green] (3cm, 0cm) rectangle (7cm, 7mm);
@@ -226,6 +237,7 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
     \centering
     \subcaptionbox{Openings patterned on a positive resist layer.
     \label{L2_resist}}{
+        \tikzsetnextfilename{L2_resist}
         \begin{tikzpicture}
             \filldraw[fill=red] (0cm, 10mm) -- (7cm, 10mm) -- (7cm, 27mm) -- (0cm, 27mm) -- cycle;
             \filldraw[fill=red] (9cm, 10mm) -- (10cm, 10mm) -- (10cm, 27mm) -- (9cm, 27mm) -- cycle;
@@ -236,6 +248,7 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
     }
     \subcaptionbox{Etch down of the template \acs{sio2} and device \acs{si} to reach the buried oxide layer.
     \label{L2_open}}{
+        \tikzsetnextfilename{L2_open}
         \begin{tikzpicture}
             \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (7cm, 0mm) -- (7cm, 19mm) -- (2cm, 19mm) -- (2cm, 17mm) -- (1cm, 17mm) -- (1cm, 10mm) -- (0cm, 10mm) -- cycle;
             \filldraw[fill=SiO2_blue] (9cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (9cm, 10mm) -- cycle;
@@ -245,6 +258,7 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
     }
     \subcaptionbox{Etch back of the \acs{si} to create the seed.
     \label{L2_etchback}}{
+        \tikzsetnextfilename{L2_etchback}
         \begin{tikzpicture}
             \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (2cm, 0mm)-- (2cm, 7mm) -- (7cm, 7mm) -- (7cm, 19mm) -- (2cm, 19mm) -- (2cm, 17mm) -- (1cm, 17mm) -- (1cm, 10mm) -- (0cm, 10mm) -- cycle;
             \filldraw[fill=SiO2_blue] (9cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (9cm, 10mm) -- cycle;
