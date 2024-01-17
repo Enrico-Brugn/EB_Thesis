@@ -771,7 +771,7 @@ Once the single growth front is established, the growth of the crystal can conti
     \centering
     \subcaptionbox{
     Growth recipe for sample 6 \cite{Brugnolotto2023_2}. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed 10 times. The \acl{qw} growth loop was executed six times.
-    \label{subfig:recipe5}
+    \label{subfig:recipe6}
     }{
     \begin{tikzpicture}
     \begin{scope}
@@ -826,9 +826,36 @@ Once the single growth front is established, the growth of the crystal can conti
     \end{scope}
     \end{tikzpicture}
     }
-    \caption{Caption}
-    \label{fig:enter-label}
+     \subcaptionbox{
+        \acs{bf}-\acs{stem_m} image of a nanowire grown with the recipe in \subref{subfig:recipe6} \cite{Brugnolotto2023_2}. Each material layer is labelled, and a guide highlighting the lattice rotation is present.
+        \label{subfig:s6_wire_OV}
+    }{
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{4_Properties/Fig/s6_wire_ov.pdf}};
+            \node at (-10.7, 2.8) {\qty{200}{\nano\metre}};
+            \node[white] at (-11.5, 1.7) {\acs{sio2}};
+            \draw[white, decorate, decoration={brace, mirror}] (-1.8, 1.1) -- (-7.4, 1.1) node[midway, anchor=south]{\num{6}x \acs{ingaas} \acl{qw}s};
+            \draw[white, decorate, decoration={brace, mirror}] (10, 1.1) -- (3.4, 1.1) node[midway, anchor=south]{\num{6}x \acs{ingaas} \acl{qw}s};
+            \node[white] at (-11.5, -0.5) {\acs{si}};
+            \node[white] at (0, -0.5) {\acs{inp}};
+            \node[white] at (-11.5, -2.5) {\acs{sio2}};
+            \draw[white] (-7.14, -2) -- (-10.85, -2) -- (-10.85, -1);
+            \draw[white] (-10.85, -1.5)  -- ++ (0.5, 0) node[anchor=south west]{\qty{90}{\degree}} -- ++ (0, -0.5);
+            \draw[white] (-7.65, -2) arc [start angle = 180, end angle = 93, radius = 0.5] node[midway, anchor=south east]{\qty{87}{\degree}};
+            \draw[white] (-7.2, -1) -- ++ (-87:1);
+        \end{tikzpicture}
+    }
+    \caption{\acs{mocvd} growth recipe \subref{subfig:recipe6} and resulting nanowire \subref{subfig:s6_wire_OV} for sample 6.}
+    \label{fig:s6_recipe+OV}
 \end{sidewaysfigure}
+
+A modified growth recipe was built based on the results of sample 5. The main objectives were to create even thinner \acs{ingaas} \acl{qw}s, which would give more information on the minimum thickness of the heterolayer achievable by \acs{mocvd} growth using the facet stabilisation method and a further decrease of the post-\acs{ingaas} \acl{as} hold step, to try to further mitigate the \acl{as} contamination in the \acs{inp} region immediately after each \acl{qw}.
+
+The resulting recipe is shown in Figure~\ref{subfig:recipe6}. The \acs{ingaas} nucleation layer's deposition time was decreased from \qty{30}{\second} to \qty{10}{\second}. As there had been no nucleation issues with the \qty{30}{\second} deposition time in sample 5, a lower step time was tested for this sample to minimise the amount of \acs{ingaas} outside the quantum wells. The recipe segments and loops following the nucleation layer were run twice. After \qty{600}{\second} of \acs{inp} growth, the deposition of the \acs{ingaas}/\acs{inp} superlattice took place. The step time for \acs{ingaas} was reduced from \qty{10}{\second} to \qty{5}{\second}, and the post-\acs{ingaas} \acl{as} hold step shortened from \qty{10}{\second} to \qty{7}{\second}. The deposition times of the barrier layers were also shortened from \qty{200}{\second} to \qty{100}{\second}. The number of repetitions of the quantum well loop was doubled from \num{3} to \num{6}. The cumulative changes were meant to double the number of quantum wells present in the same length of nanowires that contained the superlattice in sample 5, while repeating the entire recipe twice was meant to result in a longer overall nanowire to highlight differences in growth rate based on the depth of each material layer in the template.
+
+The \qty{30}{\degree} cross-section of a nanowire grown with this revised recipe is shown in the \acs{bf}-\acs{stem_m} image in Figure~\ref{subfig:s6_wire_OV}. The angled view given by this tilted cross-section causes the shaded top and bottom interfaces of the III-V material region. Circular shades in the image are given by indium droplets, a common residue left over from \acs{fib} lamella preparation. The III-V material, appearing darker in the centre of the image, is sandwiched between the template oxide at the top and the buried oxide layer at the bottom. The \acs{si} seed is visible on the left of the image, while the \acs{ingaas} nucleation layer is too thin to appear as more than a darker shade at the very beginning of the nanowire. Twelve vertical lines, darker compared to the \acs{inp} making up the majority of the wire, are given by a change in channelling contrast given by the presence of \acl{as} atoms, which are bigger than the \acl{p} atoms that make up the majority of the V element in the wire.
+
+
 
 
 
