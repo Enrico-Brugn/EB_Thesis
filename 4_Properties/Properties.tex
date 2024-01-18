@@ -3,7 +3,7 @@
 
 The critical growth mechanisms and single-facet \hkl{111}\(_B\) growth front stabilisation method were explored and developed in Chapter~\ref{chap:growth}. However, the lack of in-plane \hkl{1 1 1} directions in the \hkl(0 0 1) \acf{soi} wafer on which growth was carried out complicates the analysis of the growth results. The two possible \hkl{1 1 1} facets are tilted and, therefore, yield calculations and contacting of devices become more complex, as the process through which one of the facets is selected for stabilisation is dependent on the shape and orientation of the nucleating crystal on the \acs{si} seed.
 
-This chapter expands on the research my co-authors and I published in\cite{Brugnolotto2023, Brugnolotto2023_2}. 
+This chapter expands on the research my co-authors and I published in \cite{Brugnolotto2023, Brugnolotto2023_2}. 
 
 CHAPTER OVERVIEW
 
@@ -935,6 +935,64 @@ The seed surface consists of a single \hkl{1 1 1} facet resulting from the selec
 \end{figure}
 
 \paragraph{Growth rate}
+
+\begin{figure}
+    \centering
+    \subcaptionbox{
+    \acs{eds} linescan: III atomic percentage vs position.
+    \label{subfig:s6_III_30deg_linesc}
+    }{
+    \tikzsetnextfilename{s6_III_30deg_linesc}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width = 0.8\textwidth,
+            height = 5cm,
+            xlabel = Position (nm),
+            ylabel = Composition (atomic \%),
+            table/col sep=comma,
+            %title = III element composition,
+            legend pos=outer north east,
+            ymin=0, ymax=100,
+            xmin = 0, xmax=348.61
+        ]
+    \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/s6_III_30deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/s6_III_30deg_linesc.csv};
+    \addlegendentry{Ga}
+    \addlegendentry{In}
+    \end{axis}
+
+    \end{tikzpicture}
+    }
+    \subcaptionbox{
+    \acs{eds} linescan: V atomic percentage vs position.
+    \label{subfig:s6_V_30deg_linesc}
+    }{
+    \tikzsetnextfilename{s6_V_30deg_linesc}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width = 0.8\textwidth,
+            height = 5cm,
+            xlabel = Position (nm),
+            ylabel = Composition (atomic \%),
+            table/col sep=comma,
+            %title = V element composition,
+            legend pos=outer north east,
+            ymin=0, ymax=100,
+            xmin = 0, xmax=348.61
+        ]
+    \addplot [cb1_orange,] table[x=nm,y=As] {4_Properties/csv/s6_V_30deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Properties/csv/s6_V_30deg_linesc.csv};
+    \addlegendentry{As}
+    \addlegendentry{P}
+    \end{axis}
+
+    \end{tikzpicture}
+    }
+    \caption{\acs{eds} linescan compositional data (in percentage) for the \subref{subfig:s6_III_30deg_linesc} III elements and \subref{subfig:s6_V_30deg_linesc} V elements 
+    The origin of the x-axis is situated before the first well and is the closest point to the \acs{si} seed. Higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed.}
+    \label{fig:s6_30deg_linescans}
+\end{figure}
+
 \paragraph{\acs{eds} analysis}
 
 
