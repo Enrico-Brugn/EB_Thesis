@@ -885,7 +885,18 @@ The seed surface consists of a single \hkl{1 1 1} facet resulting from the selec
         \acs{bf}-\acs{stem_m} image of the \acs{si} / III-V interface.
         \label{subfig:s6_si-IIIV_interface}
     }{
-        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/s6_si-IIIV_interface.pdf}
+        \tikzsetnextfilename{s6_si-IIIV_interface}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{4_Properties/Fig/s6_si-IIIV_interface.pdf}};
+            \draw [red] (0.19, 3.85) -- ++ (-95.3:7.7) -- ++ (0:1.5) -- ++ (86:7.7);
+            \draw [red] (0.28, 3.85) -- ++ (-95.3:7.7);
+            \draw [red] (0.36, 3.85) -- ++ (-95.3:7.7);
+            \draw [red] (0.44, 3.85) -- ++ (-95.3:7.7);
+            \draw [red] (0.53, 3.85) -- ++ (-95.3:7.7);
+            \draw [red] (0.61, 3.85) -- ++ (-95.3:7.7);
+            \draw [red] (0.69, 3.85) -- ++ (-95.3:7.7);
+            \draw [red] (0.77, 3.85) -- ++ (-95.3:7.7);
+        \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{bf}-\acs{stem_m} image of the first \acs{ingaas} \acs{qw}.
@@ -897,7 +908,7 @@ The seed surface consists of a single \hkl{1 1 1} facet resulting from the selec
     \label{fig:s6_HR}
 \end{figure}
 
-\paragraph{High resolution analysis}
+\paragraph{High resolution analysis} Figure~\ref{fig:s6_HR} shows high resolution \acs{bf}-\acs{stem_m} images of two heterostructures in the nanowire seen in Figure~\ref{subfig:s6_wire_OV}.
 
 
 
@@ -1010,7 +1021,7 @@ The seed surface consists of a single \hkl{1 1 1} facet resulting from the selec
     \label{fig:s6_30deg_linescans}
 \end{figure}
 
-\paragraph{\acs{eds} analysis} Figure
+\paragraph{\acs{eds} analysis} 
 
 
 
