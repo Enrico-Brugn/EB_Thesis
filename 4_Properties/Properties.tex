@@ -799,46 +799,46 @@ Once the single growth front is established, the growth of the crystal can conti
     % lines
             \node [label={[label distance=0]180:\acs{in}}] at (0, 0) {};
             \draw [cb1_orange, ultra thick] (0, 0) -- (1, 0); 
-            \draw [cb1_dark_blue, ultra thick, dashed] (1, 0) -- (7, 0); %10
-            \draw [cb1_orange, ultra thick] (9, 0) -- (9.5, 0);
-            \draw [cb1_dark_blue, ultra thick, dashed] (11.2, 0) -- (12.2, 0); %10
+            \draw [cb1_dark_blue, ultra thick, dashed] (1, 0) -- (5, 0); %10
+            \draw [cb1_orange, ultra thick] (7, 0) -- (7.5, 0);
+            \draw [cb1_dark_blue, ultra thick, dashed] (9.2, 0) -- (10.2, 0); %10
         
             \node [label={[label distance=0]180:\acs{ga}}] at (0, -0.5) {};
             \draw [cb1_orange, ultra thick] (0, -0.5) -- (1, -0.5cm); 
-            \draw [cb1_orange, ultra thick] (9, -0.5) -- (9.5, -0.5);
+            \draw [cb1_orange, ultra thick] (7, -0.5) -- (7.5, -0.5);
         
             \node [label={[label distance=0]180:\acs{as}}] at (0, -1) {};
             \draw [cb1_orange, ultra thick] (0, -1) -- (1, -1); 
-            \draw [cb1_orange, ultra thick] (9, -1) -- (9.5, -1);
-            \draw [gray, ultra thick] (9.5, -1) -- (10.2, -1);
+            \draw [cb1_orange, ultra thick] (7, -1) -- (7.5, -1);
+            \draw [gray, ultra thick] (7.5, -1) -- (8.2, -1);
         
             \node [label={[label distance=0]180:\acs{p}}] at (0, -1.5) {};
-            \draw [cb1_dark_blue, ultra thick, dashed] (1, -1.5) -- (7, -1.5); %/10
-            \draw [gray, ultra thick] (7, -1.5) -- (9, -1.5);
-            \draw [gray, ultra thick] (10.2, -1.5) -- (11.2, -1.5);
-            \draw [cb1_dark_blue, ultra thick, dashed] (11.2, -1.5) -- (12.2, -1.5); %/10
-            \draw [gray, ultra thick] (12.2, -1.5) -- (14.2, -1.5);
+            \draw [cb1_dark_blue, ultra thick, dashed] (1, -1.5) -- (5, -1.5); %/10
+            \draw [gray, ultra thick] (5, -1.5) -- (7, -1.5);
+            \draw [gray, ultra thick] (8.2, -1.5) -- (9.2, -1.5);
+            \draw [cb1_dark_blue, ultra thick, dashed] (9.2, -1.5) -- (10.2, -1.5); %/10
+            \draw [gray, ultra thick] (10.2, -1.5) -- (12.2, -1.5);
         
     % labels and markers for the timescale
             \node [label={[label distance=0]180:Time (\second)}] at (0, -2) {};
             \draw [] (0, -2) -- (1, -2);
-            \draw [dashed] (1, -2) -- (7, -2);
-            \draw [] (7, -2) -- (11.2, -2);
-            \draw [dashed] (11.2, -2) -- (12.2, -2);
-            \draw [-stealth] (12.2, -2) -- (14.5, -2); % +0.3
+            \draw [dashed] (1, -2) -- (5, -2);
+            \draw [] (5, -2) -- (9.2, -2);
+            \draw [dashed] (9.2, -2) -- (10.2, -2);
+            \draw [-stealth] (10.2, -2) -- (12.5, -2); % +0.3
             \draw [] (0, 0.2) -- (0, -2.2) node[anchor = north] {\num{0}};
             \draw [] (1, 1.2) -- (1, -2.2) node[anchor = north] {\num{10}};
-            \draw [] (7, 0.2) -- (7, -2.2) node[anchor = north] {\num{610}};
-            \draw [] (9, 0.4) -- (9, -2.2) node[anchor = north] {\num{630}};
-            \draw [] (9.5, 0.2) -- (9.5, -2.8) node[anchor = north] {\num{635}};
-            \draw [] (10.2, 0.2) -- (10.2, -2.2) node[anchor = north] {\num{642}};
-            \draw [] (11.2, 0.2) -- (11.2, -2.2) node[anchor = north] {\num{652}};
-            \draw [] (12.2, 0.2) -- (12.2, -2.2) node[anchor = north] {\num{752}};
-            \draw [] (14.2, 1.2) -- (14.2, -2.2) node[anchor = north] {\num{772}};
-            \draw [stealth - stealth] (9, 0.3) -- (14.2, 0.3) node[midway, anchor=south] {Quantum Well Loop (x\num{6})};
-            \draw [stealth - stealth] (1, 1.1) -- (14.2, 1.1) node[midway, anchor=south] {Deposition Loop (x\num{2})};
+            \draw [] (5, 0.2) -- (5, -2.2) node[anchor = north] {\num{410}};
+            \draw [] (7, 0.4) -- (7, -2.2) node[anchor = north] {\num{430}};
+            \draw [] (7.5, 0.2) -- (7.5, -2.8) node[anchor = north] {\num{435}};
+            \draw [] (8.2, 0.2) -- (8.2, -2.2) node[anchor = north] {\num{442}};
+            \draw [] (9.2, 0.2) -- (9.2, -2.2) node[anchor = north] {\num{452}};
+            \draw [] (10.2, 0.2) -- (10.2, -2.2) node[anchor = north] {\num{552}};
+            \draw [] (12.2, 1.2) -- (12.2, -2.2) node[anchor = north] {\num{572}};
+            \draw [stealth - stealth] (7, 0.3) -- (12.2, 0.3) node[midway, anchor=south] {Quantum Well Loop (x\num{6})};
+            \draw [stealth - stealth] (1, 1.1) -- (12.2, 1.1) node[midway, anchor=south] {Deposition Loop (x\num{2})};
         \end{scope}
-        \begin{scope} [shift={(15.4cm, -0.5)}] % +0.9
+        \begin{scope} [shift={(13.4cm, -0.5)}] % +0.9
             \draw [gray, ultra thick] (0, 0.5) -- (0.5, 0.5) node[anchor = west, text=black] {Hold Step};
             \draw [cb1_orange, ultra thick] (0, 0) -- (0.5, 0) node[anchor = west, text=black] {\acs{ingaas}};
             \draw [cb1_dark_blue, ultra thick] (0, -0.5) -- (0.5, -0.5) node[anchor = west, text = black] {\acs{inp}};
@@ -1050,9 +1050,7 @@ If the deposition of densely packed III-V structures is planned, the effect of t
 
 \section{Growth of Strained Heterolayers}
 
-All samples shown in this thesis so far targeted an \ce{In0_.53Ga0_.47As} composition in the arsenide layers, with varying degrees of success as resulting from \acs{eds} analysis. This composition is lattice-matched to the supporting \acs{inp} barrier layer \cite{Pearsall1980, Sugii1983, Wagner1970}, therefore simplifying the growth process by confining any strain or stress to the initial material layers after nucleation. 
-
-The experiments in this section were carried out to explore the possibility of the single-facet growth front regime destabilising due to lattice mismatch-related stress in the \acl{qw} region.
+The experiments in this section were carried out to explore the possibility of the single-facet growth front regime destabilising due to lattice mismatch-related stress in the \acl{qw} region. All samples shown so far in this thesis targeted an \ce{In0_.53Ga0_.47As} composition in the arsenide layers, with varying degrees of success as resulting from \acs{eds} analysis. This composition is lattice-matched to the supporting \acs{inp} barrier layer \cite{Pearsall1980, Sugii1983, Wagner1970}, therefore simplifying the growth process by confining any strain or stress to the initial material layers after nucleation.
 
 \subsection{Arsenides}
 
@@ -1069,18 +1067,18 @@ Two more binary materials, \acf{gaas} and \acf{inas}, can be grown without alter
         \begin{scope}
     % lines
             \node [label={[label distance=0]180:\acs{in}}] at (0, 0) {};
-            \draw [cb1_orange, ultra thick] (0, 0) -- (1, 0); 
-            \draw [cb1_dark_blue, ultra thick, dashed] (1, 0) -- (7, 0); %10
+            \draw [cb1_orange, ultra thick] (0, 0) -- (3, 0); 
+            \draw [cb1_dark_blue, ultra thick, dashed] (1, 0) -- (7.5, 0); %10
             \draw [cb1_orange, ultra thick] (9, 0) -- (9.5, 0);
             \draw [cb1_dark_blue, ultra thick, dashed] (11.2, 0) -- (12.2, 0); %10
         
             \node [label={[label distance=0]180:\acs{ga}}] at (0, -0.5) {};
-            \draw [cb1_orange, ultra thick] (0, -0.5) -- (1, -0.5cm); 
-            \draw [cb1_orange, ultra thick] (9, -0.5) -- (9.5, -0.5);
+            \draw [cb1_orange, ultra thick] (0, -0.5) -- (3, -0.5cm); 
+            \draw [cb1_light_blue, ultra thick] (9.5, -0.5) -- (10.5, -0.5);
         
             \node [label={[label distance=0]180:\acs{as}}] at (0, -1) {};
-            \draw [cb1_orange, ultra thick] (0, -1) -- (1, -1); 
-            \draw [cb1_orange, ultra thick] (9, -1) -- (9.5, -1);
+            \draw [cb1_orange, ultra thick] (0, -1) -- (3, -1); 
+            \draw [cb1_light_blue, ultra thick] (9.5, -1) -- (10.5, -1);
             \draw [gray, ultra thick] (9.5, -1) -- (10.2, -1);
         
             \node [label={[label distance=0]180:\acs{p}}] at (0, -1.5) {};
@@ -1092,14 +1090,14 @@ Two more binary materials, \acf{gaas} and \acf{inas}, can be grown without alter
         
     % labels and markers for the timescale
             \node [label={[label distance=0]180:Time (\second)}] at (0, -2) {};
-            \draw [] (0, -2) -- (1, -2);
+            \draw [] (0, -2) -- (3, -2);
             \draw [dashed] (1, -2) -- (7, -2);
             \draw [] (7, -2) -- (11.2, -2);
             \draw [dashed] (11.2, -2) -- (12.2, -2);
             \draw [-stealth] (12.2, -2) -- (14.5, -2); % +0.3
             \draw [] (0, 0.2) -- (0, -2.2) node[anchor = north] {\num{0}};
-            \draw [] (1, 1.2) -- (1, -2.2) node[anchor = north] {\num{10}};
-            \draw [] (7, 0.2) -- (7, -2.2) node[anchor = north] {\num{610}};
+            \draw [] (3, 1.2) -- (3, -2.2) node[anchor = north] {\num{30}};
+            \draw [] (7, 0.2) -- (7, -2.2) node[anchor = north] {\num{450}};
             \draw [] (9, 0.4) -- (9, -2.2) node[anchor = north] {\num{630}};
             \draw [] (9.5, 0.2) -- (9.5, -2.8) node[anchor = north] {\num{635}};
             \draw [] (10.2, 0.2) -- (10.2, -2.2) node[anchor = north] {\num{642}};
