@@ -1058,100 +1058,95 @@ Two more binary materials, \acf{gaas} and \acf{inas}, can be grown without alter
 
 \begin{sidewaysfigure}
     \centering
-    \subcaptionbox{
-    Growth recipe for sample 6 \cite{Brugnolotto2023_2}. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed \num{10} times. The \acl{qw} growth loop was executed six times.
-    \label{subfig:recipe7}
-    }{
-        \tikzsetnextfilename{recipe7}
-        \begin{tikzpicture}
-        \begin{scope}
+    \tikzsetnextfilename{recipe7}
+    \begin{tikzpicture}
+    \begin{scope}
     % lines
-            \node [label={[label distance=0]180:\acs{in}}] at (0, 0) {};
-            \draw [cb1_orange, ultra thick] (0, 0) -- (3, 0); 
-            \draw [cb1_dark_blue, ultra thick, dashed] (3, 0) -- (7.5, 0); %10
-            \draw [cb1_light_blue, ultra thick] (9.5, 0) -- (10.5, 0);
-            \draw [cb1_dark_blue, ultra thick, dashed] (12.2, 0) -- (13.2, 0); %10
-            \draw [cb1_orange, ultra thick] (15.2, 0) -- (15.7, 0);
-            \node [label={[label distance=0]180:\acs{in}}] at (0, -4.6) {};
-            \draw [cb1_dark_blue, ultra thick, dashed] (0, -4.6) -- (1, -4.6); 
-            \draw [cb1_dark_blue, ultra thick, dashed] (5.7, -4.6) -- (6.7, -4.6); 
+        \node [label={[label distance=0]180:\acs{in}}] at (0, 0) {};
+        \draw [cb1_orange, ultra thick] (0, 0) -- (3, 0); 
+        \draw [cb1_dark_blue, ultra thick, dashed] (3, 0) -- (7.5, 0); %10
+        \draw [cb1_light_blue, ultra thick] (9.5, 0) -- (10.5, 0);
+        \draw [cb1_dark_blue, ultra thick, dashed] (12.2, 0) -- (13.2, 0); %10
+        \draw [cb1_orange, ultra thick] (15.2, 0) -- (15.7, 0);
+        \node [label={[label distance=0]180:\acs{in}}] at (0, -4.6) {};
+        \draw [cb1_dark_blue, ultra thick, dashed] (0, -4.6) -- (1, -4.6); 
+        \draw [cb1_dark_blue, ultra thick, dashed] (5.7, -4.6) -- (6.7, -4.6); 
         
-            \node [label={[label distance=0]180:\acs{ga}}] at (0, -0.5) {};
-            \draw [cb1_orange, ultra thick] (0, -0.5) -- (3, -0.5cm); 
-            \draw [cb1_orange, ultra thick] (15.2, -0.5) -- (15.7, -0.5);
-            \node [label={[label distance=0]180:\acs{ga}}] at (0, -5.1) {};
-            \draw [cb1_purple, ultra thick] (3, -5.1) -- (4, -5.1); 
+        \node [label={[label distance=0]180:\acs{ga}}] at (0, -0.5) {};
+        \draw [cb1_orange, ultra thick] (0, -0.5) -- (3, -0.5cm); 
+        \draw [cb1_orange, ultra thick] (15.2, -0.5) -- (15.7, -0.5);
+        \node [label={[label distance=0]180:\acs{ga}}] at (0, -5.1) {};
+        \draw [cb1_purple, ultra thick] (3, -5.1) -- (4, -5.1); 
         
-            \node [label={[label distance=0]180:\acs{as}}] at (0, -1) {};
-            \draw [cb1_orange, ultra thick] (0, -1) -- (3, -1); 
-            \draw [cb1_light_blue, ultra thick] (9.5, -1) -- (10.5, -1);
-            \draw [gray, ultra thick] (10.5, -1) -- (11.2, -1);
-            \draw [cb1_orange, ultra thick] (15.2, -1) -- (15.7, -1);
-            \draw [gray, ultra thick] (15.7, -1) -- (16.4, -1);
-            \node [label={[label distance=0]180:\acs{as}}] at (0, -5.6) {};
-            \draw [cb1_purple, ultra thick] (3, -5.6) -- (4, -5.6); 
-            \draw [gray, ultra thick] (4, -5.6) -- (4.7, -5.6); 
+        \node [label={[label distance=0]180:\acs{as}}] at (0, -1) {};
+        \draw [cb1_orange, ultra thick] (0, -1) -- (3, -1); 
+        \draw [cb1_light_blue, ultra thick] (9.5, -1) -- (10.5, -1);
+        \draw [gray, ultra thick] (10.5, -1) -- (11.2, -1);
+        \draw [cb1_orange, ultra thick] (15.2, -1) -- (15.7, -1);
+        \draw [gray, ultra thick] (15.7, -1) -- (16.4, -1);
+        \node [label={[label distance=0]180:\acs{as}}] at (0, -5.6) {};
+        \draw [cb1_purple, ultra thick] (3, -5.6) -- (4, -5.6); 
+        \draw [gray, ultra thick] (4, -5.6) -- (4.7, -5.6); 
         
-            \node [label={[label distance=0]180:\acs{p}}] at (0, -1.5) {};
-            \draw [cb1_dark_blue, ultra thick, dashed] (3, -1.5) -- (7.5, -1.5); %/10
-            \draw [gray, ultra thick] (7.5, -1.5) -- (9.5, -1.5);
-            \draw [gray, ultra thick] (11.2, -1.5) -- (12.2, -1.5);
-            \draw [cb1_dark_blue, ultra thick, dashed] (12.2, -1.5) -- (13.2, -1.5); %/10
-            \draw [gray, ultra thick] (13.2, -1.5) -- (15.2, -1.5);
-            \draw [gray, ultra thick] (16.4, -1.5) -- (17.4, -1.5);
-            \node [label={[label distance=0]180:\acs{p}}] at (0, -6.1) {};
-            \draw [cb1_dark_blue, ultra thick, dashed] (0, -6.1) -- (1, -6.1); 
-            \draw [gray, ultra thick] (1, -6.1) -- (3, -6.1); 
-            \draw [gray, ultra thick] (4.7, -6.1) -- (5.7, -6.1); 
-            \draw [cb1_dark_blue, ultra thick, dashed] (5.7, -6.1) -- (6.7, -6.1); 
+        \node [label={[label distance=0]180:\acs{p}}] at (0, -1.5) {};
+        \draw [cb1_dark_blue, ultra thick, dashed] (3, -1.5) -- (7.5, -1.5); %/10
+        \draw [gray, ultra thick] (7.5, -1.5) -- (9.5, -1.5);
+        \draw [gray, ultra thick] (11.2, -1.5) -- (12.2, -1.5);
+        \draw [cb1_dark_blue, ultra thick, dashed] (12.2, -1.5) -- (13.2, -1.5); %/10
+        \draw [gray, ultra thick] (13.2, -1.5) -- (15.2, -1.5);
+        \draw [gray, ultra thick] (16.4, -1.5) -- (17.4, -1.5);
+        \node [label={[label distance=0]180:\acs{p}}] at (0, -6.1) {};
+        \draw [cb1_dark_blue, ultra thick, dashed] (0, -6.1) -- (1, -6.1); 
+        \draw [gray, ultra thick] (1, -6.1) -- (3, -6.1); 
+        \draw [gray, ultra thick] (4.7, -6.1) -- (5.7, -6.1); 
+        \draw [cb1_dark_blue, ultra thick, dashed] (5.7, -6.1) -- (6.7, -6.1); 
         
     % labels and markers for the timescale
-            \node [label={[label distance=0]180:Time (\second)}] at (0, -2) {};
-            \draw [] (0, -2) -- (3, -2);
-            \draw [dashed] (1, -2) -- (7.5, -2);
-            \draw [] (7.5, -2) -- (11.2, -2);
-            \draw [dashed] (11.2, -2) -- (12.2, -2);
-            \draw [] (12.2, -2) -- (17.4, -2); % +0.3
-            \draw [] (0, 0.2) -- (0, -2.2) node[anchor = north] {\num{0}};
-            \draw [] (3, 0.2) -- (3, -2.2) node[anchor = north] {\num{30}};
-            \draw [] (7.5, 0.4) -- (7.5, -2.2) node[anchor = north] {\num{480}};
-            \draw [] (9.5, 0.2) -- (9.5, -2.2) node[anchor = north] {\num{500}};
-            \draw [] (10.5, 0.2) -- (10.5, -2.2) node[anchor = north] {\num{510}};
-            \draw [] (11.2, 0.2) -- (11.2, -2.8) node[anchor = north] {\num{517}};
-            \draw [] (12.2, 0.2) -- (12.2, -2.2) node[anchor = north] {\num{527}};
-            \draw [] (13.2, 0.2) -- (13.2, -2.2) node[anchor = north] {\num{627}};
-            \draw [] (15.2, 0.2) -- (15.2, -2.2) node[anchor = north] {\num{647}};
-            \draw [] (15.7, 0.2) -- (15.7, -2.8) node[anchor = north] {\num{652}};
-            \draw [] (16.4, 0.2) -- (16.4, -2.2) node[anchor = north] {\num{659}};
-            \draw [] (17.4, 0.2) -- (17.4, -2.2) node[anchor = north] {\num{669}};
-            \draw [stealth - ] (7.5, 0.3) -- (17.4, 0.3) node[midway, anchor=south] {Quantum Well Loop (x\num{3})};
-            \node [label={[label distance=0]180:Time (\second)}] at (0, -6.6) {};
-            \draw [dashed] (0, -6.6) -- (1, -6.6);
-            \draw [] (1, -6.6) -- (5.7, -6.6);
-            \draw [dashed] (5.7, -6.6) -- (6.7, -6.6);
-            \draw [ - stealth] (6.7, -6.6) -- (7, -6.6);
-            \draw [] (0, -4.4) -- (0, -6.8) node[anchor = north] {\num{669}};
-            \draw [] (1, -4.4) -- (1, -6.8) node[anchor = north] {\num{769}};
-            \draw [] (3, -4.4) -- (3, -6.8) node[anchor = north] {\num{789}};
-            \draw [] (4, -4.4) -- (4, -6.8) node[anchor = north] {\num{799}};
-            \draw [] (4.7, -4.4) -- (4.7, -7.4) node[anchor = north] {\num{806}};
-            \draw [] (5.7, -4.4) -- (5.7, -6.8) node[anchor = north] {\num{816}};
-            \draw [] (6.7, -4.2) -- (6.7, -6.8) node[anchor = north] {\num{916}};
-            \draw [ - stealth] (0, -4.3) -- (6.7, -4.3) node[midway, anchor=south] {Quantum Well Loop (x\num{3})};
-        \end{scope}
-        \begin{scope} [shift={(18.6cm, -2)}] % +0.9
-            \draw [gray, ultra thick] (0, 0.5) -- (0.5, 0.5) node[anchor = west, text=black] {Hold Step};
-            \draw [cb1_orange, ultra thick] (0, 0) -- (0.5, 0) node[anchor = west, text=black] {\acs{ingaas}};
-            \draw [cb1_dark_blue, ultra thick] (0, -0.5) -- (0.5, -0.5) node[anchor = west, text = black] {\acs{inp}};
-            \draw [cb1_light_blue, ultra thick] (0, -1) -- (0.5, -1) node[anchor = west, text = black] {\acs{inas}};
-            \draw [cb1_purple, ultra thick] (0, -1.5) -- (0.5, -1.5) node[anchor = west, text = black] {\acs{gaas}};
-            \draw [dashed, ultra thick] (0, -2) -- (0.5, -2) node[anchor = west, text = black] {\num{0.1} time scale};
-            \draw (-0.3, 1) -- (3.3, 1) -- (3.3, -2.65) -- node[midway, fill = white] {Legend} (-0.3, -2.65) -- cycle;
-        \end{scope}
-        \end{tikzpicture}
-    }
-    \caption{\acs{mocvd} growth recipe \subref{subfig:recipe6} and resulting nanowire \subref{subfig:s6_wire_OV} for sample 6.}
-    \label{fig:s7_recipe}
+        \node [label={[label distance=0]180:Time (\second)}] at (0, -2) {};
+        \draw [] (0, -2) -- (3, -2);
+        \draw [dashed] (1, -2) -- (7.5, -2);
+        \draw [] (7.5, -2) -- (11.2, -2);
+        \draw [dashed] (11.2, -2) -- (12.2, -2);
+        \draw [] (12.2, -2) -- (17.4, -2); % +0.3
+        \draw [] (0, 0.2) -- (0, -2.2) node[anchor = north] {\num{0}};
+        \draw [] (3, 0.2) -- (3, -2.2) node[anchor = north] {\num{30}};
+        \draw [] (7.5, 0.4) -- (7.5, -2.2) node[anchor = north] {\num{480}};
+        \draw [] (9.5, 0.2) -- (9.5, -2.2) node[anchor = north] {\num{500}};
+        \draw [] (10.5, 0.2) -- (10.5, -2.2) node[anchor = north] {\num{510}};
+        \draw [] (11.2, 0.2) -- (11.2, -2.8) node[anchor = north] {\num{517}};
+        \draw [] (12.2, 0.2) -- (12.2, -2.2) node[anchor = north] {\num{527}};
+        \draw [] (13.2, 0.2) -- (13.2, -2.2) node[anchor = north] {\num{627}};
+        \draw [] (15.2, 0.2) -- (15.2, -2.2) node[anchor = north] {\num{647}};
+        \draw [] (15.7, 0.2) -- (15.7, -2.8) node[anchor = north] {\num{652}};
+        \draw [] (16.4, 0.2) -- (16.4, -2.2) node[anchor = north] {\num{659}};
+        \draw [] (17.4, 0.2) -- (17.4, -2.2) node[anchor = north] {\num{669}};
+        \draw [stealth - ] (7.5, 0.3) -- (17.4, 0.3) node[midway, anchor=south] {Quantum Well Loop (x\num{3})};
+        \node [label={[label distance=0]180:Time (\second)}] at (0, -6.6) {};
+        \draw [dashed] (0, -6.6) -- (1, -6.6);
+        \draw [] (1, -6.6) -- (5.7, -6.6);
+        \draw [dashed] (5.7, -6.6) -- (6.7, -6.6);
+        \draw [ - stealth] (6.7, -6.6) -- (7, -6.6);
+        \draw [] (0, -4.4) -- (0, -6.8) node[anchor = north] {\num{669}};
+        \draw [] (1, -4.4) -- (1, -6.8) node[anchor = north] {\num{769}};
+        \draw [] (3, -4.4) -- (3, -6.8) node[anchor = north] {\num{789}};
+        \draw [] (4, -4.4) -- (4, -6.8) node[anchor = north] {\num{799}};
+        \draw [] (4.7, -4.4) -- (4.7, -7.4) node[anchor = north] {\num{806}};
+        \draw [] (5.7, -4.4) -- (5.7, -6.8) node[anchor = north] {\num{816}};
+        \draw [] (6.7, -4.2) -- (6.7, -6.8) node[anchor = north] {\num{916}};
+        \draw [ - stealth] (0, -4.3) -- (6.7, -4.3) node[midway, anchor=south] {Quantum Well Loop (x\num{3})};
+    \end{scope}
+    \begin{scope} [shift={(18.6cm, -2)}] % +0.9
+        \draw [gray, ultra thick] (0, 0.5) -- (0.5, 0.5) node[anchor = west, text=black] {Hold Step};
+        \draw [cb1_orange, ultra thick] (0, 0) -- (0.5, 0) node[anchor = west, text=black] {\acs{ingaas}};
+        \draw [cb1_dark_blue, ultra thick] (0, -0.5) -- (0.5, -0.5) node[anchor = west, text = black] {\acs{inp}};
+        \draw [cb1_light_blue, ultra thick] (0, -1) -- (0.5, -1) node[anchor = west, text = black] {\acs{inas}};
+        \draw [cb1_purple, ultra thick] (0, -1.5) -- (0.5, -1.5) node[anchor = west, text = black] {\acs{gaas}};
+        \draw [dashed, ultra thick] (0, -2) -- (0.5, -2) node[anchor = west, text = black] {\num{0.1} time scale};
+        \draw (-0.3, 1) -- (3.3, 1) -- (3.3, -2.65) -- node[midway, fill = white] {Legend} (-0.3, -2.65) -- cycle;
+    \end{scope}
+    \end{tikzpicture}
+    \caption{\acs{mocvd} growth recipe for sample 7 \cite{Brugnolotto2023_2}. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed \num{10} times. The \acl{qw} growth loop was executed six times.}
+    \label{subfig:recipe7}
 \end{sidewaysfigure}
 
 \begin{table}
