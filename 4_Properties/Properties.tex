@@ -1152,7 +1152,7 @@ Therefore, the introduction of a lattice mismatch in the quantum well heterointe
 
 Two more binary materials, \acf{gaas} and \acf{inas}, can be grown without altering the precursor species introduced into the reactor from those used in previous experiments. Figure~\ref{subfig:recipe7} shows the \acs{mocvd} recipe used in the growth of sample 7. This new recipe was derived from those used for samples 5 and 6 (Figures~\ref{subfig:recipe5} and \ref{subfig:recipe6}). The initial \acs{ingaas} nucleation layer, with a target composition of \ce{In0_.53Ga0_.47As} was grown for \qty{30}{\second}, followed by the \qty{450}{\second}-long \acs{inp} \hkl{1 1 1} facet stabilisation step.
 
-The superlattice deposition loop was expanded to include \acs{inas} and \acs{gaas} \acl{qw}s. Both of these materials were deposited in \qty{10}{\second}-long steps, while the groth time of the third arsenide layer targeting the tattice matched  \ce{In0_.53Ga0_.47As} was kept unchanged from sample 6 at \qty{5}{\second}. The three \acs{inp} barrier layer deposition steps lasted \qty{100}{\second}. The growth loop sequence was \acs{inas} - \acs{inp} - \acs{ingaas} - \acs{inp} - \acs{gaas} - \acs{inp}. The hold steps were kept unchaged from those of sample 6: the post-phosphide hold step consisted in a \qty{20}{\second}-long \acf{tbp} single-precursor flow, while the post-arsenide hold step was kept as \qty{7}{\second} of pure \acf{tbas} followed by \qty{10}{\second} of pure \acs{tbp}. This \acl{qw} deposition loop was repeated three times, resulting in a total of nine \acl{qw}s: three for each target arsenide compound.
+The superlattice deposition loop was expanded to include \acs{inas} and \acs{gaas} \acl{qw}s. Both materials were deposited in \qty{10}{\second}-long steps, while the growth time of the third arsenide layer targeting the lattice matched \ce{In0_.53Ga0_.47As} was kept unchanged from sample 6 at \qty{5}{\second}. The three \acs{inp} barrier layer deposition steps lasted \qty{100}{\second}. The growth loop sequence was \acs{inas} - \acs{inp} - \acs{ingaas} - \acs{inp} - \acs{gaas} - \acs{inp}. The hold steps were kept unchanged from those of sample 6: the post-phosphide hold step consisted in a \qty{20}{\second}-long \acf{tbp} single-precursor flow, while the post-arsenide hold step was kept as \qty{7}{\second} of pure \acf{tbas} followed by \qty{10}{\second} of pure \acs{tbp}. This \acl{qw} deposition loop was repeated three times, resulting in a total of nine \acl{qw}s: three for each target arsenide compound.
 
 \begin{table}
   \centering
@@ -1165,17 +1165,26 @@ The superlattice deposition loop was expanded to include \acs{inas} and \acs{gaa
   \end{tabular}
 \end{table}
 
-The V / III molar ratios loaded in the reator in this growth run are summarised in Table~\ref{tbl:s7_ratios}. The precursor flows were kept unchanged from previous growth runs, and as such the V / III ratios during the deposition of \acs{inp} and \acs{ingaas} are unchanged from those seen in Table~\ref{tab:sample1_ratios} at \num{234} and \num{29}, respectively. The precursor flows were kept constant during deposition to avoid fluctuations in precursor molar flows given by the real hardware, and as such the V / III ratios for \acs{inas} and \acs{gaas} were dictated by the flows used to deposit \acs{inp} and \acs{ingaas}. Said rates were \num{186} and \num{34.4}, respectively.
+The V / III molar ratios loaded in the reactor in this growth run are summarised in Table~\ref{tbl:s7_ratios}. The precursor flows were kept unchanged from previous growth runs and, as such, the V / III ratios during the deposition of \acs{inp} and \acs{ingaas} are unchanged from those seen in Table~\ref{tab:sample1_ratios} at \num{234} and \num{29}, respectively. The precursor flows were kept constant during deposition to avoid fluctuations in precursor molar flows given by the real hardware, and as such the V / III ratios for \acs{inas} and \acs{gaas} were dictated by the flows used to deposit \acs{inp} and \acs{ingaas}. Said rates were \num{186} and \num{34.4}, respectively.
+
+\begin{figure}
+    \centering
+    \tikzsetnextfilename{s7_OV}
+    \begin{tikzpicture}
+        \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{4_Properties/Fig/s7_OV.pdf}};
+    \end{tikzpicture}
+    \caption{\acs{bf}-\acs{stem_m} image of a nanowire from sample 7. The \acs{si} seed is on the left of the image, followed by the \acs{ingaas} nucleation layer and \acs{inp} stabilisation layer. Of the \num{9} \acl{qw}s the thickest are composed of \acs{inas}, then the \acs{ingaas} \acl{qw}s, and finally the \acs{gaas} \acl{qw}s are the thinnest.}
+    \label{fig:s7_OV}
+\end{figure}
+
+Figure~\ref{fig:s7_OV} shows a \acs{bf}-\acs{stem_m} image of a lamella cut with the \qty{30}{\degree} method out of a nanowire array grown with the recipe in Figure~\ref{subfig:recipe7}. The \acl{si} seed is on the left of the image, and the nanowire grew toward the right. \num{3} groups of \num{3} \acl{qw}s of different size are visible after the  initial \acs{inp} stabilisation layer.
+
+The evolution of the growth front morphology during \acs{mocvd} growth is captured by the heterolayers embedded in the \acs{inp} matrix. All arsenide layers form parallel lines and are enclosed by \hkl{1 1 1} hetrointerfaces. This means that any eventual strain introduced in the nanowire lattice does not have a destabilising effect on the \hkl{111}\(_B\) growth regimen.
 
 
 
 
-
-
-
-
-
-
+\paragraph{\acs{eds} analysis}
 \paragraph{Strain analysis}
 \subsection{Antimonides}
 
