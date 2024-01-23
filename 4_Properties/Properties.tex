@@ -1205,8 +1205,48 @@ The evolution of the growth front morphology during \acs{mocvd} growth is captur
             \end{axis}
         \end{tikzpicture}
     }
+    \subcaptionbox{
+        Caption
+        \label{subfig:s7_III_EDS}
+    }{
+        \tikzsetnextfilename{s7_III_EDS}
+        \begin{tikzpicture}
+            \begin{axis}[%
+                xlabel = Position (nm),
+                ylabel = Composition (\%),
+                table/col sep=comma,
+                title = Well 7,
+                legend pos=outer north east,
+                ymin=0, ymax=100,
+                xmin = 0, xmax=15.61
+            ]
+                \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/Fwell8.csv};
+                \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/Fwell8.csv};
+            \end{axis}
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        Caption
+        \label{subfig:s7_III_EDS}
+    }{
+        \tikzsetnextfilename{s7_III_EDS}
+        \begin{tikzpicture}
+            \begin{axis}[%
+                xlabel = Position (nm),
+                ylabel = Composition (\%),
+                table/col sep=comma,
+                title = Well 7,
+                legend pos=outer north east,
+                ymin=0, ymax=100,
+                xmin = 0, xmax=15.61
+            ]
+                \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/Fwell9.csv};
+                \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/Fwell9.csv};
+            \end{axis}
+        \end{tikzpicture}
+    }
     \caption{Caption}
-    \label{fig:enter-label}
+    \label{fig:s7_EDS}
 \end{sidewaysfigure}
 
 
