@@ -1292,6 +1292,9 @@ The high indium content is probably due to the high rate of incorporation of thi
 
 Therefore, the three arsenide materials are better identified as \acs{inas}, \ce{In0_.75Ga0_.35As}, and \ce{In0_.55Ga0_.45As}. Longer hold steps could solve the alloying issue in the layers of the last two materials \cite{Brugnolotto2023_2}.
 
+The V-element composition graph for the \qty{2}{\nano\metre}-wide well 9 tells an interesting story about finite heterointerfaces. Indeed, the \acl{as} composition profile is highly asymmetrical. The leading edge grows in the same half-bell shape seen in all previous composition profiles but decays much more abruptly in the trailing edge. This can be explained by the fact that the growth of the \acs{gaas} layer is cut short before the well composition stabilises. This finding allows for an even stronger argument for longer hold steps in future deposition recipes and gives an indication of the real size of each heterointerface under these growth conditions, which is larger than \qty{2}{\nano\metre}.
+\par
+
 \begin{figure}
     \centering
     \subcaptionbox{
@@ -1316,15 +1319,40 @@ Therefore, the three arsenide materials are better identified as \acs{inas}, \ce
     \label{fig:s7_well1-3_HR}
 \end{figure}
 
-\paragraph{Structural analysis} Figure~\ref{fig:s7_well1-3_HR} shows high-resolution \acs{bf}-\acs{stem_m} images 
+\paragraph{Structural analysis} The \acs{bf}-\acs{stem_m} images in Figure~\ref{fig:s7_well1-3_HR} show the first three \acl{qw}s of sample 7 in atomic resolution. \Acl{rtp}s are present in this sample, much like the previous ones grown with the \hkl{1 1 1}\(_B\) stabilisation method. The \acs{inas} \acs{qw} is shown in Figure~\ref{subfig:s7_well1} and is the largest of the three, followed by the \ce{In0_.75Ga0_.35As} well shown in Figure~\ref{subfig:s7_well2}. The shortest material layer is the \ce{In0_.55Ga0_.45As} well in Figure~\ref{subfig:s7_well3} which is only \num{4} atomic bilayers thick. The thinness of this layer is at the limit of what can be grown with classical \acs{mocvd}, as thinner layers begin to fall under the umbrella of \acf{ald} methods. Nevertheless, the creation of such a thin material layer with this definition demonstrates the strength of the deposition recipe used to achieve this result, despite the composition issues that were just discussed.
+\par
+\paragraph{Growth rates} Growth rates were calculated for the first and last three arsenide \acl{qw}s end for the first and seventh \acs{inp} barriers. The \acs{inp} growth rate for the first barrier was \qty[separate-uncertainty=true]{23.8 (0.3)}{\nano\metre\per\minute} and \qty[separate-uncertainty=true]{24.0 (0.4)}{\nano\metre\per\minute} for the seventh barrier. These growth rates are in line with those seen in previous samples, as are those for the first and last \ce{In0_.75Ga0_.35As} well, at \qty[separate-uncertainty=true]{39 (3)}{\nano\metre\per\minute} and \qty[separate-uncertainty=true]{44 (2)}{\nano\metre\per\minute}.
 
+The growth rates for the other two materials can be analysed by taking into account the V / III ratios. The growth rates of \acs{inas} wells have the largest increase of all material layers, going from \qty[separate-uncertainty=true]{26.4 (2)}{\nano\metre\per\minute} to \qty[separate-uncertainty=true]{34 (1)}{\nano\metre\per\minute}. This growth rate is higher than that of \acs{inp}, as expected by the lower V / III ratio. On the other hand, the growth rate of the \ce{In0_.55Ga0_.45As} is the lowest of the four, at \qty[separate-uncertainty=true]{11.6 (0.9)}{\nano\metre\per\minute} for the first well and \qty[separate-uncertainty=true]{12.5 (0.5)}{\nano\metre\per\minute} for the last. This is despite the V / III ratio of \num{34.4} being much closer to that used in the second well. 
 
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        $\varepsilon_{xx}$ around \acs{qw}1.
+        \label{subfig:s7_well1_Exx}
+    }{
+        \includegraphics[width=0.31\textwidth]{4_Properties/Fig/s7_well1_Exx.pdf}
+    }
+    \subcaptionbox{
+        $\varepsilon_{xx}$ around \acs{qw}2.
+        \label{subfig:s7_well2_Exx}
+    }{
+        \includegraphics[width=0.31\textwidth]{4_Properties/Fig/s7_well2_Exx.pdf}
+    }
+    \subcaptionbox{
+        $\varepsilon_{xx}$ around \acs{qw}3.
+        \label{subfig:s7_well3_Exx}
+    }{
+        \includegraphics[width=0.31\textwidth]{4_Properties/Fig/s7_well3_Exx.pdf}
+    }
+    \caption{High-resolution \acs{bf}-\acs{stem_m} images of the first three \acl{qw}s of the nanowire pictured in Figure~\ref{fig:s7_OV}. \subref{subfig:s7_well1} shows the first \acs{inas} \acl{qw}, \subref{subfig:s7_well2} shows the first \ce{In0_.75Ga0_.35As} \acl{qw}, and \subref{subfig:s7_well3} shows the first \ce{In0_.55Ga0_.45As} \acl{qw}.}
+    \label{fig:s7_}
+\end{figure}
 
-
-\paragraph{Growth rates}
-
-TALK ABOUT GROWTH RATE DISCREPANCIES AND ROLE OF ELEMENTS IN THE GROWTH
 \paragraph{Strain analysis}
+
+
+
 \subsection{Antimonides}
 
 \section{Doped semiconductors}
@@ -1337,8 +1365,8 @@ TALK ABOUT GROWTH RATE DISCREPANCIES AND ROLE OF ELEMENTS IN THE GROWTH
 
 
 
-\section{article 2}
-\subsection{Heterointerfaces and growth rate in nanowires}
+% \section{article 2}
+% \subsection{Heterointerfaces and growth rate in nanowires}
 
 %\begin{figure}
 %     \centering
@@ -1370,7 +1398,7 @@ TALK ABOUT GROWTH RATE DISCREPANCIES AND ROLE OF ELEMENTS IN THE GROWTH
 % \par
 % The \acs{ingaas} segment, with a target composition of \ce{In0_.53Ga0_.47As}, grew \acs{in}-rich, as seen from the EDS profiles in Figure~\ref{fig:composition}.c. A similar observation is made for the intended \acs{gaas} heterostructure: optimisation {fig:composition}.d shows this layer is heavily alloyed with a recorded \acs{in} molar fraction close to \num{0.5}. This indicates that the hold steps implemented in the growth recipe and designed to exhaust the group III element precursor (\acs{in}) were set too short. Further optimisation with prolongation of the purging step is thus suggested to improve composition control for these thin \qty{3}{nm}-wide heterostructures.
 % \par
-The growth rates of the \acs{ingaas} and \acs{inp} layers were assessed with a process analogous to the one used for the growth rates of sample 1. The \acs{inp} growth rates is \qty[separate-uncertainty=true]{23.8 (0.3)}{\nano\metre\per\minute} between the first \acs{inas} and the first \acs{ingaas} wells and \qty[separate-uncertainty=true]{24.0 (0.4)}{\nano\metre\per\minute} between the third \acs{inas} and the third \acs{ingaas} wells. The \acs{ingaas} growth rates are \qty[separate-uncertainty=true]{39 (3)}{\nano\metre\per\minute} for the first \acs{ingaas} well and \qty[separate-uncertainty=true]{44 (2)}{\nano\metre\per\minute} for the third \acs{ingaas} well. All values are averaged from repeated measurements, and errors are given with 95\% certainty. Thus, the growth rates of samples 1 and 2 are comparable for these materials.
+% The growth rates of the \acs{ingaas} and \acs{inp} layers were assessed with a process analogous to the one used for the growth rates of sample 1. The \acs{inp} growth rates is \qty[separate-uncertainty=true]{23.8 (0.3)}{\nano\metre\per\minute} between the first \acs{inas} and the first \acs{ingaas} wells and \qty[separate-uncertainty=true]{24.0 (0.4)}{\nano\metre\per\minute} between the third \acs{inas} and the third \acs{ingaas} wells. The \acs{ingaas} growth rates are \qty[separate-uncertainty=true]{39 (3)}{\nano\metre\per\minute} for the first \acs{ingaas} well and \qty[separate-uncertainty=true]{44 (2)}{\nano\metre\per\minute} for the third \acs{ingaas} well. All values are averaged from repeated measurements, and errors are given with 95\% certainty. Thus, the growth rates of samples 1 and 2 are comparable for these materials.
 
 
 %\subsection{\texorpdfstring{Growth of wide \acl{qw} structures from multiple \acs{si} seeds}{Growth of wide quantum well structures from multiple Si seeds}}
