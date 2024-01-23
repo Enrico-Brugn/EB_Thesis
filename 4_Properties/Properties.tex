@@ -1184,25 +1184,32 @@ Figure~\ref{fig:s7_OV} shows a \acs{bf}-\acs{stem_m} image of a lamella cut with
 The evolution of the growth front morphology during \acs{mocvd} growth is captured by the heterolayers embedded in the \acs{inp} matrix. All arsenide layers form parallel lines and are enclosed by \hkl{1 1 1} heterointerfaces. Any eventual strain introduced in the nanowire lattice does not destabilise the \hkl{111}\(_B\) growth regimen.
 
 \begin{sidewaysfigure}
-    \subcaptionbox{
-    \label{subfig:s7_III_EDS}
-    }{
-        \tikzsetnextfilename{s7_III_EDS}
-        \begin{tikzpicture}
-            \begin{axis}[%
-                xlabel = Position (nm),
-                ylabel = Composition (\%),
-                table/col sep=comma,
-                title = Well 7,
-                legend pos=outer north east,
-                ymin=0, ymax=100,
-                xmin = 0, xmax=15.61
-            ]
-                \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/Fwell7.csv};
-                \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/Fwell7.csv};
-            \end{axis}
-        \end{tikzpicture}
-    }
+    \begin{figure}
+        \centering
+        \subcaptionbox{
+        Caption
+        \label{subfig:s7_III_EDS}
+        }{
+            \tikzsetnextfilename{s7_III_EDS}
+            \begin{tikzpicture}
+                \begin{axis}[%
+                    xlabel = Position (nm),
+                    ylabel = Composition (\%),
+                    table/col sep=comma,
+                    title = Well 7,
+                    legend pos=outer north east,
+                    ymin=0, ymax=100,
+                    xmin = 0, xmax=15.61
+                ]
+                    \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/Fwell7.csv};
+                    \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/Fwell7.csv};
+                \end{axis}
+            \end{tikzpicture}
+        }
+        \caption{Caption}
+        \label{fig:enter-label}
+    \end{figure}
+    
 \end{sidewaysfigure}
 
 
