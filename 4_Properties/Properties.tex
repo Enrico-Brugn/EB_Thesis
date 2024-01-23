@@ -1192,7 +1192,7 @@ The evolution of the growth front morphology during \acs{mocvd} growth is captur
         \tikzsetnextfilename{s7_III_EDS}
         \begin{tikzpicture}
             \begin{axis}[%
-                width = 8cm,
+                width = 7.5cm,
                 xlabel = Position (nm),
                 ylabel = Composition (\%),
                 table/col sep=comma,
@@ -1206,7 +1206,7 @@ The evolution of the growth front morphology during \acs{mocvd} growth is captur
             \end{axis}
             \begin{axis}[%
                 xshift = 7cm,
-                width = 8cm,
+                width = 7.5cm,
                 xlabel = Position (nm),
                 table/col sep=comma,
                 title = Well 8,
@@ -1219,7 +1219,7 @@ The evolution of the growth front morphology during \acs{mocvd} growth is captur
             \end{axis}
             \begin{axis}[%
                 xshift = 14cm,
-                width = 8cm,
+                width = 7.5cm,
                 xlabel = Position (nm),
                 table/col sep=comma,
                 title = Well 9,
@@ -1231,6 +1231,54 @@ The evolution of the growth front morphology during \acs{mocvd} growth is captur
                 \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/Fwell9.csv};
                 \addlegendentry{Ga}
                 \addlegendentry{In}
+            \end{axis}
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        Caption
+        \label{subfig:s7_V_EDS}
+    }{
+        \tikzsetnextfilename{s7_V_EDS}
+        \begin{tikzpicture}
+            \begin{axis}[%
+                width = 7.5cm,
+                xlabel = Position (nm),
+                ylabel = Composition (\%),
+                table/col sep=comma,
+                legend pos=outer north east,
+                ymin=0, ymax=100,
+                xmin = 0, xmax=15.61
+            ]
+                \addplot [cb1_orange,] table[x=nm,y=As] {4_Properties/csv/Fwell7.csv};
+                \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Properties/csv/Fwell7.csv};
+            \end{axis}
+            \begin{axis}[%
+                xshift = 7cm,
+                width = 7.5cm,
+                xlabel = Position (nm),
+                table/col sep=comma,
+                title = Well 8,
+                legend pos=outer north east,
+                ymin=0, ymax=100,
+                xmin = 0, xmax=12.49
+            ]
+                \addplot [cb1_orange,] table[x=nm,y=As] {4_Properties/csv/Fwell8.csv};
+                \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Properties/csv/Fwell8.csv};
+            \end{axis}
+            \begin{axis}[%
+                xshift = 14cm,
+                width = 7.5cm,
+                xlabel = Position (nm),
+                table/col sep=comma,
+                title = Well 9,
+                legend pos=outer north east,
+                ymin=0, ymax=100,
+                xmin = 0, xmax=13.18
+            ]
+                \addplot [cb1_orange,] table[x=nm,y=As] {4_Properties/csv/Fwell9.csv};
+                \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Properties/csv/Fwell9.csv};
+                \addlegendentry{As}
+                \addlegendentry{P}
             \end{axis}
         \end{tikzpicture}
     }
