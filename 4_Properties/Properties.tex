@@ -1383,7 +1383,7 @@ Due to project-related timer constraints, further optimisation of the growth con
     \centering
     \subcaptionbox{
     Growth recipe for sample 9. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed 10 times. The \acl{qw} growth loop was executed six times.
-        \label{recipe9}
+        \label{subfig:recipe9}
     }{
         \tikzsetnextfilename{recipe9}
         \begin{tikzpicture}
@@ -1439,14 +1439,28 @@ Due to project-related timer constraints, further optimisation of the growth con
         \end{tikzpicture}
     }
     \subcaptionbox{
-        \acs{bf}-\acs{stem_m} image of a lamella cur from a nanowire grown with recipe 9.
-        \label{s9_OV}
+        \acs{bf}-\acs{stem_m} image of a lamella cut from a nanowire grown with recipe 9.
+        \label{subfig:s9_OV}
     }{
-        \includegraphics[width = \textwidth]{4_Properties/Fig/s9_OV.pdf}
+        \includegraphics[width = 0.64\textwidth]{4_Properties/Fig/s9_OV.pdf}
     }
-    \caption{Caption}
+    \subcaptionbox{
+        \acs{bf}-\acs{stem_m} of the first \acs{qw} of the wire in \subref{subfig:s9_OV}.
+        \label{subfig:s9_well1}
+    }{
+        \includegraphics[width = 0.32\textwidth]{4_Properties/Fig/s9_well1.pdf}
+    }
+    \caption{\acs{mocvd} growth recipe and \acs{stem_m} analysis of sample 9. \subref{subfig:recipe9} shows a schematic of the growth recipe, with colour-coded recipe segments. \subref{subfig:s9_OV} shows a \acs{bf}-\acs{stem_m} overview image of a nanowire cut from sample 9. \subref{subfig:s9_well1} shows a high resolution \acs{bf}-\acs{stem_m} image of the first quantum well of the lamella in \subref{subfig:s9_OV}}
     \label{fig:s9_recipe_stem}
 \end{sidewaysfigure}
+
+The study of the effect of dopants on the \hkl{1 1 1} growth regime is an important aspect to consider when bridging the gap between pure growth studies and device integration. Although an active component can incorporate \acl{qw}s or not, the reliable stabilisation of a single-faceted growth front also helps with contacting devices with a plain intrinsic region. However, as the last sentence suggests, active photonic devices are usually doped, often in a \textit{p} - \textit{i} - \textit{n} configuration. The impact on the growth mechanism of introducing dopants in the lattice and the reaction atmosphere, although in low quantities compared to the precursors of the main species, should, therefore, be studied.
+
+\Acl{sn} is a \textit{n} dopant \cite{Vedel2023} that has been previously used in the \acs{inp} layer of successful \acs{tase}-grown devices \cite{Wen2022}.
+
+
+
+
 
 
 
