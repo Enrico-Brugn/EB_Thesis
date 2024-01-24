@@ -799,46 +799,46 @@ Once the single growth front is established, the growth of the crystal can conti
     % lines
             \node [label={[label distance=0]180:\acs{in}}] at (0, 0) {};
             \draw [cb1_orange, ultra thick] (0, 0) -- (1, 0); 
-            \draw [cb1_dark_blue, ultra thick, dashed] (1, 0) -- (5, 0); %10
-            \draw [cb1_orange, ultra thick] (7, 0) -- (7.5, 0);
-            \draw [cb1_dark_blue, ultra thick, dashed] (9.2, 0) -- (10.2, 0); %10
+            \draw [cb1_dark_blue, ultra thick, dashed] (1, 0) -- (5.5, 0); %10
+            \draw [cb1_orange, ultra thick] (7.5, 0) -- (8, 0);
+            \draw [cb1_dark_blue, ultra thick, dashed] (9.7, 0) -- (10.7, 0); %10
         
             \node [label={[label distance=0]180:\acs{ga}}] at (0, -0.5) {};
             \draw [cb1_orange, ultra thick] (0, -0.5) -- (1, -0.5cm); 
-            \draw [cb1_orange, ultra thick] (7, -0.5) -- (7.5, -0.5);
+            \draw [cb1_orange, ultra thick] (7.5, -0.5) -- (8, -0.5);
         
             \node [label={[label distance=0]180:\acs{as}}] at (0, -1) {};
             \draw [cb1_orange, ultra thick] (0, -1) -- (1, -1); 
-            \draw [cb1_orange, ultra thick] (7, -1) -- (7.5, -1);
-            \draw [gray, ultra thick] (7.5, -1) -- (8.2, -1);
+            \draw [cb1_orange, ultra thick] (7.5, -1) -- (8, -1);
+            \draw [gray, ultra thick] (8, -1) -- (8.7, -1);
         
             \node [label={[label distance=0]180:\acs{p}}] at (0, -1.5) {};
-            \draw [cb1_dark_blue, ultra thick, dashed] (1, -1.5) -- (5, -1.5); %/10
-            \draw [gray, ultra thick] (5, -1.5) -- (7, -1.5);
-            \draw [gray, ultra thick] (8.2, -1.5) -- (9.2, -1.5);
-            \draw [cb1_dark_blue, ultra thick, dashed] (9.2, -1.5) -- (10.2, -1.5); %/10
-            \draw [gray, ultra thick] (10.2, -1.5) -- (12.2, -1.5);
+            \draw [cb1_dark_blue, ultra thick, dashed] (1, -1.5) -- (5.5, -1.5); %/10
+            \draw [gray, ultra thick] (5.5, -1.5) -- (7.5, -1.5);
+            \draw [gray, ultra thick] (8.7, -1.5) -- (9.7, -1.5);
+            \draw [cb1_dark_blue, ultra thick, dashed] (9.7, -1.5) -- (10.7, -1.5); %/10
+            \draw [gray, ultra thick] (10.7, -1.5) -- (12.7, -1.5);
         
     % labels and markers for the timescale
             \node [label={[label distance=0]180:Time (\second)}] at (0, -2) {};
             \draw [] (0, -2) -- (1, -2);
-            \draw [dashed] (1, -2) -- (5, -2);
-            \draw [] (5, -2) -- (9.2, -2);
-            \draw [dashed] (9.2, -2) -- (10.2, -2);
-            \draw [-stealth] (10.2, -2) -- (12.5, -2); % +0.3
+            \draw [dashed] (1, -2) -- (5.5, -2);
+            \draw [] (5.5, -2) -- (9.7, -2);
+            \draw [dashed] (9.7, -2) -- (10.7, -2);
+            \draw [-stealth] (10.7, -2) -- (13.2, -2); % +0.3
             \draw [] (0, 0.2) -- (0, -2.2) node[anchor = north] {\num{0}};
             \draw [] (1, 1.2) -- (1, -2.2) node[anchor = north] {\num{10}};
-            \draw [] (5, 0.2) -- (5, -2.2) node[anchor = north] {\num{410}};
-            \draw [] (7, 0.4) -- (7, -2.2) node[anchor = north] {\num{430}};
-            \draw [] (7.5, 0.2) -- (7.5, -2.8) node[anchor = north] {\num{435}};
-            \draw [] (8.2, 0.2) -- (8.2, -2.2) node[anchor = north] {\num{442}};
-            \draw [] (9.2, 0.2) -- (9.2, -2.2) node[anchor = north] {\num{452}};
-            \draw [] (10.2, 0.2) -- (10.2, -2.2) node[anchor = north] {\num{552}};
-            \draw [] (12.2, 1.2) -- (12.2, -2.2) node[anchor = north] {\num{572}};
-            \draw [stealth - stealth] (7, 0.3) -- (12.2, 0.3) node[midway, anchor=south] {Quantum Well Loop (x\num{6})};
-            \draw [stealth - stealth] (1, 1.1) -- (12.2, 1.1) node[midway, anchor=south] {Deposition Loop (x\num{2})};
+            \draw [] (5.5, 0.2) -- (5.5, -2.2) node[anchor = north] {\num{460}};
+            \draw [] (7.5, 0.4) -- (7.5, -2.2) node[anchor = north] {\num{480}};
+            \draw [] (8, 0.2) -- (8, -2.8) node[anchor = north] {\num{485}};
+            \draw [] (8.7, 0.2) -- (8.7, -2.2) node[anchor = north] {\num{492}};
+            \draw [] (9.7, 0.2) -- (9.7, -2.2) node[anchor = north] {\num{502}};
+            \draw [] (10.7, 0.2) -- (10.7, -2.2) node[anchor = north] {\num{602}};
+            \draw [] (12.7, 1.2) -- (12.7, -2.2) node[anchor = north] {\num{622}};
+            \draw [stealth - stealth] (7.5, 0.3) -- (12.7, 0.3) node[midway, anchor=south] {Quantum Well Loop (x\num{6})};
+            \draw [stealth - stealth] (1, 1.1) -- (12.7, 1.1) node[midway, anchor=south] {Deposition Loop (x\num{2})};
         \end{scope}
-        \begin{scope} [shift={(13.4cm, -0.5)}] % +0.9
+        \begin{scope} [shift={(14.1cm, -0.5)}] % +0.9
             \draw [gray, ultra thick] (0, 0.5) -- (0.5, 0.5) node[anchor = west, text=black] {Hold Step};
             \draw [cb1_orange, ultra thick] (0, 0) -- (0.5, 0) node[anchor = west, text=black] {\acs{ingaas}};
             \draw [cb1_dark_blue, ultra thick] (0, -0.5) -- (0.5, -0.5) node[anchor = west, text = black] {\acs{inp}};
@@ -875,7 +875,7 @@ Once the single growth front is established, the growth of the crystal can conti
 
 A modified growth recipe was built based on the results of sample 5. The main objectives were to create even thinner \acs{ingaas} \acl{qw}s, which would give more information on the minimum thickness of the heterolayer achievable by \acs{mocvd} growth using the facet stabilisation method and a further decrease of the post-\acs{ingaas} \acl{as} hold step, to try to further mitigate the \acl{as} contamination in the \acs{inp} region immediately after each \acl{qw}.
 
-The resulting recipe is shown in Figure~\ref{subfig:recipe6}. The \acs{ingaas} nucleation layer's deposition time was decreased from \qty{30}{\second} to \qty{10}{\second}. As there had been no nucleation issues with the \qty{30}{\second} deposition time in sample 5, a lower step time was tested for this sample to minimise the amount of \acs{ingaas} outside the \acl{qw}s. The recipe segments and loops following the nucleation layer were run twice. The deposition of the \acs{ingaas}/\acs{inp} superlattice took place after \qty{400}{\second} of \acs{inp} growth. The step time for \acs{ingaas} was reduced from \qty{10}{\second} to \qty{5}{\second}, and the post-\acs{ingaas} \acl{as} hold step shortened from \qty{10}{\second} to \qty{7}{\second}. The deposition times of the barrier layers were also shortened from \qty{200}{\second} to \qty{100}{\second}. The number of repetitions of the \acl{qw} loop was doubled from \num{3} to \num{6}. The cumulative changes were meant to double the number of \acl{qw}s present in the same length of nanowires that contained the superlattice in sample 5, while repeating the entire recipe twice was meant to result in a longer overall nanowire to highlight differences in growth rate based on the depth of each material layer in the template.
+The resulting recipe is shown in Figure~\ref{subfig:recipe6}. The \acs{ingaas} nucleation layer's deposition time was decreased from \qty{30}{\second} to \qty{10}{\second}. As there had been no nucleation issues with the \qty{30}{\second} deposition time in sample 5, a lower step time was tested for this sample to minimise the amount of \acs{ingaas} outside the \acl{qw}s. The recipe segments and loops following the nucleation layer were run twice. The deposition of the \acs{ingaas}/\acs{inp} superlattice took place after \qty{450}{\second} of \acs{inp} growth. The step time for \acs{ingaas} was reduced from \qty{10}{\second} to \qty{5}{\second}, and the post-\acs{ingaas} \acl{as} hold step shortened from \qty{10}{\second} to \qty{7}{\second}. The deposition times of the barrier layers were also shortened from \qty{200}{\second} to \qty{100}{\second}. The number of repetitions of the \acl{qw} loop was doubled from \num{3} to \num{6}. The cumulative changes were meant to double the number of \acl{qw}s present in the same length of nanowires that contained the superlattice in sample 5, while repeating the entire recipe twice was meant to result in a longer overall nanowire to highlight differences in growth rate based on the depth of each material layer in the template.
 
 The \qty{30}{\degree} cross-section of a nanowire grown with this revised recipe is shown in the \acs{bf}-\acs{stem_m} image in Figure~\ref{subfig:s6_wire_OV}. The angled view given by this tilted cross-section causes the shaded top and bottom interfaces of the III-V material region. The circular shades in the image are given by indium droplets, a common residue left over from \acs{fib} lamella preparation. The III-V material, appearing darker in the centre of the image, is sandwiched between the template oxide at the top and the buried oxide layer at the bottom. The \acs{si} seed is visible on the left of the image, while the \acs{ingaas} nucleation layer is too thin to appear as more than a darker shade at the very beginning of the nanowire. Twelve vertical lines, darker compared to the \acs{inp} making up the majority of the wire, are created by a change in channelling contrast given by the presence of \acl{as} atoms, which are larger than the \acl{p} atoms that make up the majority of the V element atoms in the wire.
 
@@ -1381,18 +1381,71 @@ Due to project-related timer constraints, further optimisation of the growth con
 
 \begin{sidewaysfigure}
     \centering
-    \subcaptionbox{Caption
+    \subcaptionbox{
+    Growth recipe for sample 9. Each line represents an active flow of the corresponding precursor into the reactor. The colour of the horizontal lines represents the target material. The dashed lines are time-compressed 10 times. The \acl{qw} growth loop was executed six times.
         \label{recipe9}
     }{
-        \includegraphics[width = \textwidth]{4_Properties/Fig/s9_OV.pdf}
+        \tikzsetnextfilename{recipe9}
+        \begin{tikzpicture}
+        \begin{scope}
+    % lines
+            \node [label={[label distance=0]180:\acs{in}}] at (0, 0) {};
+            \draw [cb1_orange, ultra thick] (0, 0) -- (1.5, 0); 
+            \draw [cb1_dark_blue, ultra thick, dashed] (1.5, 0) -- (6, 0); %10
+            \draw [cb1_orange, ultra thick] (8, 0) -- (9.5, 0);
+            \draw [cb1_dark_blue, ultra thick, dashed] (11.2, 0) -- (12.2, 0); %10
+        
+            \node [label={[label distance=0]180:\acs{ga}}] at (0, -0.5) {};
+            \draw [cb1_orange, ultra thick] (0, -0.5) -- (1.5, -0.5cm); 
+            \draw [cb1_orange, ultra thick] (8, -0.5) -- (9.5, -0.5);
+        
+            \node [label={[label distance=0]180:\acs{as}}] at (0, -1) {};
+            \draw [cb1_orange, ultra thick] (0, -1) -- (1.5, -1); 
+            \draw [cb1_orange, ultra thick] (8, -1) -- (9.5, -1);
+            \draw [gray, ultra thick] (9.5, -1) -- (10.2, -1);
+        
+            \node [label={[label distance=0]180:\acs{p}}] at (0, -1.5) {};
+            \draw [cb1_dark_blue, ultra thick, dashed] (1.5, -1.5) -- (6, -1.5); %/10
+            \draw [gray, ultra thick] (6, -1.5) -- (8, -1.5);
+            \draw [gray, ultra thick] (10.2, -1.5) -- (11.2, -1.5);
+            \draw [cb1_dark_blue, ultra thick, dashed] (11.2, -1.5) -- (12.2, -1.5); %/10
+            \draw [gray, ultra thick] (12.2, -1.5) -- (14.2, -1.5);
+        
+    % labels and markers for the timescale
+            \node [label={[label distance=0]180:Time (\second)}] at (0, -2) {};
+            \draw [] (0, -2) -- (1.5, -2);
+            \draw [dashed] (1, -2) -- (6, -2);
+            \draw [] (6, -2) -- (11.2, -2);
+            \draw [dashed] (11.2, -2) -- (12.2, -2);
+            \draw [-stealth] (12.2, -2) -- (14.5, -2); % +0.3
+            \draw [] (0, 0.2) -- (0, -2.2) node[anchor = north] {\num{0}};
+            \draw [] (1.5, 0.2) -- (1.5, -2.2) node[anchor = north] {\num{15}};
+            \draw [] (6, 0.2) -- (6, -2.2) node[anchor = north] {\num{465}};
+            \draw [] (8, 0.4) -- (8, -2.2) node[anchor = north] {\num{485}};
+            \draw [] (9.5, 0.2) -- (9.5, -2.2) node[anchor = north] {\num{500}};
+            \draw [] (10.2, 0.2) -- (10.2, -2.8) node[anchor = north] {\num{507}};
+            \draw [] (11.2, 0.2) -- (11.2, -2.2) node[anchor = north] {\num{517}};
+            \draw [] (12.2, 0.2) -- (12.2, -2.2) node[anchor = north] {\num{617}};
+            \draw [] (14.2, 0.4) -- (14.2, -2.2) node[anchor = north] {\num{637}};
+            \draw [stealth - stealth] (8, 0.3) -- (14.2, 0.3) node[midway, anchor=south] {Quantum Well Loop (x\num{6})};
+        \end{scope}
+        \begin{scope} [shift={(15.4cm, -0.5)}] % +0.9
+            \draw [gray, ultra thick] (0, 0.5) -- (0.5, 0.5) node[anchor = west, text=black] {Hold Step};
+            \draw [cb1_orange, ultra thick] (0, 0) -- (0.5, 0) node[anchor = west, text=black] {\acs{ingaas}};
+            \draw [cb1_dark_blue, ultra thick] (0, -0.5) -- (0.5, -0.5) node[anchor = west, text = black] {\acs{inp} (\acs{sn}-doped)};
+            \draw [dashed, ultra thick] (0, -1) -- (0.5, -1) node[anchor = west, text = black] {\num{0.1} time scale};
+            \draw (-0.3, 1) -- (3.3, 1) -- (3.3, -1.65) -- node[midway, fill = white] {Legend} (-0.3, -1.65) -- cycle;
+        \end{scope}
+        \end{tikzpicture}
     }
-    \subcaptionbox{Caption
+    \subcaptionbox{
+        \acs{bf}-\acs{stem_m} image of a lamella cur from a nanowire grown with recipe 9.
         \label{s9_OV}
     }{
         \includegraphics[width = \textwidth]{4_Properties/Fig/s9_OV.pdf}
     }
     \caption{Caption}
-    \label{fig:s9_OV}
+    \label{fig:s9_recipe_stem}
 \end{sidewaysfigure}
 
 
