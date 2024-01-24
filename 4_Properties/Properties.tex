@@ -1,5 +1,5 @@
 \chapter{Properties of TASE-grown nanowires}
-\label{chap:properties}
+\label{chap: properties}
 
 The critical growth mechanisms and single-facet \hkl{111}\(_B\) growth front stabilisation method were explored and developed in Chapter~\ref{chap:growth}. However, the lack of in-plane \hkl{1 1 1} directions in the \hkl(0 0 1) \acf{soi} wafer on which growth was carried out complicates the analysis of growth results. The two possible \hkl{1 1 1} facets are tilted and, therefore, yield calculations and device contacting become more complex, as the process through which one of the facets is selected for stabilisation is dependent on the shape and orientation of the nucleating crystal on the \acs{si} seed.
 
@@ -1456,7 +1456,7 @@ Due to project-related timer constraints, further optimisation of the growth con
 
 The study of the effect of dopants on the \hkl{1 1 1} growth regime is an important aspect to consider when bridging the gap between pure growth studies and device integration. Although an active component can incorporate \acl{qw}s or not, the reliable stabilisation of a single-faceted growth front also helps with contacting devices with a plain intrinsic region. However, as the last sentence suggests, active photonic devices are usually doped, often in a \textit{p} - \textit{i} - \textit{n} configuration. The impact on the growth mechanism of introducing dopants in the lattice and the reaction atmosphere, although in low quantities compared to the precursors of the main species, should, therefore, be studied.
 
-\Acl{sn} is a \textit{n} dopant \cite{Vedel2023} that has previously been used in the \acs{inp} layer of successful \acs{tase}-grown devices \cite{Wen2022}. Its metal-organic precursor, \acf{tmsn}, was available in the \acs{mocvd} system, and therefore a growth run was carried out. The deposition recipe is shown in Figure~\ref{subfig:recipe9}, and features a standard step sequence, consisting of a \qty{15}{\second} long step for the \acs{ingaas} nucleation layer, followed by a \qty{450}{\second}-long \textit{n}-doped \acs{inp} stabilisation layer. The following superlattice deposition loop contained a \qty{15}{\second}-long \acs{ingaas} well deposition step followed by the \qty{7}{\second} \acs{tbas} / \qty{10}{\second} \acs{tbp} hold step. The barrier \textit{n}-\acs{inp} deposition step was \qty{100}{\second} in duration and was followed by a \qty{20}{\second} \acs{tbp} hold step.
+\Acl{sn} is a \textit{n} dopant \cite{Vedel2023} that has previously been used in the \acs{inp} layer of successful \acs{tase}-grown devices \cite{Wen2022}. Its metal-organic precursor, \acf{tesn}, was available in the \acs{mocvd} system, and therefore a growth run was carried out. The deposition recipe is shown in Figure~\ref{subfig:recipe9}, and features a standard step sequence, consisting of a \qty{15}{\second} long step for the \acs{ingaas} nucleation layer, followed by a \qty{450}{\second}-long \textit{n}-doped \acs{inp} stabilisation layer. The following superlattice deposition loop contained a \qty{15}{\second}-long \acs{ingaas} well deposition step followed by the \qty{7}{\second} \acs{tbas} / \qty{10}{\second} \acs{tbp} hold step. The barrier \textit{n}-\acs{inp} deposition step was \qty{100}{\second} in duration and was followed by a \qty{20}{\second} \acs{tbp} hold step.
 
 Figure~\ref{subfig:s9_OV} shows the \acs{bf}-\acs{stem_m} image of a \qty{30}{\degree} \acs{fib} cross-section of a nanowire grown with the recipe shown in Figure~\ref{subfig:recipe9}. The \acl{si} seed is on the left of the image, and the III-V material is at its centre enclosed by the top \acs{sio2} template and the bottom buried oxide layer. Its surface appears to be formed by a \hkl{1 1 1} facet at the top and another, likely high-indexed, facet at the bottom. Despite this defect, initial nucleation was successful and the \textit{n}-\acs{inp} stabilisation layer formed a single \hkl{1 1 1} growth front, reflected in its evolution by the shape of the \acs{ingaas} \acl{qw}s.
 
@@ -1514,9 +1514,16 @@ Figure~\ref{subfig:s9_well1} shows a high-resolution \acs{bf}-\acs{stem_m} image
 
     \end{tikzpicture}
     }
-    \caption{\acs{eds} linescan compositional data (in percentage) for the \subref{subfig:s6_III_30deg_linesc} III elements and \subref{subfig:s6_V_30deg_linesc} V elements of sample 9 (Figure~\ref{subfig:s6_wire_OV}).}
-    \label{fig:s6_30deg_linescans}
+    \caption{\acs{eds} linescan compositional data (in atomic percentage) for the \subref{subfig:s6_III_30deg_linesc} III elements and \subref{subfig:s6_V_30deg_linesc} V elements of sample 9.}
+    \label{fig:s9_30deg_linescans}
 \end{figure}
+
+\paragraph{\acs{eds} analysis} The \acs{tesn} / (\acs{tesn} + \acs{tmin}) ratio loaded in the reactor was \num{0.037}, way too low to be reflected in \acs{eds} spectra. Regardless of this, the composition graphs of Figure~\ref{fig:s9_30deg_linescans} raise another point of interest. Figure~\ref{fig:s9_30deg_linescans} shows the composition of the III-V nanowire as a function of the position struck by the electron beam of the \acs{stem_m} as it moved across the \acl{qw} shown in Figure~\ref{subfig:s9_well1}, from left to right. The noise level of the spectra is around \qty{15}{\%}.
+
+The III element composition graph of Figure~\ref{subfig:s9_III_30deg_linesc} reveals a composition of \ce{In0_.75Ga0_.35As} for the \acl{qw}. However, the V-element composition graph in Figure~\ref{subfig:s9_V_30deg_linesc} shows very high alloying for the barrier layers, which have a real composition of \ce{InP0_.6As0_.4}. The file containing the growth recipe was double-checked to ensure that the \acs{tbas} flow was cut off during \acs{inp} deposition, and it was found that the recipe was programmed correctly. This left a mystery as to the origin of the high \acl{as} concentration found in this and other \acs{eds} spectra of this sample. The likely explanation being an equipment malfunction.
+
+This finding does, however, show that it is not only a pure phosphide layer that can stabilise a single \hkl{1 1 1} growth front inside a \acs{tase} template, but also phosphide arsenides.
+
 
 
 
@@ -1524,7 +1531,6 @@ Figure~\ref{subfig:s9_well1} shows a high-resolution \acs{bf}-\acs{stem_m} image
 
 
 \section{Discussion and future developments}
-
 
 
 
