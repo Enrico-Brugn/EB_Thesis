@@ -1456,9 +1456,67 @@ Due to project-related timer constraints, further optimisation of the growth con
 
 The study of the effect of dopants on the \hkl{1 1 1} growth regime is an important aspect to consider when bridging the gap between pure growth studies and device integration. Although an active component can incorporate \acl{qw}s or not, the reliable stabilisation of a single-faceted growth front also helps with contacting devices with a plain intrinsic region. However, as the last sentence suggests, active photonic devices are usually doped, often in a \textit{p} - \textit{i} - \textit{n} configuration. The impact on the growth mechanism of introducing dopants in the lattice and the reaction atmosphere, although in low quantities compared to the precursors of the main species, should, therefore, be studied.
 
-\Acl{sn} is a \textit{n} dopant \cite{Vedel2023} that has been previously used in the \acs{inp} layer of successful \acs{tase}-grown devices \cite{Wen2022}. Its precursor, \acf{tmsn}, was available in the \acs{mocvd} system, and therefore a growth run was carried out. The deposition recipe is shown in Figure~\ref{subfig:recipe9}, and features a standard step sequence, consisting of a \qty{15}{\second} long step for the \acs{ingaas} nucleation layer, followed by a \qty{450}{\second}-long \textit{n}-doped \acs{inp} stabilisation layer.
+\Acl{sn} is a \textit{n} dopant \cite{Vedel2023} that has previously been used in the \acs{inp} layer of successful \acs{tase}-grown devices \cite{Wen2022}. Its metal-organic precursor, \acf{tmsn}, was available in the \acs{mocvd} system, and therefore a growth run was carried out. The deposition recipe is shown in Figure~\ref{subfig:recipe9}, and features a standard step sequence, consisting of a \qty{15}{\second} long step for the \acs{ingaas} nucleation layer, followed by a \qty{450}{\second}-long \textit{n}-doped \acs{inp} stabilisation layer. The following superlattice deposition loop contained a \qty{15}{\second}-long \acs{ingaas} well deposition step followed by the \qty{7}{\second} \acs{tbas} / \qty{10}{\second} \acs{tbp} hold step. The barrier \textit{n}-\acs{inp} deposition step was \qty{100}{\second} in duration and was followed by a \qty{20}{\second} \acs{tbp} hold step.
 
+Figure~\ref{subfig:s9_OV} shows the \acs{bf}-\acs{stem_m} image of a \qty{30}{\degree} \acs{fib} cross-section of a nanowire grown with the recipe shown in Figure~\ref{subfig:recipe9}. The \acl{si} seed is on the left of the image, and the III-V material is at its centre enclosed by the top \acs{sio2} template and the bottom buried oxide layer. Its surface appears to be formed by a \hkl{1 1 1} facet at the top and another, likely high-indexed, facet at the bottom. Despite this defect, initial nucleation was successful and the \textit{n}-\acs{inp} stabilisation layer formed a single \hkl{1 1 1} growth front, reflected in its evolution by the shape of the \acs{ingaas} \acl{qw}s.
 
+Figure~\ref{subfig:s9_well1} shows a high-resolution \acs{bf}-\acs{stem_m} image of the first \acl{qw}. The image does not show any particular difference from those seen for previous samples. \Acl{rtp}s are present throughout the whole sample, including the \qty{10}{\nano\metre}-thick quantum wells.
+
+\begin{figure}
+    \centering
+    \subcaptionbox{
+    \acs{eds} linescan: III atomic percentage vs position.
+    \label{subfig:s9_III_30deg_linesc}
+    }{
+    \tikzsetnextfilename{s9_III_30deg_linesc}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width = 0.8\textwidth,
+            height = 5cm,
+            xlabel = Position (nm),
+            ylabel = Composition (atomic \%),
+            table/col sep=comma,
+            %title = III element composition,
+            legend pos=outer north east,
+            ymin=0, ymax=100,
+            xmin = 0, xmax=32.51
+        ]
+    \addplot [cb1_orange,] table[x=nm,y=Ga] {4_Properties/csv/s9_III_30deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=In] {4_Properties/csv/s9_III_30deg_linesc.csv};
+    \addlegendentry{Ga}
+    \addlegendentry{In}
+    \end{axis}
+
+    \end{tikzpicture}
+    }
+    \subcaptionbox{
+    \acs{eds} linescan: V atomic percentage vs position.
+    \label{subfig:s9_V_30deg_linesc}
+    }{
+    \tikzsetnextfilename{s9_V_30deg_linesc}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width = 0.8\textwidth,
+            height = 5cm,
+            xlabel = Position (nm),
+            ylabel = Composition (atomic \%),
+            table/col sep=comma,
+            %title = V element composition,
+            legend pos=outer north east,
+            ymin=0, ymax=100,
+            xmin = 0, xmax=32.51
+        ]
+    \addplot [cb1_orange,] table[x=nm,y=As] {4_Properties/csv/s9_V_30deg_linesc.csv};
+    \addplot [cb1_dark_blue,] table[x=nm,y=P] {4_Properties/csv/s9_V_30deg_linesc.csv};
+    \addlegendentry{As}
+    \addlegendentry{P}
+    \end{axis}
+
+    \end{tikzpicture}
+    }
+    \caption{\acs{eds} linescan compositional data (in percentage) for the \subref{subfig:s6_III_30deg_linesc} III elements and \subref{subfig:s6_V_30deg_linesc} V elements of sample 9 (Figure~\ref{subfig:s6_wire_OV}).}
+    \label{fig:s6_30deg_linescans}
+\end{figure}
 
 
 
@@ -1466,6 +1524,13 @@ The study of the effect of dopants on the \hkl{1 1 1} growth regime is an import
 
 
 \section{Discussion and future developments}
+
+
+
+
+
+
+
 
 
 
