@@ -47,7 +47,7 @@ The fabrication of templates for nanowires and microstructures on the new \hkl(1
         \begin{tikzpicture}
             \filldraw[fill=Si_green] (2cm, 0cm) --  node[midway, anchor= north west] {\acs{si}} (2cm, 22mm) -- (4cm, 22mm) -- (4cm, 0cm) node[midway, anchor=west]{{\hkl{1 1 1}}} -- cycle;
             \filldraw[fill=SiO2_blue] (0cm, -10mm) -- (8cm, -10mm) -- (8cm, 0cm) -- (2cm, 0mm)-- (2cm, 22mm) -- (8cm, 22mm) -- (8cm, 32mm) -- (0cm, 32mm) --  node[midway, anchor=west] {\acs{sio2}} cycle; 
-            \draw (3.7cm, 22mm) arc [start angle = 180, end angle = 270, radius = 3mm] node[midway, anchor = north east]{\qty{90}{\degree}};
+            \draw (3.7cm, 22mm) -- ++ (0, -3mm) node[anchor = north east]{\qty{90}{\degree}} -- ++ (3mm, 0);
             \draw[-stealth] (6cm, 7mm) node[anchor=north] {\hkl<-1 1 -2>} -- ++ (90:0.8cm) node[anchor=south] {\hkl<1 1 0>};
             \draw[-stealth] (6cm, 7mm) -- ++ (0:0.8cm) node[anchor=west] {\hkl<-1 1 1>};
             \node[mark size=2pt] at (6, 7mm) {\pgfuseplotmark{o}};
