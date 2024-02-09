@@ -637,6 +637,7 @@ These two diffusion routes are illustrated in Figure~\ref{subfig:diffusion_mecha
 \end{sidewaysfigure}
 
 \section{Implementation of a revised switching sequence}
+\label{sec:s3}
 
 To address the issues identified in Figure~\ref{fig:issues}, several modifications were made to the \acs{mocvd} growth recipe, resulting in the revised step sequence shown in Figure~\ref{subfig:recipe3}. In this graphic, the segments drawn with dashed lines are represented with a \num{0.1} time scale to maintain a reasonable size for the picture. The main additions to the recipe are the "hold steps": moments at the end of each layer deposition segment when the flow of III precursors was halted, leaving only a V-element atmosphere in the background. The \qty{5}{s}-long \acl{p} hold step was introduced after the \acl{as} hold step and the \acs{ingaas} deposition step in the looped recipe segment to promote a change in the atmosphere inside the template for the following \acs{inp} deposition step. The rationale for its introduction here but not in the previous arsenide-to-phosphide step is that the smaller size and weight of the \acl{p} atom would give it a higher mobility and a lower chance to diffuse as an adsorbate compared to the bulkier, heavier \acl{as} atom. 
 
