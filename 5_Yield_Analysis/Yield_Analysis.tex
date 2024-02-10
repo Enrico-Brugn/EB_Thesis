@@ -54,13 +54,13 @@ A \acf{stem_m} analysis of every nanowire is impossible due to the damage caused
     \tikzsetnextfilename{s7_OVs}
     \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/s7_OV1.pdf}};
-        \node[inner sep=0pt] (image) at (3,-0.8) {(1)};
+        \node at (3,-0.8) {(1)};
         \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/s7_OV2.pdf}};
-        \node[inner sep=0pt] (image) at (11,-0.8) {(2)};
+        \node at (11,-0.8) {(2)};
         \node[inner sep=0pt] (image) at (0,-3) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/s7_OV3.pdf}};
-        \node[inner sep=0pt] (image) at (3,-3.8) {(3)};
+        \node at (3,-3.8) {(3)};
         \node[inner sep=0pt] (image) at (8,-3) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/s7_OV4.pdf}};
-        \node[inner sep=0pt] (image) at (11,-3.8) {(4)};
+        \node at (11,-3.8) {(4)};
     \end{tikzpicture}
     \caption[Four \acs{bf}-\acs{stem_m} images of different nanowires from the lamella cut for sample 7.]{Four \acs{bf}-\acs{stem_m} images of different nanowires from the lamella cut for sample 7.}
     \label{fig:s7_OVs}
@@ -68,9 +68,59 @@ A \acf{stem_m} analysis of every nanowire is impossible due to the damage caused
 
 Stabilisation of a single \hkl{1 1 1} facet for the internal superlattice heterointerfaces of the nanowires was observed in all phosphide-arsenide samples since it was first achieved in sample 3 (Section~\ref{sec:s3}). Eliminating the ambiguity of facet selection due to the substrate \hkl(1 1 0) discussed in Section~\ref{sec:s4} limits the outcome of the \acf{tmah} etching to a single facet seed, a condition which is reliably achieved since sample 4. Similarly, from sample 4 onwards, the seed facet and the end facet of the wires have been parallel or showed a misalignment of \qty{3}{\degree} in sample 6 (Section~\ref{sec:s6}). Finally, with the minimisation of \acf{ingaas} nucleation layer thickness introduced in sample 5 (Section~\ref{sec:s5}) all important material layers are heterointerfaced with a single \hkl{1 1 1} facet.
 
-Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the same number of nanowires from the lamella cut from sample 7. These images confirm the observations made in the previous paragraph regarding the relation between \acf{si} / III-V semiconductor interface and the nanowire end-facet shapes being mirrored in all important interior phosphide-arsenide heterointerfaces. An approximation can therefore be made by inferring that if the \acl{si} seed consists of a single \hkl{1 1 1} facet, the III-V material fully covers it, and the end-wire surface is a single \hkl{1 1 1} facet parallel to the \acs{si} seed the internal morphology also developed as-desired, with \hkl{1 1 1} single-facet heterointerfaces. 
+Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the same number of nanowires from the lamella cut from sample 7. These images confirm the observations made in the previous paragraph regarding the relation between \acf{si} / III-V semiconductor interface and the nanowire end-facet shapes mirrored in all important interior phosphide-arsenide heterointerfaces. An approximation can therefore be made by inferring that if the \acl{si} seed consists of a single \hkl{1 1 1} facet, the III-V material fully covers it, and the end-wire surface is a single \hkl{1 1 1} facet parallel to the \acs{si} seed the internal morphology also developed as-desired, with \hkl{1 1 1} single-facet heterointerfaces. 
 
-These requirements do not require a full \acs{stem_m} analysis. Instead, a \acf{sem_m} survey of the arrays in the sample is sufficient to assess the growth yield. One such survey, resulting in an open access dataset \cite{dataset}, was carried out on samples 6 and 7.
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        \acs{sem_m} images of \qty{70}{\nano\metre}-wide nanowire arrays.
+        \label{subfig:70nm_arrays}
+    }{
+        \tikzsetnextfilename{70nm_arrays}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/70nm_perpendicular.pdf}};
+            \node at (0,1) {Perpendicular};
+            \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/70nm_misaligned.pdf}};
+            \node at (8,1) {\qty{30}{\degree} misaligned};
+            \draw[| - |] (2.4, -0.9) -- ++ (3.2, 0) node [anchor = west] {\qty{5}{\micro\metre}};
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        \acs{sem_m} images of \qty{140}{\nano\metre}-wide nanowire arrays. Scale bar in \subref{subfig:280nm_arrays}.
+        \label{subfig:140nm_arrays}
+    }{
+        \tikzsetnextfilename{140nm_arrays}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/140nm_perpendicular.pdf}};
+            \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/140nm_misaligned.pdf}};
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        \acs{sem_m} images of \qty{210}{\nano\metre}-wide nanowire arrays. Scale bar in \subref{subfig:280nm_arrays}.
+        \label{subfig:210nm_arrays}
+    }{
+        \tikzsetnextfilename{210nm_arrays}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/210nm_perpendicular.pdf}};
+            \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/210nm_misaligned.pdf}};
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        \acs{sem_m} images of \qty{280}{\nano\metre}-wide nanowire arrays.
+        \label{subfig:280nm_arrays}
+    }{
+        \tikzsetnextfilename{280nm_arrays}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/280nm_perpendicular.pdf}};
+            \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/280nm_misaligned.pdf}};
+            \draw[| - |] (2.6, -2) -- ++ (2.7, 0) node [anchor = west] {\qty{5}{\micro\metre}};
+        \end{tikzpicture}
+    }
+    \caption[\acs{sem_m} images of nanowire arrays.]{Caption}
+    \label{fig:s7_arrays}
+\end{figure}
+
+These specifications do not require a full \acs{stem_m} analysis. Instead, a \acf{sem_m} survey of the arrays in the sample is sufficient to assess the growth yield. One such survey, resulting in an open access dataset \cite{dataset}, was carried out on samples 6 and 7.
 
 STEM IMAGES SHOWING OMOGENEITY ACROSS WIRES IN SINGLE LAMELLA AND MAKE ARGUMENT THAT WE CAN SIMPLIFY TO SI/III-V INTERFACE AND FINAL INTERFACE
 
