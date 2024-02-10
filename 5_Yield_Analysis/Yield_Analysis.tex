@@ -45,6 +45,8 @@ The yield analysis will focus on samples \num{6} and \num{7}, grown on \hkl(1 1 
 
 Figure~\ref{fig:wafer_mask} shows the digital mask that was used during the \acs{tase} process in the \acf{ebl} definition of markers, micro-structures, and template openings and to fabricate the optical lithography mask used to create the marker protections, as explained in \ref{chap:tase}. Figure~\ref{subfig:mask_array} shows how a single \num{66}-nanowire array looks like in the \acs{ebl} mask. This single array is placed in a section, shown in Figure~\ref{subfig:mask_section}, of the chip, together with \num{23} others, totalling \num{6} array per nanowire size per section. Each section is identified by a number, in the case of the one in Figure~\ref{subfig:mask_section} it is \num{11}, and two letters that, in turn, identify the division of the mask in which it is found. One such division, marked AA, is shown in Figure~\ref{subfig:mask_division} and contains a total of \num{12} sections. Each of these sections is orientated so that the nanowires in each array and merge structure are closely aligned with one of the in-plane \hkl<1 1 1> directions, or \qty{30}{\degree} misaligned from them. This results in a series of fishbone patterns across the mask used to pattern the entire chip, shown in Figure~\ref{subfig:mask_chip}. The \qtyproduct{1.5 x 1.5}{\centi\metre} sample area of each chip, highlighted in yellow, contains \num{49} divisions, resulting in a total of \num{1254528} nanowire single nucleation sites (therefore, without taking into account the merge structures).
 
+EXPAND HOW DIVISIONS AND SECTIONS ARE NUMBERED (ROW/COLUMN)
+
 A \acf{stem_m} analysis of every nanowire is impossible due to the damage caused by \acf{fib} lamella preparation to the area immediately surrounding each cut-out. Still, even if a single cut per array was performed, a total of \num{19008} lamellae would have to be manufactured and analysed per sample. This task is too time-consuming and resource-intensive to be viable. Therefore, a different approach must be found to tackle the problem of yield calculation.
 
 \subsection{\texorpdfstring{Internal morphology and reproducibility in \acs{tase} nanowires}{Internal morphology and reproducibility in TASE nanowires}}
@@ -68,7 +70,7 @@ A \acf{stem_m} analysis of every nanowire is impossible due to the damage caused
 
 Stabilisation of a single \hkl{1 1 1} facet for the internal superlattice heterointerfaces of the nanowires was observed in all phosphide-arsenide samples since it was first achieved in sample 3 (Section~\ref{sec:s3}). Eliminating the ambiguity of facet selection due to the substrate \hkl(1 1 0) discussed in Section~\ref{sec:s4} limits the outcome of the \acf{tmah} etching to a single facet seed, a condition which is reliably achieved since sample 4. Similarly, from sample 4 onwards, the seed facet and the end facet of the wires have been parallel or showed a misalignment of \qty{3}{\degree} in sample 6 (Section~\ref{sec:s6}). Finally, with the minimisation of \acf{ingaas} nucleation layer thickness introduced in sample 5 (Section~\ref{sec:s5}) all important material layers are heterointerfaced with a single \hkl{1 1 1} facet.
 
-Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the same number of nanowires from the lamella cut from sample 7. These images confirm the observations made in the previous paragraph regarding the relation between \acf{si} / III-V semiconductor interface and the nanowire end-facet shapes mirrored in all important interior phosphide-arsenide heterointerfaces. An approximation can therefore be made by inferring that if the \acl{si} seed consists of a single \hkl{1 1 1} facet, the III-V material fully covers it, and the end-wire surface is a single \hkl{1 1 1} facet parallel to the \acs{si} seed the internal morphology also developed as-desired, with \hkl{1 1 1} single-facet heterointerfaces. 
+Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the same number of nanowires from the lamella cut from sample 7. These images confirm the observations made in the previous paragraph regarding the relation between \acf{si} / III-V semiconductor interface and the nanowire end-facet shapes mirrored in all important interior phosphide-arsenide heterointerfaces. An approximation can therefore be made by inferring that if the \acl{si} seed consists of a single \hkl{1 1 1} facet, the III-V material fully covers it, and the end-wire surface is a single \hkl{1 1 1} facet parallel to the \acs{si} seed the internal morphology also developed as-desired, with \hkl{1 1 1} single-facet heterointerfaces. These metrics can, therefore, be used to define a perfect wire.
 
 \begin{figure}
     \centering
@@ -116,17 +118,28 @@ Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the 
             \draw[| - |] (2.6, -2) -- ++ (2.7, 0) node [anchor = west] {\qty{5}{\micro\metre}};
         \end{tikzpicture}
     }
-    \caption[\acs{sem_m} images of nanowire arrays.]{Caption}
+    \caption[\acs{sem_m} images of nanowire arrays.]{\acs{sem_m} top-view images of III-V nanowire arrays. \subref{subfig:70nm_arrays}, \subref{subfig:140nm_arrays}, \subref{subfig:210nm_arrays}, and \subref{subfig:280nm_arrays} show both perpendicular and \qty{30}{\degree} misalligned arrays with template widths of \qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}, respectively \cite{Brugnolotto2023_2}.}
     \label{fig:s7_arrays}
 \end{figure}
 
-These specifications do not require a full \acs{stem_m} analysis. Instead, a \acf{sem_m} survey of the arrays in the sample is sufficient to assess the growth yield. One such survey, resulting in an open access dataset \cite{dataset}, was carried out on samples 6 and 7.
+These specifications do not require a full \acs{stem_m} analysis. Instead, a \acf{sem_m} survey of the arrays in the sample is sufficient to assess the growth yield. One such survey, resulting in an open access dataset \cite{dataset}, was carried out on samples 6 and 7. Figure~\ref{fig:s7_arrays} shows eight images of the arrays of sample 6 taken from this dataset. A first distinction can be made by "Perpendicular" wires, so-called because the heterointerfaces in perfect nanowires are perpendicular to all four template walls, and \qty{30}{\degree} misaligned wires, which owe their name to the tilt of the template channels from the \hkl{1 1 1} direction.
 
-STEM IMAGES SHOWING OMOGENEITY ACROSS WIRES IN SINGLE LAMELLA AND MAKE ARGUMENT THAT WE CAN SIMPLIFY TO SI/III-V INTERFACE AND FINAL INTERFACE
+The dataset was gathered manually using the \acs{sem_m} beam of the dual beam \acs{sem_m} - \acs{fib} tool. Due to project time constraints, sampling became necessary to gather a full suite of images showing every one of the \num{19008} arrays. Five sections were selected in each chip, mostly at random. However, for sample 7, a perpendicular and a \qty{30}{\degree} misaligned section were selected in the AA division to ensure a representation of the border divisions of the chip. Another difference between the two samples is that while for sample 6, sections were randomly drafted and changed for each of the five positions, for sample 6, a second division was randomly selected, within which another two sections were imaged. The third and final section was once again randomly chosen. These sections are reported in Table~\ref{tab:dataset_sections}. Three parallel and two \qty{30}{\degree} misaligned sections were imaged for both samples.
 
-SHOW SEM ARRAYS DESCRIBE CHOSEN TOP LEFT AND RANDOM AND START COMMENTING
+\begin{table}
+    \centering
+    \caption{Randomly selected sections for the array dataset.}
+    \begin{tabular}{c|c c c c c}
+         & \multicolumn{5}{c}{Sections} \\ \hline
+        Sample 6 & BB13 & CD22 & DE42 & FB13 & GG31 \\
+        Sample 7 & AA32 & AA42 & DE11 & DE22 & FC11 \\ \hline \hline
+    \end{tabular}
+    \label{tab:dataset_sections}
+\end{table}
 
-Further consideration should be given to wires that are abnormally short or long as that 
+This means that 240 arrays containing 15840 nucleation sites were imaged. This number represents \qty{0.63}{\percent} of the wires in the two chips. As such it can be helpful to provide a first estimate of the yield, and for a dataset from which automated yield calculation methods can be built on.
+
+The length of the nanowires does not change significantly with the change in width of the \acs{tase} templates, as can be seen by comparing the length of the nanowires in Figure~\ref{subfig:70nm_arrays} with those of nanowires in Figure~\ref{subfig:140nm_arrays}, \ref{subfig:210nm_arrays}, and \ref{subfig:280nm_arrays}, once the slight magnification used for presentation purposes in Figure~\ref{subfig:70nm_arrays} is taken into account. Therefore, when compared to their neighbours, abnormally long or short III-V material segments in some nucleation sites can also indicate that undesired defects are present in the wire's internal structure.
 
 
 
@@ -141,19 +154,19 @@ Further consideration should be given to wires that are abnormally short or long
 
 
 \section{article2}
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{4_Properties/From_Article2/Figure2.png}
-    \caption{Top-view SEM images of arrays with grown III-V nanowires. The \qty{70}{\nm}, \qty{140}{\nm}, \qty{210}{\nm}, and \qty{280}{\nm} wide wires are shown from top to bottom. The arrays on the left contain structures grown from a seed surface parallel to the template direction, while those on the right are grown from seed surfaces that are tilted concerning the template. On the bottom left of the images, the three main elements of the arrays are highlighted in green (silicon seed), red (III-V nanowires), and blue (template opening).}
-    \label{fig:arrays}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\textwidth]{4_Properties/From_Article2/Figure2.png}
+%     \caption{Top-view SEM images of arrays with grown III-V nanowires. The \qty{70}{\nm}, \qty{140}{\nm}, \qty{210}{\nm}, and \qty{280}{\nm} wide wires are shown from top to bottom. The arrays on the left contain structures grown from a seed surface parallel to the template direction, while those on the right are grown from seed surfaces that are tilted concerning the template. On the bottom left of the images, the three main elements of the arrays are highlighted in green (silicon seed), red (III-V nanowires), and blue (template opening).}
+%     \label{fig:arrays}
+% \end{figure}
 
-Figure~\ref{fig:arrays} shows growth results from sample 1 of arrays containing template nanotubes of four different widths (\qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}). Each array contains 66 nanowires (in red) grown from silicon (in green) and arranged in 33 pairs. Each pair of wires shares the same template opening (in blue). 
-\par
+% Figure~\ref{fig:arrays} shows growth results from sample 1 of arrays containing template nanotubes of four different widths (\qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}). Each array contains 66 nanowires (in red) grown from silicon (in green) and arranged in 33 pairs. Each pair of wires shares the same template opening (in blue). 
+% \par
 Each wire in the array can be identified by its row, opening, and position relative to the latter. Each row is numbered from 1 to 11, starting at the bottom of the array. The template openings are marked by letters A, B, or C; the wires connected to the opening to the left (l) or right (r) can be easily distinguished. Therefore, a string such as 9Br identifies a single wire in the array. 
 \par
-Our growth methodology aims to select and maintain a single \hkl{111}\(_B\) facet as the nanowire's growth front. If a III-V wire end-surface is multi-faceted or not parallel to the \acs{si} seed facet, the wire is classified as defective in this study without requiring a further in-depth STEM analysis. This first distinction allows the evaluation of the fraction of "perfect" wires, defining a growth yield. 
-\par
+% Our growth methodology aims to select and maintain a single \hkl{111}\(_B\) facet as the nanowire's growth front. If a III-V wire end-surface is multi-faceted or not parallel to the \acs{si} seed facet, the wire is classified as defective in this study without requiring a further in-depth STEM analysis. This first distinction allows the evaluation of the fraction of "perfect" wires, defining a growth yield. 
+% \par
 In Figure~\ref{fig:arrays}, the \qty{280}{nm} tilted arrays present some defective wires in 11Al, 6Cr, and 7Cr; however, the other wires in each pair (11Ar, 6Cl, and 7Cl) appear “perfect”. As is evident in the case of wire 6Cr, the wire grew into an unpredictable shape after nucleation. It is unclear if the source of defective wires can be attributed solely to the nucleation step, as there are other sites (\qty{70}{nm} tilted 6Cl, \qty{140}{nm} perpendicular 2Br, 11Br, and \qty{280}{nm} perpendicular 7Br) that present a defective wire and fully covered seed. However, this finding suggests that nucleation does play an important role in the following growth facet selection.
 
 
