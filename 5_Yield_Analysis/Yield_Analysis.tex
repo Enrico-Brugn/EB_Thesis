@@ -3,7 +3,7 @@
 
 Chapters~\ref{chap:growth} and \ref{chap:properties} showed how the \hkl{1 1 1} facet stabilisation method affects the internal composition and morphology of nanowires grown with the \acf{tase} process. These results, obtained on \hkl(0 0 1) and \hkl(1 1 0) \acf{soi} wafers with different device layer thicknesses, showed reliable growth rates and structural results. However, a quantitative analysis of the yield of this growth method is needed to understand its success rate better. 
 
-This chapter presents the research my co-authors and me carried out and published in \cite{Brugnolotto2023_2, Brugnolotto2024}.
+This chapter presents the research my coauthors and I carried out and published in \cite{Brugnolotto2023_2, Brugnolotto2024}.
 
 CHAPTER OUTLINE
 
@@ -80,10 +80,13 @@ Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the 
     }{
         \tikzsetnextfilename{70nm_arrays}
         \begin{tikzpicture}
-            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/70nm_perpendicular.pdf}};
             \node at (0,1) {Perpendicular};
-            \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/70nm_misaligned.pdf}};
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/70nm_perpendicular.pdf}};
+            \draw[yellow, -stealth] (1.2, -0.06) -- ++ (0.5, 0);
             \node at (8,1) {\qty{30}{\degree} misaligned};
+            \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/70nm_misaligned.pdf}};
+            \draw[yellow, -stealth] (6.5, 0.18) -- ++ (0.5, 0);
+            \draw[yellow, -stealth] (9.2, 0) -- ++ (0.5, 0);
             \draw[| - |] (2.4, -0.9) -- ++ (3.2, 0) node [anchor = west] {\qty{5}{\micro\metre}};
         \end{tikzpicture}
     }
@@ -94,7 +97,10 @@ Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the 
         \tikzsetnextfilename{140nm_arrays}
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/140nm_perpendicular.pdf}};
+            \draw[yellow, -stealth] (1.4, 0.73) -- ++ (-0.5, 0);
+            \draw[yellow, -stealth] (1.4, -0.56) -- ++ (-0.5, 0);
             \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/140nm_misaligned.pdf}};
+            \draw[yellow, -stealth] (6.6, 0.27) -- ++ (0.5, 0);
         \end{tikzpicture}
     }
     \subcaptionbox{
@@ -105,6 +111,7 @@ Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the 
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/210nm_perpendicular.pdf}};
             \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/210nm_misaligned.pdf}};
+            \draw[yellow, -stealth] (7, -0.87) -- ++ (-0.5, 0);
         \end{tikzpicture}
     }
     \subcaptionbox{
@@ -114,11 +121,15 @@ Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the 
         \tikzsetnextfilename{280nm_arrays}
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/280nm_perpendicular.pdf}};
+            \draw[yellow, -stealth] (1.4, 0.3) -- ++ (-0.5, 0);
             \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/280nm_misaligned.pdf}};
+            \draw[yellow, -stealth] (4.3, 1.45) -- ++ (0.5, 0);
+            \draw[yellow, -stealth] (11.7, 0.25) -- ++ (-0.5, 0);
+            \draw[yellow, -stealth] (11.7, -0.05) -- ++ (-0.5, 0);
             \draw[| - |] (2.6, -2) -- ++ (2.7, 0) node [anchor = west] {\qty{5}{\micro\metre}};
         \end{tikzpicture}
     }
-    \caption[\acs{sem_m} images of nanowire arrays.]{\acs{sem_m} top-view images of III-V nanowire arrays. \subref{subfig:70nm_arrays}, \subref{subfig:140nm_arrays}, \subref{subfig:210nm_arrays}, and \subref{subfig:280nm_arrays} show both perpendicular and \qty{30}{\degree} misalligned arrays with template widths of \qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}, respectively \cite{Brugnolotto2023_2}.}
+    \caption[\acs{sem_m} images of nanowire arrays.]{\acs{sem_m} top-view images of III-V nanowire arrays with defective wires marked by yellow arrows. \subref{subfig:70nm_arrays}, \subref{subfig:140nm_arrays}, \subref{subfig:210nm_arrays}, and \subref{subfig:280nm_arrays} show both perpendicular and \qty{30}{\degree} misalligned arrays with template widths of \qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}, respectively \cite{Brugnolotto2023_2}.}
     \label{fig:s7_arrays}
 \end{figure}
 
@@ -139,7 +150,9 @@ The dataset was collected manually using the \acs{sem_m} beam of the dual-beam \
 
 This means that 240 arrays containing 15840 nucleation sites were imaged. This number represents \qty{0.63}{\percent} of the wires in the two chips. As such it can be helpful to provide a first estimate of the yield, and for a dataset from which automated yield calculation methods can be built on.
 
-The length of the nanowires does not change significantly with the change in width of the \acs{tase} templates, as can be seen by comparing the length of the nanowires in Figure~\ref{subfig:70nm_arrays} with those of nanowires in Figure~\ref{subfig:140nm_arrays}, \ref{subfig:210nm_arrays}, and \ref{subfig:280nm_arrays}, once the slight magnification used for presentation purposes in Figure~\ref{subfig:70nm_arrays} is taken into account. Therefore, compared to their neighbours, abnormally long or short III-V material segments in some nucleation sites can indicate undesired defects in the wire's internal structure.
+\subsection{\texorpdfstring{\acs{sem_m}-observable defects in \acs{tase} nanowires}{SEM observable defects in TASE nanowires}}
+
+The length of the nanowires does not change significantly with the change in width of the \acs{tase} templates, as can be seen by comparing the lengths of the nanowires in Figure~\ref{subfig:70nm_arrays} with those of the nanowires in Figure~\ref{subfig:140nm_arrays}, \ref{subfig:210nm_arrays}, and \ref{subfig:280nm_arrays}, once the slight magnification used for presentation purposes in Figure~\ref{subfig:70nm_arrays} is taken into account. Therefore, compared to their neighbours, abnormally long or short III-V material segments in some nucleation sites can indicate undesired defects in the wire's internal structure.
 
 
 
