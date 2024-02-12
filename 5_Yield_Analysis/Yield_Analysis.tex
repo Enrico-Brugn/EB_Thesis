@@ -162,7 +162,11 @@ The length of the nanowires does not change significantly with the change in wid
         Parasitic growth covering some growth sites in sample 7.
         \label{subfig:defects_parasitic}
     }{
-        \includegraphics[width=\textwidth]{5_Yield_Analysis/Fig/defects_parasitic.pdf}
+        \tikzsetnextfilename{defects_parasitic}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{5_Yield_Analysis/Fig/defects_parasitic.pdf}};
+            \draw[| - |] (-2.7, -3) -- ++ (5.5, 0) node [anchor = west] {\qty{5}{\micro\metre}};
+        \end{tikzpicture}
     }
     \subcaptionbox{
         Un-nucleated sites in sample 7.
@@ -176,7 +180,7 @@ The length of the nanowires does not change significantly with the change in wid
     }{
         \includegraphics[width=0.29\textwidth]{5_Yield_Analysis/Fig/defects_oxide_nucleated.pdf}
     }
-    \caption[Arrays from sample 7 presenting different types of defects.]{Arrays from sample 7 presenting different types of defects. \subref{subfig:defects_parasitic} shows a parasitic crystal hiding numerous nucleation sites from view. \subref{subfig:defects_unucleated} shows several nucleation sites where nucleation has not occurred. Two sites also contain defective wires. \subref{subfig:defects_oxide_nucleated} shows a template with nucleation on both the \acs{si} seed, resulting in a small III-V particle, and on the template wall.}
+    \caption[Arrays from sample 7 presenting different types of defects.]{Arrays from sample 7 presenting different types of defects. The scale bar for all three images is in \subref{subfig:defects_parasitic}. \subref{subfig:defects_parasitic} shows a parasitic crystal hiding numerous nucleation sites from view. \subref{subfig:defects_unucleated} shows several nucleation sites where nucleation has not occurred. Two sites also contain defective wires. \subref{subfig:defects_oxide_nucleated} shows a template with nucleation on both the \acs{si} seed, resulting in a small III-V particle, and on the template wall.}
     \label{fig:defects}
 \end{figure}
 
