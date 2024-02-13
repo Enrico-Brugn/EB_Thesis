@@ -188,7 +188,27 @@ Loss of growth selectivity can negatively affect the yield of "perfect" nanowire
 
 \section{Yield study}
 
-
+\sisetup{detect-all = true}
+\begin{table}
+    \centering
+    \caption[Overview of the distribution of defect types for samples 1 and 2.]{Overview of the distribution of defect types for samples 1 and 2 \cite{Brugnolotto2023_2}.}
+    \begin{tabular}{l|ccccccc}
+        \hline
+         & \multicolumn{7}{c}{Defect categories and occurrence} \\ 
+         & $\begin{matrix} \text{Wrong} \\ \text{Facet} \end{matrix}$ & $\begin{matrix} \text{Hidden by} \\ \text{Parasitic} \end{matrix}$ & $\begin{matrix} \text{Oxide} \\ \text{Nucleated} \end{matrix}$ & $\begin{matrix} \text{Seed} \\ \text{Exposed} \end{matrix}$ & Long & Short & Ungrown \\ 
+        \hline \hline
+        Sample 6 & \num{164} & \num{230} & \num{2} & \num{0} & \num{5} & \num{204} & \num{61} \\ 
+        \textit{\% of category} & \textit{\qty{44.6}{\%}} & \textit{\qty{47.2}{\%}} & \textit{\qty{11.8}{\%}} & \textit{\qty{0}{\percent}} & \textit{\qty{62.5}{\%}} & \textit{\qty{98.8}{\%}} & \textit{\qty{75.3}{\%}} \\ 
+        \hline
+        Sample 7 & \num{204} & \num{257} & \num{15} & \num{8} & \num{3} & \num{7} & \num{20} \\ 
+        \textit{\% of category} & \textit{\qty{55.4}{\%}} & \textit{\qty{52.8}{\%}} & \textit{\qty{88.2}{\%}} & \textit{\qty{100}{\%}} & \textit{\qty{37.5}{\%}} & \textit{\qty{1.2}{\%}} & \textit{\qty{24,7}{\%}} \\ 
+        \hline
+        \textbf{Total} & \textbf{\num{368}} & \textbf{\num{487}} & \textbf{\num{17}} & \textbf{\num{8}} & \textbf{\num{8}} & \textbf{\num{211}} & \textbf{\num{81}} \\
+        \hline
+    \end{tabular}
+    \label{tab:defects}
+\end{table}
+\sisetup{detect-none = true}
 
 
 
@@ -237,40 +257,38 @@ Loss of growth selectivity can negatively affect the yield of "perfect" nanowire
 
 \subsection{Yield study}
 
-\sisetup{detect-all = true}
-\begin{table}
-    \centering
-    \begin{tabular}{l|ccccccc}
-        \hline
-         & \multicolumn{7}{c}{Defect categories and occurrence} \\ 
-         & $\begin{matrix} \text{Wrong} \\ \text{Facet} \end{matrix}$ & $\begin{matrix} \text{Hidden by} \\ \text{Parasitic} \end{matrix}$ & $\begin{matrix} \text{Oxide} \\ \text{Nucleated} \end{matrix}$ & $\begin{matrix} \text{Seed} \\ \text{Exposed} \end{matrix}$ & Long & Short & Ungrown \\ 
-        \hline \hline
-         & & & & & & & \\
-        Sample 1 & \num{164} & \num{230} & \num{2} & \num{0} & \num{5} & \num{204} & \num{61} \\ 
-        \hline
-        Parallel & \num{81} & \num{170} & \num{1} & \num{0} & \num{4} & \num{0} & \num{0} \\
-        \textit{\% of category} & \textit{\qty{49.4}{\%}} & \textit{\qty{77.9}{\%}} & \textit{\qty{50}{\%}} & \textit{-} & \textit{\qty{80}{\%}} & \textit{\qty{0}{\%}} & \textit{\qty{0}{\%}} \\ 
-        \hline
-        Tilted & \num{83} & \num{51} & \num{1} & \num{0} & \num{1} & \num{204} & \num{61} \\
-        \textit{\% of category} & \textit{\qty{50.6}{\%}} & \textit{\qty{22.1}{\%}} & \textit{\qty{50}{\%}} & \textit{-} & \textit{\qty{20}{\%}} & \textit{\qty{100}{\%}} & \textit{\qty{100}{\%}} \\ 
-        \hline
-         & & & & & & & \\
-        Sample 2 & \num{204} & \num{257} & \num{15} & \num{8} & \num{3} & \num{7} & \num{20} \\ 
-        \hline
-        Parallel & \num{127} & \num{145} & \num{6} & \num{4} & \num{1} & \num{5} & \num{20} \\
-        \textit{\% of category} & \textit{\qty{62.3}{\%}} & \textit{\qty{56.4}{\%}} & \textit{\qty{40}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{33.3}{\%}} & \textit{\qty{71.4}{\%}} & \textit{\qty{100}{\%}} \\ 
-        \hline
-        Tilted & \num{77} & \num{112} & \num{9} & \num{4} & \num{2} & \num{2} & \num{0} \\
-        \textit{\% of category} & \textit{\qty{37.7}{\%}} & \textit{\qty{43.6}{\%}} & \textit{\qty{60}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{66.7}{\%}} & \textit{\qty{28.6}{\%}} & \textit{\qty{0}{\%}} \\ 
-        \hline
-        & & & & & & & \\
-        \textbf{Total} & \textbf{\num{368}} & \textbf{\num{487}} & \textbf{\num{17}} & \textbf{\num{8}} & \textbf{\num{8}} & \textbf{\num{211}} & \textbf{\num{81}} \\
-        \hline
-    \end{tabular}
-    \caption{Distribution of failure types for samples 1 and 2. Each sample's total is broken down between wires grown parallel to or tilted away from the \hkl<111> direction. Percentages for these two sub-categories and an overall total are given.}
-    \label{tab:failures}
-\end{table}
-\sisetup{detect-none = true}
+% \begin{table}
+%     \centering
+%     \caption[Overview of the distribution of defect types for samples 1 and 2.]{Overview of the distribution of defect types for samples 1 and 2 \cite{Brugnolotto2023_2}.}
+%     \begin{tabular}{l|ccccccc}
+%         \hline
+%          & \multicolumn{7}{c}{Defect categories and occurrence} \\ 
+%          & $\begin{matrix} \text{Wrong} \\ \text{Facet} \end{matrix}$ & $\begin{matrix} \text{Hidden by} \\ \text{Parasitic} \end{matrix}$ & $\begin{matrix} \text{Oxide} \\ \text{Nucleated} \end{matrix}$ & $\begin{matrix} \text{Seed} \\ \text{Exposed} \end{matrix}$ & Long & Short & Ungrown \\ 
+%         \hline \hline
+%          & & & & & & & \\
+%         Sample 6 & \num{164} & \num{230} & \num{2} & \num{0} & \num{5} & \num{204} & \num{61} \\ 
+%         \hline
+%         Parallel & \num{81} & \num{170} & \num{1} & \num{0} & \num{4} & \num{0} & \num{0} \\
+%         \textit{\% of category} & \textit{\qty{49.4}{\%}} & \textit{\qty{77.9}{\%}} & \textit{\qty{50}{\%}} & \textit{-} & \textit{\qty{80}{\%}} & \textit{\qty{0}{\%}} & \textit{\qty{0}{\%}} \\ 
+%         \hline
+%         Tilted & \num{83} & \num{51} & \num{1} & \num{0} & \num{1} & \num{204} & \num{61} \\
+%         \textit{\% of category} & \textit{\qty{50.6}{\%}} & \textit{\qty{22.1}{\%}} & \textit{\qty{50}{\%}} & \textit{-} & \textit{\qty{20}{\%}} & \textit{\qty{100}{\%}} & \textit{\qty{100}{\%}} \\ 
+%         \hline
+%          & & & & & & & \\
+%         Sample 7 & \num{204} & \num{257} & \num{15} & \num{8} & \num{3} & \num{7} & \num{20} \\ 
+%         \hline
+%         Parallel & \num{127} & \num{145} & \num{6} & \num{4} & \num{1} & \num{5} & \num{20} \\
+%         \textit{\% of category} & \textit{\qty{62.3}{\%}} & \textit{\qty{56.4}{\%}} & \textit{\qty{40}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{33.3}{\%}} & \textit{\qty{71.4}{\%}} & \textit{\qty{100}{\%}} \\ 
+%         \hline
+%         Tilted & \num{77} & \num{112} & \num{9} & \num{4} & \num{2} & \num{2} & \num{0} \\
+%         \textit{\% of category} & \textit{\qty{37.7}{\%}} & \textit{\qty{43.6}{\%}} & \textit{\qty{60}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{66.7}{\%}} & \textit{\qty{28.6}{\%}} & \textit{\qty{0}{\%}} \\ 
+%         \hline
+%         & & & & & & & \\
+%         \textbf{Total} & \textbf{\num{368}} & \textbf{\num{487}} & \textbf{\num{17}} & \textbf{\num{8}} & \textbf{\num{8}} & \textbf{\num{211}} & \textbf{\num{81}} \\
+%         \hline
+%     \end{tabular}
+%     \label{tab:defects}
+% \end{table}
 
 A survey of the arrays was carried out using samples 1 and 2, and involved \num{15840} individual nanowires grown in \num{240} arrays grouped in \num{5} locations per sample. The areas investigated were the top left of the chips as well as randomly selected locations throughout it. Wires need to have two parallel visible \hkl{111} seed and end facets of equal length, and they need to have nucleated directly on the \acs{si} seed covering it in its entirety for them to be considered "perfect". Of the \num{15840} total wires \num{14660} match these criteria, totalling a global yield of \qty{92.55}{\%}.
 \par
