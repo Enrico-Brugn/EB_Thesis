@@ -1,9 +1,9 @@
 \chapter{Growth Yield Analysis}
 \label{chap:yield_analysis}
 
-Chapters~\ref{chap:growth} and \ref{chap:properties} showed how the \hkl{1 1 1} facet stabilisation method affects the internal composition and morphology of nanowires grown with the \acf{tase} process. These results, obtained on \hkl(0 0 1) and \hkl(1 1 0) \acf{soi} wafers with different device layer thicknesses, showed reliable growth rates and structural results. However, a quantitative analysis of the yield of this growth method is needed to understand its success rate better. 
+Chapters~\ref{chap:growth} and \ref{chap:properties} showed how the \hkl{1 1 1} facet stabilisation method affects the internal composition and morphology of nanowires grown with the \acf{tase} process. These results, obtained on \hkl(0 0 1) and \hkl(1 1 0) \acf{soi} wafers with different device layer thicknesses, showed reliable growth rates and structural results. However, a quantitative analysis of the yield of this growth method is needed to better understand its success rate. 
 
-This chapter presents the research my coauthors and I carried out and published in \cite{Brugnolotto2023_2, Brugnolotto2024}.
+This chapter presents the research my co-authors and I carried out and published in \cite{Brugnolotto2023_2, Brugnolotto2024}.
 
 CHAPTER OUTLINE
 
@@ -191,7 +191,7 @@ Loss of growth selectivity can negatively affect the yield of "perfect" nanowire
 \sisetup{detect-all = true}
 \begin{table}
     \centering
-    \caption[Overview of the distribution of defect types for samples 1 and 2.]{Overview of the distribution of defect types for samples 6 and 7 \cite{Brugnolotto2023_2}.}
+    \caption[Overview of the distribution of defect types for samples 6 and 7.]{Overview of the distribution of defect types for samples 6 and 7 \cite{Brugnolotto2023_2}.}
     \begin{tabular}{l|ccccccc}
         \hline
          & \multicolumn{7}{c}{Defect categories and occurrence} \\ 
@@ -216,7 +216,27 @@ The \num{1180} defective wires are broken down between the two samples and by de
 
 The three most numerous categories for total number of defects are "hidden by parasitic", "wrong facet", and "short", with totals of \num{487}, \num{368}, and \num{211}, respectively. The other categories are one order of magnitude lower. The category "hidden by parasitic" is different from the others in the sense that a single defect hides multiple wires, close to \num{15}, or \num{14.87} on average, from view, as shown in Figure~\ref{subfig:defects_parasitic}. As such, the status of the hidden wires is unknown. If these hidden nucleation sites are ignored for the purposes of yield calculation, the total number of surveyed sites falls to \num{15379}, while the number of perfect wires remains unchanged. Under this approximation, the total yield rises by \qty{2.77}{\percent} to \qty{95.32}{\percent}.
 
-
+\sisetup{detect-all = true}
+\begin{table}
+    \centering
+    \caption[Overview of the distribution of defect types between perpendicular and \qty{30}{\degree} misaligned sites.]{Overview of the distribution of defect types between perpendicular and \qty{30}{\degree} misaligned sites \cite{Brugnolotto2023_2}.}
+    \begin{tabular}{l|ccccccc}
+        \hline
+         & \multicolumn{7}{c}{Defect categories and occurrence} \\ 
+         & $\begin{matrix} \text{Wrong} \\ \text{Facet} \end{matrix}$ & $\begin{matrix} \text{Hidden by} \\ \text{Parasitic} \end{matrix}$ & $\begin{matrix} \text{Oxide} \\ \text{Nucleated} \end{matrix}$ & $\begin{matrix} \text{Seed} \\ \text{Exposed} \end{matrix}$ & Long & Short & Ungrown \\ 
+        \hline \hline
+        Perpendicular & \num{208} & \num{315} & \num{7} & \num{4} & \num{5} & \num{5} & \num{20} \\ 
+        \textit{\% of category} & \textit{\qty{56.5}{\%}} & \textit{\qty{66.7}{\%}} & \textit{\qty{41.2}{\%}} & \textit{\qty{50}{\percent}} & \textit{\qty{62.5}{\%}} & \textit{\qty{2.4}{\%}} & \textit{\qty{24.7}{\%}} \\ 
+        \hline
+        \qty{30}{\degree} misaligned & \num{160} & \num{162} & \num{10} & \num{4} & \num{3} & \num{206} & \num{61} \\ 
+        \textit{\% of category} & \textit{\qty{43.5}{\%}} & \textit{\qty{33.3}{\%}} & \textit{\qty{58.8}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{37.5}{\%}} & \textit{\qty{97.6}{\%}} & \textit{\qty{75.3}{\%}} \\ 
+        \hline
+        \textbf{Total} & \textbf{\num{368}} & \textbf{\num{487}} & \textbf{\num{17}} & \textbf{\num{8}} & \textbf{\num{8}} & \textbf{\num{211}} & \textbf{\num{81}} \\
+        \hline
+    \end{tabular}
+    \label{tab:defects_overview}
+\end{table}
+\sisetup{detect-none = true}
 
 
 \subsection{Sample 6}
