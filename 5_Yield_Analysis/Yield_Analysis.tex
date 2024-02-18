@@ -43,7 +43,7 @@ The yield analysis will focus on samples \num{6} and \num{7}, grown on \hkl(1 1 
 
 \subsection{Lithography masks}
 
-Figure~\ref{fig:wafer_mask} shows the digital mask that was used during the \acs{tase} process in the \acf{ebl} definition of markers, micro-structures, and template openings and to fabricate the optical lithography mask used to create the marker protections, as explained in \ref{chap:tase}. Figure~\ref{subfig:mask_array} shows how a single \num{66}-nanowire array looks like in the \acs{ebl} mask. This single array is placed in a section, shown in Figure~\ref{subfig:mask_section}, of the chip, together with \num{23} others, totalling \num{6} array per nanowire size per section. Sections are further grouped in divisions, one of which, marked AA, is shown in Figure~\ref{subfig:mask_division}. Each division contains a total of \num{12} sections. Each of the sections is orientated so that the nanowires in each array and merge structure are closely aligned with one of the in-plane \hkl<1 1 1> directions, or \qty{30}{\degree} misaligned from them. This results in a series of fishbone patterns across the mask used to pattern the entire chip, shown in Figure~\ref{subfig:mask_chip}. The \qtyproduct{1.5 x 1.5}{\centi\metre} sample area of each chip, highlighted in yellow, contains \num{49} divisions, resulting in a total of \num{1254528} nanowire single nucleation sites (therefore, without taking into account the merge structures). 
+Figure~\ref{fig:wafer_mask} shows the digital mask that was used during the \acs{tase} process in the \acf{ebl} definition of markers, micro-structures, and template openings and to fabricate the optical lithography mask used to create the marker protections, as explained in \ref{chap:tase}. Figure~\ref{subfig:mask_array} shows how a single \num{66}-nanowire array looks like in the \acs{ebl} mask. This single array is placed in a section, shown in Figure~\ref{subfig:mask_section}, of the chip, together with \num{23} others, totalling \num{6} array per nanowire size per section. Sections are further grouped in divisions, one of which, marked AA, is shown in Figure~\ref{subfig:mask_division}. Each division contains a total of \num{12} sections. Each of the sections is orientated so that the nanowires in each array and merge structure are closely aligned with one of the in-plane \hkl<1 1 1> directions, or \qty{20}{\degree} misaligned from them. This results in a series of fishbone patterns across the mask used to pattern the entire chip, shown in Figure~\ref{subfig:mask_chip}. The \qtyproduct{1.5 x 1.5}{\centi\metre} sample area of each chip, highlighted in yellow, contains \num{49} divisions, resulting in a total of \num{1254528} nanowire single nucleation sites (therefore, without taking into account the merge structures). 
 
 Each section is identified by a number, in the case of the one in Figure~\ref{subfig:mask_section} it is \num{11}, and two letters that, in turn, identify the division of the mask in which it is found. Therefore, the naming convention defines, in order, the row and the column of the division within the chip, starting at the top left of Figure~\ref{subfig:mask_chip}, and the row and column of the section within the division, starting at the top left of each division. In this example, AA11 is the top-leftmost section in the entire chip.
 
@@ -83,7 +83,7 @@ Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the 
             \node at (0,1) {Perpendicular};
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/70nm_perpendicular.pdf}};
             \draw[yellow, -stealth] (1.2, -0.06) -- ++ (0.5, 0);
-            \node at (8,1) {\qty{30}{\degree} misaligned};
+            \node at (8,1) {\qty{20}{\degree} misaligned};
             \node[inner sep=0pt] (image) at (8,0) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/70nm_misaligned.pdf}};
             \draw[yellow, -stealth] (6.5, 0.18) -- ++ (0.5, 0);
             \draw[yellow, -stealth] (9.2, 0) -- ++ (0.5, 0);
@@ -129,13 +129,13 @@ Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the 
             \draw[| - |] (2.6, -2) -- ++ (2.7, 0) node [anchor = west] {\qty{5}{\micro\metre}};
         \end{tikzpicture}
     }
-    \caption[\acs{sem_m} images of nanowire arrays.]{\acs{sem_m} top-view images of III-V nanowire arrays with defective wires marked by yellow arrows. \subref{subfig:70nm_arrays}, \subref{subfig:140nm_arrays}, \subref{subfig:210nm_arrays}, and \subref{subfig:280nm_arrays} show both perpendicular and \qty{30}{\degree} misalligned arrays with template widths of \qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}, respectively \cite{Brugnolotto2023_2}.}
+    \caption[\acs{sem_m} images of nanowire arrays.]{\acs{sem_m} top-view images of III-V nanowire arrays with defective wires marked by yellow arrows. \subref{subfig:70nm_arrays}, \subref{subfig:140nm_arrays}, \subref{subfig:210nm_arrays}, and \subref{subfig:280nm_arrays} show both perpendicular and \qty{20}{\degree} misalligned arrays with template widths of \qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}, respectively \cite{Brugnolotto2023_2}.}
     \label{fig:s7_arrays}
 \end{figure}
 
-These specifications do not require a full \acs{stem_m} analysis. Instead, a \acf{sem_m} survey of the arrays in the sample is sufficient to assess the growth yield. One such survey, resulting in an open access dataset \cite{dataset}, was carried out on samples 6 and 7. Figure~\ref{fig:s7_arrays} shows eight images of the arrays of sample 6 taken from this dataset. A first distinction can be made by "Perpendicular" wires, so-called because the heterointerfaces in perfect nanowires are perpendicular to all four template walls, and \qty{30}{\degree} misaligned wires, which owe their name to the tilt of the template channels from the \hkl{1 1 1} direction.
+These specifications do not require a full \acs{stem_m} analysis. Instead, a \acf{sem_m} survey of the arrays in the sample is sufficient to assess the growth yield. One such survey, resulting in an open access dataset \cite{dataset}, was carried out on samples 6 and 7. Figure~\ref{fig:s7_arrays} shows eight images of the arrays of sample 6 taken from this dataset. A first distinction can be made by "Perpendicular" wires, so-called because the heterointerfaces in perfect nanowires are perpendicular to all four template walls, and \qty{20}{\degree} misaligned wires, which owe their name to the tilt of the template channels from the \hkl{1 1 1} direction.
 
-The dataset was collected manually using the \acs{sem_m} beam of the dual-beam \acs{sem_m} - \acs{fib} tool. Due to project time constraints, sampling became necessary to gather a full suite of images showing every one of the \num{19008} arrays. Five sections were selected in each chip, mostly at random. However, for sample 7, a perpendicular and a \qty{30}{\degree} misaligned section were selected in the AA division to ensure a representation of the border divisions of the chip. Another difference between the two samples is that while for sample 6, sections were randomly drafted and changed for each of the five positions, for sample 6, a second division was randomly selected, within which another two sections were imaged. The fifth and final section was once again randomly chosen. These sections are reported in Table~\ref{tab:dataset_sections}. Three parallel and two \qty{30}{\degree} misaligned sections were imaged for both samples.
+The dataset was collected manually using the \acs{sem_m} beam of the dual-beam \acs{sem_m} - \acs{fib} tool. Due to project time constraints, sampling became necessary to gather a full suite of images showing every one of the \num{19008} arrays. Five sections were selected in each chip, mostly at random. However, for sample 7, a perpendicular and a \qty{20}{\degree} misaligned section were selected in the AA division to ensure a representation of the border divisions of the chip. Another difference between the two samples is that while for sample 6, sections were randomly drafted and changed for each of the five positions, for sample 6, a second division was randomly selected, within which another two sections were imaged. The fifth and final section was once again randomly chosen. These sections are reported in Table~\ref{tab:dataset_sections}. Three parallel and two \qty{20}{\degree} misaligned sections were imaged for both samples.
 
 \begin{table}
     \centering
@@ -152,7 +152,7 @@ This means that 240 arrays containing 15840 nucleation sites were imaged. This n
 
 \subsection{\texorpdfstring{\acs{sem_m}-observable defects in \acs{tase} nanowires}{SEM observable defects in TASE nanowires}}
 
-Defective wires were marked with yellow arrows in the nanowire arrays of Figure~\ref{fig:s7_arrays}. All these defective wires can be detected by looking at the wire-end interface. None of the wires mirroring the defective wires are defective, except for two. Each defective wire is isolated, having no immediate defective neighbour. Some of the defective wires also have partially covered seeds, as is most evident in the two neighbouring \qty{280}{\nano\metre} \qty{30}{\degree} misaligned array. However, unideal nucleation is not the only reason for defective growth, as seen in the \qty{140}{\nano\metre} and \qty{280}{\nano\metre} perpendicular wires, which fully cover the \acl{si} seed.
+Defective wires were marked with yellow arrows in the nanowire arrays of Figure~\ref{fig:s7_arrays}. All these defective wires can be detected by looking at the wire-end interface. None of the wires mirroring the defective wires are defective, except for two. Each defective wire is isolated, having no immediate defective neighbour. Some of the defective wires also have partially covered seeds, as is most evident in the two neighbouring \qty{280}{\nano\metre} \qty{20}{\degree} misaligned array. However, unideal nucleation is not the only reason for defective growth, as seen in the \qty{140}{\nano\metre} and \qty{280}{\nano\metre} perpendicular wires, which fully cover the \acl{si} seed.
 
 The length of the nanowires does not change significantly with the change in width of the \acs{tase} templates, as can be seen by comparing the lengths of the nanowires in Figure~\ref{subfig:70nm_arrays} with those of the nanowires in Figure~\ref{subfig:140nm_arrays}, \ref{subfig:210nm_arrays}, and \ref{subfig:280nm_arrays}, once the slight magnification used for presentation purposes in Figure~\ref{subfig:70nm_arrays} is taken into account. Therefore, compared to their neighbours, abnormally long or short III-V material segments in some nucleation sites can indicate undesired defects in the wire's internal structure.
 
@@ -219,7 +219,7 @@ The three most numerous categories for total number of defects are "hidden by pa
 \sisetup{detect-all = true}
 \begin{table}
     \centering
-    \caption[Overview of the distribution of defect types between perpendicular and \qty{30}{\degree} misaligned sites.]{Overview of the distribution of defect types between perpendicular and \qty{30}{\degree} misaligned sites \cite{Brugnolotto2023_2}.}
+    \caption[Overview of the distribution of defect types between perpendicular and \qty{20}{\degree} misaligned sites.]{Overview of the distribution of defect types between perpendicular and \qty{20}{\degree} misaligned sites \cite{Brugnolotto2023_2}.}
     \begin{tabular}{l|ccccccc}
         \hline
          & \multicolumn{7}{c}{Defect categories and occurrence} \\ 
@@ -228,7 +228,7 @@ The three most numerous categories for total number of defects are "hidden by pa
         Perpendicular & \num{208} & \num{315} & \num{7} & \num{4} & \num{5} & \num{5} & \num{20} \\ 
         \textit{\% of category} & \textit{\qty{56.5}{\%}} & \textit{\qty{64.7}{\%}} & \textit{\qty{41.2}{\%}} & \textit{\qty{50}{\percent}} & \textit{\qty{62.5}{\%}} & \textit{\qty{2.4}{\%}} & \textit{\qty{24.7}{\%}} \\ 
         \hline
-        \qty{30}{\degree} misaligned & \num{160} & \num{172} & \num{10} & \num{4} & \num{3} & \num{206} & \num{61} \\ 
+        \qty{20}{\degree} misaligned & \num{160} & \num{172} & \num{10} & \num{4} & \num{3} & \num{206} & \num{61} \\ 
         \textit{\% of category} & \textit{\qty{43.5}{\%}} & \textit{\qty{35.3}{\%}} & \textit{\qty{58.8}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{37.5}{\%}} & \textit{\qty{97.6}{\%}} & \textit{\qty{75.3}{\%}} \\ 
         \hline
         \textbf{Total} & \textbf{\num{368}} & \textbf{\num{487}} & \textbf{\num{17}} & \textbf{\num{8}} & \textbf{\num{8}} & \textbf{\num{211}} & \textbf{\num{81}} \\
@@ -238,18 +238,18 @@ The three most numerous categories for total number of defects are "hidden by pa
 \end{table}
 \sisetup{detect-none = true}
 
-Data on defective wires can also be divided between perpendicular and \qty{30}{\degree} misaligned growth sites, as shown in Table~\ref{tab:defects_overview_sites}. The total number of perpendicular growth sites surveyed is \num{9504} (\qty{60}{\%} of the total): higher than the number of \qty{30}{\degree} misaligned sites, which is \num{6336} (\qty{40}{\%} of the total). This is caused by three out of five sections containing perpendicular growth sites for both samples. As a result, the total number of defects in the perpendicular sections is expected to be higher if the same possibility of defective wire presence is expected. However, suppose the presence of a tilted seed surface is expected to be a disadvantage for the growth of perfect wires. In that case, this should be reflected in an equal or higher number of defective wires for the misaligned sites.
+Data on defective wires can also be divided between perpendicular and \qty{20}{\degree} misaligned growth sites, as shown in Table~\ref{tab:defects_overview_sites}. The total number of perpendicular growth sites surveyed is \num{9504} (\qty{60}{\%} of the total): higher than the number of \qty{20}{\degree} misaligned sites, which is \num{6336} (\qty{40}{\%} of the total). This is caused by three out of five sections containing perpendicular growth sites for both samples. As a result, the total number of defects in the perpendicular sections is expected to be higher if the same possibility of defective wire presence is expected. However, suppose the presence of a tilted seed surface is expected to be a disadvantage for the growth of perfect wires. In that case, this should be reflected in an equal or higher number of defective wires for the misaligned sites.
 
-A first count of the total number of defective wires points to this conclusion, with \num{564} (\qty{47.8}{\%} of the total) defective wires for the perpendicular growth sites and \num{616} (\qty{52.2}{\%} of the total) for the \qty{30}{\degree} misaligned sections. However, when breaking down the defects into each category, it becomes apparent that a third of all defects in the \qty{30}{\degree} misaligned growth sites are in the short category, which is two orders of magnitude larger compared to the perpendicular growth sites. This was caused by the nucleation sites of section GG31 in sample 6 presenting numerous nucleation and growth issues, reflected in the higher number of short and ungrown wires. This could be ascribed to the different orientations of the \acl{si} seed but could just as easily be due to characteristics of the seed, such as residual oxide cover, or of the precursor flow over the sample, independent of geometry.
+A first count of the total number of defective wires points to this conclusion, with \num{564} (\qty{47.8}{\%} of the total) defective wires for the perpendicular growth sites and \num{616} (\qty{52.2}{\%} of the total) for the \qty{20}{\degree} misaligned sections. However, when breaking down the defects into each category, it becomes apparent that a third of all defects in the \qty{20}{\degree} misaligned growth sites are in the short category, which is two orders of magnitude larger compared to the perpendicular growth sites. This was caused by the nucleation sites of section GG31 in sample 6 presenting numerous nucleation and growth issues, reflected in the higher number of short and ungrown wires. This could be ascribed to the different orientations of the \acl{si} seed but could just as easily be due to characteristics of the seed, such as residual oxide cover, or of the precursor flow over the sample, independent of geometry.
 
-Four of the other five categories closely follow the expected defect ratios between the two types of nucleation sites, which comprise the other two categories with more than \num{100} defective wires. The presence of parasitic crystals is purely stochastic, and given that they can vary in size, the \qty{64.7}{\%} / \qty{35.3}{\%} split in this category is expected. However, the split in the "wrong facet" category is the most indicative of the actual difference in the performance of the facet stabilisation method, as it concentrates on analysing the relationship between the shapes of the seed and end-wire interface. This \qty{56.5}{\%} / \qty{43.5}{\%} split denotes a slight prevalence of defective wires for the \qty{30}{\degree} misaligned sites, but remains close to the \num{60} / \num{40} split of the sample sizes.
+Four of the other five categories closely follow the expected defect ratios between the two types of nucleation sites, which comprise the other two categories with more than \num{100} defective wires. The presence of parasitic crystals is purely stochastic, and given that they can vary in size, the \qty{64.7}{\%} / \qty{35.3}{\%} split in this category is expected. However, the split in the "wrong facet" category is the most indicative of the actual difference in the performance of the facet stabilisation method, as it concentrates on analysing the relationship between the shapes of the seed and end-wire interface. This \qty{56.5}{\%} / \qty{43.5}{\%} split denotes a slight prevalence of defective wires for the \qty{20}{\degree} misaligned sites, but remains close to the \num{60} / \num{40} split of the sample sizes.
 
 \subsection{Sample 6}
 
 \sisetup{detect-all = true}
 \begin{table}
     \centering
-    \caption[Overview of the distribution of defect types in sample 6.]{Overview of the distribution of defect types between perpendicular and \qty{30}{\degree} misaligned sites in sample 6 \cite{Brugnolotto2023_2}.}
+    \caption[Overview of the distribution of defect types in sample 6.]{Overview of the distribution of defect types between perpendicular and \qty{20}{\degree} misaligned sites in sample 6 \cite{Brugnolotto2023_2}.}
     \begin{tabular}{l|ccccccc}
         \hline
          & \multicolumn{7}{c}{Defect categories and occurrence} \\ 
@@ -258,7 +258,7 @@ Four of the other five categories closely follow the expected defect ratios betw
         Perpendicular & \num{81} & \num{170} & \num{1} & \num{0} & \num{4} & \num{0} & \num{0} \\ 
         \textit{\% of category} & \textit{\qty{49.8}{\%}} & \textit{\qty{79.9}{\%}} & \textit{\qty{50}{\%}} & \textit{-} & \textit{\qty{80}{\%}} & \textit{\qty{0}{\%}} & \textit{\qty{0}{\%}} \\ 
         \hline
-        \qty{30}{\degree} misaligned & \num{83} & \num{51} & \num{1} & \num{0} & \num{1} & \num{204} & \num{61} \\ 
+        \qty{20}{\degree} misaligned & \num{83} & \num{51} & \num{1} & \num{0} & \num{1} & \num{204} & \num{61} \\ 
         \textit{\% of category} & \textit{\qty{50.6}{\%}} & \textit{\qty{22.1}{\%}} & \textit{\qty{50}{\%}} & \textit{-} & \textit{\qty{20}{\%}} & \textit{\qty{100}{\%}} & \textit{\qty{100}{\%}} \\ 
         \hline
         \textbf{Total} & \textbf{\num{164}} & \textbf{\num{230}} & \textbf{\num{2}} & \textbf{\num{0}} & \textbf{\num{5}} & \textbf{\num{204}} & \textbf{\num{61}} \\
@@ -268,12 +268,28 @@ Four of the other five categories closely follow the expected defect ratios betw
 \end{table}
 \sisetup{detect-none = true}
 
+Table~\ref{tab:defects_s6} shows a breakdown of the defective wires surveyed on sample 6 between perpendicular and \qty{20}{\degree} misaligned growth sites and defect category. As discussed in the previous section, the total growth yield for this sample is \qty{91.59}{\percent}. The singular growth yields for perpendicular and misaligned sites in this sample is \qty{}{\percent}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Sample 7}
 
 \sisetup{detect-all = true}
 \begin{table}
     \centering
-    \caption[Overview of the distribution of defect types in sample 7.]{Overview of the distribution of defect types between perpendicular and \qty{30}{\degree} misaligned sites in sample 7 \cite{Brugnolotto2023_2}.}
+    \caption[Overview of the distribution of defect types in sample 7.]{Overview of the distribution of defect types between perpendicular and \qty{20}{\degree} misaligned sites in sample 7 \cite{Brugnolotto2023_2}.}
     \begin{tabular}{l|ccccccc}
         \hline
          & \multicolumn{7}{c}{Defect categories and occurrence} \\ 
@@ -282,7 +298,7 @@ Four of the other five categories closely follow the expected defect ratios betw
         Perpendicular & \num{127} & \num{145} & \num{6} & \num{4} & \num{1} & \num{5} & \num{20} \\ 
         \textit{\% of category} & \textit{\qty{62.3}{\%}} & \textit{\qty{56.4}{\%}} & \textit{\qty{40}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{33.3}{\%}} & \textit{\qty{71.4}{\%}} & \textit{\qty{100}{\%}} \\ 
         \hline
-        \qty{30}{\degree} misaligned & \num{77} & \num{112} & \num{9} & \num{4} & \num{2} & \num{2} & \num{0} \\ 
+        \qty{20}{\degree} misaligned & \num{77} & \num{112} & \num{9} & \num{4} & \num{2} & \num{2} & \num{0} \\ 
         \textit{\% of category} & \textit{\qty{37.7}{\%}} & \textit{\qty{43.6}{\%}} & \textit{\qty{60}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{66.7}{\%}} & \textit{\qty{28.6}{\%}} & \textit{\qty{0}{\%}} \\ 
         \hline
         \textbf{Total} & \textbf{\num{204}} & \textbf{\num{257}} & \textbf{\num{15}} & \textbf{\num{8}} & \textbf{\num{3}} & \textbf{\num{7}} & \textbf{\num{20}} \\
