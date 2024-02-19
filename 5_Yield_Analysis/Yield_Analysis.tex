@@ -143,7 +143,7 @@ The dataset was collected manually using the \acs{sem_m} beam of the dual-beam \
     \begin{tabular}{c|c c c c c}
          & \multicolumn{5}{c}{Sections} \\ \hline
         Sample 6 & BB13 & CD22 & DE42 & FB13 & GG31 \\
-        Sample 7 & AA32 & AA42 & DE11 & DE22 & FC11 \\ \hline \hline
+        Sample 7 & AA32 & AA41 & DE11 & DE22 & FC11 \\ \hline \hline
     \end{tabular}
     \label{tab:dataset_sections}
 \end{table}
@@ -214,7 +214,7 @@ The \num{240} array images discussed in the previous sections were manually exam
 
 The \num{1180} defective wires are broken down between the two samples and by defect category in Table~\ref{tab:defects_overview}. The seven defect classes are: "wrong facet", which comprises the wires where the end interface is not parallel to the \hkl{1 1 1} seed interface, "hidden by parasitic", counting the nucleation sites that are covered by a parasitic crystal and therefore not visible, "oxide nucleated", which counts the wires that nucleated on the template oxide, "seed exposed" wires have the correct end surface but did not fully cover the seed surface, "long" and "short" wires are only defective in terms of length when compared to those around them, and "ungrown" wires, or lack of wires, counts the nucleation sites that did not experience growth.
 
-The three most numerous categories for total number of defects are "hidden by parasitic", "wrong facet", and "short", with totals of \num{487}, \num{368}, and \num{211}, respectively. The other categories are one order of magnitude lower. The category "hidden by parasitic" is different from the others in the sense that a single defect hides multiple wires, close to \num{15}, or \num{14.87} on average, from view, as shown in Figure~\ref{subfig:defects_parasitic}. As such, the status of the hidden wires is unknown. If these hidden nucleation sites are ignored for the purposes of yield calculation, the total number of surveyed sites falls to \num{15379}, while the number of perfect wires remains unchanged. Under this approximation, the total yield rises by \qty{2.77}{\percent} to \qty{95.32}{\percent}.
+The three most numerous categories for the total number of defects are "hidden by parasitic", "wrong facet", and "short", with totals of \num{487}, \num{368}, and \num{211}, respectively. The other categories are one order of magnitude lower. The category "hidden by parasitic" is different from the others in the sense that a single defect hides multiple wires, close to \num{15}, or \num{14.87} on average, from view, as shown in Figure~\ref{subfig:defects_parasitic}. As such, the status of the hidden wires is unknown. If these hidden nucleation sites are ignored for yield calculation, the total number of surveyed sites falls to \num{15379}, while the number of perfect wires remains unchanged. Under this approximation, the total yield rises by \qty{2.77}{\percent} to \qty{95.32}{\percent}.
 
 \sisetup{detect-all = true}
 \begin{table}
@@ -240,7 +240,7 @@ The three most numerous categories for total number of defects are "hidden by pa
 
 Data on defective wires can also be divided between perpendicular and \qty{20}{\degree} misaligned growth sites, as shown in Table~\ref{tab:defects_overview_sites}. The total number of perpendicular growth sites surveyed is \num{9504} (\qty{60}{\%} of the total): higher than the number of \qty{20}{\degree} misaligned sites, which is \num{6336} (\qty{40}{\%} of the total). This is caused by three out of five sections containing perpendicular growth sites for both samples. As a result, the total number of defects in the perpendicular sections is expected to be higher if the same possibility of defective wire presence is expected. However, suppose the presence of a tilted seed surface is expected to be a disadvantage for the growth of perfect wires. In that case, this should be reflected in an equal or higher number of defective wires for the misaligned sites.
 
-A first count of the total number of defective wires points to this conclusion, with \num{564} (\qty{47.8}{\%} of the total) defective wires for the perpendicular growth sites and \num{616} (\qty{52.2}{\%} of the total) for the \qty{20}{\degree} misaligned sections. However, when breaking down the defects into each category, it becomes apparent that a third of all defects in the \qty{20}{\degree} misaligned growth sites are in the short category, which is two orders of magnitude larger compared to the perpendicular growth sites. This was caused by the nucleation sites of section GG31 in sample 6 presenting numerous nucleation and growth issues, reflected in the higher number of short and ungrown wires. This could be ascribed to the different orientations of the \acl{si} seed but could just as easily be due to characteristics of the seed, such as residual oxide cover, or of the precursor flow over the sample, independent of geometry.
+A first count of the total number of defective wires points to this conclusion, with \num{564} (\qty{47.8}{\%} of the total) defective wires for the perpendicular growth sites and \num{616} (\qty{52.2}{\%} of the total) for the \qty{20}{\degree} misaligned sections. However, when breaking down the defects into each category, it becomes apparent that a third of all defects in the \qty{20}{\degree} misaligned growth sites are in the short category, which is two orders of magnitude larger compared to the perpendicular growth sites. This was caused by the nucleation sites of section GG31 in sample 6 presenting numerous nucleation and growth issues, reflected in the higher number of short and ungrown wires. This could be ascribed to the different orientations of the \acl{si} seed but could just as easily be due to the surface characteristics of the seed, such as residual oxide cover, or to the flow of the precursor over the sample, independent of geometry.
 
 Four of the other five categories closely follow the expected defect ratios between the two types of nucleation sites, which comprise the other two categories with more than \num{100} defective wires. The presence of parasitic crystals is purely stochastic, and given that they can vary in size, the \qty{64.7}{\%} / \qty{35.3}{\%} split in this category is expected. However, the split in the "wrong facet" category is the most indicative of the actual difference in the performance of the facet stabilisation method, as it concentrates on analysing the relationship between the shapes of the seed and end-wire interface. This \qty{56.5}{\%} / \qty{43.5}{\%} split denotes a slight prevalence of defective wires for the \qty{20}{\degree} misaligned sites, but remains close to the \num{60} / \num{40} split of the sample sizes.
 
@@ -268,21 +268,9 @@ Four of the other five categories closely follow the expected defect ratios betw
 \end{table}
 \sisetup{detect-none = true}
 
-Table~\ref{tab:defects_s6} shows a breakdown of the defective wires surveyed on sample 6 between perpendicular and \qty{20}{\degree} misaligned growth sites and defect category. As discussed in the previous section, the total growth yield for this sample is \qty{91.59}{\percent}. The singular growth yields for perpendicular and misaligned sites in this sample is \qty{}{\percent}
+Table~\ref{tab:defects_s6} shows a breakdown of the defective wires surveyed on sample 6 between perpendicular and \qty{20}{\degree} misaligned growth sites and defect category. Sample 6 contained wires with twelve lattice-matched \acs{ingaas} \acl{qw}s. As discussed in the previous section, the total growth yield for this sample is \qty{91.59}{\percent}. The singular growth yields for the perpendicular and misaligned sites in this sample are \qty{94.84}{\percent} and \qty{86.71}{\percent}, respectively. This \qty{8.13}{\percent} difference is driven mainly by section GG31, which is responsible for all of the "short" and "ungrown" wires in this sample. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Aside from the contribution coming from section GG31, this sample mainly presented "wrong facet" and "hidden by parasitic" defective wires. The latter category shows a very high imbalance compared to the expected \num{60} / \num{40} distribution given by the random nature of parasitic nucleation. A significant contribution to this figure comes from section BB13, where \num{96} templates were covered by parasitic growth: this is \qty{19.7}{\percent}, or close to a fifth, of the total number of templates covered by parasitic growth in a single sector, which itself represents a tenth of the data. On the other hand, the likelihood that a wire develops defects is much more closely matched between the two types of nucleation sites while being slightly higher for the \qty{20}{\degree} misaligned sample.
 
 \subsection{Sample 7}
 
@@ -307,6 +295,26 @@ Table~\ref{tab:defects_s6} shows a breakdown of the defective wires surveyed on 
     \label{tab:defects_s7}
 \end{table}
 \sisetup{detect-none = true}
+
+The statistics highlighting the distribution of each defect category between seed types in sample 7 are shown in Table~\ref{tab:defects_s7}. Sample 7 contains strained arsenide layers in the form of \acs{inas} \acl{qw}s in an \acs{inp} matrix as well as some close to lattice-matched \acs{ingaas} layers. The total growth yield for this sample was \qty{93.51}{\%}, higher than for the previous sample, which only contained unstrained interfaces. This is mainly due to the presence of many nucleation issues in section GG31 of sample 6. Thus, the main factors affecting the growth yield are more related to surface treatment issues than to the actual growth recipe loaded in the reactor. The growth yield for the perpendicular and \qty{20}{\degree} misaligned ave very close at \qty{93.73}{\%} and \qty{93.75}{\%}, respectively.
+
+For this sample, the categories "wrong facet" and "hidden by parasitic" exceed 200 wires each, in total, closely following the \num{60} / \num{40} distribution given by a stochastic process. The most unbalance category consists of the \num{20} ungrown wires for the perpendicular growth sites. These all originate from a single array in section AA41, and are shown in Figure~\ref{subfig:defects_unucleated}.
+
+Therefore, the analysis of this sample also confirms that, aside from some discrepancies closely related to surface treatment issues, the growth yield follow the expected \num{60} / \num{40} distribution. In conclusion, the presence of strained arsenide heterolayers does not have a significant impact on the total growth yield.
+
+\section{Image processing for yield calculation}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
