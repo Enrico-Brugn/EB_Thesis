@@ -30,4 +30,4 @@ output.pdf
 *.ipynb
 *.synctex(busy)
 /figures/*
-/minted-output
+/_minted-output
