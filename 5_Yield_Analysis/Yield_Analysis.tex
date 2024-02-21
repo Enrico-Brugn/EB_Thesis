@@ -346,8 +346,16 @@ The open-source software LabelMe \cite{labelme2016} was used to generate the lab
 
 These five classes, plus a sixth generated according to the outcome of digital wire-splitting algorithm, are used to labelled the data which forms the input for the supervised classifier. Examples of what each wire image looks like is provided in Figure~\ref{fig:class_examples} complete with their encodings, which are summarised in Table~\ref{tab:encodings}.
 
+\subsubsection{Digital image splitting algorithm}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{5_Yield_Analysis/Fig/raw_sem_image.pdf}
+    \caption[An unprocessed \acs{sem_m} image of nanowire arrays.]{A raw \acs{sem_m} image of nanowire arrays. This is an example of the starting state of a lot of the images in the unprocessed dataset, in particular this image has low contrast.}
+    \label{fig:raw_image}
+\end{figure}
 
+The main challenge is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}
 
 
 
