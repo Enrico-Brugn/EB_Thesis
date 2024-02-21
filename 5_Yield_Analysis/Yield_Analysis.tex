@@ -344,26 +344,47 @@ The open-source software LabelMe \cite{labelme2016} was used to generate the lab
     \label{tab:encodings}
 \end{table}
 
-These five classes, plus a sixth generated according to the outcome of digital wire-splitting algorithm, are used to labelled the data which forms the input for the supervised classifier. Examples of what each wire image looks like is provided in Figure~\ref{fig:class_examples} complete with their encodings, which are summarised in Table~\ref{tab:encodings}.
+These five classes, plus a sixth generated according to the outcome of digital wire-splitting algorithm, are used to label the data that form the input for the supervised classifier. Examples of what each wire image looks like is provided in Figure~\ref{fig:class_examples} complete with their encodings, which are summarised in Table~\ref{tab:encodings}.
 
 \subsubsection{Digital image splitting algorithm}
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{5_Yield_Analysis/Fig/raw_sem_image.pdf}
-    \caption[An unprocessed \acs{sem_m} image of nanowire arrays.]{A raw \acs{sem_m} image of nanowire arrays. This is an example of the starting state of a lot of the images in the unprocessed dataset, in particular this image has low contrast.}
+    \caption[An unprocessed \acs{sem_m} image of a nanowire array.]{A raw \acs{sem_m} image of a nanowire array. This is an example of the starting state of the images in the unprocessed dataset, in particular this image has low contrast.}
     \label{fig:raw_image}
 \end{figure}
 
 The main challenge is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}. This particular image was captured with low contrast; other images, such as those seen in Figure~\ref{fig:class_examples} were captured under different acquisition settings, making it difficult to define hardcoded intensity levels to, for example, detect whether or not a wire is there and what shape it has.
 
-However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the arrays. Another constant is the information panel at the bottom of the image. This, while useful to a human for the interpretation of the image, is not necessary for a machine. Given its regular nature, it can be easily removed by cutting a constant number of pixel rows at the bottom of the image. 
+However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the arrays. Another constant is the information panel at the bottom of the image. This, while useful to a human for the interpretation of the image, is not necessary for a machine. Given its regular nature, it can be easily removed from all images by cutting a constant number of pixel rows. 
 
 
 
 
 
 
+
+
+\subsection{Training results}
+
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        F1 score and loss for each training epoch \cite{Brugnolotto2024}.
+        \label{subfig:F1Score}
+    }{
+        \includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/F1Score.pdf}
+    }
+    \subcaptionbox{
+        Confusion Matrix of the classifier \cite{Brugnolotto2024}.
+        \label{subfig:confusion_matrix}
+    }{
+        \includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/Confusion_Matrix.pdf}
+    }
+    \caption[Training metrics for the classifier.]{Training metrics for the classifier \cite{Brugnolotto2024}. \subref{subfig:F1Score} shows the evolution of }
+    \label{fig:training_metrics}
+\end{figure}
 
 
 
