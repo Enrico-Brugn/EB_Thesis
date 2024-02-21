@@ -316,15 +316,26 @@ The open-source software LabelMe \cite{labelme2016} was used to generate the lab
     \centering
     \tikzsetnextfilename{class_examples}
     \begin{tikzpicture}
-        
+        \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.31\textwidth]{5_Yield_Analysis/Fig/class_example_0.pdf}};
+        \node at (0,-1.2) {\num{0}};
+        \node[inner sep=0pt] (image) at (5.2,0) {\includegraphics[width=0.31\textwidth]{5_Yield_Analysis/Fig/class_example_1.pdf}};
+        \node at (5.2,-1.2) {\num{1}};
+        \node[inner sep=0pt] (image) at (10.4,0) {\includegraphics[width=0.31\textwidth]{5_Yield_Analysis/Fig/class_example_2.pdf}};
+        \node at (10.4,-1.2) {\num{2}};
+        \node[inner sep=0pt] (image) at (0,-3) {\includegraphics[width=0.31\textwidth]{5_Yield_Analysis/Fig/class_example_3.pdf}};
+        \node at (0,-4.2) {\num{3}};
+        \node[inner sep=0pt] (image) at (5.2,-3) {\includegraphics[width=0.31\textwidth]{5_Yield_Analysis/Fig/class_example_4.pdf}};
+        \node at (5.2,-4.2) {\num{4}};
+        \node[inner sep=0pt] (image) at (10.4,-3) {\includegraphics[width=0.31\textwidth]{5_Yield_Analysis/Fig/class_example_5.pdf}};
+        \node at (10.4,-4.2) {\num{5}};
     \end{tikzpicture}
-    \caption{Caption}
+    \caption[Examples of each class of wire.]{Examples of each class of wire \cite{Brugnolotto2024}. The numbers below each image are the respective encodings, which can be interpreted from Table~\ref{tab:encodings}.}
     \label{fig:class_examples}
 \end{figure}
 
 \begin{table}
     \centering
-    \caption{Class encodings.}
+    \caption[Class encodings for the training of the classifier.]{Class encodings for the training of the classifier \cite{Brugnolotto2024}.}
     \begin{tabular}{l|c|c c|c c|c}
         & & \multicolumn{2}{c|}{Wire Parallel} & \multicolumn{2}{c|}{Wire Tilted} & \\ 
         Class & Parasitic & Defect & Perfect & Defect & Perfect & Null \\ \hline \hline
