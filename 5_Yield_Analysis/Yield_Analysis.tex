@@ -355,7 +355,9 @@ These five classes, plus a sixth generated according to the outcome of digital w
     \label{fig:raw_image}
 \end{figure}
 
-The main challenge is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}. This particular image was captured with low contrast, other images, such as those seen in Figure~\ref{fig:class_examples} were captured under different acquisition settings, making defining a hardcoded intensity levels difficult to, for example, detect whether or not a wire is there and what shape it has.
+The main challenge is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}. This particular image was captured with low contrast; other images, such as those seen in Figure~\ref{fig:class_examples} were captured under different acquisition settings, making it difficult to define hardcoded intensity levels to, for example, detect whether or not a wire is there and what shape it has.
+
+However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the arrays. Another constant is the information panel at the bottom of the image. This, while useful to a human for the interpretation of the image, is not necessary for a machine. Given its regular nature, it can be easily removed by cutting a constant number of pixel rows at the bottom of the image. 
 
 
 
