@@ -306,9 +306,9 @@ Therefore, the analysis of this sample also confirms that, aside from some discr
 
 After the manual analysis carried out on the \num{15840} wires shown in the \num{240} \acs{sem_m} images dataset \cite{dataset}, it became clear that carrying out such a task manually for each sample would consist in a lot of tedious and time-consuming work. To retain the ability to calculate the yield information on \acs{tase} nanowires, the dataset could be processed to become the input data to train a machine learning algorithm to automatically classify each wire between "defective" and "non defective". 
 
-The work in this section was carried out by Preslav Aleksandrov, with whom I had many important discussions about digital image processing and machine learning, and I, and was published in \cite{Brugnolotto2024}. The code described in this section is available in an open-source repository \cite{code}. The approach that was selected for this automation was to train a simple classifier with supervised training on images of single wire extracted from the \num{240} array images.
+The work in this section was carried out by Preslav Aleksandrov, with whom I had many important discussions about digital image processing and machine learning, and I, and was published in \cite{Brugnolotto2024}. The code described in this section is available in an open-source repository \cite{code}. The approach that was selected for this automation was to train a simple classifier with supervised training on images of single wire extracted from the \num{240} array images. Given the choice of supervised training, manual labelling labelling of \num{15840} wires across 240 images had to be carried out. Then the 240 images had to be digitally split into the single wires, half of which were mirrored to maintain the same seed-wire-empty template left to right sequence in each resulting image.
 
-\subsection{Dataset Labelling}
+\subsection{Image preprocessing}
 
 The open-source software LabelMe \cite{labelme2016} was used to generate the labelling data for each array image. A reduced subset of label classes was employed compared to the manual analysis in the previous section. They distinguished between parallel and tilted wires, which describe the orientations of the templates in which the wire grew and correspond to the "Perpendicular" and "\qty{20}{\degree} misaligned" categories of the previous section. These two kinds of wire were further subdivided into two classes by adding "defect" or "perfect". A fifth class was created to represent parasitic crystals because they are a very different kind of defect and should, therefore, be easily identified by any classifier.
 
@@ -345,6 +345,17 @@ The open-source software LabelMe \cite{labelme2016} was used to generate the lab
 \end{table}
 
 These five classes, plus a sixth generated according to the outcome of digital wire-splitting algorithm, are used to labelled the data which forms the input for the supervised classifier. Examples of what each wire image looks like is provided in Figure~\ref{fig:class_examples} complete with their encodings, which are summarised in Table~\ref{tab:encodings}.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
