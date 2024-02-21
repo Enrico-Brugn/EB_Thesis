@@ -261,7 +261,7 @@ Four of the other five categories closely follow the expected defect ratios betw
         \qty{20}{\degree} misaligned & \num{83} & \num{51} & \num{1} & \num{0} & \num{1} & \num{204} & \num{61} \\ 
         \textit{\% of category} & \textit{\qty{50.6}{\%}} & \textit{\qty{22.1}{\%}} & \textit{\qty{50}{\%}} & \textit{-} & \textit{\qty{20}{\%}} & \textit{\qty{100}{\%}} & \textit{\qty{100}{\%}} \\ 
         \hline
-        \textbf{Total} & \textbf{\num{164}} & \textbf{\num{230}} & \textbf{\num{2}} & \textbf{\num{0}} & \textbf{\num{5}} & \textbf{\num{204}} & \textbf{\num{61}} \\
+        \textbf{Sample total} & \textbf{\num{164}} & \textbf{\num{230}} & \textbf{\num{2}} & \textbf{\num{0}} & \textbf{\num{5}} & \textbf{\num{204}} & \textbf{\num{61}} \\
         \hline
     \end{tabular}
     \label{tab:defects_s6}
@@ -289,7 +289,7 @@ Aside from the contribution coming from section GG31, this sample mainly present
         \qty{20}{\degree} misaligned & \num{77} & \num{112} & \num{9} & \num{4} & \num{2} & \num{2} & \num{0} \\ 
         \textit{\% of category} & \textit{\qty{37.7}{\%}} & \textit{\qty{43.6}{\%}} & \textit{\qty{60}{\%}} & \textit{\qty{50}{\%}} & \textit{\qty{66.7}{\%}} & \textit{\qty{28.6}{\%}} & \textit{\qty{0}{\%}} \\ 
         \hline
-        \textbf{Total} & \textbf{\num{204}} & \textbf{\num{257}} & \textbf{\num{15}} & \textbf{\num{8}} & \textbf{\num{3}} & \textbf{\num{7}} & \textbf{\num{20}} \\
+        \textbf{Sample total} & \textbf{\num{204}} & \textbf{\num{257}} & \textbf{\num{15}} & \textbf{\num{8}} & \textbf{\num{3}} & \textbf{\num{7}} & \textbf{\num{20}} \\
         \hline
     \end{tabular}
     \label{tab:defects_s7}
@@ -308,11 +308,32 @@ After the manual analysis carried out on the \num{15840} wires shown in the \num
 
 The work in this section was carried out by Preslav Aleksandrov, with whom I had many important discussions about digital image processing and machine learning, and I, and was published in \cite{Brugnolotto2024}. The code described in this section is available in an open-source repository \cite{code}. The approach that was selected for this automation was to train a simple classifier with supervised training on images of single wire extracted from the \num{240} array images.
 
-\subsection{Dataset Labeling}
+\subsection{Dataset Labelling}
 
-The open-source software LabelMe \cite{labelme2016} was employed to generate the labeling data for each array image. A reduced subset of label classes was employed compared to the manual analysis in the previous section. They distinguished between parallel and tilted wires, which describe the orientations of the templates the wire grew in and corresponds to the "Perpendicular" and "\qty{20}{\degree} misaligned" categories of the previous section. Each of these two kinds of wire was further subdivided into two classes by adding "defect" or "perfect". A fifth class was created to represent parasitic crystals as they are a very different kind of defect and should, therefore, be easily identified by any classifier.
+The open-source software LabelMe \cite{labelme2016} was used to generate the labelling data for each array image. A reduced subset of label classes was employed compared to the manual analysis in the previous section. They distinguished between parallel and tilted wires, which describe the orientations of the templates in which the wire grew and correspond to the "Perpendicular" and "\qty{20}{\degree} misaligned" categories of the previous section. These two kinds of wire were further subdivided into two classes by adding "defect" or "perfect". A fifth class was created to represent parasitic crystals because they are a very different kind of defect and should, therefore, be easily identified by any classifier.
 
+\begin{figure}
+    \centering
+    \tikzsetnextfilename{class_examples}
+    \begin{tikzpicture}
+        
+    \end{tikzpicture}
+    \caption{Caption}
+    \label{fig:class_examples}
+\end{figure}
 
+\begin{table}
+    \centering
+    \caption{Class encodings.}
+    \begin{tabular}{l|c|c c|c c|c}
+        & & \multicolumn{2}{c|}{Wire Parallel} & \multicolumn{2}{c|}{Wire Tilted} & \\ 
+        Class & Parasitic & Defect & Perfect & Defect & Perfect & Null \\ \hline \hline
+        Encoding & \num{0} & \num{1} & \num{2} & \num{3} & \num{4} & \num{5}
+    \end{tabular}
+    \label{tab:encodings}
+\end{table}
+
+These five classes, plus a sixth generated according to the outcome of digital wire-splitting algorithm, are used to labelled the data which forms the input for the supervised classifier. Examples of what each wire image looks like is provided in Figure~\ref{fig:class_examples} complete with their encodings, which are summarised in Table~\ref{tab:encodings}.
 
 
 
