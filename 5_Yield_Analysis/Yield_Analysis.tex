@@ -350,14 +350,23 @@ These five classes, plus a sixth generated according to the outcome of digital w
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{5_Yield_Analysis/Fig/raw_sem_image.pdf}
-    \caption[An unprocessed \acs{sem_m} image of a nanowire array.]{A raw \acs{sem_m} image of a nanowire array. This is an example of the starting state of the images in the unprocessed dataset, in particular this image has low contrast.}
+    \tikzsetnextfilename{raw_image}
+    \begin{tikzpicture}
+        \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=\textwidth]{5_Yield_Analysis/Fig/raw_sem_image.pdf}};
+        \draw[cb1_orange] (-7.5, -4) rectangle (7.5, 5);
+        \node[anchor=north, cb1_orange] at (0, -4) {First cut};
+        \draw[cb1_purple, dashed] (-7.5, -1) rectangle (7.5, 2);
+        \node[anchor=west, cb1_purple, rotate=90] at (-7.2, -0.8) {Pooling area};
+        \draw[cb1_light_blue] (-6.7, -2.8) rectangle (6.7, 3.85);
+        \node[anchor=north, cb1_light_blue] at (0, -2.8) {Isolated array};
+    \end{tikzpicture}
+    \caption[An unprocessed \acs{sem_m} image of a nanowire array.]{A raw \acs{sem_m} image of a nanowire array. This is an example of the starting state of the images in the unprocessed dataset, in particular, this image has low contrast. The cutting process is also shown with rectangles of different size.}
     \label{fig:raw_image}
 \end{figure}
 
 The main challenge is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}. This particular image was captured with low contrast; other images, such as those seen in Figure~\ref{fig:class_examples} were captured under different acquisition settings, making it difficult to define hardcoded intensity levels to, for example, detect whether or not a wire is there and what shape it has.
 
-However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the arrays. Another constant is the information panel at the bottom of the image. This, while useful to a human for the interpretation of the image, is not necessary for a machine. Given its regular nature, it can be easily removed from all images by cutting a constant number of pixel rows. 
+However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the arrays. Another constant is the information panel at the bottom of the image. While useful to a human for interpreting the image, this part of the image is not necessary for a machine. Given its regular nature, it can be easily removed from all images by cutting a constant number of pixel rows. The geometry of the array remains constant as well, varying only in vertical size, with small fluctuations in position inside the image.
 
 
 
@@ -382,7 +391,7 @@ However, a constant for all images is the magnification and orientation, plus or
     }{
         \includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/Confusion_Matrix.pdf}
     }
-    \caption[Training metrics for the classifier.]{Training metrics for the classifier \cite{Brugnolotto2024}. \subref{subfig:F1Score} shows the evolution of }
+    \caption[Training metrics for the classifier.]{Training metrics for the classifier \cite{Brugnolotto2024}. \subref{subfig:F1Score} shows the evolution of the F1 score and the loss during training. \subref{subfig:confusion_matrix} shows the confusion matrix of the trained classifier calculated on the test fraction.}
     \label{fig:training_metrics}
 \end{figure}
 
