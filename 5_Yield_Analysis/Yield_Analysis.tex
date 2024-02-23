@@ -304,9 +304,9 @@ Therefore, the analysis of this sample also confirms that, aside from some discr
 
 \section{Image processing for yield calculation}
 
-After the manual analysis carried out on the \num{15840} wires shown in the \num{240} \acs{sem_m} images dataset \cite{dataset}, it became clear that carrying out such a task manually for each sample would consist in a lot of tedious and time-consuming work. To retain the ability to calculate the yield information on \acs{tase} nanowires, the dataset could be processed to become the input data to train a machine learning algorithm to automatically classify each wire between "defective" and "non defective". 
+After the manual analysis carried out on the \num{15840} wires shown in the \num{240} \acs{sem_m} images dataset \cite{dataset}, it became clear that carrying out such a task manually for each sample would consist in a lot of tedious and time-consuming work. To retain the ability to calculate the yield information on \acs{tase} nanowires, the dataset could be processed to become the input data for a machine learning algorithm to automatically classify each wire between "defective" and "non defective". 
 
-The work in this section was carried out by Preslav Aleksandrov, with whom I had many important discussions about digital image processing and machine learning, and I, and was published in \cite{Brugnolotto2024}. The code described in this section is available in an open-source repository \cite{code}. The approach that was selected for this automation was to train a simple classifier with supervised training on images of single wire extracted from the \num{240} array images. Given the choice of supervised training, manual labelling labelling of \num{15840} wires across 240 images had to be carried out. Then the 240 images had to be digitally split into the single wires, half of which were mirrored to maintain the same seed-wire-empty template left to right sequence in each resulting image.
+The work in this section was carried out by Preslav Aleksandrov, with whom I had many important discussions about digital image processing and machine learning, and I, and was published in \cite{Brugnolotto2024}. The code described in this section is available in an open-source repository \cite{code}. The approach selected for this automation was to train a simple classifier with supervised training on images of a single wire extracted from the images of the \num{240} array. Given the choice of supervised training, manual labelling of \num{15840} wires across 240 images had to be carried out. Then, the 240 images had to be digitally split into single wires, half of which were mirrored to maintain the same seed-wire-empty template left to right sequence in each resulting image.
 
 \subsection{Image preprocessing}
 
@@ -360,15 +360,15 @@ These five classes, plus a sixth generated according to the outcome of digital w
         \draw[cb1_light_blue] (-6.7, -2.8) rectangle (6.7, 3.85);
         \node[anchor=north, cb1_light_blue] at (0, -2.8) {Isolated array};
     \end{tikzpicture}
-    \caption[An unprocessed \acs{sem_m} image of a nanowire array.]{A raw \acs{sem_m} image of a nanowire array. This is an example of the starting state of the images in the unprocessed dataset, in particular, this image has low contrast. The cutting process is also shown with rectangles of different size.}
+    \caption[An unprocessed \acs{sem_m} image of a nanowire array.]{A raw \acs{sem_m} image of a nanowire array. This is an example of the starting state of the images in the unprocessed dataset, in particular, this image has low contrast. The cutting process is also shown with rectangles of different colours.}
     \label{fig:raw_image}
 \end{figure}
 
-The main challenge is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}. This particular image was captured with low contrast; other images, such as those seen in Figure~\ref{fig:class_examples} were captured under different acquisition settings, making it difficult to define hardcoded intensity levels to, for example, detect whether or not a wire is there and what shape it has.
+The main challenge is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}. This particular image was captured with low contrast; other images, such as those seen in Figure~\ref{fig:class_examples} were captured under different acquisition settings, making it challenging to define hardcoded intensity levels to, for example, detect whether or not a wire is there and what shape it has.
 
-However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the arrays. Another constant is the information panel at the bottom of the image. While useful to a human for interpreting the image, this part of the image is not necessary for a machine. Given its regular nature, it can be easily removed from all images by cutting a constant number of pixel rows. The geometry of the array remains constant as well, varying only in vertical size, with small fluctuations in position inside the image.
+However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the arrays. Another constant is the information panel at the bottom of the image. While useful for human interpretation of the image, this part of the image is not necessary for a machine. Given its regular nature, it can be easily removed from all images by cutting a constant number of pixel rows. The geometry of the array remains constant as well, varying only in vertical size, with minor fluctuations in position inside the image.
 
-
+Figure~\ref{fig:raw_image} shows the initial cutting steps. A first cut, highlighted in orange, using hard-coded coordinates, excludes the information panel at the bottom of the image and the array's left and right side walls. The coordinates of the next cut are computed based on the relative intensities within a specific pooling area, represented by dashed purple lines. After four such operations, one per each side of the array, only the image data within the blue rectangle remain, and the array is therefore isolated.
 
 
 
