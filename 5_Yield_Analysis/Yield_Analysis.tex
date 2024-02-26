@@ -370,6 +370,49 @@ However, a constant for all images is the magnification and orientation, plus or
 
 Figure~\ref{fig:raw_image} shows the initial cutting steps. A first cut, highlighted in orange, using hard-coded coordinates, excludes the information panel at the bottom of the image and the array's left and right side walls. The coordinates of the next cut are computed based on the relative intensities within a specific pooling area, represented by dashed purple lines. After four such operations, one per each side of the array, only the image data within the blue rectangle remain, and the array is therefore isolated.
 
+\begin{sidewaysfigure}
+    \centering
+    \tikzsetnextfilename{pooling}
+    \begin{tikzpicture}
+        \node[inner sep=0pt, label={Denoised input}] (no_pool) at (0, 0) {\includegraphics[width=0.4\textwidth]{5_Yield_Analysis/Fig/no_pool.pdf}};
+        \node[inner sep=0pt] (max_pl) at (13, 0) {\includegraphics[width=0.4\textwidth]{5_Yield_Analysis/Fig/max_pl.pdf}};
+        \node[inner sep=0pt] (min_pl) at (0, -4) {\includegraphics[width=0.4\textwidth]{5_Yield_Analysis/Fig/min_pl.pdf}};
+        \node[inner sep=0pt] (avg_max) at (13, -3) {\includegraphics[width=0.4\textwidth]{5_Yield_Analysis/Fig/avg_max.pdf}};
+        \node[inner sep=0pt] (avg_min) at (0, -7) {\includegraphics[width=0.4\textwidth]{5_Yield_Analysis/Fig/avg_min.pdf}};
+        \draw[-stealth] (no_pool) -- (max_pl) node[midway, anchor=south]{Max Pooling};
+        \draw[-stealth] (max_pl) -- (avg_max) node[midway, anchor=west]{Vectorisation};
+        \draw[-stealth] (no_pool) -- (min_pl) node[midway, anchor=west]{Min Pooling};
+        \draw[-stealth] (min_pl) -- (avg_min) node[midway, anchor=west]{Vectorisation};
+        \draw[-stealth] (avg_max.south) -- ++ (0, -1.5) node[midway, anchor=west]{Gradient};
+        \draw[-stealth] (avg_min.east) -- ++ (2.8, 0) node[midway, anchor=south]{Gradient};
+        \begin{axis}[%
+            xshift= 9cm,
+            yshift= -11cm,
+            width = 9cm,
+            xlabel = Position (pixel),
+            ylabel = Gradient,
+            table/col sep=comma,
+            legend pos=north east,
+            ymin=0, ymax=25,
+            xmin = 0, xmax=1436
+        ]
+            \addplot [cb1_orange,] table[x=index,y=grad_max] {5_Yield_Analysis/csv/gradients.csv};
+            \addplot [cb1_dark_blue,] table[x=index,y=grad_min] {5_Yield_Analysis/csv/gradients.csv};
+            \addlegendentry{Max Pool Gradient}
+            \addlegendentry{Min Pool Gradient}
+        \end{axis};
+    \end{tikzpicture}
+    \caption[Max and min-pooling operations with vectorization and gradient calculation for cut-point identification.]{Max and min-pooling operations with vectorization and gradient calculation for cut-point identification.}
+    \label{fig:gradients}
+\end{sidewaysfigure}
+
+
+
+
+
+
+
+
 
 
 
