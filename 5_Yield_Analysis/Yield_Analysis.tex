@@ -370,6 +370,8 @@ However, a constant for all images is the magnification and orientation, plus or
 
 Figure~\ref{fig:raw_image} shows the concept for the initial cutting steps. The first cut, highlighted in orange, using hard-coded coordinates, excludes the information panel at the bottom of the image and the nanowire array's left and right side walls. The coordinates of the next cut are computed on the basis of the relative intensities within a specific pooling area, represented by dashed purple lines. After four such operations, one per each side of the nanowire array, only the image data within the blue rectangle remain, and the nanowire array is therefore isolated.
 
+Keeping track of the coordinates of the vertices of each cut is essential to correlate the label data in the \texttt{.json} to the data in the image itself. The splitting algorithm uses the binary representation of the raw image contained in the \texttt{.json} label file to create a \texttt{numpy} \cite{Harris2020, numpy} array populated by \texttt{uint8} values. Each value gives the intensity of a pixel as an 8-bit unlabelled integer, which varies from \num{0} to \num{255}. Therefore, the resulting \texttt{numpy} array is the mathematical description of a black-and-white image. The data for all images are stored in its \texttt{numpy} array form in a variable inside a Python \texttt{class}, also containing its file name, label (once assigned) and coordinates relative to the raw image. These coordinates are kept updated throughout the image pre-processing steps.
+
 \begin{sidewaysfigure}
     \centering
     \tikzsetnextfilename{pooling}
@@ -406,11 +408,9 @@ Figure~\ref{fig:raw_image} shows the concept for the initial cutting steps. The 
     \label{fig:pooling}
 \end{sidewaysfigure}
 
-Keeping track of the coordinates of the vertices of each cut is essential to correlate the label data in the \texttt{.json} to the data in the image itself. The splitting algorithm uses the binary representation of the raw image contained in the \texttt{.json} label file to create a \texttt{numpy} \cite{Harris2020, numpy} array populated by \texttt{uint8} values. Each value gives the intensity of a pixel as an 8-bit unlabelled integer, which varies from \num{0} to \num{255}. Therefore, the resulting \texttt{numpy} array is the mathematical description of a black-and-white image. The data for all images are stored in its \texttt{numpy} array form in a variable inside a Python \texttt{class}, also containing its file name, label (once assigned) and coordinates relative to the raw image. These coordinates are kept updated throughout the image pre-processing steps.
-
 The first hardcoded cut is performed by eliminating the first \num{100} and the last \num{200} \texttt{numpy} array rows and the first and last \num{50} \texttt{numpy} array columns. This operation eliminates the information panel at the bottom of the image and the bright lateral edges of the nanowire array, a step necessary to determine the exact cutting points. Figure~\ref{fig:pooling} shows how the precise image-cutting concept illustrated in Figure~\ref{fig:raw_image} is implemented. First, a copy of the image is made, and its top and bottom thirds are cut to isolate the pooling area and exclude the two remaining edges of the nanowire array. A denoising algorithm from the \texttt{opencv} library \cite{Bradski2000, opencv} was employed to eliminate pixels that, due to noise, might be too dark or too bright and, therefore, impact the detection of the correct edges with the pooling method.
 
-The pooling method is based on two different kernels parsing the \texttt{numpy} array and overwriting its values to highlight vertical edges. These two kernels are called \texttt{min\_pool} and \texttt{max\_pool}. Aside from selecting a minimum or maximum value, respectively, their implementation is identical. A 
+The pooling method is based on two different kernels parsing the \texttt{numpy} array and overwriting its values to highlight vertical edges. These two kernels are called \texttt{min\_pool} and \texttt{max\_pool}. Aside from selecting either a minimum or maximum value, their implementation is identical. A 
 
 
 
