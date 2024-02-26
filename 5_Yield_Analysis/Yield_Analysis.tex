@@ -1,11 +1,11 @@
 \chapter{Growth Yield Analysis}
 \label{chap:yield_analysis}
 
-Chapters~\ref{chap:growth} and \ref{chap:properties} showed how the \hkl{1 1 1} facet stabilisation method affects the internal composition and morphology of nanowires grown with the \acf{tase} process. These results, obtained on \hkl(0 0 1) and \hkl(1 1 0) \acf{soi} wafers with different device layer thicknesses, showed reliable growth rates and structural results. However, a quantitative analysis of the yield of this growth method is needed to understand its success rate better. 
+Chapters~\ref{chap:growth} and \ref{chap:properties} showed how the \hkl{1 1 1} facet stabilisation method affects the internal composition and morphology of nanowires grown with the \acf{tase} process. These results, obtained on \hkl(0 0 1) and \hkl(1 1 0) \acf{soi} wafers with different device layer thicknesses, showed reliable growth rates and structural results. However, a quantitative analysis of this growth method's yield is needed to understand its success rate better. 
 
-This chapter presents the research my co-authors and I carried out and published in \cite{Brugnolotto2023_2, Brugnolotto2024}.
+This chapter presents the research my co-authors and I carried out and published in \cite{Brugnolotto2023_2, Brugnolotto2024}. The structure and appearance of the surface of samples 6 and 7 is described. The assumption of correlation between the internal structure seen with \acf{stem_m} and the top-down low-resolution data collected with \acf{sem_m} is explained. A statistical analysis that compares the wires between perfectly grown and defective and evaluates the impact of parasitic crystal growth is presented, involving \num{15840} wires equally divided between the two abovementioned samples. 
 
-CHAPTER OUTLINE
+The second half of the chapter focuses on using the dataset containing \num{240} \acs{sem_m} images as input data for the supervised training of a machine learning algorithm for automatically classifying wires. Using digital image processing, a strategy is presented to isolate each single wire from the \num{240} arrays. The ability to create single-wire images enables the use of a lightweight image classifier. Finally, the performance of the splitting algorithm and the resulting classifier are examined, together with some improvements to the former.
 
 \section{Sample characteristics}
 
@@ -47,7 +47,7 @@ Figure~\ref{fig:wafer_mask} shows the digital mask that was used during the \acs
 
 Each section is identified by a number, in the case of the one in Figure~\ref{subfig:mask_section} it is \num{11}, and two letters that, in turn, identify the division of the mask in which it is found. Therefore, the naming convention defines, in order, the row and the column of the division within the chip, starting at the top left of Figure~\ref{subfig:mask_chip}, and the row and column of the section within the division, starting at the top left of each division. In this example, AA11 is the top-leftmost section in the entire chip.
 
-A \acf{stem_m} analysis of every nanowire is impossible due to the damage caused by \acf{fib} lamella preparation to the area immediately surrounding each cut-out. Still, even if a single cut per array was performed, a total of \num{19008} lamellae would have to be manufactured and analysed per sample. This task is too time-consuming and resource-intensive to be viable. Therefore, a different approach must be found to tackle the problem of yield calculation.
+A \acs{stem_m} analysis of every nanowire is impossible due to the damage caused by \acf{fib} lamella preparation to the area immediately surrounding each cut-out. Still, even if a single cut per array was performed, a total of \num{19008} lamellae would have to be manufactured and analysed per sample. This task is too time-consuming and resource-intensive to be viable. Therefore, a different approach must be found to tackle the problem of yield calculation.
 
 \subsection{\texorpdfstring{Internal morphology and reproducibility in \acs{tase} nanowires}{Internal morphology and reproducibility in TASE nanowires}}
 
@@ -133,7 +133,7 @@ Figure~\ref{fig:s7_OVs} shows four \acs{bf}-\acs{stem_m} overview images of the 
     \label{fig:s7_arrays}
 \end{figure}
 
-These specifications do not require a full \acs{stem_m} analysis. Instead, a \acf{sem_m} survey of the arrays in the sample is sufficient to assess the growth yield. One such survey, resulting in an open access dataset \cite{dataset}, was carried out on samples 6 and 7. Figure~\ref{fig:s7_arrays} shows eight images of the arrays of sample 6 taken from this dataset. A first distinction can be made by "Perpendicular" wires, so-called because the heterointerfaces in perfect nanowires are perpendicular to all four template walls, and \qty{20}{\degree} misaligned wires, which owe their name to the tilt of the template channels from the \hkl{1 1 1} direction.
+These specifications do not require a full \acs{stem_m} analysis. Instead, a \acs{sem_m} survey of the arrays in the sample is sufficient to assess the growth yield. One such survey, resulting in an open access dataset \cite{dataset}, was carried out on samples 6 and 7. Figure~\ref{fig:s7_arrays} shows eight images of the arrays of sample 6 taken from this dataset. A first distinction can be made by "Perpendicular" wires, so-called because the heterointerfaces in perfect nanowires are perpendicular to all four template walls, and \qty{20}{\degree} misaligned wires, which owe their name to the tilt of the template channels from the \hkl{1 1 1} direction.
 
 The dataset was collected manually using the \acs{sem_m} beam of the dual-beam \acs{sem_m} - \acs{fib} tool. Due to project time constraints, sampling became necessary to gather a full suite of images showing every one of the \num{19008} arrays. Five sections were selected in each chip, mostly at random. However, for sample 7, a perpendicular and a \qty{20}{\degree} misaligned section were selected in the AA division to ensure a representation of the border divisions of the chip. Another difference between the two samples is that while for sample 6, sections were randomly drafted and changed for each of the five positions, for sample 6, a second division was randomly selected, within which another two sections were imaged. The fifth and final section was once again randomly chosen. These sections are reported in Table~\ref{tab:dataset_sections}. Three parallel and two \qty{20}{\degree} misaligned sections were imaged for both samples.
 
@@ -310,7 +310,7 @@ The work in this section was carried out by Preslav Aleksandrov, with whom I had
 
 \subsection{Image preprocessing}
 
-The open-source software LabelMe \cite{labelme2016} was used to generate the labelling data for each array image. A reduced subset of label classes was employed compared to the manual analysis in the previous section. They distinguished between parallel and tilted wires, which describe the orientations of the templates in which the wire grew and correspond to the "Perpendicular" and "\qty{20}{\degree} misaligned" categories of the previous section. These two kinds of wire were further subdivided into two classes by adding "defect" or "perfect". A fifth class was created to represent parasitic crystals because they are a very different kind of defect and should, therefore, be easily identified by any classifier.
+The open-source software and Python \cite{python} library \texttt{labelme} \cite{labelme2016} was used to generate the labelling data for each array image. A reduced subset of label classes was employed compared to the manual analysis in the previous section. They distinguished between parallel and tilted wires, which describe the orientations of the templates in which the wire grew and correspond to the "Perpendicular" and "\qty{20}{\degree} misaligned" categories of the previous section. These two kinds of wire were further subdivided into two classes by adding "defect" or "perfect". A fifth class was created to represent parasitic crystals because they are a very different kind of defect and should, therefore, be easily identified by any classifier.
 
 \begin{figure}
     \centering
@@ -344,7 +344,7 @@ The open-source software LabelMe \cite{labelme2016} was used to generate the lab
     \label{tab:encodings}
 \end{table}
 
-These five classes, plus a sixth generated according to the outcome of digital wire-splitting algorithm, are used to label the data that form the input for the supervised classifier. Examples of what each wire image looks like is provided in Figure~\ref{fig:class_examples} complete with their encodings, which are summarised in Table~\ref{tab:encodings}.
+These five classes, plus a sixth generated according to the outcome of digital wire-splitting algorithm, are used to label the data that form the input for the supervised classifier. Examples of what each wire image looks like are provided in Figure~\ref{fig:class_examples} complete with their encodings, which are summarised in Table~\ref{tab:encodings}. At the end of the labelling process, each \texttt{.tiff} raw image will have a \texttt{.json} file containing the labels for the wires (and eventual parasitic crystals) it contains. These labels are stored as coordinate pairs describing the position of the vertices of the polygon that was drawn when labelling the object in the image, with a coordinate system based on the pixel coordinates in the image itself. These groups of coordinate pairs are associated with the manually assigned label describing the object. This \texttt{.json} file also contains a binary representation of the image that can be viewed with the \texttt{labelme} library.
 
 \subsubsection{Digital image splitting algorithm}
 
@@ -364,11 +364,11 @@ These five classes, plus a sixth generated according to the outcome of digital w
     \label{fig:raw_image}
 \end{figure}
 
-The main challenge is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}. This particular image was captured with low contrast; other images, such as those seen in Figure~\ref{fig:class_examples} were captured under different acquisition settings, making it challenging to define hardcoded intensity levels to, for example, detect whether or not a wire is there and what shape it has.
+The main challenge facing the creation of the input data set is to produce images of isolated nanowires from an image such as that in Figure~\ref{fig:raw_image}. This particular image was captured with low contrast; other images, such as those seen in Figure~\ref{fig:class_examples} were captured under different acquisition settings. The variety of acquisition conditions makes it challenging to define hardcoded intensity levels to, for example, detect whether or not a wire is there and what shape it has.
 
-However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the arrays. Another constant is the information panel at the bottom of the image. While useful for human interpretation of the image, this part of the image is not necessary for a machine. Given its regular nature, it can be easily removed from all images by cutting a constant number of pixel rows. The geometry of the array remains constant as well, varying only in vertical size, with minor fluctuations in position inside the image.
+However, a constant for all images is the magnification and orientation, plus or minus some units of degree, of the nanowire arrays. Another constant is the information panel at the bottom of the image. While useful for human interpretation of the image, this part of the image is not necessary for a machine. Given its regular nature, it can be easily removed from all images by cutting a constant number of pixel rows. The geometry of the nanowire array remains constant as well, varying only in vertical size, with minor fluctuations in position inside the image.
 
-Figure~\ref{fig:raw_image} shows the initial cutting steps. A first cut, highlighted in orange, using hard-coded coordinates, excludes the information panel at the bottom of the image and the array's left and right side walls. The coordinates of the next cut are computed based on the relative intensities within a specific pooling area, represented by dashed purple lines. After four such operations, one per each side of the array, only the image data within the blue rectangle remain, and the array is therefore isolated.
+Figure~\ref{fig:raw_image} shows the concept for the initial cutting steps. The first cut, highlighted in orange, using hard-coded coordinates, excludes the information panel at the bottom of the image and the nanowire array's left and right side walls. The coordinates of the next cut are computed on the basis of the relative intensities within a specific pooling area, represented by dashed purple lines. After four such operations, one per each side of the nanowire array, only the image data within the blue rectangle remain, and the nanowire array is therefore isolated.
 
 \begin{sidewaysfigure}
     \centering
@@ -403,8 +403,12 @@ Figure~\ref{fig:raw_image} shows the initial cutting steps. A first cut, highlig
         \end{axis};
     \end{tikzpicture}
     \caption[Max and min-pooling operations with vectorization and gradient calculation for cut-point identification.]{Max and min-pooling operations with vectorization and gradient calculation for cut-point identification.}
-    \label{fig:gradients}
+    \label{fig:pooling}
 \end{sidewaysfigure}
+
+Keeping track of the coordinates of the vertices of each cut is essential to correlate the label data in the \texttt{.json} to the data in the image itself. The splitting algorithm uses the binary representation of the raw image contained in the \texttt{.json} label file to create a \texttt{numpy} \cite{Harris2020, numpy} array populated by \texttt{uint8} values. Each value gives the intensity of a pixel as an 8-bit unlabelled integer, which varies from \num{0} to \num{255}. Therefore, the resulting \texttt{numpy} array is the mathematical description of a black-and-white image. The data for all images are stored in its \texttt{numpy} array form in a variable inside a Python \texttt{class}, also containing its file name, label (once assigned) and coordinates relative to the raw image. These coordinates are kept updated throughout the image pre-processing steps.
+
+The first hardcoded cut is performed by eliminating the first \num{100} and the last \num{200} \texttt{numpy} array rows and the first and last \num{50} \texttt{numpy} array columns. This operation eliminates the information panel at the bottom of the image and the bright lateral edges of the nanowire array, a step necessary to determine the exact cutting points. Figure~\ref{fig:pooling} shows how the precise image-cutting concept illustrated in Figure~\ref{fig:raw_image} is implemented. First, a copy of the image is made, and its top and bottom thirds are cut to isolate the pooling area and exclude the two remaining edges of the nanowire array.
 
 
 
