@@ -423,7 +423,7 @@ The resulting \texttt{numpy} arrays are visualised in Figure~\ref{fig:pooling}. 
 
 This difference in outcome is the reason why the idea of isolating only the area of the image corresponding to the III-V nanowires was abandoned and, instead, the goal shifted to isolating the portion of seed, nanowire and empty templates together, as was shown in Figure~\ref{fig:class_examples}.
 
-To determine the cut-point the \texttt{numpy} arrays resulting from the pooling operations were vertorised, as in, reduced to one-dimensional \texttt{numpy} arrays, by taking the maximum value, for the \texttt{max\_pool} output, or the minimum value, for the \texttt{max\_pool} output. of each column.
+To determine the cut-point the \texttt{numpy} arrays resulting from the pooling operations were vectorised, as in, reduced to one-dimensional \texttt{numpy} arrays, by taking the maximum value, for the \texttt{max\_pool} output, or the minimum value, for the \texttt{max\_pool} output, of each column. The gradient of both vectors was then calculated using the \texttt{gradient} method of the \texttt{numpy} library, which calculated the ratio of the variation in intensity to the variation in the position in the vector. The results of this operation for the imaged used as an example in this section are also shown in Figure~\ref{fig:pooling}.
 
 
 
