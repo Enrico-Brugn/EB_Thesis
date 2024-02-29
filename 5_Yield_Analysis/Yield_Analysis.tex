@@ -377,7 +377,7 @@ However, a constant for all images is the magnification and orientation, plus or
 
 Figure~\ref{fig:raw_image} shows the concept for the initial cutting steps. The first cut, highlighted in orange, using hard-coded coordinates, excludes the information panel at the bottom of the image and the nanowire array's left and right side walls. The coordinates of the next cut are computed on the basis of the relative intensities within a specific pooling area, represented by dashed purple lines. After four such operations, one per each side of the nanowire array, only the image data within the blue rectangle remain, and the nanowire array is therefore isolated.
 
-Keeping track of the coordinates of the vertices of each cut is essential to correlate the label data in the \texttt{.json} to the data in the image itself. The splitting algorithm uses the binary representation of the raw image contained in the \texttt{.json} label file to create a \texttt{numpy} \cite{Harris2020, numpy} array populated by \texttt{uint8} values. Each value gives the intensity of a pixel as an 8-bit unlabelled integer, which varies from \num{0} to \num{255}. Therefore, the resulting \texttt{numpy} array is the mathematical description of a black-and-white image. The data for all images are stored in its \texttt{numpy} array form in a variable inside a Python \texttt{class}, also containing its file name, label (once assigned) and coordinates relative to the raw image. These coordinates are kept updated throughout the image pre-processing steps.
+Keeping track of the coordinates of the vertices of each cut is essential to correlate the label data in the \texttt{.json} file to the data in the image itself. The splitting algorithm uses the binary representation of the raw image contained in the \texttt{.json} label file to create a \texttt{numpy} \cite{Harris2020, numpy} array populated by \texttt{uint8} values. Each value gives the intensity of a pixel as an 8-bit unlabelled integer, which varies from \num{0} to \num{255}. Therefore, the resulting \texttt{numpy} array is the mathematical description of a black-and-white image. The data for all images are stored in its \texttt{numpy} array form in a variable inside a Python \texttt{class}, also containing its file name, label (once assigned) and coordinates relative to the raw image. These coordinates are kept updated throughout the image pre-processing steps.
 
 \begin{sidewaysfigure}
     \centering
@@ -458,17 +458,17 @@ During the development of the splitting algorithm, it was found that due to the 
 
 The procedure used to isolate this cut point is repeated after rotating the \texttt{numpy} array to calculate the cut points for all four sides of the nanowire array. The final result of these cutting operations is shown in Figure~\ref{subfig:wire_array}. The nanowire array is perfectly centred in this image, and the columns containing the nanowires can be split easily by dividing the image into three equally sized parts, as shown by the light blue dashed lines, resulting in three nanowire column images.
 
-The nanowire array columns can be 
+The remaining \acl{si} anchor areas in the nanowire array column images can be trimmed out with the same algorithm used to isolate the array (Figure~\ref{fig:pooling}), resulting in an image like that of Figure~\ref{subfig:single_column_2}, showing the central column of the nanowire array in Figure~\ref{subfig:wire_array} after refinement. By splitting this image in half vertically along the middle and then dividing the two halves horizontally in \num{11} equally-sized parts the single wires are isolated.
 
+\subsubsection{Label assignment}
 
+After completion of image splitting, each image must be assigned a label for supervised classifier training to take place. The coordinates of the position of the vertices delimitating each resulting image within the parent raw image were recorded throughout all transformation. They can be compared with the coordinates of the label saved in the \texttt{.json} file created by \texttt{labelme} during labelling.
 
+To determine which label to assign to each refined image, the label list for the parent image is loaded and the coordinates of each point defining a label are checked to verify if they fall in the area corresponding to the refined image. When a label does it is added to a list. Ideally, the length of the list after all labels are processed should be \num{1}, only containing the label corresponding to the wire type (straight or tilted) and growth result (perfect or defect). However, the splitting algorithm does not always result in the expected result, often due to the cut points being incorrect. This, plus some images containing two labels either due to nucleation on the internal template walls or parasitic III-V crystals growing on top of the nanowire array (as seen in Figure~\ref{fig:defects}) means that some images will have either \num{0} or more than \num{1}. 
 
+Images with \num{0} labels are removed from the input dataset and are not considered. Images with more than one label that do not contain a defective or parasitic label are assigned to the \texttt{Null} class. Conversely, if there is a defective or parasitic label, it is assigned to the image.
 
-
-
-
-
-\subsection{Training results}
+\subsection{Training}
 
 \begin{figure}
     \centering
