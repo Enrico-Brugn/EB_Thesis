@@ -425,7 +425,40 @@ This difference in outcome is the reason why the idea of isolating only the area
 
 To determine the cut-point the \texttt{numpy} arrays resulting from the pooling operations were vectorised, as in, reduced to one-dimensional \texttt{numpy} arrays, by taking the maximum value, for the \texttt{max\_pool} output, or the minimum value, for the \texttt{max\_pool} output, of each column. The gradient of both vectors was then calculated using the \texttt{gradient} method of the \texttt{numpy} library, which returned the ratio of the variation in intensity to the variation in the position in the vector. The results of this operation for the image used as an example in this section are also shown in Figure~\ref{fig:pooling}.
 
-Early during the development of the splitting algorithm, it was found that, due to shading in the \acs{sem_m} image, both vectors had their largest gradients in correspondence to the area which sees the introduction of the template side walls. Furthermore, for the initial, smaller dataset used in the early trials, it was also found that taking the largest gradient further down the vector resulted in a tighter cut. Unfortunately, as seen in the plot in Figure~\ref{fig:pooling} this had to be changed in the code revisions carried out after the initial classifier training to include a handful of images that presented this problem and would otherwise be excluded in the input dataset.
+During the development of the splitting algorithm, it was found that due to the shading in the \acs{sem_m} image both vectors had their largest gradients in the area corresponding to the introduction of the side walls of the comb tooth template. Furthermore, for the initial, smaller dataset used in the early trials, it was also found that taking the largest gradient further down the vector resulted in a tighter cut. Unfortunately, as seen in the plot in Figure~\ref{fig:pooling} this had to be changed in the code revisions carried out after the initial classifier training to include a handful of images for which the maximum gradient was much further after the desired cut point. In the first iterations of the splitting algorithm this would result in the image being excluded from the input dataset.
+
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        Isolated nanowire array and division in columns.
+        \label{subfig:wire_array}
+    }{
+        \tikzsetnextfilename{wire_array}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width = 0.72\textwidth]{5_Yield_Analysis/Fig/wire_array.pdf}};
+            \draw[cb1_light_blue, dashed] (-1.93333, -2.2) -- ++ (0, 4.4);
+            \draw[cb1_light_blue, dashed] (1.93333, -2.2) -- ++ (0, 4.4);
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        Final cuts
+        \label{subfig:single_column_2}
+    }{
+        \tikzsetnextfilename{single_column_2}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width = 0.20\textwidth]{5_Yield_Analysis/Fig/single_column_2.pdf}};
+            \draw[cb1_light_blue, dashed] (0, -2.25) -- ++ (0, 4.5);
+            \foreach \y in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+                \draw[cb1_orange, dashed] (-1.6, -2.25+\y*0.4091) -- ++ (3.2, 0);
+        \end{tikzpicture}
+    }
+    \caption[Final cuts for the isolation of single wires.]{Final cuts for the isolation of single wires. \subref{subfig:wire_array} shows an image of a nanowire array as it appears after a successful cut with the method shown in Figure~\ref{fig:pooling}. The light blue dashed lines show the division in three equally sized parts picturing the three columns. \subref{subfig:single_column_2} shows a column after it has been reduced to the \num{22} wires, a light blue vertical line shows how the image is divided in two equally sized parts, while the 10 equally-spaced orange horizontal lines show the final subdivision into single wires.}
+    \label{fig:fine_cutting}
+\end{figure}
+
+The procedure used to isolate this cut point is repeated after rotating the \texttt{numpy} array to calculate the cut points for all four sides of the nanowire array. The final result of these cutting operations is shown in Figure~\ref{subfig:wire_array}. The nanowire array is perfectly centred in this image, and the columns containing the nanowires can be split easily by dividing the image into three equally sized parts, as shown by the light blue dashed lines, resulting in three nanowire column images.
+
+The nanowire array columns can be 
 
 
 
