@@ -464,9 +464,20 @@ The remaining \acl{si} anchor areas in the nanowire array column images can be t
 
 After completion of image splitting, each image must be assigned a label for supervised classifier training to take place. The coordinates of the position of the vertices delimitating each resulting image within the parent raw image were recorded throughout all transformation. They can be compared with the coordinates of the label saved in the \texttt{.json} file created by \texttt{labelme} during labelling.
 
-To determine which label to assign to each refined image, the label list for the parent image is loaded and the coordinates of each point defining a label are checked to verify if they fall in the area corresponding to the refined image. When a label does it is added to a list. Ideally, the length of the list after all labels are processed should be \num{1}, only containing the label corresponding to the wire type (straight or tilted) and growth result (perfect or defect). However, the splitting algorithm does not always result in the expected result, often due to the cut points being incorrect. This, plus some images containing two labels either due to nucleation on the internal template walls or parasitic III-V crystals growing on top of the nanowire array (as seen in Figure~\ref{fig:defects}) means that some images will have either \num{0} or more than \num{1}. 
+To determine which label to assign to each refined image, the label list for the parent image is loaded and the coordinates of each point defining a label are checked to verify if they fall in the area corresponding to the refined image. When a label does it is added to a list. Ideally, the length of the list after all labels are processed should be \num{1}, only containing the label corresponding to the wire type (parallel or tilted) and growth result (perfect or defect). However, the splitting algorithm does not always result in the expected result, often due to the cut points being incorrect. This, plus some images containing two labels either due to nucleation on the internal template walls or parasitic III-V crystals growing on top of the nanowire array (as seen in Figure~\ref{fig:defects}) means that some images will have either \num{0} or more than \num{1}. 
 
-Images with \num{0} labels are removed from the input dataset and are not considered. Images with more than one label that do not contain a defective or parasitic label are assigned to the \texttt{Null} class. Conversely, if there is a defective or parasitic label, it is assigned to the image.
+\begin{table}
+    \centering
+    \caption[Percentages of each class in the input dataset after preprocessing with the original splitting algorithm.]{Percentages of each class in the input dataset after preprocessing with the original splitting algorithm.}
+    \begin{tabular}{l|c|c c|c c|c}
+        & & \multicolumn{2}{c|}{Wire Parallel} & \multicolumn{2}{c|}{Wire Tilted} & \\ 
+        Class & Parasitic & Defect & Perfect & Defect & Perfect & Null \\ \hline \hline
+        Percentage & \qty{1.8}{\%} & \qty{1.2}{\%} & \qty{25.8}{\%} & \qty{1.2}{\%} &\qty{18}{\%} & \qty{11.2}{\%}
+    \end{tabular}
+    \label{tab:class_makeup}
+\end{table}
+
+Images with \num{0} labels are removed from the input dataset and are not considered. Images with more than one label that do not contain a defective or parasitic label are assigned to the \texttt{Null} class. Conversely, if there is a defective or parasitic label, it is assigned to the image. Table~\ref{tab:class_makeup} shows the breakdown of the composition of the dataset resulting from the splitting algorithm in its first iteration. The percentages add up to \qty{59.2}{\%} as the remaining \qty{40.2}{\%} of images was incorrectly cut by the algorithm.
 
 \subsection{Training}
 
