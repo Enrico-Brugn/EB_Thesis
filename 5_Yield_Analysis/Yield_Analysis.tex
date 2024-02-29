@@ -477,7 +477,9 @@ To determine which label to assign to each refined image, the label list for the
     \label{tab:class_makeup}
 \end{table}
 
-Images with \num{0} labels are removed from the input dataset and are not considered. Images with more than one label that do not contain a defective or parasitic label are assigned to the \texttt{Null} class. Conversely, if there is a defective or parasitic label, it is assigned to the image. Table~\ref{tab:class_makeup} shows the breakdown of the composition of the dataset resulting from the splitting algorithm in its first iteration. The percentages add up to \qty{59.2}{\%} as the remaining \qty{40.2}{\%} of images was incorrectly cut by the algorithm.
+Images with \num{0} labels are removed from the input dataset and are not considered. Images with more than one label that do not contain a defective or parasitic label are assigned to the \texttt{Null} class. Conversely, if there is a defective or parasitic label, it is assigned to the image. Table~\ref{tab:class_makeup} shows the breakdown of the composition of the dataset resulting from the splitting algorithm in its first iteration. The percentages add up to \qty{59.2}{\%} as the remaining \qty{40.2}{\%} of images was incorrectly cut by the algorithm resulting in no matches with existing labels.
+
+Aside from the flaws of the splitting algorithm, another issue is that the dataset is heavily unbalanced. The perfect wires dominate in quantity, having more than \num{10} times the number of defective wires. \qty{25.8}{\%} of the wires are parallel perfect, and \qty{18}{\%} are tilted perfect, reflecting very well the \qty{60}{\%} / \qty{40}{\%} split of the raw dataset between parallel and tilted arrays. Parallel and tilted defective wires make up an equal percentage (\qty{1.2}{\%}) of the splitting algorithm's output. \qty{1.8}{\%} of the output consists of images of parasitic crystals, and, finally, \qty{11.2}{\%} was assigned as \texttt{Null} class.
 
 \subsection{Training}
 
