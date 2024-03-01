@@ -511,10 +511,28 @@ The best classifier achieved an F1 score of \num[separate-uncertainty=true]{0.91
 
 The confusion matrix in Figure~\ref{subfig:confusion_matrix} provides a much clearer assessment of the class-specific performance of the classifier. The diagonal elements (top left to bottom right) of this matrix represent the recall, the ratio of true positives to the sum of true positives and false negatives, as a percentage. The higher the recall for each class the better the classifier is at assigning the correct class to an image. Therefore, the classifier does a very good job at classigying images containing parasitic crystals, perfect parallel and tilted wires, and \texttt{Null} images. These four classes have recalls of \qty{80}{\%} or higher, with wire perfect classes showing a recall of \qty{96}{\%} and \qty{94}{\%} for parallel and tilted wires, respectively. The defective classes, however, have very low recalls, with perfect parallel wires correctly identified only \qty{36}{\%} of the time and their tilted counterparts only \qty{25}{\%} of the time. When the off-diagonal components of the confusion matrix are examined, it is easily seen that defective wires are more often than not incorrectly classified as perfect. This is likely due to the disproportionate prevalence of perfect wires, but also to the relatively minor visible alteration of some of the defective wires compared to their perfect counterparts.
 
-Collecting more images of defective wires is therefore a necessary step to create a more balanced input set and improve the recall of defective classes.
+Collecting more images of defective wires is therefore a necessary step to create a more balanced input set and improve the recall of defective classes. It is worth noting that, despite the splitting algorithm's mixed success in properly processing half of the raw dataset, the classifier still managed to assign four out of six classes with very high accuracy.
 
 \subsection{Improvements to the digital image splitting algorithm}
 
+\begin{table}
+    \centering
+    \caption[Percentages of each class in the input dataset after preprocessing with the revised splitting algorithm.]{Percentages of each class in the input dataset after preprocessing with the revised splitting algorithm.}
+    \begin{tabular}{l|c|c c|c c|c}
+        & & \multicolumn{2}{c|}{Wire Parallel} & \multicolumn{2}{c|}{Wire Tilted} & \\ 
+        Class & Parasitic & Defect & Perfect & Defect & Perfect & Null \\ \hline \hline
+        Percentage & \qty{2.6}{\%} & \qty{1.5}{\%} & \qty{35.9}{\%} & \qty{1.2}{\%} &\qty{24.4}{\%} & \qty{0}{\%}
+    \end{tabular}
+    \label{tab:class_makeup2}
+\end{table}
+
+Changes were made to make the \texttt{ Null} class unnecessary by allowing the algorithm to discriminate between multiple labels on the same image. This was done by computing the area of the intersections of each label polygon with the images using the \texttt{shapely} \cite{gillies_2024} library. The label with the highest intersection area is then assigned to the image.
+
+Another change concerned the cut-point determination in the algorithm shown in Figure~\ref{fig:pooling}. The algorithm was changed to only process each image with the \texttt{max\_pool} kernel and calculate the associated vectors and gradient. This solved the issues of the wrong point being chosen due to the influence of the \texttt{min\_pool} kernel discussed in previous sections.
+
+The results of these two modifications are shown in Table~\ref{tab:class_makeup2}. Only \qty{34.4}{\%} of the raw dataset is marked for deletion in this version of the splitting algorithm. It is worth noting, however, that the classes that benefit the most from these modifications are the wire perfects. Indeed, while the wire parallel defect class gained \qty{0.3}{\%} more share of the raw dataset, the wire parallel perfect class gained \qty{10.1}{\%}. Similarly, the share of wire tilted defect class stays unchanged, while the wire tilted perfect increases by \qty{6.4}{\%}. These new results, coupled with the high recall for the \texttt{Null} class, point to the original splitting algorithm being already sufficiently apt for the task of creating a dataset to train a classifier.
+
+\section{Conclusions and future directions}
 
 
 
@@ -523,7 +541,10 @@ Collecting more images of defective wires is therefore a necessary step to creat
 
 
 
-\subsection{Conclusions and future directions}
+
+
+
+
 
 
 % \section{article2}
