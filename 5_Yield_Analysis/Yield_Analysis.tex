@@ -501,9 +501,13 @@ Aside from the flaws of the splitting algorithm, another issue is that the datas
     \label{fig:training_metrics}
 \end{figure}
 
-A compact model consisting of two convolutional layers, followed by three linear layers and based on the \texttt{pytorch} \cite{NEURIPS2019_9015, pytorch} framework was chosen. This simple model showed good performance when classifying commonly used datasets, such as CIFAR-10 \cite{NIPS2012_c399862d}.
+A compact model consisting of two convolutional layers, followed by three linear layers and based on the \texttt{pytorch} \cite{NEURIPS2019_9015, pytorch} framework was chosen. This simple model showed good performance when classifying commonly used datasets, such as CIFAR-10 \cite{NIPS2012_c399862d}. The input dataset as resulting from the splitting algorithm and label assignment was divided into a training set, comprising \qty{70}{\%} of the data, and a validation set containing the remaining \qty{30}{\%}. The sets were filled with random images, respecting the original composition of the dataset.
+
+The three metrics of loss, F1 score, and confusion matrix were used to evaluate the classifier's performance \cite{grandini2020}. The cross-entropy loss function, integrated with the Adam algorithm was used to guide the learning process \cite{Brugnolotto2024}.
 
 The classifier was trained until loss saturation was achieved, a process that lasted \num{100} epochs. The red curve in Figure~\ref{subfig:F1Score} shows the saturation process, with loss, shown on the y-axis on the right side, reaching \num{0} at the end of the \num{100} training epochs. The blue line in Figure~\ref{subfig:F1Score} shows the evolution of the F1 score during training, with the shaded area around it representing the \qty{97}{\%} confidence interval on this metric.
+
+The best classifier achieved a F1 score of \num[separate-uncertainty=true]{0.91 (4)}
 
 
 
