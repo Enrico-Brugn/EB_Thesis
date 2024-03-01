@@ -503,15 +503,27 @@ Aside from the flaws of the splitting algorithm, another issue is that the datas
 
 A compact model consisting of two convolutional layers, followed by three linear layers and based on the \texttt{pytorch} \cite{NEURIPS2019_9015, pytorch} framework was chosen. This simple model showed good performance when classifying commonly used datasets, such as CIFAR-10 \cite{NIPS2012_c399862d}. The input dataset as resulting from the splitting algorithm and label assignment was divided into a training set, comprising \qty{70}{\%} of the data, and a validation set containing the remaining \qty{30}{\%}. The sets were filled with random images, respecting the original composition of the dataset.
 
-The three metrics of loss, F1 score, and confusion matrix were used to evaluate the classifier's performance \cite{grandini2020}. The cross-entropy loss function, integrated with the Adam algorithm was used to guide the learning process \cite{Brugnolotto2024}.
+The three metrics of loss, F1 score, and confusion matrix were used to evaluate the classifier's performance \cite{grandini2020}. The cross-entropy loss function, integrated with the Adam algorithm, was used to guide the learning process \cite{Brugnolotto2024}.
 
 The classifier was trained until loss saturation was achieved, a process that lasted \num{100} epochs. The red curve in Figure~\ref{subfig:F1Score} shows the saturation process, with loss, shown on the y-axis on the right side, reaching \num{0} at the end of the \num{100} training epochs. The blue line in Figure~\ref{subfig:F1Score} shows the evolution of the F1 score during training, with the shaded area around it representing the \qty{97}{\%} confidence interval on this metric.
 
-The best classifier achieved a F1 score of \num[separate-uncertainty=true]{0.91 (4)}
+The best classifier achieved an F1 score of \num[separate-uncertainty=true]{0.91 (4)} (\qty{97}{\%} confidence interval), as calculated on the test fraction. However, this metric alone is insufficient to properly assess the performance of the classifier given the very high imbalance in the dataset. 
+
+The confusion matrix in Figure~\ref{subfig:confusion_matrix} provides a much clearer assessment of the class-specific performance of the classifier. The diagonal elements (top left to bottom right) of this matrix represent the recall, the ratio of true positives to the sum of true positives and false negatives, as a percentage. The higher the recall for each class the better the classifier is at assigning the correct class to an image. Therefore, the classifier does a very good job at classigying images containing parasitic crystals, perfect parallel and tilted wires, and \texttt{Null} images. These four classes have recalls of \qty{80}{\%} or higher, with wire perfect classes showing a recall of \qty{96}{\%} and \qty{94}{\%} for parallel and tilted wires, respectively. The defective classes, however, have very low recalls, with perfect parallel wires correctly identified only \qty{36}{\%} of the time and their tilted counterparts only \qty{25}{\%} of the time. When the off-diagonal components of the confusion matrix are examined, it is easily seen that defective wires are more often than not incorrectly classified as perfect. This is likely due to the disproportionate prevalence of perfect wires, but also to the relatively minor visible alteration of some of the defective wires compared to their perfect counterparts.
+
+Collecting more images of defective wires is therefore a necessary step to create a more balanced input set and improve the recall of defective classes.
+
+\subsection{Improvements to the digital image splitting algorithm}
 
 
 
 
+
+
+
+
+
+\subsection{Conclusions and future directions}
 
 
 % \section{article2}
