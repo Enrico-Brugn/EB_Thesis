@@ -16,12 +16,14 @@ In integrated interconnects, the use of photons bypasses some important problems
 
 Indeed, integration is the key step enabling photonics, the initial photonic circuits of the late 1980s and 1990s were realised directly on \acf{inp} wafers from \num{2} inches to \num{4} inches in diameter. Despite the small size, these are very expensive supports compared to the much larger \qty{150}{\milli\metre} and \qty{200}{\milli\metre} \acl{si} supports their contemporary. This technology managed to demonstrate very large scale integration by the mid 2010s, after which it was surpassed by both \acl{si} and III-V on \acl{si} photonic integrated circuits \cite{Shekhar2024, Margalit2021}.
 
+the techs and their properties
+
 \paragraph{\Acl{si} / \acl{si}-\acl{ge} components} unalloyed \acl{si} is mostly used for modulators
 \par
 \paragraph{\Acl{ge} components}
 \par
 \paragraph{III-V components}
-the techs and their properties
+\par
 
 
 
@@ -34,12 +36,27 @@ the techs and their properties
 
 
 \section{Properties of III-V materials}
+
+III-V semiconductors are compound semiconductors formed by the stoichiometric combination of elements from group III and group V of the periodic table. In their most simple form they are binary, or consisting of one element from group III and one from group V, with some examples being \acs{inp} and \acs{gaas}. Ternary and quaternary III-V materials such as \ce{In1_-_xGa_xAs} or \ce{In1_-_xGa_xAs1_-_yP_y} contain three or four different elements, respectively. 
+
+Crystallographically, III-V materials are available at room temperature in crystals with the symmetries of space group number \num{216} (F-43m, or zincblende-like) or \num{186} (P6\(_3\)mc, or wurtzite-like) and are easily affected by polytypism when grown. Space group \num{216} is that of a cubic face-centred crystal, while space group \num{186} describes a crystal with a hexagonal prism as a unit cell. These two structures are closely related, as the addition of a two-fold axis alongside the three-fold axis of space group \num{216} results in a phase change to space group \num{186}, transforming the \hkl<1 1 1> direction in the zincblende phase to the \hkl<0 0 0 1> direction in the wurtzite phase. 
+
+
+
+
+
+
+
+
+
+
+
 \section{\texorpdfstring{III-V-on-\acs{si} integration routes}{III-V-on-Si integration routes}}
-The various integration routes of III-V semiconductor on Si can be at first divided in 2 broad categories: heterogeneous and homogeneous integration.
+The various integration routes of III-V semiconductors on Si can be divided in two broad categories: heterogeneous and homogeneous integration.
 \subsection{Heterogeneous integration}
 Heterogeneous integration refers to the indirect integration of III-V material grown on a different, lattice matched, substrate on a Si wafer. 
 \par
-The main advantage of these techniques is the elimination of lattice mismatch as a source of defects during epitaxial growth. Furthermore, it allows the selection of the best performing structures to be transferred onto the Si substrate \cite{Zadeh2016, Wang2017}, and does not have to compromise on the growth parameters or material systems for the sake of CMOS compatibility (except for bonding temperature). The various methods that fall under this definition form, all together, a mature technology that already finds application in industry4, therefore benefitting from a few years of industrial optimisation.
+The main advantage of these techniques is the elimination of lattice mismatch as a source of defects during epitaxial growth. Furthermore, it allows the selection of the best-performing structures to be transferred onto the Si substrate \cite{Zadeh2016, Wang2017}, and does not have to compromise on the growth parameters or material systems for the sake of CMOS compatibility (except for bonding temperature). The various methods that fall under this definition form, all together, a mature technology that already finds application in industry4, therefore benefitting from a few years of industrial optimisation.
 \par
 On the other hand, this type of integration requires the growth of III-V to take place in a different fabrication line that must maintain the high precision and cleanliness standard of the main CMOS silicon line, resulting in a rather large capital investment. Furthermore, most classic transfer steps can result in a material with a more irregular geometry (wafer bow, surface roughness after etching), or presenting transfer-related defects \cite{Jevtics2022}, or require an extra bonding layer \cite{Jevtics2022, Tang2019}, and do not allow for nm precise integration \cite{Wang2017, McPhillimy2020}. However, the most advanced techniques that bypass most of these quality issues are too slow to provide a competitive transfer time for large, densely integrated 8' production wafers \cite{Wang2017, McPhillimy2020}.
 \subsection{Homogeneous Integration}
