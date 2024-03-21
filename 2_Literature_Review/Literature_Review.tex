@@ -43,21 +43,43 @@ the techs and their properties
         \hkl{0 0 1} facet.
         \label{subfig:GaAs_100}
     }{
-        \includegraphics[width=0.31\textwidth]{2_Literature_Review/Fig/GaAs_100.pdf}
+        \tikzsetnextfilename{GaAs_100}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.30\textwidth]{2_Literature_Review/Fig/GaAs_100.pdf}};
+            \draw [fill = black] (0.15, 0.15) rectangle (-0.15, -0.15);
+            \draw [white] (0.1, 0.1) -- (-0.1, -0.1);
+            \draw [white] (-0.1, 0.1) -- (0.1, -0.1);
+        \end{tikzpicture}
     }
     \subcaptionbox{
         \hkl{1 1 0} facet.
         \label{subfig:GaAs_110}
     }{
-        \includegraphics[width=0.31\textwidth]{2_Literature_Review/Fig/GaAs_110.pdf}
+        \tikzsetnextfilename{GaAs_110}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.30\textwidth]{2_Literature_Review/Fig/GaAs_110.pdf}};
+            \begin{scope}[yshift=-0.01]
+                \draw (0, 0) -- ++ (37:2);
+                \draw (0, 0) -- ++ (37:-2);
+                \draw (34:1.9) -- ++ (37:-0.3) -- ++ (-53:0.1) -- cycle;
+                \draw (40:1.9) -- ++ (37:-0.3) -- ++ (127:0.1) -- cycle;
+            \end{scope}
+        \end{tikzpicture}
     }
     \subcaptionbox{
         \hkl{1 1 1}\(_B\) facet.
         \label{subfig:GaAs_111}
     }{
-        \includegraphics[width=0.31\textwidth]{2_Literature_Review/Fig/GaAs_111.pdf}
+        \tikzsetnextfilename{GaAs_111}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.30\textwidth]{2_Literature_Review/Fig/GaAs_111.pdf}};
+            \draw [fill = black] (0.17, 0) -- ++ (-150:0.3) -- ++ (90:0.3) -- cycle;
+            \draw [white] (0, 0) -- ++ (-120:0.1);
+            \draw [white] (0, 0) -- ++ (0:0.1);
+            \draw [white] (0, 0) -- ++ (120:0.1);
+        \end{tikzpicture}
     }
-    \caption[Caption]{Caption.}
+    \caption[Low-index facets in the F-43m \acs{gaas} crystal.]{Simulation of the low-index facets in the F-43m \acs{gaas} crystal with the basic symmetry elements highlighted. \Acl{ga} is represented in orange and \acs{as} in pink; atomic radii are not to scale. \subref{subfig:GaAs_100} shows the 2D projection of the lattice along the \hkl{0 0 1} direction, which coincides with the four-fold axis. \subref{subfig:GaAs_110} shows the 2D projection along the \hkl{1 1 0} direction, contained in the mirror plane. \subref{subfig:GaAs_111} shows the 2D projection along the \hkl{1 1 1} direction, coinciding with the three-fold axis.}
     \label{fig:ZB_low_index_facets}
 \end{figure}
 
