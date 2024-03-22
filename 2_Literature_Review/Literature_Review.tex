@@ -87,6 +87,68 @@ III-V semiconductors are compound semiconductors formed by the stoichiometric co
 
 Crystallographically, III-V materials are available at room temperature in crystals with the symmetries of space group number \num{216} (F-43m, or zincblende-like) or \num{186} (P6\(_3\)mc, or wurtzite-like) and are easily affected by polytypism when grown. Space group \num{216} is that of a cubic face-centred crystal, while space group \num{186} describes a hexagonal crystal. These two structures are closely related, as the addition of a two-fold axis alongside the three-fold axis of space group \num{216} results in a phase change to space group \num{186}, transforming the \hkl<1 1 1> direction in the zincblende phase to the \hkl<0 0 0 1> direction in the wurtzite phase. 
 
+Figure~\ref{fig:ZB_low_index_facets} shows the 2D projections of a \acs{gaas} F-43m crystal along the low-index directions. These projections are useful for the interpretation of atomic-resolution microscopy images of III-V semiconductors. These simulated projections were created using CrystalKit, a dedicated software. They also highlight the main symmetry elements of the zincblende space group. The 2D projection in Figure~\ref{subfig:GaAs_100} shows how a \hkl{0 0 1} facet appears in the microscope. The symmetry element controlling its motif is a four-fold axis perpendicular to the projection plane. Similarly, Figure~\ref{subfig:GaAs_110} shows how a \hkl{1 1 0} facet appears in the microscope and the mirror plane dictating its symmetry. Finally, Figure~\ref{subfig:GaAs_111} shows the lattice projected along the \hkl<1 1 1> direction. The symmetry of this projection is compatible with a three-fold axis coinciding with the \hkl<1 1 1> vector.
+
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        \hkl[0 0 1] corresponding to the z-axis.
+        \label{subfig:100_symmetry}
+    }{
+        \tikzsetnextfilename{100_symmetry}
+        \begin{tikzpicture}[isometric]
+            \draw [fill=cb1_orange] (0.5, 0.5, 1.5) -- (-0.5, 0.5, 1.5) -- (-0.5, -0.5, 1.5) -- (0.5, -0.5, 1.5) -- cycle;
+            % \draw [fill=red] (0.5, 0.5, -1.5) -- (-0.5, 0.5, -1.5) -- (-0.5, -0.5, -1.5) -- (0.5, -0.5, -1.5) -- cycle;
+            \draw [fill=cb1_orange] (1.5, 0.5, 0.5) -- (1.5, -0.5, 0.5) -- (1.5, -0.5, -0.5) -- (1.5, 0.5, -0.5) -- cycle;
+            % \draw [fill=green] (-1.5, 0.5, 0.5) -- (-1.5, -0.5, 0.5) -- (-1.5, -0.5, -0.5) -- (-1.5, 0.5, -0.5) -- cycle;
+            \draw [fill=cb1_orange] (0.5, 1.5, 0.5) -- (-0.5, 1.5, 0.5) -- (-0.5, 1.5, -0.5) -- (0.5, 1.5, -0.5) -- cycle;
+            % \draw [fill=blue] (0.5, -1.5, 0.5) -- (-0.5, -1.5, 0.5) -- (-0.5, -1.5, -0.5) -- (0.5, -1.5, -0.5) -- cycle;
+            \draw [fill=cb1_light_blue] (1.5, 0.5, 0.5) -- (1.5, -0.5, 0.5)-- (0.5, -0.5, 1.5) -- (0.5, 0.5, 1.5)  -- cycle;
+            \draw [fill=cb1_purple] (0.5, 0.5, 1.5)  -- (1.5, 0.5, 0.5) -- (0.5, 1.5, 0.5) -- cycle;
+            \draw [fill=cb1_purple] (0.5, -0.5, 1.5)  -- (1.5, -0.5, 0.5) -- (0.5, -1.5, 0.5) -- cycle;
+            \draw [fill=cb1_light_blue] (0.5, 0.5, 1.5) -- (-0.5, 0.5, 1.5) -- (-0.5, 1.5, 0.5) -- (0.5, 1.5, 0.5) -- cycle;
+            \draw [fill=cb1_light_blue] (0.5, 1.5, -0.5) -- (0.5, 1.5, 0.5) -- (1.5, 0.5, 0.5) -- (1.5, 0.5, -0.5) -- cycle;
+            \draw [fill=cb1_purple] (0.5, 0.5, -1.5) -- (0.5, 1.5, -0.5) -- (1.5, 0.5, -0.5) -- cycle;
+            \draw [fill=cb1_purple] (-0.5, 0.5, 1.5) -- (-0.5, 1.5, 0.5) -- (-1.5, 0.5, 0.5) -- cycle;
+            \draw [-stealth] (0,0,1.5) -- ++ (0,0,1) node [anchor=east] {\hkl[1 0 0]};
+            \draw [-stealth] (0,1.5,0) -- ++ (0,1,0) node [anchor=south] {\hkl[0 0 1]};
+            \draw [-stealth] (1.5,0,0) -- ++ (1,0,0) node [anchor=west] {\hkl[0 1 0]};
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        \hkl[1 1 0] corresponding to the z-axis.
+        \label{subfig:110_symmetry}
+    }{
+        \tikzsetnextfilename{110_symmetry}
+        \begin{tikzpicture}[isometric]
+            \begin{scope}[rotate around x=45]
+                \draw [fill=cb1_orange] (0.5, 0.5, 1.5) -- (-0.5, 0.5, 1.5) -- (-0.5, -0.5, 1.5) -- (0.5, -0.5, 1.5) -- cycle;
+                \draw [fill=red] (0.5, 0.5, -1.5) -- (-0.5, 0.5, -1.5) -- (-0.5, -0.5, -1.5) -- (0.5, -0.5, -1.5) -- cycle;
+                \draw [fill=cb1_orange] (1.5, 0.5, 0.5) -- (1.5, -0.5, 0.5) -- (1.5, -0.5, -0.5) -- (1.5, 0.5, -0.5) -- cycle;
+                % \draw [fill=green] (-1.5, 0.5, 0.5) -- (-1.5, -0.5, 0.5) -- (-1.5, -0.5, -0.5) -- (-1.5, 0.5, -0.5) -- cycle;
+                \draw [fill=cb1_orange] (0.5, 1.5, 0.5) -- (-0.5, 1.5, 0.5) -- (-0.5, 1.5, -0.5) -- (0.5, 1.5, -0.5) -- cycle;
+                % \draw [fill=blue] (0.5, -1.5, 0.5) -- (-0.5, -1.5, 0.5) -- (-0.5, -1.5, -0.5) -- (0.5, -1.5, -0.5) -- cycle;
+                \draw [fill=cb1_light_blue] (1.5, 0.5, 0.5) -- (1.5, -0.5, 0.5) -- (0.5, -0.5, 1.5) -- (0.5, 0.5, 1.5)  -- cycle;
+                \draw [fill=cb1_purple] (0.5, 0.5, 1.5)  -- (1.5, 0.5, 0.5) -- (0.5, 1.5, 0.5) -- cycle;
+                % \draw [fill=cb1_purple] (0.5, -0.5, 1.5)  -- (1.5, -0.5, 0.5) -- (0.5, -1.5, 0.5) -- cycle;
+                \draw [fill=cb1_light_blue] (0.5, 0.5, 1.5) -- (-0.5, 0.5, 1.5) -- (-0.5, 1.5, 0.5) -- (0.5, 1.5, 0.5) -- cycle;
+                \draw [fill=cb1_light_blue] (0.5, 1.5, -0.5) -- (0.5, 1.5, 0.5) -- (1.5, 0.5, 0.5) -- (1.5, 0.5, -0.5) -- cycle;
+                \draw [fill=cb1_purple] (0.5, 0.5, -1.5) -- (0.5, 1.5, -0.5) -- (1.5, 0.5, -0.5) -- cycle;
+                \draw [fill=cb1_purple] (-0.5, 0.5, 1.5) -- (-0.5, 1.5, 0.5) -- (-1.5, 0.5, 0.5) -- cycle;
+                \draw [fill=cb1_light_blue] (-0.5, 0.5, -1.5) -- (-0.5, 1.5, -0.5) -- (0.5, 1.5, -0.5) -- (0.5, 0.5, -1.5) -- cycle;
+                \draw [fill=cb1_light_blue] (1.5, -0.5, -0.5) -- (1.5, 0.5, -0.5) -- (0.5, 0.5, -1.5) -- (0.5, -0.5, -1.5) -- cycle;
+                \draw [fill=cb1_light_blue] (-1.5, 0.5, -0.5) -- (-1.5, 0.5, 0.5) -- (-0.5, 1.5, 0.5) -- (-0.5, 1.5, -0.5) -- cycle;
+                \draw [fill=cb1_purple] (-0.5, 0.5, -1.5) -- (-1.5, 0.5, -0.5) -- (-0.5, 1.5, -0.5) -- cycle;
+                \draw [-stealth] (0,0,-1.5) -- ++ (0,0,-1) node [anchor=south] {\hkl[1 0 0]};
+                \draw [-stealth] (0,1.5,0) -- ++ (0,1,0) node [anchor=east] {\hkl[0 1 0]};
+                \draw [-stealth] (1.5,0,0) -- ++ (1,0,0) node [anchor=west] {\hkl[0 0 1]};
+            \end{scope}
+        \end{tikzpicture}
+    }
+    \caption[Low index facet orientation in the F-43m space group.]{Low index facet orientation in the F-43m space group. The \hkl{0 0 1}, \hkl{1 1 0}, and \hkl{1 1 1} facets are color-coded in orange, light blue, and purple, respectively.}
+    \label{fig:facet_relations}
+\end{figure}
+
 
 
 
