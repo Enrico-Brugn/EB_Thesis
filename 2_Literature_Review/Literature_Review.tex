@@ -145,9 +145,26 @@ Figure~\ref{fig:ZB_low_index_facets} shows the 2D projections of a \acs{gaas} F-
             \end{scope}
         \end{tikzpicture}
     }
-    \caption[Low index facet orientation in the F-43m space group.]{Low index facet orientation in the F-43m space group. The \hkl{0 0 1}, \hkl{1 1 0}, and \hkl{1 1 1} facets are color-coded in orange, light blue, and purple, respectively.}
+    \caption[Low index facet orientation in the F-43m space group.]{Low index facet orientation in the F-43m space group. The \hkl{0 0 1}, \hkl{1 1 0}, and \hkl{1 1 1} facets are color-coded in orange, light blue, and purple, respectively. The two orientations shown in this Figure are with the vertical z-axis coinciding with the \hkl[0 0 1] and \hkl[1 1 0] directions in \subref{subfig:100_symmetry} and \subref{subfig:110_symmetry}, respectively.}
     \label{fig:facet_relations}
 \end{figure}
+
+Although the orientation of the low index facets with respect to each other is difficult to properly convey on a 2D support, Figure~\ref{fig:facet_relations} shows how the three different facets, \hkl{0 0 1} in orange, \hkl{1 1 0} in light blue, and \hkl{1 1 1} in purple are orientated in a cubic crystal. The shapes of the polygons that make up the figure also give a hint as to what kind of symmetry element is present in each facet. Figure~\ref{subfig:100_symmetry} can also be used to understand the relationship between different planes in the cubic \acl{si} crystal of the \hkl(0 0 1) \acf{soi} device layer used as seed in Chapter~\ref{chap:growth}. Similarly, Figure~\ref{subfig:110_symmetry} illustrates the symmetry of the \hkl(1 1 0) \acs{soi} device layer used in Chapters~\ref{chap:properties} and \ref{chap:yield_analysis}.
+
+\begin{figure}
+    \centering
+    \tikzsetnextfilename{GaAs_rtp}
+    \begin{tikzpicture}
+        \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.3\textwidth]{2_Literature_Review/Fig/GaAs_rtp.pdf}};
+        \draw [dashed] (-2.5,0.4) -- ++ (5,0.15) node [anchor = west] {RTP};
+    \end{tikzpicture}
+    \caption[Drawing of a \hkl{1 1 1} \acl{rtp} in a F-43m crystal.]{Drawing of a \acl{rtp}, highlighted by a dashed line, corresponding to a \hkl{1 1 1} plane in a \acs{gaas} F-43m crystal.}
+    \label{fig:GaAs_rtp}
+\end{figure}
+
+
+
+
 
 
 
@@ -161,6 +178,9 @@ Figure~\ref{fig:ZB_low_index_facets} shows the 2D projections of a \acs{gaas} F-
 
 \section{\texorpdfstring{III-V-on-\acs{si} integration routes}{III-V-on-Si integration routes}}
 The various integration routes of III-V semiconductors on Si can be divided in two broad categories: heterogeneous and homogeneous integration.
+
+CHANGE TO TRANSFER AND MONOLITHIC GROWTH
+
 \subsection{Heterogeneous integration}
 Heterogeneous integration refers to the indirect integration of III-V material grown on a different, lattice matched, substrate on a Si wafer. 
 \par
