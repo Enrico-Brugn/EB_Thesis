@@ -526,7 +526,7 @@ Collecting more images of defective wires is therefore a necessary step to creat
     \label{tab:class_makeup2}
 \end{table}
 
-Changes were made to make the \texttt{ Null} class unnecessary by allowing the algorithm to discriminate between multiple labels on the same image. This was done by computing the area of the intersections of each label polygon with the images using the \texttt{shapely} \cite{gillies_2024} library. The label with the highest intersection area is then assigned to the image.
+Changes were made to make the \texttt{Null} class unnecessary by allowing the algorithm to discriminate between multiple labels on the same image. This was done by computing the area of the intersections of each label polygon with the images using the \texttt{shapely} \cite{gillies_2024} library. The label with the highest intersection area is then assigned to the image.
 
 Another change concerned the cut-point determination in the algorithm shown in Figure~\ref{fig:pooling}. The algorithm was changed to only process each image with the \texttt{max\_pool} kernel and calculate the associated vectors and gradient. This solved the issue of the wrong point being chosen due to the influence of the \texttt{min\_pool} kernel discussed in previous sections.
 
