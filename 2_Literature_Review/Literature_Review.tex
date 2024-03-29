@@ -1,20 +1,15 @@
 \chapter{Literature Review and Methodology}
 \label{chap:review}
 
-
-CHAPTER SUMMARY
-
-\section{A tale of two particles}
-
 If the reader asks a common person in the street what "electronics" means they will receive a variety of responses centred on computers, smartphones, television sets, and other everyday appliances. On the other hand, if the same interviewee demographic was asked about "photonics", some might mention \acl{led}s (\acs{led}s) and lasers, others might cite Star Trek or other science-fiction work. The term photonics has not found widespread understanding outside the semiconductor industry, despite these two technologies often being separated by around a decade and a half in the research and development stages. 
 
 The basic building block of modern electronics, the transistor, was invented in 1947 \cite{Bardeen1948, Bardeen1950}. Pointing to a direct equivalent in the history of photonics is not straightforward; however, the first solid-state light-emitting device was described just \num{15} years later in 1962 \cite{Biard1966} and consisted of a \acf{gaas} \acs{led} emitting in the infrared. Interest in solid-state lasing grew immediately after this discovery \cite{Hall1962, Hall1963} affirming the role of III-V semiconductors as solid-state light emitters. The next year, in 1963, Wanlass invented \acf{cmos} technology \cite{Wanlass1967} cementing integrated planar electronics as the main computational platform of the second half of the century. It took four years after this seminal invention for the idea of a \acf{pic} to follow \cite{Miller1969}.
 
 Therefore, while integrated electronics was entering its exponential phase, exemplified by Moore's law \cite{Moore1965}, formulated in the mid-1960s, the building blocks of photonics were just being discovered or still in a conceptual phase. This led to a difference in investment that, in turn, shaped the technological landscape of humanity. While commercial electron-based technologies were progressing through small-, medium- and large-scale integration, up until very large-scale, photon-based technology was mostly commercialised as bulk devices for, until the discovery of the blue \acs{led} in the 1990s \cite{Nakamura1994}, highly specialised lighting applications and solid-state lasers. However, the 1990s saw a new revolution, the introduction, and rapid diffusion, of the Internet. This new technology exposed the limitation of the electron as an information-carrying particle: impedance losses and inductive currents can be sidestepped by choosing to transmit information with pulses of light as induction is an issue specific to the electron. Simultaneously, the fibre optic cable can support a larger data stream than copper wires. This change from metallic cables to optical supports was quite quickly implemented in the long-range communication infrastructure, going hand in hand with the employment of bulk emitters and absorbers at the two ends of the cable. This change also stimulated interest in using this technology in integrated interconnects, which has been growing since the late 1980s \cite{Miller1989}.
 
-In integrated interconnects the use of photons bypasses some important problems affecting electrical lines, such as the "aspect ratio limit" that binds the maximum amount of bits per second to the shape of the interconnect \cite{Miller1997}, the dependence of clock timing on temperature, cross-talk between neighbouring interconnects, and the transition between high impedance electronic components and low impedance electronic interconnects, while providing voltage isolation and potential for free space interconnects \cite{Miller1997_reasons}. Most of these problems also have electrical solutions. Still, these solutions in turn increase the energy requirements and therefore the energy loss that occurs on the circuit board, and there is a limit to how much heat can be cost-efficiently extracted from each singular chip; therefore, photonics becomes attractive from both an energy- and a cost-efficiency point of view \cite{Miller2009}, provided that the integration method allows for such an efficiency. 
+In integrated interconnects the use of photons bypasses some important problems affecting electrical lines, such as the "aspect ratio limit" that binds the maximum amount of bits per second to the shape of the interconnect \cite{Miller1997}, the dependence of clock timing on temperature, cross-talk between neighbouring interconnects, and the transition between high impedance electronic components and low impedance electronic interconnects, while providing voltage isolation and potential for free space interconnects \cite{Miller1997_reasons}. Most of these problems also have electrical solutions. Still, these solutions in turn increase the energy requirements and therefore the energy loss that occurs on the circuit board, and there is a limit to how much heat can be cost-effectively extracted from each singular chip; therefore, photonics becomes attractive from both an energy- and a cost-efficiency point of view \cite{Miller2009}, provided that the integration method allows such an efficiency. 
 
-Indeed, integration is the key step enabling photonics, the initial photonic circuits of the late 1980s and 1990s were realised directly on \acf{inp} wafers from \num{2} inches to \num{4} inches in diameter. Despite the small size, these are expensive supports compared to the much larger \qty{150}{\milli\metre} and \qty{200}{\milli\metre} \acl{si} supports their contemporary. This technology managed to demonstrate very large scale integration by the mid-2010s, after which it was surpassed by both \acl{si} and III-V on \acl{si} photonic integrated circuits \cite{Shekhar2024, Margalit2021}.
+Indeed, integration is the key step in enabling photonics. The initial photonic circuits of the late 1980s and 1990s were realised directly on \acf{inp} wafers from \num{2} inches to \num{4} inches in diameter. Despite the small size, these are expensive supports compared to the much larger \qty{150}{\milli\metre} and \qty{200}{\milli\metre} \acl{si} supports their contemporary. This technology managed to demonstrate very large scale integration by the mid-2010s, after which it was surpassed by both \acl{si} and III-V on \acl{si} photonic integrated circuits \cite{Shekhar2024, Margalit2021}.
 
 An important objective is to perfect the integration of efficient III-V components on the cheap \acl{si} substrate. The main issue that needs to be addressed in the integration of III-V semiconductors on \acl{si} is the mismatch in the lattice parameter between these two materials, which causes a wide variety of defects in monolithic integration \cite{Kunert2018}. 
 
@@ -189,13 +184,27 @@ The main advantage of these techniques is the absence of lattice mismatch as a s
 
 This type of integration requires the growth of III-V in a separate fabrication line that must maintain the high precision and cleanliness standard of the main \acs{cmos} \acl{si} line, resulting in a large capital investment. Furthermore, most classic transfer steps can result in a material with a more irregular geometry (wafer bow, surface roughness after etching), or presenting transfer-related defects \cite{Jevtics2022}, or require an extra bonding layer \cite{Jevtics2022, Tang2019}, and do not allow nanometre precision in integration \cite{Wang2017, McPhillimy2020}. However, the most advanced techniques that bypass most of these quality issues are too slow to provide a competitive transfer time for large, densely integrated \qty{200}{\milli\metre} (or \qty{300}{\milli\metre}) production wafers \cite{Wang2017, McPhillimy2020}.
 
-\subsection{Monolithic Integration}
+\subsection{Monolithic integration}
 
 Monolithic integration refers to direct integration by epitaxial growth of III-V semiconductors on a \acl{si} substrate. 
 
 It naturally provides advantages such as extremely high spatial precision and accuracy for small device integration on wafer-scale substrates, which can be achieved in a shorter time frame compared to its heterogeneous analogues \cite{Wang2017}. It has the potential to be a more economical alternative to heterogeneous integration. If the growth process can be integrated with current \acs{cmos} processes, its implementation in a \acs{cmos} line would eliminate the need to have a dedicated III-V fabrication facility running in parallel with a \acl{si}-based plant unnecessary, especially if the use of III-V electronics is envisioned at the same time as III-V photonics \cite{Wang2017}. Thus, monolithic integration has the potential to reduce the capital cost required to integrate III-V photonics in different \acl{si}-based devices \cite{Tang2019}.
 
-The main disadvantage of monolithic integration is the high lattice mismatch between \acl{si} and most III-V materials \cite{Kuech2016}. The effect of this mismatch in the material is the formation of strain-relaxing defects at the \acl{si} / III-V heterointerface \cite{Kunert2018}: these defects have a very detrimental effect on the performance and lifetime of the devices \cite{Mahajan2000, Zenari2021}, and act as scattering or recombination centres \cite{Jeon2015}. 
+The main disadvantage of monolithic integration is the high lattice mismatch between \acl{si} and most III-V materials \cite{Kuech2016}. The effect of this mismatch in the material is the formation of strain-relaxing defects at the \acl{si} / III-V heterointerface \cite{Kunert2018}: these defects have a very detrimental effect on the performance and lifetime of a device \cite{Mahajan2000, Zenari2021}, and act as scattering or recombination centres \cite{Jeon2015}. The polar nature of III-V atomic bonds compared to nonpolar \acs{si}-\acs{si} bonds means that anti-phase boundaries can be created during growth on \acl{si} surfaces with monoatomic steps \cite{Kunert2018}, and most known surface treatments to eliminate nucleation sites for these defects occur in temperature ranges that are incompatible with the \acs{cmos} process \cite{Miller2000}. Furthermore, materials that are known to grow at a higher temperature, such as III – nitrides, and others that could have detrimental effects on the passivating of \acf{sio2} layers, such as gallium \cite{Miller2000}, also pose the same temperature-related \acs{cmos} compatibility issues. Another key obstacle, especially related to the direct growth of micro- and nanostructures, is the stricter requirements for the reproducibility and reliability of the process.
+
+There are many monolithic integration routes and the most common categories are introduced in the following paragraphs.
+
+\paragraph{Planar growth} Direct planar growth of III-Vs on \acl{si} is the simplest method of monolithic integration. It can be suitable for the growth of III-Vs with a lattice constant very close to that of \acl{si} or for the self-assembled nucleation of nanoparticles in a Stranski-Krastanov growth mode, which can pose the basis for quantum dot fabrication \cite{Shi2016, Reithmaier2016}. It, however, presents a few drawbacks related to the absence of a way to contain defects and the different material properties of the material stack \cite{Ravash2012}. It can lead to wafer bow or warp due to the mismatch of thermal coefficients between the various materials \cite{Miyoshi2016, Wang2017_2}, and materials with a high deviation from the \acl{si} lattice parameter can require strain management layers of \qty{1}{\micro\metre} or more to grow without defects\cite{Wang2017_2, Cantoro2012}.
+\par
+\paragraph{\Acf{sag}} \acs{sag} consists in the growth of III-V material from \acl{si} seeds located in openings in a horizontal mask of a material that does not promote nucleation, such as \acs{sio2}. These holes can be defined with different methods, from self-assembled masking to lithography. This type of growth results in nanostructures \cite{Cantoro2012} such as nanowires, both of a single material and in core-shell configurations with very high position control \cite{Tomioka2011}. Wafer bow and warp are not issues with \acs{sag}, since growth does not, unless promoted by accentuating lateral growth \cite{McKenzie2023}, end up forming a single material layer. However, in this technique, growth develops mainly in the vertical direction, and the presence of lateral growth can result in unwanted heterointerfaces.
+\par
+\paragraph{Droplet epitaxy} Droplet or \acf{vls} epitaxy consists in guiding the nucleation of III-V material by using a nano-droplet of a catalyst metal on the \acl{si} substrate. This technique also avoids wafer bow as it only results in the growth of nanowires \cite{Wagner1964}. Since \acs{vls} is dependent on the metallic droplet, the growth can be tuned to achieve high directionality and the incorporation of heterostructures with minimal or no unwanted side growth \cite{Harmand2018, Joyce2007}. This type of growth depends on the metal droplets and therefore on their self-assembled distribution on the substrate surface, which diminishes position control \cite{Joyce2007}. Similarly, the geometry of the resulting structures is limited to nanowires \cite{Wagner1964}, and the reservoir effect in the catalyst droplet complicates the control of composition in ternary and quaternary III-V materials \cite{Dubrovskii2017}. Nonetheless, this method allows for sophisticated growth studies such as in-situ TEM imaging \cite{Maliakkal2020, Jacobsson2016, Harmand2018}, leading to the possible refinement of growth recipes to the point where phase control can be achieved \cite{Algra2008, Caroff2009, Joyce2007}.
+\par
+\paragraph{\Acf{art}} \acs{art} refers to the confinement of defects to the seed region by sidewalls and other such barriers in a growth regimen mediated by a template. The basic idea is that, as most defects nucleate near the \acl{si} / III-V interface and then propagate in directions that are often not parallel to the growth axis, they can be trapped in the region of the material closest to the seed by sidewalls that constrict the III-V crystal so that it grows in a cavity with a high aspect ratio. 
+
+\acs{sag}-\acs{art} sees the mask selecting the seed areas in thickness to allow for the trapping of defects. This technique also allows high position control of the III-V crystal while accentuating the control over the defects \cite{Han2016}. However, typically \acs{sag}-\acs{art} employs large templates, which means that defects propagating in directions that lie in the plane of the side walls are not filtered by the \acs{art} mechanism \cite{Kunert2018}. Simultaneously, multiple nucleation points can result in grain boundaries that must be eliminated with additional process steps \cite{Kunert2016}.
+\par
+\paragraph{\Acf{tase}} \acs{tase} can be seen as an evolution of the \acs{sag}-\acs{art} method as it also defines \acl{si} seeds surrounded by \acs{sio2} and uses templates with high aspect ratio to guide the growth. The main difference with \acs{sag}-\acs{art} are the size and complexity of the templates and the focus on planar growth. \acs{tase}
 
 
 
@@ -208,70 +217,67 @@ The main disadvantage of monolithic integration is the high lattice mismatch bet
 
 
 
-The polar nature of III-V atomic bonds compared to nonpolar Si-Si bonds can create anti-phase boundaries during growth on certain Si facets \cite{Kunert2018}, and most known surface treatments to eliminate the nucleation sites for these defects occur in temperature ranges that are incompatible with the CMOS process \cite{Miller2000}. Furthermore, materials that are known to grow at a higher temperature, such as III – nitrides, and others that could have detrimental effects on the passivating of \acf{sio2} layers, such as gallium \cite{Miller2000}, also pose compatibility problems with the \acs{cmos} process. Another key obstacle, especially related to the direct growth of micro- and nanostructures, is the stricter requirements for the reproducibility and reliability of the process.
 
-\subsection{Comparison between homogeneous integration routes}
 
-What follows is a table comparing the advantages and disadvantages of various homogeneous integration techniques. The table predominantly focusses on what can be accomplished in the growth reactor and briefly mentions techniques that require simple or complex substrate preparation.
-
+\par
 LAU ARTICLE WITH OTHER TABLE AS A FURTHER WAY TO CLASSIFY
 
+% \begin{sidewaystable}
+%     \centering
+% \begin{longtable}{p{0.1\textwidth}|p{0.42\textwidth}|p{0.42\textwidth}}
+%     Type & Advantages & Disadvantages \\ \hline \hline
+%     % Planar growth & 
+%     % \begin{itemize}
+%     %     \item Extremely simple substrate preparation steps.
+%     %     \item Allows Stranski-Krastanov growth mode for quantum dot formation \cite{Shi2016, Reithmaier2016}
+%     % \end{itemize} & 
+%     % \begin{itemize}
+%     %     \item Often leads to wafer bow or warp due to thermal expansion coefficient mismatch \cite{Miyoshi2016, Wang2017_2}
+%     %     \item Can require 1+ micrometre thick strain management layer before device growth (depending on mismatch) \cite{Wang2017_2, Cantoro2012}
+%     %     \item Widespread defects are common in this kind of growth \cite{Ravash2012}
+%     % \end{itemize} \\ \hline
+%     % Selective Area Growth (SAG) & 
+%     % \begin{itemize}
+%     %     \item Substrate preparation ranges from relatively simple to somewhat complex
+%     %     \item Allows the growth of nanostructures \cite{Cantoro2012}
+%     %     \item Allows the growth of core-shell wires \cite{Tomioka2011}
+%     %     \item Allows position control \cite{Tomioka2011}
+%     %     \item No wafer warp or bow as a result of the III-V material
+%     %     \item Allows the growth of various device structures, but only vertically \cite{Bi2019, Staudinger2021}
+%     % \end{itemize}  & 
+%     % \begin{itemize}
+%     %     \item Sidewall growth can be minimized but not eliminated, resulting in undesired heterointerfaces and possible loss of composition control in complex systems.
+%     %     \item Growth mainly happens in the vertical direction
+%     % \end{itemize}  \\ \hline
+%     VLS/Droplet epitaxy (vertical nanowires) & 
+%     \begin{itemize}
+%         \item Simple substrate preparation process
+%         \item Allows for nanostructure growth \cite{Wagner1964}
+%         \item No wafer warp or bow as a result of the III-V material
+%         \item Allows for sophisticated growth studies such as in-situ TEM imaging \cite{Maliakkal2020, Jacobsson2016, Harmand2018}, leading to the possibility to refine growth recipes to the point where phase control can be achieved \cite{Algra2008, Caroff2009, Joyce2007}.
+%         \item Can be tuned to achieve high directionality of the growth and possibility to incorporate heterostructures with minimal or no undesired side growth \cite{Harmand2018, Joyce2007}
+%     \end{itemize}  & \begin{itemize}
+%         \item Limited position control \cite{Joyce2007}
+%         \item Nanostructure geometry limited to nanowires \cite{Wagner1964}
+%         \item Reservoir effect complicates composition control in ternary and quaternary compounds \cite{Dubrovskii2017}
+%     \end{itemize} \\ \hline
+%     \caption{Caption}
+%     \label{tab:methods1}
+% \end{longtable}
+% \end{sidewaystable}
 \begin{sidewaystable}
-    \centering
-\begin{longtable}{p{0.1\textwidth}|p{0.42\textwidth}|p{0.42\textwidth}}
-    Type & Advantages & Disadvantages \\ \hline \hline
-    Planar growth & 
-    \begin{itemize}
-        \item Extremely simple substrate preparation steps.
-        \item Allows Stranski-Krastanov growth mode for quantum dot formation \cite{Shi2016, Reithmaier2016}
-    \end{itemize} & 
-    \begin{itemize}
-        \item Often leads to wafer bow or warp due to thermal expansion coefficient mismatch \cite{Miyoshi2016, Wang2017_2}
-        \item Can require 1+ micrometre thick strain management layer before device growth (depending on mismatch) \cite{Wang2017_2, Cantoro2012}
-        \item Widespread defects are common in this kind of growth \cite{Ravash2012}
-    \end{itemize} \\ \hline
-    Selective Area Growth (SAG) & 
-    \begin{itemize}
-        \item Substrate preparation ranges from relatively simple to somewhat complex
-        \item Allows the growth of nanostructures \cite{Cantoro2012}
-        \item Allows the growth of core-shell wires \cite{Tomioka2011}
-        \item Allows position control \cite{Tomioka2011}
-        \item No wafer warp or bow as a result of the III-V material
-        \item Allows the growth of various device structures, but only vertically \cite{Bi2019, Staudinger2021}
-    \end{itemize}  & 
-    \begin{itemize}
-        \item Sidewall growth can be minimized but not eliminated, resulting in undesired heterointerfaces and possible loss of composition control in complex systems.
-        \item Growth mainly happens in the vertical direction
-    \end{itemize}  \\ \hline
-    VLS/Droplet epitaxy (vertical nanowires) & 
-    \begin{itemize}
-        \item Simple substrate preparation process
-        \item Allows for nanostructure growth \cite{Wagner1964}
-        \item No wafer warp or bow as a result of the III-V material
-        \item Allows for sophisticated growth studies such as in-situ TEM imaging \cite{Maliakkal2020, Jacobsson2016, Harmand2018}, leading to the possibility to refine growth recipes to the point where phase control can be achieved \cite{Algra2008, Caroff2009, Joyce2007}.
-        \item Can be tuned to achieve high directionality of the growth and possibility to incorporate heterostructures with minimal or no undesired side growth \cite{Harmand2018, Joyce2007}
-    \end{itemize}  & \begin{itemize}
-        \item Limited position control \cite{Joyce2007}
-        \item Nanostructure geometry limited to nanowires \cite{Wagner1964}
-        \item Reservoir effect complicates composition control in ternary and quaternary compounds \cite{Dubrovskii2017}
-    \end{itemize} \\ \hline
-    \caption{Caption}
-    \label{tab:methods1}
-\end{longtable}
-\end{sidewaystable}
-    \begin{sidewaystable}
     \centering
     \begin{longtable}{p{0.1\textwidth}|p{0.42\textwidth}|p{0.42\textwidth}}
     Type & Advantages & Disadvantages \\ \hline \hline
-    Selective Area Growth with Aspect Ratio Trapping & 
-    \begin{itemize}
-        \item Allows position control for the III-V growth29
-        \item Highly reduced bow and warp effect on the wafer after deposition
-        \item Aspect ratio trapping (ART) allows a base level of defect control \cite{Han2016}
-    \end{itemize}  & \begin{itemize}
-        \item Defects propagating in any direction that shares the plane of the side walls are not filtered2
-        \item Multiple nucleation points can result in grain boundaries, and their elimination requires extra process steps \cite{Kunert2016}
-    \end{itemize} \\ \hline
+    % Selective Area Growth with Aspect Ratio Trapping & 
+    % \begin{itemize}
+    %     \item Allows position control for the III-V growth\cite{Han2016}
+    %     \item Highly reduced bow and warp effect on the wafer after deposition
+    %     \item Aspect ratio trapping (ART) allows a base level of defect control \cite{Han2016}
+    % \end{itemize}  & \begin{itemize}
+    %     \item Defects propagating in any direction that shares the plane of the side walls are not filtered2
+    %     \item Multiple nucleation points can result in grain boundaries, and their elimination requires extra process steps \cite{Kunert2016}
+    % \end{itemize} \\ \hline
     Template Assisted Selective Epitaxy (TASE) & 
     \begin{itemize}
         \item Allows the growth of a very large variety of both vertical and horizontal nanostructures while maintaining extremely accurate geometry and  position control \cite{Ritter2021, Tiwari2020, Schmid2015}
@@ -283,7 +289,7 @@ LAU ARTICLE WITH OTHER TABLE AS A FURTHER WAY TO CLASSIFY
     \begin{itemize}
         \item Substrate preparation takes place in a complex multi-step process
         \item Can suffer from parasitic growth
-        \item Some height limitations in terms of core shell structures, which can’t be grown horizontally, and are de-facto limited to microdisk form factors \cite{Tiwari2020}
+        \item Some height limitations in terms of core shell structures, which can’t be grown in nanowires, and are de-facto limited to microdisk form factors \cite{Tiwari2020}
     \end{itemize} \\ \hline
     \caption{Caption}
     \label{tab:methods2}
