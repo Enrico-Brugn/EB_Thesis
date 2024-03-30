@@ -180,7 +180,7 @@ Various III-V synthesis methods are available \cite{Kuech2016}: the following is
 \subsection{Transfer integration}
 Transfer integration refers to the indirect integration of III-V material grown on a different lattice-matched substrate on a \acl{si} wafer. 
 
-The main advantage of these techniques is the absence of lattice mismatch as a source of defects during epitaxial growth. Furthermore, it allows the selection of the best-performing structures to be transferred onto the \acl{si} substrate \cite{Zadeh2016, Wang2017}. Transfer integration does not have to compromise on the growth parameters or material systems to achieve \acs{cmos} compatibility (except for bonding temperature). Together, the various methods that fall under this definition form a mature technology well established in industry \cite{Wang2017}, and, as a result, benefit from years of industrial optimisation.
+The main advantage of these techniques is the absence of lattice mismatch as a source of defects during epitaxial growth. Furthermore, it allows the selection of the best-performing structures to be transferred onto the \acl{si} substrate \cite{Zadeh2016, Wang2017}. Transfer integration does not have to compromise on the growth parameters or material systems to achieve \acs{cmos} compatibility (except for bonding temperature). Together, the various methods that fall under this definition form a mature technology well established in industry \cite{Wang2017, Han2022}, and, as a result, benefit from years of industrial optimisation.
 
 This type of integration requires the growth of III-V in a separate fabrication line that must maintain the high precision and cleanliness standard of the main \acs{cmos} \acl{si} line, resulting in a large capital investment. Furthermore, most classic transfer steps can result in a material with a more irregular geometry (wafer bow, surface roughness after etching), or presenting transfer-related defects \cite{Jevtics2022}, or require an extra bonding layer \cite{Jevtics2022, Tang2019}, and do not allow nanometre precision in integration \cite{Wang2017, McPhillimy2020}. However, the most advanced techniques that bypass most of these quality issues are too slow to provide a competitive transfer time for large, densely integrated \qty{200}{\milli\metre} (or \qty{300}{\milli\metre}) production wafers \cite{Wang2017, McPhillimy2020}.
 
@@ -202,99 +202,14 @@ There are many monolithic integration routes and the most common categories are 
 \par
 \paragraph{\Acf{art}} \acs{art} refers to the confinement of defects to the seed region by sidewalls and other such barriers in a growth regimen mediated by a template. The basic idea is that, as most defects nucleate near the \acl{si} / III-V interface and then propagate in directions that are often not parallel to the growth axis, they can be trapped in the region of the material closest to the seed by sidewalls that constrict the III-V crystal so that it grows in a cavity with a high aspect ratio. 
 
-\acs{sag}-\acs{art} sees the mask selecting the seed areas in thickness to allow for the trapping of defects. This technique also allows high position control of the III-V crystal while accentuating the control over the defects \cite{Han2016}. However, typically \acs{sag}-\acs{art} employs large templates, which means that defects propagating in directions that lie in the plane of the side walls are not filtered by the \acs{art} mechanism \cite{Kunert2018}. Simultaneously, multiple nucleation points can result in grain boundaries that must be eliminated with additional process steps \cite{Kunert2016}.
+\acs{sag}-\acs{art} sees the mask selecting the seed areas increase in thickness to allow for the trapping of defects. This technique also allows high position control of the III-V crystal while accentuating the control over the defects \cite{Han2016}. However, typically \acs{sag}-\acs{art} employs large templates, which means that defects propagating in directions that lie in the plane of the side walls are not filtered by the \acs{art} mechanism \cite{Kunert2018}. Simultaneously, multiple nucleation points can result in grain boundaries that must be eliminated with additional process steps \cite{Kunert2016}.
 \par
-\paragraph{\Acf{tase}} \acs{tase} can be seen as an evolution of the \acs{sag}-\acs{art} method as it also defines \acl{si} seeds surrounded by \acs{sio2} and uses templates with high aspect ratio to guide the growth. The main difference with \acs{sag}-\acs{art} are the size and complexity of the templates and the focus on planar growth. \acs{tase}
+\paragraph{\Acf{tase}} \acs{tase} can be seen as an evolution of the \acs{sag}-\acs{art} method as it also defines \acl{si} seeds surrounded by \acs{sio2} and uses templates with high aspect ratio to guide the growth. The main difference with \acs{sag}-\acs{art} are the size and complexity of the templates and the focus on planar growth. \acs{tase} enables the growth of various vertical and horizontal nanostructures while maintaining extremely accurate geometry and position control \cite{Ritter2021, Tiwari2020, Schmid2015}. It also enables superior defect control, even compared with \acs{art}: far from the growth interface defects can be effectively limited to twin planes \cite{Han2020}, which in some cases can too be eliminated \cite{Knoedler2017}. In certain geometries, it also enables phase control \cite{Staudinger2018}. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+On the other hand, it is the most complex method of those listed in terms of overall steps before III-V growth. Furthermore, since nanowires fill templates quickly, \acs{tase} can only grow core-shell structures in a microdisk format \cite{Tiwari2020} and not in nanowire format. 
 \par
-LAU ARTICLE WITH OTHER TABLE AS A FURTHER WAY TO CLASSIFY
 
-% \begin{sidewaystable}
-%     \centering
-% \begin{longtable}{p{0.1\textwidth}|p{0.42\textwidth}|p{0.42\textwidth}}
-%     Type & Advantages & Disadvantages \\ \hline \hline
-%     % Planar growth & 
-%     % \begin{itemize}
-%     %     \item Extremely simple substrate preparation steps.
-%     %     \item Allows Stranski-Krastanov growth mode for quantum dot formation \cite{Shi2016, Reithmaier2016}
-%     % \end{itemize} & 
-%     % \begin{itemize}
-%     %     \item Often leads to wafer bow or warp due to thermal expansion coefficient mismatch \cite{Miyoshi2016, Wang2017_2}
-%     %     \item Can require 1+ micrometre thick strain management layer before device growth (depending on mismatch) \cite{Wang2017_2, Cantoro2012}
-%     %     \item Widespread defects are common in this kind of growth \cite{Ravash2012}
-%     % \end{itemize} \\ \hline
-%     % Selective Area Growth (SAG) & 
-%     % \begin{itemize}
-%     %     \item Substrate preparation ranges from relatively simple to somewhat complex
-%     %     \item Allows the growth of nanostructures \cite{Cantoro2012}
-%     %     \item Allows the growth of core-shell wires \cite{Tomioka2011}
-%     %     \item Allows position control \cite{Tomioka2011}
-%     %     \item No wafer warp or bow as a result of the III-V material
-%     %     \item Allows the growth of various device structures, but only vertically \cite{Bi2019, Staudinger2021}
-%     % \end{itemize}  & 
-%     % \begin{itemize}
-%     %     \item Sidewall growth can be minimized but not eliminated, resulting in undesired heterointerfaces and possible loss of composition control in complex systems.
-%     %     \item Growth mainly happens in the vertical direction
-%     % \end{itemize}  \\ \hline
-%     VLS/Droplet epitaxy (vertical nanowires) & 
-%     \begin{itemize}
-%         \item Simple substrate preparation process
-%         \item Allows for nanostructure growth \cite{Wagner1964}
-%         \item No wafer warp or bow as a result of the III-V material
-%         \item Allows for sophisticated growth studies such as in-situ TEM imaging \cite{Maliakkal2020, Jacobsson2016, Harmand2018}, leading to the possibility to refine growth recipes to the point where phase control can be achieved \cite{Algra2008, Caroff2009, Joyce2007}.
-%         \item Can be tuned to achieve high directionality of the growth and possibility to incorporate heterostructures with minimal or no undesired side growth \cite{Harmand2018, Joyce2007}
-%     \end{itemize}  & \begin{itemize}
-%         \item Limited position control \cite{Joyce2007}
-%         \item Nanostructure geometry limited to nanowires \cite{Wagner1964}
-%         \item Reservoir effect complicates composition control in ternary and quaternary compounds \cite{Dubrovskii2017}
-%     \end{itemize} \\ \hline
-%     \caption{Caption}
-%     \label{tab:methods1}
-% \end{longtable}
-% \end{sidewaystable}
-\begin{sidewaystable}
-    \centering
-    \begin{longtable}{p{0.1\textwidth}|p{0.42\textwidth}|p{0.42\textwidth}}
-    Type & Advantages & Disadvantages \\ \hline \hline
-    % Selective Area Growth with Aspect Ratio Trapping & 
-    % \begin{itemize}
-    %     \item Allows position control for the III-V growth\cite{Han2016}
-    %     \item Highly reduced bow and warp effect on the wafer after deposition
-    %     \item Aspect ratio trapping (ART) allows a base level of defect control \cite{Han2016}
-    % \end{itemize}  & \begin{itemize}
-    %     \item Defects propagating in any direction that shares the plane of the side walls are not filtered2
-    %     \item Multiple nucleation points can result in grain boundaries, and their elimination requires extra process steps \cite{Kunert2016}
-    % \end{itemize} \\ \hline
-    Template Assisted Selective Epitaxy (TASE) & 
-    \begin{itemize}
-        \item Allows the growth of a very large variety of both vertical and horizontal nanostructures while maintaining extremely accurate geometry and  position control \cite{Ritter2021, Tiwari2020, Schmid2015}
-        \item Superior defect control, even compared with ART: far from the growth interface defects can be effectively limited to twin planes \cite{Han2020}, which in some cases can too be eliminated \cite{Knoedler2017}
-        \item Potential for excellent facet and composition \cite{Borg2019, Goswami2020} control in nanowires, with no side growth when growing heterostructures \cite{Brunelli2019} 
-        \item No wafer warp or bow as a result of the III-V material
-        \item Allows for phase control in determinate growth geometries \cite{Staudinger2018}
-    \end{itemize} & 
-    \begin{itemize}
-        \item Substrate preparation takes place in a complex multi-step process
-        \item Can suffer from parasitic growth
-        \item Some height limitations in terms of core shell structures, which can’t be grown in nanowires, and are de-facto limited to microdisk form factors \cite{Tiwari2020}
-    \end{itemize} \\ \hline
-    \caption{Caption}
-    \label{tab:methods2}
-\end{longtable}
-\end{sidewaystable}
+\section{\texorpdfstring{State of \acl{tase}}{State of template assisted selective epitaxy}}
 
 It should be noted that often, in papers from Dr. Lau’s group, the growth method they use is called lateral aspect ratio trapping (LART) \cite{Han2020, Yan2021}: this is in essence a hybrid between SAG-ART and TASE, and can be described as a type of TASE with particularly wide (sometimes several micrometres) templates, therefore I have grouped it with TASE in the above table. It should be noted, however, that while LART offers most of the same advantages that TASE offers, it is more susceptible to the formation of grain boundaries due to multiple nucleation (which does not take place in TASE) and has reduced defect trapping in the wide direction. On the other hand, due to their etch-based approach, they can achieve more intricate quantum well positioning in their microdisk lasers than what is possible with our TASE approach for microdisk growth.
 
@@ -302,7 +217,6 @@ It should be noted that often, in papers from Dr. Lau’s group, the growth meth
 
 111B growth outside of tase
 
-\section{\texorpdfstring{State of \acl{tase}}{State of template assisted selective epitaxy}}
 \section{Characterization of nano- and microstructures}
 Talk about defect types (what is an rtp is very important) and therefore about the lattices
 
