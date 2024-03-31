@@ -190,7 +190,7 @@ Monolithic integration refers to direct integration by epitaxial growth of III-V
 
 It naturally provides advantages such as extremely high spatial precision and accuracy for small device integration on wafer-scale substrates, which can be achieved in a shorter time frame compared to its heterogeneous analogues \cite{Wang2017}. It has the potential to be a more economical alternative to heterogeneous integration. If the growth process can be integrated with current \acs{cmos} processes, its implementation in a \acs{cmos} line would eliminate the need to have a dedicated III-V fabrication facility running in parallel with a \acl{si}-based plant unnecessary, especially if the use of III-V electronics is envisioned at the same time as III-V photonics \cite{Wang2017}. Thus, monolithic integration has the potential to reduce the capital cost required to integrate III-V photonics in different \acl{si}-based devices \cite{Tang2019}.
 
-The main disadvantage of monolithic integration is the high lattice mismatch between \acl{si} and most III-V materials \cite{Kuech2016}. The effect of this mismatch in the material is the formation of strain-relaxing defects at the \acl{si} / III-V heterointerface \cite{Kunert2018, Shi2021}: these defects have a very detrimental effect on the performance and lifetime of a device \cite{Mahajan2000, Zenari2021}, and act as scattering or recombination centres \cite{Jeon2015}. The polar nature of III-V atomic bonds compared to nonpolar \acs{si}-\acs{si} bonds means that anti-phase boundaries can be created during growth on \acl{si} surfaces with monoatomic steps \cite{Kunert2018}, and most known surface treatments to eliminate nucleation sites for these defects occur in temperature ranges that are incompatible with the \acs{cmos} process \cite{Miller2000}. Furthermore, materials that are known to grow at a higher temperature, such as III – nitrides, and others that could have detrimental effects on the passivating of \acf{sio2} layers, such as gallium \cite{Miller2000}, also pose the same temperature-related \acs{cmos} compatibility issues. Another key obstacle, especially related to the direct growth of micro- and nanostructures, is the stricter requirements for the reproducibility and reliability of the process.
+The main disadvantage of monolithic integration is the high lattice mismatch between \acl{si} and most III-V materials \cite{Kuech2016}. The effect of this mismatch in the material is the formation of strain-relaxing defects at the \acl{si} / III-V heterointerface \cite{Kunert2018, Shi2021}: these defects have a very detrimental effect on the performance and lifetime of a device \cite{Mahajan2000, Zenari2021}, and act as scattering or recombination centres \cite{Jeon2015}. The polar nature of III-V atomic bonds compared to nonpolar \acs{si}-\acs{si} bonds means that anti-phase boundaries (\acs{apb}) can be created during growth on \acl{si} surfaces with monoatomic steps \cite{Kunert2018}, and most known surface treatments to eliminate nucleation sites for these defects occur in temperature ranges that are incompatible with the \acs{cmos} process \cite{Miller2000}. Furthermore, materials that are known to grow at a higher temperature, such as III – nitrides, and others that could have detrimental effects on the passivating of \acf{sio2} layers, such as gallium \cite{Miller2000}, also pose the same temperature-related \acs{cmos} compatibility issues. Another key obstacle, especially related to the direct growth of micro- and nanostructures, is the stricter requirements for the reproducibility and reliability of the process.
 
 There are many monolithic integration routes and the most common categories are introduced in the following paragraphs.
 
@@ -213,7 +213,38 @@ On the other hand, it is the most complex method of those listed in terms of ove
 
 As shown in the previous section, \acs{tase} is one of the most advanced monolithic integration techniques; its implementation can be found in Appendix~\ref{chap:tase}. The flexibility of \acs{tase} is demonstrated by the different ways research groups have used it. A group at the University of California Santa Barbara used \acs{tase} to achieve high facet control in the homoepitaxial growth of III-V semiconductors \cite{Brunelli2019, Goswami2020, Goswami2021}, while another group at the University of Hong Kong focussed on deposition in large templates \cite{Han2020, Yan2021} to then etch them into the desired device shape \cite{Han2020_2, Huang2024}. Sometimes the name \acf{lart} is used to highlight the use of large templates to create in-plane structures inside templates \cite{Han2020_2}. This method increases the risk of multiple nucleations and limits the defect-trapping effect in the in-plane direction \cite{Han2020, Yan2021, Huang2024}. 
 
-The Hong Kong and IBM Research Europe Zurich groups have been developing template-based methods to fully integrate \acs{pic} on a \acs{soi} platform. This means a circuit complete of emitters, waveguides, and detrectors. With the \acs{tase} method, \acl{si} waveguides can be defined in the same lithography step as the emitting and absorbing structures, allowing for high design accuracy. Emitters can be integrated in the form of microdisks \cite{Tiwari2020, Tiwari2021} or modulators \cite{Scherrer2022, Scherrer2024}
+The Hong Kong and IBM Research Europe Zurich groups have been developing template-based methods to fully integrate planar \acs{pic}s on a \acs{soi} platform \cite{Mauthe2020}. This means a circuit made up of emitters, waveguides, and detectors. With the \acs{tase} method, \acl{si} waveguides can be defined in the same lithography step as emitting and absorbing structures, allowing for high design accuracy \cite{Wen2022}. Emitters can be integrated in the form of microdisks \cite{Tiwari2020, Tiwari2021} or modulators \cite{Scherrer2022, Scherrer2024}. Detectors can be fabricated out of III-V \textit{p}-\textit{i}-\textit{n} structures in nanowires and have demonstrated high performance \cite{Mauthe2020, Wen2022}.
+
+\begin{figure}
+    \centering
+    \tikzsetnextfilename{wen}
+    \begin{tikzpicture}
+        \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width = \textwidth]{3_Growth/wen.pdf}};
+        \node[fill=white] at (-7.6, -0.3) {(A)};
+        \node[fill=white] at (-3.9, 3.7) {(B)};
+        \node[fill=white] at (7.6, -0.3) {(C)};
+    \end{tikzpicture}
+    \caption[Structural and compositional analysis of a nanowire detector.]{Structural and compositional analysis of a nanowire detector carried out by Wen \textit{et al.} This Figure was adapted from the work of Wen et al \cite{Wen2022} under the terms of the CC BY 4.0 license \cite{CCBY40}.}
+    \label{fig:wen}
+\end{figure}
+
+This project started with the backdrop of the device published by Wen et al. \cite{Wen2022}, shown in its structure in Figure~\ref{fig:wen}. The \acs{bf}-\acs{stem_m} image in Figure~\ref{fig:wen}(A) shows the morphology of the nanowire. A \hkl{1 1 1} \acf{si} facet on the right of the image served as the nucleation surface from which the heterostructures nanowire grew. The selection of this particular facet in \acs{tase} is not casual. The aim is to avoid monoatomic steps on the seed surface that can lead to the formation of \acs{apb}s \cite{Kunert2018}. Nickel-gold contacts are placed at the two \textit{p} and \textit{n} extremities of the doped III-V \textit{p}-\textit{i}-\textit{n} diode. These contact areas were defined specifically for the wire in question. 
+
+Figure~\ref{fig:wen}(B) shows a composition map of the device created from \acf{eds} data. It can be seen that the internal structure of the nanowire contains multi-faceted heterointerfaces. This is exemplified by the first phosphide layer (counting from the \acl{si} seed on the right of the image towards the end of the wire on the left) which presents a bottom \hkl{1 1 1} facet and one visible \hkl{1 1 0} facet at the top, which is indicative of an "arrowhead" morphology implying the presence of a second \hkl{1 1 0} facet at the top \cite{Borg2015, Borg2019}. 
+
+The heterointerfaces act as a "snapshot" of the shape of the growth front when the precursors were switched during \acf{mocvd}. The second phosphide layer exemplifies the first issue with a multi-faceted growth front: the layer thickness varies depending on the vertical position in the layer. The second issue is that the contacting of the device is complicated, as it becomes difficult to predict accurately where each layer begins and ends. Even in this situation where the contacts were specifically defined for this device, the contact on the first phosphide layer also touches the arsenide intrinsic layer because of the arrowhead shape of the heterointerface. The third issue with a multi-faceted growth front is that, in ternary compounds, the integration of each III group element is dependent on the type of facet it is deposited onto \cite{Borg2019}, causing composition gradients within the wire itself with the potential to alter its absorption properties.
+
+Composition gradients at the heterointerfaces are another issue that should be solved before fine structures such as superlattices can be accurately defined. As seen in Figure~\ref{fig:wen}(C) these interface gradients can last hundreds of nanometres, if taken at face value. In reality, the complex geometry of the heterointerfaces also makes it impossible to determine exactly the size of these gradient areas.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -235,7 +266,7 @@ The Hong Kong and IBM Research Europe Zurich groups have been developing templat
 
 \section{Characterization of nano- and microstructures}
 
-TALK ABOUT IMPORTANCE OF SINGLE FACET FOR INCORPORATION RATES (SEE FOLLOWING SECTION)
+
 
 \section{Article 2}
 

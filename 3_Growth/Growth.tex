@@ -5,21 +5,6 @@ For over a decade, research on monolithic integration of III-V semiconductors ha
 
 Controlling the morphology of the growth front is essential for several reasons. The first is that by ensuring a specific shape of the various heterolayers, the metal-to-semiconductor contact regions can be determined more accurately, aiding in further process steps. The second reason concerns the different integration rates of III elements on different facets. This was already explored by researchers who showed a marked dependence of the atomic fraction of the III element in \acs{ingaas} from the facet on which it was grown \cite{Borg2019}.
 
-\begin{figure}
-    \centering
-    \tikzsetnextfilename{wen}
-    \begin{tikzpicture}
-        \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width = \textwidth]{3_Growth/wen.pdf}};
-        \node[fill=white] at (-7.6, -0.3) {(A)};
-        \node[fill=white] at (-3.9, 3.7) {(B)};
-        \node[fill=white] at (7.6, -0.3) {(C)};
-    \end{tikzpicture}
-    \caption[Structural and compositional analysis of a nanowire detector.]{Structural and compositional analysis of a nanowire detector carried out by Wen \textit{et al.} Adapted from \cite{Wen2022} licensed under CC BY 4.0 \cite{CCBY40}.}
-    \label{fig:wen}
-\end{figure}
-
-Figure~\ref{fig:wen} shows the structure and composition of the nanowire characterised by Wen \textit{et al.} in \cite{Wen2022}. The \acs{bf}-\acs{stem_m} image in Figure~\ref{fig:wen}(A) shows the morphology of the nanowire. A \hkl{1 1 1} \acs{si} facet on the right of the image served as the nucleation surface from which the heterostructures nanowire grew. The nickel-gold contacts are placed at the two \textit{p} and \textit{n} extremities of the doped III-V \textit{p}-\textit{i}-\textit{n} diode. The \acf{eds} map in Figure~\ref{fig:wen}(B) reveals how to obtain the performance described in their article. The authors precisely deposited the metal contact to cover the exact regions of \textit{p} doped \acs{ingaas} at the end of the wire and \textit{n} doped \acs{inp} closer to the seed. The authors report a good performance for the final device. Despite this, they note some reproducibility issues in the discussion section of their paper, namely regarding contact placement. This is because the growth front geometry in \acs{tase} has been shown to depend on specific parameters but to be essentially stochastic when, as with the sample in Figure~\ref{fig:wen}, there is a multifaceted growth front. This, in turn, means that material layers that should have the same thickness can vary in shape and, therefore, have a different contactable area at their top interface, changing the distance between contacts wire-by-wire and complicating direct performance comparisons between different devices. Finally, the graph in Figure~\ref{fig:wen}(C) shows the sample's composition profile, highlighting its broad composition gradients. These are highly dependent on the shape of the various heterointerfaces and, therefore, the growth front. It is then clear that achieving a single-facet, reproducible growth front is the key to improving the reproducibility of devices grown with \acs{tase}.
-
 This chapter expands on the research published by my co-authors and me in \cite{Brugnolotto2023}. The most common crystalline defects observed in \acs{stem_m} images of \acs{tase} grown structures will be discussed to complement this chapter's compositional and morphological introduction. An in-depth exposition of the nanowire design and growth recipes and their analysis, explaining the evolution of the methodology from a simple thick bi-layer heterostructure to a multi-\acl{qw} architecture with single facet heterointerfaces, follows. When discussing the order of appearance of the wire's internal structure in this thesis, the 0 point is always found at the \acs{si} seed interface, regardless of its position in the image.
 
 \section{Initial measurements on pre-existing samples}
