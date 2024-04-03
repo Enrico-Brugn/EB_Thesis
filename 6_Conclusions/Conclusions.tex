@@ -1,6 +1,56 @@
 \chapter{Conclusions}
 \label{chap:conclusions}
+
+The work presented in this thesis focused on the identification of the conditions under which the \acf{mocvd} of III-V semiconductors in \acf{tase} templates results in a growth front consisting of a single \hkl{1 1 1}\(_B\) facet, the properties of the nanowires grown with this method, and its yield. 
+
+The process began by analysing a single heterostructure consisting of two material segments, which showed the difference in growth front morphology between \acf{ingaas} grown with a low V / III ratio and \acf{inp} grown with a high V / III ratio. As was seen in Figure~\ref{subfig:sample1_cross-sec}, the low V / III \acs{ingaas} layer grew with the arrowhead growth front, well known in literature \cite{Knoedler2017}, consisting of two \hkl{1 1 0} facet on the top half of the wire and a \hkl{1 1 1} facet at the bottom. Conversely, in the high V / III ratio \acs{inp} segment the growth rate along the \hkl{1 1 0} directions was boosted, resulting in the annihilation of the two top \hkl{1 1 0} facets to the benefit of the bottom \hkl{1 1 1} facet. Thus, it became clear that a high V / III ratio \acs{inp} growth regimen accomplishes the single-facet growth front stabilisation goal.
+
+
+
+
 \section{Future Directions}
 can address twinning (alrteady have ref of twin free growth on 111)
 can select 110 by using method similar to goswami et al (first fo up and then laterally) with a si (110) soi
 further fib-sem study on etch-back and relation of seed shape to growth front morfology
+thickness limit (and as function of how much the facet is stabilised
+
+
+\section{old conclusions}
+
+\subsection{growth}
+
+The main accomplishment in this chapter was the identification and exploitation of the high V/III ratio \acs{inp} \acs{mocvd} growth conditions' effect on the stabilisation of the \hkl{1 1 1}\(_B\) facet as the single growth front for the growing III-V nanowire. This avoids issues related to different incorporation rates of III-elements in ternary materials such as \acs{ingaas} \cite{Borg2019} and creates compositionally uniform material layers. This is then united with the introduction of hold steps, which mitigate the effect of the adsorbate diffusion pathway, avoiding creating a reservoir effect for the III-component, which are integrated into their design layer as expected and without delay. 
+
+This is expected to provide a solution or, at the very least, improve on all of the issues identified in Figure~\ref{fig:wen}. However, some critical problems remain. The first is related to the possibility of the stabilisation of either of 2 different \hkl{1 1 1} facets. This negates the advantage gained in terms of contact positioning, as the selection of the \hkl{1 1 1} facet remains a stochastic process. This is an unsolvable problem with the \hkl[0 0 1] \acs{soi} wafer, as this substrate defines the crystalline orientation of the growing wire. 
+
+As the experiments described on this sample were being carried out, Markus F. Ritter was in the process of publishing a paper on hybrid \acs{tase}, a methodology through which part of the \acs{sio2} template is switched out for a superconducting material \cite{Ritter2021}. As a result of a collaboration on the \acs{stem_m} analysis of hybrid \acs{tase} samples, access to \hkl[1 1 0] \acs{soi} wafers as a growth substrate was obtained for this project. This new crystalline orientation of the growth substrate means that there are in-plane \hkl<1 1 1> vectors at high angles with respect to each other, and prompted my interest in using these wafers as the substrate for the next steps of my research.
+
+This new wafer had a \acs{si} device layer thickness of \qty{70}{\nano\metre} and a \qty{220}{\nano\metre}-thick buried oxide layer, compared to the \hkl[0 0 1] wafer employed so far for which the thicknesses were \qty{220}{\nano\metre} and \qty{2}{\micro\metre}, respectively. The new wafer, therefore, is less suited for optoelectronic and photonic applications but should still prove an ideal test bed for the study of \acs{mocvd} growth dynamics.
+
+In particular, there are remaining questions on the reproducibility of the study, the yield of the growth stabilization, the optical properties of the devices and the application of this facet stabilization method to the integration of different III-V materials outside of the lattice-matched \ce{In0_.55Ga0_.45As} and \acs{inp} material system \cite{Pearsall1980, Sugii1983, Wagner1970} studied in this chapter.
+
+\subsection{properties}
+
+This chapter explored a variety of \acs{mocvd}-grown \acs{tase} structures with various layer thicknesses and semiconductor materials. The \hkl{1 1 1} single growth front stabilisation growth regimen was confirmed to be an attractive methodology for controlling defects and material composition. Initially limited to a high V-III ratio \acs{inp}, it was shown that a high V-III ratio \ce{InAsP} can also provide the same \hkl{1 1 1} stabilisation effect. 
+
+This growth methodology was easy to apply to the new substrate, the growth rates on the \hkl<1 1 0> substrate differed from those recorded for the \hkl{0 0 1} \acs{soi} wafer but remained comparable. Small fluctuations in growth rate were observed from one sample to the other but remained within the same value ranges within both \acs{inp} and \acs{ingaas}. 
+
+The most significant impact on growth rates was observed in samples grown in a competitive environment. The presence of many parasitic crystals deeply affected the growth of \acs{tase} nanowires and the growth regimen within the template. The effective V / III ratio alteration in this environment was enough to cause the wire to lose its single-faceted growth front. This effect should be considered when attempting dense integration of \acs{tase} structure, especially if they differ in shape and size.
+
+As expected, the photoluminescence analysis of the \acs{ingaas} \acs{qw}s showed dependence on their size and composition. Importantly, it was shown that the signal originating from \hkl{1 1 1} single-facet heterointerface quantum wells was sharper than that of a sample with a large multi-faceted \acs{ingaas} nucleation layer.
+
+Another important achievement shown in this chapter was the growth of a single crystal from multiple nucleation points, resulting in a crystalline quality comparable to that of single-nucleation nanowires. This was shown to be a reproducible process in Figure~\ref{fig:merge_ov}. This result was made possible by the highly controlled growth regimen created during the high V-III ratio deposition of \acs{inp}, resulting in a layer-by-layer growth of \hkl{1 1 1} atomic planes. Further yield calculations for this multi-seed single structure and a study of their performance as a function of size are interesting research avenues. 
+
+This layer-by-layer growth was again observed in 4 atomic layers thin \acs{ingaas} growth. This experiment pushed growth to the limits of what \acs{mocvd} deposition can achieve and close to the territory of \acs{ald}, revealing the merit of the growth front stabilisation method and its limitations. The heterointerfaces were shown to be finite and function as transition areas between two III-V materials, and to have a width greater than \qty{2}{\nano\metre}. The strain analysis of a lattice-mismatched \acs{inas} in a \acs{inp} matrix showed low strain values. Further optimisation of the growth recipe for the deposition of \acs{gaas} and \acs{gasb} in thin layers will complement these findings and expand the knowledge base past the lattice-matched \acs{inp}-\acs{ingaas} case.
+
+The presence of \acl{sn} precursor in doping concentrations in the reactive did not affect the facet-stabilisation and therefore represents an ideal \textit{n} dopant. Further investigation to find a \textit{p} dopant that also does not interfere with the facet-stabilisation effect would complete the doping toolset for \textit{p} - \textit{i} - \textit{n} structures.
+
+Although quantitative data on the reliability of this deposition methodology was presented, a quantitative study exploring the yield of the growth stabilisation method is a strong next step in demonstrating its value. 
+
+\subsection{yield}
+
+This chapter explored the yield statistics for the \hkl{1 1 1} growth front stabilisation method introduced and developed in Chapters~\ref{chap:growth} and \ref{chap:properties}. The survey carried out on \num{15840} nucleation sites across \num{240} nanowire arrays found a global yield of \qty{92.55}{\%} \cite{Brugnolotto2023_2}. It also highlighted the three most common defects, which were wires that grew with the wrong facet, totalling \num{368} wires or \qty{31.19}{\%} of defective sites, short wires, \num{211} or \qty{17.88}{\%} of defective sites, and the highest defect category: growth sites hidden by parasitic crystals with \num{487} sites or \qty{41.27}{\%} of defective sites. The number of wires hidden by parasitic crystals is so high that if they were excluded from the yield calculation, the total yield would grow by \qty{2.77}{\%} to \qty{95.32}{\%}.
+
+Nucleation-related issues represented two-thirds (\num{796} or \qty{67.46}{\%}) of the recorded defects, mostly due to surface treatment-related issues, such as loss of selectivity and seed surface conditions. This points to the strength of the facet stabilisation method as a reliable and controlled approach to the growth of monolithically integrated III-V crystals on chip-sized surfaces, supplementing observations on a more local level regarding the merging of multiple crystals in a single structure shown in Section~\ref{sec:merge}.
+
+The survey of the two samples that resulted in the statistical data on growth yield also produced a labelled dataset containing \num{240} \acs{sem_m} images \cite{dataset}, publicly available for use under the CC BY 4.0 licence \cite{CCBY40}. In this chapter, the dataset was used to train a classifier that could distinguish between the two orientations of the nanowire arrays. The classifier achieved good performance in discriminating perfect wires between tilted and parallel but struggled with the identification of defective wires. This can be attributed to the high imbalance in the dataset, which can be resolved by collecting more images of defective wires of both kinds to supplement the currently available data. Further improvements can also be made to the wire-splitting algorithm, where a different approach might yield a more reliable solution to the determination of the cut points.
