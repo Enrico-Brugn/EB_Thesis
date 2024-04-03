@@ -44,11 +44,6 @@ The sample in Figure~\ref{fig:2020_Merge} was grown by Svenja Mauthe before the 
 As made clear by the definition with which the atomic columns are visible on the left-hand side of Figure~\ref{subfig:SM_merge_position} the sample was orientated to achieve the channelling condition of the \acs{stem_m} electron beam in the corresponding crystal. The crystal's lattice on the right-hand side of the same image does not appear as clearly defined: a slight rotation at the time of nucleation might have happened for one of the two seeds pictured. Of course, since the platelet originated from five different seeds, an empirical assumption can be made about two of them prevailing over the other three. This hypothesis is further supported by the presence of \acs{rtp}s on the leftmost portion of the crystalline slice in Figure~\ref{subfig:SM_overview}. At the same time, the area to its immediate right does not show signs of \acs{rtp}s, hinting at the possibility of growth developing in two different directions. 
 
 \section{\texorpdfstring{Fabrication on \acs{si}\hkl(0 0 1) \acs{soi}}{Fabrication on Si(001) SOI}}
-Nanofabrication was carried out with the \acs{tase} process (see \autoref{chap:tase} for details) and, together with the later sample characterisation, took place in highly controlled environments such as a cleanroom and noise-free lab (see \autoref{chap:tools}). Firstly, the shape of the ensemble of nucleation seed and nanostructure is transferred to the \acs{si} device layer of the \acs{soi} wafer through a series of lithographic and etching steps. The template, composed of \acs{sio2}, is then deposited on top of the resulting microstructures. Finally, the template is opened in one or more positions before the etch-back of the sacrificial \acs{si} volume and the introduction of \acf{mocvd} grown III-V semiconductor in its place \cite{Schmid2015, borgTASEp2018}.
-\par
-Initial growth experiments focussed on nanowires, one of the simplest geometries. The relative simplicity of the nanowires allows for the study of the impact of even minor modifications of the growth recipes on the final crystal, both in terms of structure and composition.
-
-\subsection{Template design considerations}
 
 \begin{figure}
     \centering
@@ -112,16 +107,11 @@ Initial growth experiments focussed on nanowires, one of the simplest geometries
     \label{fig:001_Templat5e_Design}
 \end{figure}
 
-\begin{table}
-    \centering
-    \caption{V/III molar ratios injected in the reactor during each material deposition step \cite{Brugnolotto2023_2}.}
-    \begin{tabular}{l|c}
-        Material & V/III ratio \\ \hline \hline
-        InGaAs  & 234\\
-        InP     & 29\\ \hline
-    \end{tabular}
-    \label{tab:sample1_ratios}
-\end{table}
+Nanofabrication was carried out with the \acs{tase} process (see \autoref{chap:tase} for details) and, together with the later sample characterisation, took place in highly controlled environments such as a cleanroom and noise-free lab (see \autoref{chap:tools}). Firstly, the shape of the ensemble of nucleation seed and nanostructure is transferred to the \acs{si} device layer of the \acs{soi} wafer through a series of lithographic and etching steps. The template, composed of \acs{sio2}, is then deposited on top of the resulting microstructures. Finally, the template is opened in one or more positions before the etch-back of the sacrificial \acs{si} volume and the introduction of \acf{mocvd} grown III-V semiconductor in its place \cite{Schmid2015, borgTASEp2018}.
+\par
+Initial growth experiments focussed on nanowires, one of the simplest geometries. The relative simplicity of the nanowires allows for the study of the impact of even minor modifications of the growth recipes on the final crystal, both in terms of structure and composition.
+
+\subsection{Template design considerations}
 
 The orientation of the \acs{tase} template on the \acs{si} \hkl(0 0 1) surface, and therefore the crystalline direction along which the growth will take place, is the first key factor in determining the final shape of the crystal. In the \acs{si} space group \num{227} \cite{osti_si}, the \hkl<0 0 1> vector contains a four-fold axis, represented by a square dot in Figure~\ref{subfig:001wafer_directions}. If we were to examine the possible in-plane directions within an arbitrary \qty{90}{\degree} angle, we would find them repeated three more times in the remaining in-plane \qty{270}{\degree} arc because of this symmetry element. Figure~\ref{subfig:001wafer_directions} shows this principle applied to the \hkl(0 0 1) wafer used to fabricate the first samples. By drawing a \qty{90}{\degree} angle around the notch indicating the \hkl[1 1 0] direction and highlighting the low-index in-plane directions, the two equivalent \hkl[0 1 0] and \hkl[1 0 0] directions define the edges of the arc. Although the cubic III-V semiconductor phase is zincblende (space group \num{216}) \cite{wyckoff1963crystal, osti_gaas_zb, osti_inas_zb, osti_inp_zb}, equivalent symmetry considerations can be made, provided the polar nature of the compound is taken into account.
 \par
@@ -193,6 +183,17 @@ Figure~\ref{subfig:enterprise_etchback} shows the situation of the \acs{si} seed
     \caption[Growth recipe and \acs{sem_m} image of sample 1.]{Growth of the first sample. \subref{subfig:recipe1} diagram representing the growth recipe for a single-heterointerface III-V wire \cite{Brugnolotto2023}. Each line represents an active flow of precursor into the reactor. The colour of the horizontal lines represents the target material. \subref{subfig:comb_sample1} shows a \acs{sem_m} image of an \num{11}-nanowire array. The \acs{si} seed, III-V segment, empty template, and template opening are visible from left to right.}
     \label{fig:sample1_growth}
 \end{figure}
+
+\begin{table}
+    \centering
+    \caption{V/III molar ratios injected in the reactor during each material deposition step \cite{Brugnolotto2023_2}.}
+    \begin{tabular}{l|c}
+        Material & V/III ratio \\ \hline \hline
+        InGaAs  & 234\\
+        InP     & 29\\ \hline
+    \end{tabular}
+    \label{tab:sample1_ratios}
+\end{table}
 
 The second key factor in determining the shape of the growing crystal is the individual growth rate of each facet. Growth conditions, including temperature, precursor molar flow, III/V ratios, and chemical species, are the key to determining the low-index facet growth rate \cite{Borg2015, Elsner1992}.
 \par
