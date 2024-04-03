@@ -15,7 +15,7 @@ Growth in a competitive environment was studied on an area of the chip with diff
 
 The \hkl{1 1 1}\(_B\) stabilisation method proved to be an exciting avenue to grow defect-free single crystals from simultaneous nucleation on multiple seeds, as shown in Figure~\ref{fig:merge_ov}. The defect-free merging of the three seed crystals was achieved thanks to the layer-by-layer growth on \hkl{1 1 1} atomic planes enabled by the highly controlled growth regimen established during the deposition of \acs{inp} with a high V / III ratio.
 
-The deposition of \acs{ingaas} layers with a thickness of four atomic bi-layers was an achievement at the very limit of what can be achieved with \acf{mocvd}, highlighting both the merits and limitations of the recipe developed in this thesis. It also showed how any heterointerface achievable with this method is finite with a width larger than \qty{2}{\nano\metre}. The quantum well consisting of lattice-mismatched \acf{inas} between two \acs{inp} segments was analysed with \acf{gpa}. This thin layer showed a very small change in lattice constant, synonymous with local strain.
+The deposition of \acs{ingaas} layers with a thickness of four atomic bi-layers was an achievement at the very limit of what can be accomplished with \acf{mocvd}, highlighting both the merits and limitations of the recipe developed in this thesis. It also showed how any heterointerface achievable with this method is finite with a width larger than \qty{2}{\nano\metre}. The quantum well consisting of lattice-mismatched \acf{inas} between two \acs{inp} segments was analysed with \acf{gpa}. This thin layer showed a very small change in lattice constant, synonymous with local strain.
 
 A survey was carried out across two of the samples to establish yield statistics for \acs{tase} on \hkl(1 1 0) \acs{soi} using the single-facet \hkl{1 1 1} growth front method. \num{240} nanowire arrays were imaged, resulting in a dataset of \num{15840} nucleation sites. Yield calculations showed how \num{14660} wires grew with the intended end facet, indicative of an early stabilisation of the \hkl{1 1 1} facet as the growth front. The three most common reasons for defective wires were:
 
@@ -27,7 +27,7 @@ A survey was carried out across two of the samples to establish yield statistics
 
 Together, nucleation-related issues represented \qty{67.47}{\percent} of the recorded defects, cementing the facet stabilisation method as a reliable approach to the growth of III-V semiconductor on \acl{si}, since further optimisation of pre-\acs{mocvd} surface treatments would eliminate these defects.
 
-The dataset used in this yield study is publicly available \cite{dataset} under the terms of the CC BY 4.0 license \cite{CCBY40}. In it, each wire and parasitic crystal has been given one of five labels: "Parasitic", "Wire\_Straigh\_Perfect", "Wire\_Straigh\_Defect", "Wire\_Tilted\_Perfect", and "Wire\_Tilted\_Defect". 
+The data set used in this yield study is publicly available \cite{dataset} under the terms of the CC BY 4.0 license \cite{CCBY40}. In it, each wire and parasitic crystal has been given one of five labels: "Parasitic", "Wire\_Straigh\_Perfect", "Wire\_Straigh\_Defect", "Wire\_Tilted\_Perfect", and "Wire\_Tilted\_Defect". In this thesis, the images that make up the data set were first split down to individual wires using an automated splitting algorithm \cite{code} and then used in a simple classifier. Training metrics showed a marked classification ability for the parasitic crystals and perfect wires, whether straight or tilted. However, due to data set imbalance, the model's ability to classify defective wires was not very high.
 
 \section{Future Directions}
 
@@ -38,9 +38,6 @@ can select 110 by using a method similar to goswami et al (first go up and then 
 further fib-sem study on etch-back and relation of seed shape to growth front morfology (among other things, can you eliminate the 2 possibilities of the (1 1 1) facet on (0 0 1) soi by changing the seed shape?)
 
 thickness limit (and as a function of how much the facet is stabilised)
-
-
-\section{old conclusions}
 
 \subsection{properties}
 
@@ -56,6 +53,4 @@ Further investigation to find a \textit{p} dopant that also does not interfere w
 
 \subsection{yield}
 
-Nucleation-related issues represented two-thirds (\num{796} or \qty{67.46}{\%}) of the recorded defects, mostly due to surface treatment-related issues, such as loss of selectivity and seed surface conditions. This points to the strength of the facet stabilisation method as a reliable and controlled approach to the growth of monolithically integrated III-V crystals on chip-sized surfaces, supplementing observations on a more local level regarding the merging of multiple crystals in a single structure shown in Section~\ref{sec:merge}.
-
-The survey of the two samples that resulted in the statistical data on growth yield also produced a labelled dataset containing \num{240} \acs{sem_m} images \cite{dataset}, publicly available for use under the CC BY 4.0 licence \cite{CCBY40}. In this chapter, the dataset was used to train a classifier that could distinguish between the two orientations of the nanowire arrays. The classifier achieved good performance in discriminating perfect wires between tilted and parallel but struggled with the identification of defective wires. This can be attributed to the high imbalance in the dataset, which can be resolved by collecting more images of defective wires of both kinds to supplement the currently available data. Further improvements can also be made to the wire-splitting algorithm, where a different approach might yield a more reliable solution to the determination of the cut points.
+Further improvements can also be made to the wire-splitting algorithm, where a different approach might yield a more reliable solution to the determination of the cut points.
