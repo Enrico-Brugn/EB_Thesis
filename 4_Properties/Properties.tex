@@ -258,16 +258,22 @@ A compromise can be found by cutting the sample with a \qty{30}{\degree} tilt in
         \end{tikzpicture}
     }
     \subcaptionbox{
-    \acs{bf}-\acs{stem_m} overview images of two nanowires from sample 4. The wire on the left was cut with a regular cross-section, while the wire on the right was cut with a \qty{30}{\degree} cross-section.
-    \label{subfig:s4_OV}
+        \acs{bf}-\acs{stem_m} overview images of two nanowires from sample 4. The wire on the left was cut with a regular cross-section, while the wire on the right was cut with a \qty{30}{\degree} cross-section.
+        \label{subfig:s4_OV}
     }{
-    \includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s4_OV.pdf}
+        \tikzsetnextfilename{s4_OV}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s4_OV.pdf}};
+        \end{tikzpicture}
     }
     \subcaptionbox{
-    High-resolution \acs{bf}-\acs{stem_m} images of the first \acl{qw} for both wires in \subref{subfig:s4_OV} with \acs{fft} inserts.
-    \label{subfig:s4_HR}
+        High-resolution \acs{bf}-\acs{stem_m} images of the first \acl{qw} for both wires in \subref{subfig:s4_OV} with \acs{fft} inserts.
+        \label{subfig:s4_HR}
     }{
-    \includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s4_HR.pdf}
+        \tikzsetnextfilename{s4_HR}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s4_HR.pdf}};
+        \end{tikzpicture}
     }
     \caption[Growth recipe and \acs{bf}-\acs{stem_m} images of sample 4.]{Growth recipe and \acs{bf}-\acs{stem_m} images of sample 4. The III-V material appears dark due to channelling contrast, with \acs{ingaas} being the darkest of the two III-V materials. \subref{subfig:recipe4} shows the growth recipe. \subref{subfig:s4_OV} shows overview images of the normal cross-section and \qty{30}{\degree} cross-section. \subref{subfig:s4_HR} shows high-resolution images of the first \acl{qw} for both wires in \subref{subfig:s4_OV} with inserts showing the calculated \acs{fft}s}
     \label{fig:s4_recipe_STEM}
@@ -650,7 +656,7 @@ These repeated observations (Figures~\ref{fig:s3_linescans}, \ref{fig:s4_0deg_li
 
 \paragraph{Photoluminescence analysis} Figure~\ref{fig:s5_pl} compares a photoluminescence spectrum recorded for sample 5 with that recorded for sample 4 and shown in Figure~\ref{fig:s4_pl}. The measurement conditions were left largely unchanged. The main alterations affected the sample temperature, which was \qty{-100}{\kelvin} instead of \qty{-200}{\kelvin}, and the excitation wavelength, set at \qty{1060}{\nano\metre} instead of \qty{1000}{\nano\metre}. Therefore, despite the small change in wavelength, the material targeted for analysis remained \acs{ingaas}.
 
-The emission peak of the \acl{qw}s is found at a wavelength lower than that of the peak of sample 4. This could be due to the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, however, as the peak is much narrower for this sample, a \acl{qw} effect could be present. Unfortunately, due to the noise level of the \acs{eds} composition profiles, it is difficult to attribute the spectral changes to either of these changes.
+The emission peak of the \acl{qw}s is found at a wavelength lower than that of the peak of sample 4. This could be due to the higher \acl{in} concentration seen in Figure~\ref{subfig:s5_III_0deg_linesc}, however, as the peak is much narrower for this sample, a \acl{qw} effect could be present. Unfortunately, due to the noise level of the \acs{eds} composition profiles, it is difficult to solely attribute the spectral changes to either of these changes.
 \par
 
 \subsection{Merge structures}
