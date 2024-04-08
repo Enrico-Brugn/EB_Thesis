@@ -505,11 +505,22 @@ A compact model consisting of two convolutional layers, followed by three linear
 
 The three metrics of loss, F1 score, and confusion matrix were used to evaluate the classifier's performance \cite{grandini2020}. The F1 score is a metric which rates the performance of a predictive operation. It consists in the harmonic mean of recall (R) and precision (P).
 
-\[F_1=\frac{2}{R^{-1}+P^{-1}}\]
+\begin{equation}
+    F_1=\frac{2}{R^{-1}+P^{-1}}
+\end{equation}
 
 Recall and precision are defined as the ratio of true positives (tp) to the sum of true positives and false negatives (fn) and the sum of true positives and false positives (fp), respectively.
 
-\[R=\frac{tp}{tp+fn}\] \[P=\frac{tp}{tp+fp}\]
+\begin{equation}
+    R=\frac{tp}{tp+fn}
+        \quad\quad\text{and}\quad\quad
+    P=\frac{tp}{tp+fp}
+\end{equation}
+
+This is valid for a single-class problem, but adjustments can be made to calculate these metrics for a multi-class situation. 
+
+
+
 
 The confusion matrix 
 
