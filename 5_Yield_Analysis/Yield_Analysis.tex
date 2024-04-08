@@ -483,6 +483,26 @@ Aside from the flaws of the splitting algorithm, another issue is that the datas
 
 \subsection{Training}
 
+A compact model consisting of two convolutional layers, followed by three linear layers and based on the \texttt{pytorch} \cite{NEURIPS2019_9015, pytorch} framework was chosen. First, a block of two convolutional layers (\texttt{torch.nn.Conv2d}) received the input image, which was normalised to a standard size. The first convolutional layer applies 6 filters to the starting image with a \num{5} x \num{5} kernel size. The second convolutional layer applies \num{16} filters of the same size. Each convolutional layer is followed by a ReLu activation function (\texttt{torch.nn.ReLu}) and a max pool operation (\texttt{torch.nn.MaxPool2d}) with a \num{2} x \num{2} kernel size. Secondly, the output from the convolutional layers is then flattened into a one-dimensional vector using \texttt{torch.nn.Flatten}. Thirdly, the vector goes through three linear layers (\texttt{torch.nn.Linear}), each separated by the application of a ReLu activation function to their output. The final layer outputs a vector with a length of \num{6} \cite{code}. Each value in this vector represents the probability of the input image to belong in a certain class, according to the classifier. The class with the highest probability then becomes the predicted class.
+
+This simple model showed good performance when classifying commonly used datasets, such as CIFAR-10 \cite{NIPS2012_c399862d}. The input dataset as resulting from the splitting algorithm and label assignment was divided into a training set, comprising \qty{70}{\%} of the data, and a validation set containing the remaining \qty{30}{\%}. The sets were filled with random images, respecting the original composition of the dataset.
+
+The three metrics of loss, F1 score, and confusion matrix were used to evaluate the classifier's performance \cite{grandini2020}. The F1 score is a metric which rates the performance of a predictive operation. It consists in the harmonic mean of recall (R) and precision (P).
+
+\begin{equation}
+    F_1=\frac{2}{R^{-1}+P^{-1}}
+\end{equation}
+
+Recall and precision are defined as the ratio of true positives (tp) to the sum of true positives and false negatives (fn) and the sum of true positives and false positives (fp), respectively.
+
+\begin{equation}
+    R=\frac{tp}{tp+fn}
+        \quad\quad\text{and}\quad\quad
+    P=\frac{tp}{tp+fp}
+\end{equation}
+
+This is valid for a two-class problem, but adjustments can be made to calculate these metrics for a multi-class situation. Macro averages of each class' precision and recall were employed. This method calculates precision and recall class-wise and then uses them to produce a single value metric by arithmetic mean.
+
 \begin{figure}
     \centering
     \subcaptionbox{
@@ -501,32 +521,11 @@ Aside from the flaws of the splitting algorithm, another issue is that the datas
     \label{fig:training_metrics}
 \end{figure}
 
-A compact model consisting of two convolutional layers, followed by three linear layers and based on the \texttt{pytorch} \cite{NEURIPS2019_9015, pytorch} framework was chosen. This simple model showed good performance when classifying commonly used datasets, such as CIFAR-10 \cite{NIPS2012_c399862d}. The input dataset as resulting from the splitting algorithm and label assignment was divided into a training set, comprising \qty{70}{\%} of the data, and a validation set containing the remaining \qty{30}{\%}. The sets were filled with random images, respecting the original composition of the dataset.
-
-The three metrics of loss, F1 score, and confusion matrix were used to evaluate the classifier's performance \cite{grandini2020}. The F1 score is a metric which rates the performance of a predictive operation. It consists in the harmonic mean of recall (R) and precision (P).
-
-\begin{equation}
-    F_1=\frac{2}{R^{-1}+P^{-1}}
-\end{equation}
-
-Recall and precision are defined as the ratio of true positives (tp) to the sum of true positives and false negatives (fn) and the sum of true positives and false positives (fp), respectively.
-
-\begin{equation}
-    R=\frac{tp}{tp+fn}
-        \quad\quad\text{and}\quad\quad
-    P=\frac{tp}{tp+fp}
-\end{equation}
-
-This is valid for a single-class problem, but adjustments can be made to calculate these metrics for a multi-class situation. 
-
-
-
-
-The confusion matrix 
-
-(cont)The diagonal elements (top left to bottom right) of a confusion matrix represent the recall (the ratio of true positives to the sum of true positives and false negatives) as a percentage. The higher the recall for each class the better the classifier is at assigning the correct class to an image.
+The confusion matrix is a useful tool to visualise the performace of the classifier. It shows the number of items that were assigned to a predicted class divided according to their real class. An example of a confusion matrix, which was normalised on the population of each true class, is shown in Figure~\ref{subfig:confusion_matrix}. Because of how the normalisation was carried out, the diagonal elements (top left to bottom right) represent the recall as a percentage. The higher the recall for each class, the better the classifier is at assigning the correct class to an item.
 
 The cross-entropy loss function, integrated with the Adam algorithm, was used to guide the learning process \cite{Brugnolotto2024}.
+
+
 
 The classifier was trained until loss saturation was achieved, a process that lasted \num{100} epochs. The red curve in Figure~\ref{subfig:F1Score} shows the saturation process, with loss, shown on the y-axis on the right side, reaching \num{0} at the end of the \num{100} training epochs. The blue line in Figure~\ref{subfig:F1Score} shows the evolution of the F1 score during training, with the shaded area around it representing the \qty{97}{\%} confidence interval on this metric.
 
