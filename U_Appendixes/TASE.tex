@@ -1,10 +1,10 @@
-\chapter{Template Assisted Selective Epitaxy}
+\section{Template Assisted Selective Epitaxy}
 \label{chap:tase}
 
 The concept of \acf{tase} is relatively simple, consisting in the growth of III-V material in an enclosed \acf{sio2} template from a \acf{si} seed \cite{Schmid2015, borgTASEp2018}. However, its experimental implementation to achieve a finished sample is lengthy. Thirty-five process steps (three of which are \acf{ebl} steps and one of which is an optical lithography step) involving 13 tools, four characterisation methods, and around 30 different chemicals are required to transform a \acf{soi} wafer into a chip with III-V \acs{tase}-grown nanostructures ready for further study. 
 
 
-\section{Substrate and preprocessing}
+\subsection{Substrate and preprocessing}
 \label{sec:substrate_preprocessing}
 \begin{figure}
     \centering
@@ -192,7 +192,7 @@ The alignment markers are then protected from the next aggressive etching steps 
 This concludes the initial steps that prepare the wafer to go through the \acs{tase} process. In the following illustrations (figures \ref{fig:litho1} and \ref{fig:litho2}), the \acl{w} markers and their oxide protection are omitted as they will not be affected by the following process steps in a process-relevant manner. Still, they are not removed and are the basis for alignment in the next lithography steps.
 
 
-\section{Nanostructure definition and template deposition}
+\subsection{Nanostructure definition and template deposition}
 \label{sec:nanostructure-def_template-dep}
 \begin{figure}
     \centering
@@ -231,7 +231,7 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
 
 
 
-\section{Etch-back and growth}
+\subsection{Etch-back and growth}
 \label{etch_growth}
 \begin{figure}
     \centering
@@ -285,4 +285,4 @@ The last lithography step involves defining the opening areas in the template ox
 \par
 Excess \acl{si} to be substituted with III-V material is removed using a \qty{2.5}{\%_{V\per\V}} \acf{tmah}/\acf{h2o} solution heated at \qty{80}{\degreeCelsius}. This solution has a reliable etch-back speed of \qty{60}{\nm\per\minute}.  The etch back proceeds from the template openings to leave only the seed area inside an empty \acl{sio2} template where the III-V crystal will grow (Figure \ref{L2_etchback}). \Acs{tmah} is specifically chosen because it has good selectivity to \acs{si}, therefore leaving the \acs{sio2} template mostly unaffected. A small amount of template etching still takes place and must be considered when etching multiple micrometres of \acs{si} by depositing a thicker template oxide in previous fabrication steps. Another advantage of \acs{tmah} etching is that it results in \acl{si} seeds terminated by \hkl{1 1 1} facets that avoid antiphase boundary formation during \acf{mocvd} \cite{Kunert2018}. After etching, the chip is ready for III-V material growth, pre-growth surface treatment steps include a dip in a 2:1 \acf{h2so4} / \acf{h2o2} solution to remove organic contaminants and a further \qty{10}{s} dip in a diluted \acs{hf} solution to remove the native oxide layer. 
 \par
-Before growth and in the chamber, the chip is also thermally treated at \qty{780}{\degreeCelsius} for \qty{3}{\minute} in an \acs{as} atmosphere to facilitate \acl{o} desorption from the \acs{si} seed. The nucleation of the III-V material is selective to the \acl{si} seeds. This means that the growth of the III-V nanostructures is limited to the areas defined in the previous lithography steps (Figure \ref{L2_growth}). At the beginning of this project, the DESIGN-EID consortium chose the \acf{ingaas} / \acf{inp} material system, and these are the III-V semiconductors that I grew in the templates using \acs{mocvd}.
+Before growth and in the chamber, the chip is also thermally treated at \qty{780}{\degreeCelsius} for \qty{3}{\minute} in an \acs{as} atmosphere to facilitate \acl{o} desorption from the \acs{si} seed. The nucleation of the III-V material is selective to the \acl{si} seeds. This means that the growth of the III-V nanostructures is limited to the areas defined in the previous lithography steps (Figure \ref{L2_growth}). At the beginning of this project, the DESIGN-EID consortium chose the \acf{ingaas} / \acf{inp} material system, and these are the III-V semiconductors that were grown in the templates using \acs{mocvd}.
