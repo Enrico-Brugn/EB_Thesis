@@ -1,0 +1,110 @@
+\chapter{Contributions to the Thesis}
+
+In the following flow charts, the tasks in black are those performed by me and the contribution of other staff and researchers at \acs{ibm} Research Europe - Zurich is highlighted in red. Given the abundance of tasks, the black rectangles represent multiple process steps, further explained in Section~\ref{chap:tase} for the initial nanofabrication process and in the experimental chapters for growth, characterisation, and data analysis. Rhomboids represent single process steps.
+
+\begin{figure}[H]
+\centering
+\tikzsetnextfilename{nanofab_flow}
+\begin{tikzpicture}
+    \node[draw,
+          blue,
+	   rounded rectangle, 
+	   minimum width=2.5cm,] (soi){Pristine SOI wafer (commercially available)};
+    \node[draw,
+          red,
+          below = of soi,
+          trapezium,
+          trapezium left angle = 120,
+          trapezium right angle = 120,
+          trapezium stretches] (dicing) {Dicing};
+    \node[draw,
+          below = of dicing,
+          trapezium,
+          trapezium left angle = 120,
+          trapezium right angle = 120,
+          trapezium stretches] (mask) {Design of the lithography mask};
+    \node[draw,
+          red,
+          right = of mask,
+          trapezium,
+          trapezium left angle = 120,
+          trapezium right angle = 120,
+          trapezium stretches] (optimask) {Fabrication of the optical mask};
+    \node[draw,
+          below = of mask,
+	   minimum width=2.5cm,] (markers){Fabrication of e-beam markers};
+    \node[draw,
+          red,
+          right = of markers,
+          trapezium,
+          trapezium left angle = 120,
+          trapezium right angle = 120,
+          trapezium stretches] (exposure1) {e-beam exposure};
+    \node[draw,
+          below = of markers,
+	   minimum width=2.5cm,] (nanostructures){Definition of nanostructures};
+    \node[draw,
+          red,
+          right = of nanostructures,
+          trapezium,
+          trapezium left angle = 120,
+          trapezium right angle = 120,
+          trapezium stretches] (exposure2) {e-beam exposure};
+    \node[draw,
+          below = of nanostructures,
+	   minimum width=2.5cm,] (template){Etching and template oxide deposition};
+    \node[draw,
+          below = of template,
+	   minimum width=2.5cm,] (openings){Creation of the openings in the template oxide};
+    \node[draw,
+          red,
+          right = of openings,
+          trapezium,
+          trapezium left angle = 120,
+          trapezium right angle = 120,
+          trapezium stretches] (exposure3) {e-beam exposure};
+    \node[draw,
+          below = of openings,
+	   minimum width=2.5cm,] (etch){Etch back of the sacrificial \acs{si} in the template};
+    \node[draw,
+          below = of etch,
+	   minimum width=2.5cm,] (growth){Growth of III-V material inside the templates};
+    \node[draw,
+          right = of growth,
+          rounded rectangle,
+	   minimum width=2.5cm,] (end){III-V \acs{tase} nanostructures};
+
+    \draw [-stealth](soi) edge (dicing);
+    \draw [-stealth](dicing) edge (mask);
+    \draw [-stealth, red] (mask) -- (optimask);
+    \draw [-stealth](mask) edge (markers);
+    \draw [stealth-, red] (markers) -- (exposure1);
+    \draw [-stealth](markers) edge (nanostructures);
+    \draw [stealth-, red] (nanostructures) -- (exposure2);
+    \draw [-stealth] (nanostructures) edge (template);
+    \draw [-stealth] (template) edge (openings);
+    \draw [stealth-, red] (openings) -- (exposure3);
+    \draw [-stealth] (openings) edge (etch);
+    \draw [-stealth] (etch) edge (growth);
+    \draw [-stealth] (growth) edge (end);
+\end{tikzpicture}
+\caption{Nanofabrication flowchart}
+\label{fig:nanofab_flow}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \node[draw,
+	       rounded rectangle, 
+	       minimum width=2.5cm,] (start){III-V \acs{tase} nanostructures};
+        \node[draw,
+	       below = of start, 
+	       minimum width=2.5cm,] (fib){FIB lamella preparation};
+        \node[draw,
+	       below = of fib, 
+	       minimum width=2.5cm,] (stem){\acs{stem_m} analysis};
+    \end{tikzpicture}
+    \caption{Caption}
+    \label{fig:characterisation_flow}
+\end{figure}
