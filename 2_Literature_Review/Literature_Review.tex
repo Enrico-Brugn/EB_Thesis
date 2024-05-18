@@ -197,17 +197,122 @@ The main disadvantage of monolithic integration is the high lattice mismatch bet
 
 There are many monolithic integration routes, and the most common categories are introduced in the following paragraphs.
 
-\paragraph{Planar growth} Direct planar growth of III-Vs on \acl{si} is the simplest method of monolithic integration. It can be suitable for the growth of III-Vs with a lattice constant very close to that of \acl{si} or for the self-assembled nucleation of nanoparticles in a Stranski-Krastanov growth mode, which can pose the basis for quantum dot fabrication \cite{Shi2016, Reithmaier2016}. It, however, presents a few drawbacks related to the absence of a way to contain defects and the different material properties of the material stack \cite{Ravash2012}. It can lead to wafer bow or warp due to the mismatch of thermal coefficients between the various materials \cite{Miyoshi2016, Wang2017_2}, and materials with a high deviation from the \acl{si} lattice parameter can require strain management layers of \qty{1}{\micro\metre} or more to grow without defects \cite{Wang2017_2, Cantoro2012, Huang2022}. Some techniques to lower the thickness of the semiconductor layer containing defects include the use of a \acf{sls}, a series of thin layers of highly mismatched material, which acts as a \acf{dfl} halting the spread of threading dislocation by reflecting them back towards the substrate \cite{Kunert2018, Yamaguchi1989, Nozawa1992}. Similarly, an \acf{ima} has been shown to improve material quality, but is only available as a stress-reducing avenue between highly lattice-mismatched material \cite{Huang2009, Jasik2018}. 
+\begin{figure}
+    \centering
+    \subcaptionbox{
+        Planar growth
+        \label{subfig:planar_example}
+    }{
+        \tikzsetnextfilename{planar_example}
+        \begin{tikzpicture}
+            \begin{scope}
+                \filldraw[fill=cb1_orange] (0, 0) rectangle (6, 1);
+                \filldraw[fill=Si_green] (0, 0) rectangle (6, -1);
+            \end{scope}
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        Selective area growth
+        \label{subfig:sag_example}
+    }{
+        \tikzsetnextfilename{sag_example}
+        \begin{tikzpicture}
+            \begin{scope}
+                \filldraw[fill=cb1_orange] (0.9,0) rectangle (1.6, 1);
+                \filldraw[fill=cb1_orange] (2.9,0) rectangle (3.6, 1);
+                \filldraw[fill=cb1_orange] (4.9,0) rectangle (5.6, 1);
+                \filldraw[fill=SiO2_blue] (0,0) rectangle (1, 0.15);
+                \filldraw[fill=SiO2_blue] (1.5,0) rectangle (3, 0.15);
+                \filldraw[fill=SiO2_blue] (3.5,0) rectangle (5, 0.15);
+                \filldraw[fill=SiO2_blue] (5.5,0) rectangle (6, 0.15);
+                \filldraw[fill=Si_green] (0,0) rectangle (6, -1);
+            \end{scope}
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        Droplet epitaxy
+        \label{subfig:vls_example}
+    }{
+        \tikzsetnextfilename{vls_example}
+        \begin{tikzpicture}
+            \begin{scope}
+                \filldraw[fill=Si_green] (0,0) rectangle (6, -1);
+
+                \filldraw[fill=cb1_orange] (1, 0) rectangle (1.2, 1);
+                \filldraw[fill=cb1_orange] (2.3, 0) rectangle (2.5, 1);
+                \filldraw[fill=cb1_orange] (3.3, 0) rectangle (3.5, 1);
+                \filldraw[fill=cb1_orange] (4.1, 0) rectangle (4.3, 1);
+                \filldraw[fill=cb1_orange] (5.7, 0) rectangle (5.9, 1);
+                
+                \filldraw[fill=yellow] (1.2, 1) arc [start angle = 0, end angle = 180, radius = 1mm] -- cycle;
+                \filldraw[fill=yellow] (2.5, 1) arc [start angle = 0, end angle = 180, radius = 1mm] -- cycle;
+                \filldraw[fill=yellow] (3.5, 1) arc [start angle = 0, end angle = 180, radius = 1mm] -- cycle;
+                \filldraw[fill=yellow] (4.3, 1) arc [start angle = 0, end angle = 180, radius = 1mm] -- cycle;
+                \filldraw[fill=yellow] (5.9, 1) arc [start angle = 0, end angle = 180, radius = 1mm] -- cycle;
+            \end{scope}
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        \Acs{sag} - \acl{art}
+        \label{subfig:art_example}
+    }{
+        \tikzsetnextfilename{art_example}
+        \begin{tikzpicture}
+            \begin{scope}
+                \filldraw[fill=cb1_orange] (0.9, 0) rectangle (1.6, 1);
+                \filldraw[fill=cb1_orange] (2.9, 0) rectangle (3.6, 1);
+                \filldraw[fill=cb1_orange] (4.9, 0) rectangle (5. 6,1);
+                \filldraw[fill=SiO2_blue] (0, 0) rectangle (1.1, 0.5);
+                \filldraw[fill=SiO2_blue] (1.4, 0) rectangle (3.1, 0.5);
+                \filldraw[fill=SiO2_blue] (3.4, 0) rectangle (5.1, 0.5);
+                \filldraw[fill=SiO2_blue] (5.4, 0) rectangle (6, 0.5);
+                \filldraw[fill=Si_green] (0, 0) rectangle (6, -1);
+
+                \draw (1.2, 0) -- (1.4, 0.2);
+                \draw (1.2, 0) -- (1.1, 0.1);
+                \draw (1.3, 0) -- (1.4, 0.1);
+
+                \draw (3.35, 0) -- (3.1, 0.25);
+                \draw (3.3, 0.05) -- (3.4, 0.15);
+                \draw (3.25, 0) -- (3.1, 0.15);
+                \draw (3.15, 0) -- (3.1, 0.05);
+
+                \draw (5.15, 0) -- (5.4, 0.25);
+                \draw (5.2, 0.05) -- (5.1, 0.15);
+                \draw (5.35, 0) -- (5.25, 0.1);
+            \end{scope}
+        \end{tikzpicture}
+    }
+    \subcaptionbox{
+        \Acl{tase}
+        \label{subfig:tase_example}
+    }{
+        \tikzsetnextfilename{tase_example}
+        \begin{tikzpicture}
+            \begin{scope}[scale = 0.65]
+                \filldraw[fill=cb1_orange] (3.5cm, 7mm) -- (3.5cm, 0mm) -- (6cm, 0mm) -- (6cm, 7mm) -- cycle;
+                \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (2cm, 0mm)-- (2cm, 7mm) -- (7cm, 7mm) -- (7cm, 19mm) -- (2cm, 19mm) -- (2cm, 17mm) -- (1cm, 17mm) -- (1cm, 10mm) -- (0cm, 10mm) -- cycle;
+                \filldraw[fill=SiO2_blue] (9cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (9cm, 10mm) -- cycle;
+                \filldraw[fill=Si_green] (2cm, 0cm) -- (2cm, 7mm) -- (3.5cm, 7mm) -- (3.5cm, 0mm) -- cycle;
+                \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
+            \end{scope}
+        \end{tikzpicture}
+    }
+    \caption[Types of III-V on \acl{si} monolithic integration methods.]{Types of III-V on \acl{si} monolithic integration methods. \Acl{si} is shown in green, \acs{sio2} in blue, III-V semiconductor in orange, and metal catalyst in yellow. \subref{subfig:planar_example} shows an example of a planar III-V film growing from a \acs{si} substrate. \subref{subfig:sag_example} shows an example of \acs{sag}, where III-V semiconductor grows from small opening in a passivating layer. \subref{subfig:vls_example} shows a drawing of droplet epitaxy, where nanodroplets of a catalyst metal mediate nucleation and growth. \subref{subfig:art_example} illustrates the mechanism by which defects, the black lines in the nucleation area of the III-V material, are trapped by sidewalls of passivating material. \subref{subfig:tase_example} shows a drawing of \acs{tase}, where III-V semiconductor grows horizontally in passivating material templates with high aspect ratio.}
+    \label{fig:enter-label}
+\end{figure}
+
+\paragraph{Planar growth} Direct planar growth of III-Vs on \acl{si} (Figure~\ref{subfig:planar_example}) is the simplest method of monolithic integration. It can be suitable for the growth of III-Vs with a lattice constant very close to that of \acl{si} or for the self-assembled nucleation of nanoparticles in a Stranski-Krastanov growth mode, which can pose the basis for quantum dot fabrication \cite{Shi2016, Reithmaier2016}. It, however, presents a few drawbacks related to the absence of a way to contain defects and the different material properties of the material stack \cite{Ravash2012}. It can lead to wafer bow or warp due to the mismatch of thermal coefficients between the various materials \cite{Miyoshi2016, Wang2017_2}, and materials with a high deviation from the \acl{si} lattice parameter can require strain management layers of \qty{1}{\micro\metre} or more to grow without defects \cite{Wang2017_2, Cantoro2012, Huang2022}. Some techniques to lower the thickness of the semiconductor layer containing defects include the use of a \acf{sls}, a series of thin layers of highly mismatched material, which acts as a \acf{dfl} halting the spread of threading dislocation by reflecting them back towards the substrate \cite{Kunert2018, Yamaguchi1989, Nozawa1992}. Similarly, an \acf{ima} has been shown to improve material quality, but is only available as a stress-reducing avenue between highly lattice-mismatched material \cite{Huang2009, Jasik2018}. 
 \par
-\paragraph{\Acf{sag}} \acs{sag} consists in the growth of III-V material from \acl{si} seeds located in openings in a horizontal mask of a material that does not promote nucleation, such as \acs{sio2}. These holes can be defined with different methods, from self-assembled masking to lithography. This type of growth results in nanostructures \cite{Cantoro2012} such as nanowires, both of a single material and in core-shell configurations with very high position control \cite{Tomioka2011}. Wafer bow and warp are not issues with \acs{sag}, since growth does not, unless promoted by accentuating lateral growth \cite{McKenzie2023}, end up forming a single material layer. However, in this technique, growth develops mainly in the vertical direction, and the presence of lateral growth can result in unwanted heterointerfaces.
+\paragraph{\Acf{sag}} As shown in Figure~\ref{subfig:sag_example}, \acs{sag} consists in the growth of III-V material from \acl{si} seeds located in openings in a horizontal mask of a material that does not promote nucleation, such as \acs{sio2}. These holes can be defined with different methods, from self-assembled masking to lithography. This type of growth results in nanostructures \cite{Cantoro2012} such as nanowires, both of a single material and in core-shell configurations with very high position control \cite{Tomioka2011}. Wafer bow and warp are not issues with \acs{sag}, since growth does not, unless promoted by accentuating lateral growth \cite{McKenzie2023}, end up forming a single material layer. However, in this technique, growth develops mainly in the vertical direction, and the presence of lateral growth can result in unwanted heterointerfaces.
 \par
-\paragraph{Droplet epitaxy} Droplet or \acf{vls} epitaxy consists in guiding the nucleation of III-V material by using a nano-droplet of a catalyst metal on the \acl{si} substrate. This technique also avoids wafer bow as it only results in the growth of nanowires \cite{Wagner1964}. Since \acs{vls} is dependent on the metallic droplet, the growth can be tuned to achieve high directionality and the incorporation of heterostructures with minimal or no unwanted side growth \cite{Harmand2018, Joyce2007}. This type of growth depends on the metal droplets and therefore on their self-assembled distribution on the substrate surface, which diminishes position control \cite{Joyce2007}. Similarly, the geometry of the resulting structures is limited to nanowires \cite{Wagner1964}, and the reservoir effect in the catalyst droplet complicates the control of composition in ternary and quaternary III-V materials \cite{Dubrovskii2017}. Nonetheless, this method allows for sophisticated growth studies such as in-situ TEM imaging \cite{Harmand2018, Maliakkal2020, Jacobsson2016}, leading to the possible refinement of growth recipes to the point where phase control can be achieved \cite{Algra2008, Joyce2007, Caroff2009}.
+\paragraph{Droplet epitaxy} Droplet or \acf{vls} epitaxy consists in guiding the nucleation of III-V material by using a nano-droplet of a catalyst metal, such as gold, on the \acl{si} substrate (Figure~\ref{subfig:vls_example}). This technique also avoids wafer bow as it only results in the growth of nanowires \cite{Wagner1964}. Since \acs{vls} is dependent on the metallic droplet, the growth can be tuned to achieve high directionality and the incorporation of heterostructures with minimal or no unwanted side growth \cite{Harmand2018, Joyce2007}. This type of growth depends on the metal droplets and therefore on their self-assembled distribution on the substrate surface, which diminishes position control \cite{Joyce2007}. Similarly, the geometry of the resulting structures is limited to nanowires \cite{Wagner1964}, and the reservoir effect in the catalyst droplet complicates the control of composition in ternary and quaternary III-V materials \cite{Dubrovskii2017}. Nonetheless, this method allows for sophisticated growth studies such as in-situ TEM imaging \cite{Harmand2018, Maliakkal2020, Jacobsson2016}, leading to the possible refinement of growth recipes to the point where phase control can be achieved \cite{Algra2008, Joyce2007, Caroff2009}.
 \par
-\paragraph{\Acf{art}} \acs{art} refers to the confinement of defects to the seed region by sidewalls and other such barriers in a growth regimen mediated by a template. The basic idea is that, as most defects nucleate near the \acl{si} / III-V interface and then propagate in directions that are often not parallel to the growth axis, they can be trapped in the region of the material closest to the seed by sidewalls that constrict the III-V crystal so that it grows in a cavity with a high aspect ratio. 
+\paragraph{\Acf{art}} \acs{art} refers to the confinement of defects to the seed region by sidewalls and other such barriers in a growth regimen mediated by a template. The basic idea is that, as most defects nucleate near the \acl{si} / III-V interface and then propagate in directions that are often not parallel to the growth axis, they can be trapped in the region of the material closest to the seed by sidewalls that constrict the III-V crystal so that it grows in a cavity with a high aspect ratio, as shown in Figure~\ref{subfig:art_example}. 
 
 \acs{sag}-\acs{art} has the mask selecting the seed areas increase in thickness to allow the trapping of defects. This technique also allows high position control of the III-V crystal, while accentuating control over the defects \cite{Han2016, Han2016_2}. However, typically \acs{sag}-\acs{art} employs large templates, which means that defects propagating in directions that lie in the plane of the side walls are not filtered by the \acs{art} mechanism \cite{Kunert2018}. Simultaneously, multiple nucleation points in large seed areas can result in coalescence-borne defects often not trapped by sidewalls \cite{Kunert2016}.
 \par
-\paragraph{\Acf{tase}} \acs{tase} can be seen as an evolution of the \acs{sag}-\acs{art} method as it also defines \acl{si} seeds surrounded by \acs{sio2} and uses templates with high aspect ratio to guide growth. The main differences with \acs{sag}-\acs{art} are the size and complexity of the templates and the focus on planar growth. \acs{tase} enables the growth of various vertical and horizontal nanostructures while maintaining extremely accurate geometry and position control \cite{Ritter2021, Tiwari2020, Schmid2015}. It also enables superior defect control, even compared with \acs{art}: far from the growth interface, defects can be effectively limited to twin planes \cite{Han2020}, which can also be eliminated in some cases \cite{Knoedler2017}. In certain geometries, it also enables phase control \cite{Staudinger2018}. 
+\paragraph{\Acf{tase}} \acs{tase} can be seen as an evolution of the \acs{sag}-\acs{art} method as it also defines \acl{si} seeds surrounded by \acs{sio2} and uses templates with high aspect ratio to guide growth, as shown in Figure~\ref{subfig:tase_example}. The main differences with \acs{sag}-\acs{art} are the size and complexity of the templates and the focus on planar growth. \acs{tase} enables the growth of various vertical and horizontal nanostructures while maintaining extremely accurate geometry and position control \cite{Ritter2021, Tiwari2020, Schmid2015}. It also enables superior defect control, even compared with \acs{art}: far from the growth interface, defects can be effectively limited to twin planes \cite{Han2020}, which can also be eliminated in some cases \cite{Knoedler2017}. In certain geometries, it also enables phase control \cite{Staudinger2018}. 
 
 On the other hand, it is the most complex method of those listed in terms of overall steps before III-V growth. Furthermore, since nanowires fill templates quickly, \acs{tase} can only grow core-shell structures in a microdisk format \cite{Tiwari2020} and not in nanowire format. Like other techniques which employ a mask to control selectivity, unwanted nucleation on the masks, called parasitic growth, which results in parasitic crystals, can occur \cite{Goswami2021}.
 \par

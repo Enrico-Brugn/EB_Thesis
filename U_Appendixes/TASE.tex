@@ -77,21 +77,21 @@ I used this fabrication process, starting from the pristine \acs{soi} wafer and 
                 \filldraw[fill=SiO2_blue] (0cm, -20cm) rectangle (40cm, 0cm);
                 \draw[decorate,decoration={brace, raise=1pt}] (0cm, -20cm) -- (0cm, 0mm) node[midway, anchor=east]{\qty{2}{\um}};
                 \filldraw[fill=Si_green] (0cm, -58.6cm) decorate [decoration=zigzag] {-- (40cm, -58.6cm)} -- (40cm, -20cm) -- (0cm, -20cm) --cycle;
-                \draw[orange, thick] (38.5cm, -1cm) rectangle (41.5cm, 3cm);
+                \draw[cb1_orange, thick] (38.5cm, -1cm) rectangle (41.5cm, 3cm);
             \end{scope}
                 \begin{scope}
                     \clip (1.9cm, -3cm) rectangle (3cm, 1cm);
-                    \draw[orange] (1.925cm, 0.15cm) -- (3cm, 1cm);
-                    \draw[orange] (2.075cm, 0.15cm) -- (6cm, 1cm);
-                    \draw[orange] (2.075cm, -0.05) -- (6cm, -3cm);
-                    \draw[orange] (1.925cm, -0.05) -- (3cm, -3cm);
+                    \draw[cb1_orange] (1.925cm, 0.15cm) -- (3cm, 1cm);
+                    \draw[cb1_orange] (2.075cm, 0.15cm) -- (6cm, 1cm);
+                    \draw[cb1_orange] (2.075cm, -0.05) -- (6cm, -3cm);
+                    \draw[cb1_orange] (1.925cm, -0.05) -- (3cm, -3cm);
                 \end{scope}
             \begin{scope}[xshift=0.5cm, yshift=-2cm]
                 \clip (2.5cm, -1cm) rectangle (5.5cm, 3cm);
                 \filldraw[fill=Si_green] (0cm, 0cm) rectangle (4cm, 22mm);
                 \draw[decorate,decoration={brace, mirror, raise=1pt}] (4cm, 0cm) -- (4cm, 22mm) node[midway, anchor=west]{\qty{220}{\nm}};
                 \filldraw[fill=SiO2_blue] (0cm, -20cm) -- (4cm, -20cm) -- (4cm, 0cm) -- (0mm,0mm) -- cycle;
-                \draw[orange, thick] (2.5cm, -1cm) rectangle (5.5cm, 3cm);
+                \draw[cb1_orange, thick] (2.5cm, -1cm) rectangle (5.5cm, 3cm);
             \end{scope}
         \end{tikzpicture}
     }
@@ -195,6 +195,7 @@ This concludes the initial steps that prepare the wafer to go through the \acs{t
 
 \subsection{Nanostructure definition and template deposition}
 \label{sec:nanostructure-def_template-dep}
+
 \begin{figure}
     \centering
     \subcaptionbox{\acs{hsq} layer on top of the wafer after exposure.\label{L1_exposed_resist}}{
@@ -271,7 +272,7 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
     \label{L2_growth}}{
         \tikzsetnextfilename{L2_growth}
         \begin{tikzpicture}
-            \filldraw[fill=orange] (3.5cm, 7mm) -- (3.5cm, 0mm) -- (6cm, 0mm) -- (6cm, 7mm) -- cycle;
+            \filldraw[fill=cb1_orange] (3.5cm, 7mm) -- (3.5cm, 0mm) -- (6cm, 0mm) -- (6cm, 7mm) -- cycle;
             \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (2cm, 0mm)-- (2cm, 7mm) -- (7cm, 7mm) -- (7cm, 19mm) -- (2cm, 19mm) -- (2cm, 17mm) -- (1cm, 17mm) -- (1cm, 10mm) -- (0cm, 10mm) -- cycle;
             \filldraw[fill=SiO2_blue] (9cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (9cm, 10mm) -- cycle;
             \filldraw[fill=Si_green] (2cm, 0cm) -- (2cm, 7mm) -- (3.5cm, 7mm) -- (3.5cm, 0mm) -- cycle;
