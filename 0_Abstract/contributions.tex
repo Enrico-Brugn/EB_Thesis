@@ -1,6 +1,6 @@
 \chapter{Contributions to the Thesis}
 
-In the following flow charts, the tasks in black are those performed by me and the contribution of other staff and researchers at \acs{ibm} Research Europe - Zurich is highlighted in red. Given the abundance of tasks, the black rectangles represent multiple process steps, further explained in Section~\ref{chap:tase} for the initial nanofabrication process and in the experimental chapters for growth, characterisation, and data analysis. Rhomboids represent single process steps.
+In the following flowcharts, the tasks in black are those I performed. Tasks that other staff and researchers kindly carried out on my request and the key external input for the pooling method in the image preprocessing are highlighted in red. The black rectangles represent multiple process steps, further explained in Section~\ref{chap:tase} for the initial nanofabrication process and in the experimental chapters for growth, characterisation, and data analysis. Rhomboids represent single process steps. The rounded boxes represent the flowcharts' start and end(s).
 
 \begin{figure}[H]
 \centering
@@ -88,23 +88,91 @@ In the following flow charts, the tasks in black are those performed by me and t
     \draw [-stealth] (etch) edge (growth);
     \draw [-stealth] (growth) edge (end);
 \end{tikzpicture}
-\caption{Nanofabrication flowchart}
+\caption{Nanofabrication flowchart.}
 \label{fig:nanofab_flow}
 \end{figure}
 
 \begin{figure}
     \centering
+    \tikzsetnextfilename{characterisation_flow}
     \begin{tikzpicture}
+        \node [minimum width=2.5cm](start){};
         \node[draw,
+              left = of start,
 	       rounded rectangle, 
-	       minimum width=2.5cm,] (start){III-V \acs{tase} nanostructures};
+	       minimum width=2.5cm,] (nanostructures){III-V \acs{tase} nanostructures};
         \node[draw,
 	       below = of start, 
 	       minimum width=2.5cm,] (fib){FIB lamella preparation};
         \node[draw,
 	       below = of fib, 
 	       minimum width=2.5cm,] (stem){\acs{stem_m} analysis};
+        \node[draw,
+	       rounded rectangle, 
+	       below = of stem, 
+	       minimum width=2.5cm,] (structural){Structural information};
+        \node[draw,
+	       rounded rectangle, 
+	       right = of stem, 
+	       minimum width=2.5cm,] (composition){Compositional information};
+        \node[draw,
+              red,
+	       left = of structural, 
+	       minimum width=2.5cm,] (extra_stem){\acs{tem_m} imaging | \acs{gpa}};
+        \node[draw,
+              red,
+	       rounded rectangle, 
+	       right = of start, 
+	       minimum width=2.5cm,] (pl){Photoluminescence spectra};
+        \node[draw,
+	       above = of start, 
+	       minimum width=2.5cm,] (sem){\acs{sem_m} imaging};
+        \node[draw,
+	       rounded rectangle, 
+	       right = of sem, 
+	       minimum width=2.5cm,] (yield){Growth yields};
+        \node[draw,
+	       above = of sem, 
+              trapezium,
+              trapezium left angle = 120,
+              trapezium right angle = 120, 
+	         text width=3.5cm,
+              align = center,
+              trapezium stretches] (labelling){Labelling of \acs{sem_m} images};
+        \node[draw,
+	       rounded rectangle, 
+	       left = of labelling,
+              align = center,
+	         text width=4cm,] (dataset){Nanowire array \acs{sem_m} images dataset};
+        \node[draw, 
+	       above = of labelling, 
+	       minimum width=2.5cm,] (algo){Image preprocessing algorithm};
+        \node[draw,
+              red,
+	       right = of algo, 
+              trapezium,
+              trapezium left angle = 120,
+              trapezium right angle = 120,
+              trapezium stretches] (pool){Pooling method};
+        \node[draw, 
+	       rounded rectangle,
+	       above = of algo, 
+	       minimum width=2.5cm,] (classifier){Classifier for yield calculation};
+
+        \draw [-stealth](nanostructures) edge (pl);
+        \draw [stealth-stealth](sem) edge (fib);
+        \draw [-stealth](fib) edge (stem);
+        \draw [-stealth](fib) -| (extra_stem);
+        \draw [red, -stealth](extra_stem) edge (structural);
+        \draw [-stealth](stem) edge (structural);
+        \draw [-stealth](stem) edge (composition);
+        \draw [-stealth](sem) edge (yield);
+        \draw [-stealth](sem) edge (labelling);
+        \draw [-stealth](labelling) edge (algo);
+        \draw [-stealth](labelling) edge (dataset);
+        \draw [-stealth](algo) edge (classifier);
+        \draw [red, stealth-](algo) edge (pool);
     \end{tikzpicture}
-    \caption{Caption}
+    \caption{Characterisation flowchart.}
     \label{fig:characterisation_flow}
 \end{figure}
