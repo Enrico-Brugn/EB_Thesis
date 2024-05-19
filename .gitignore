@@ -31,3 +31,6 @@ output.pdf
 *.synctex(busy)
 /figures/*
 /_minted-output
+ltex.dictionary.en-GB.txt
+ltex.disabledRules.en-GB.txt
+ltex.hiddenFalsePositives.en-GB.txt
