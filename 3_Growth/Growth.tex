@@ -409,10 +409,11 @@ Regarding growth dynamics, the main finding from the sample in Figure~\ref{fig:s
     \subcaptionbox{
         \acs{sem_m} image of the lamella for sample 2.
         \label{subfig:FIB_cut_2}
-        }{
+    }{
         \tikzsetnextfilename{FIB_cut_2}
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = \textwidth]{3_Growth/Sample2_FIB.pdf}};
+
             \node [text=white,] at (0, -2.5) {\acs{sio2}};
             \node [text=white] at (0, 0.2) {\acs{sio2}};
             \node [text=white] at (-2, -0.7) {III-V};
@@ -422,9 +423,11 @@ Regarding growth dynamics, the main finding from the sample in Figure~\ref{fig:s
             \node [text=white] at (7, -1) {Void};
             \node [text=white] at (-7, -1) {Void};
             \draw [white, |-|, very thick] (-7.2, 2.8) -- (-3, 2.8) node [midway, anchor=south] {\qty{500}{\nano\metre}};
+            \draw [red, stealth-] (-6,-2.5) -- ++ (4.5,0) node [midway, anchor=north] {\textcolor{red}{Growth direction 2}};
+            \draw [red, stealth-] (6,-2.5) -- ++ (-4.5,0) node [midway, anchor=north] {\textcolor{red}{Growth direction 1}};
         \end{tikzpicture}
     }
-    \caption[Precursor sequence and \acs{sem_m}-\acs{fib} image of a cross-section of a wire from sample 2]{Growth of the second sample. \subref{subfig:recipe1} Is the diagram representing the modified precursor sequence introducing the looped segment for thin layer deposition \cite{Brugnolotto2023}. Each line represents an active flow of precursor into the reactor. The colour of the horizontal lines represents the target material. \subref{subfig:FIB_cut_2} \acs{sem_m} image of the lamella during \acs{fib} thinning. The various material regions are labelled.}
+    \caption[Precursor sequence and \acs{sem_m}-\acs{fib} image of a cross-section of a wire from sample 2]{Growth of the second sample. \subref{subfig:recipe1} is the diagram representing the modified precursor sequence introducing the looped segment for thin layer deposition \cite{Brugnolotto2023}. Each line represents an active flow of precursor into the reactor. The colour of the horizontal lines represents the target material. \subref{subfig:FIB_cut_2} \acs{sem_m} image of the lamella during \acs{fib} thinning. The various material regions are labelled, including the \acs{si} seed, from which \num{2} III-V wires grew towards in opposite directions, highlighted by the red arrows underneath them.}
     \label{fig:sample2_growth}
 \end{figure}
 
