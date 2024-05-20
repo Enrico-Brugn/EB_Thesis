@@ -294,6 +294,24 @@ Figure~\ref{fig:s4_recipe_STEM} shows \acs{bf}-\acs{stem_m} images of two differ
 Both lamellae come from the same sample, with identical device layer thickness. 
 However, Figure~\ref{subfig:s4_OV} highlights how the \qty{30}{\degree} cross-section appears larger because the viewing angle is not perpendicular to the heterointerfaces that lay in the wafer plane. This distortion becomes clear when one looks at the III-V-\acs{si} interfaces at the top and bottom of the nanowires. The well-defined lines in the standard cross-section become large regions in the \qty{30}{\degree} cross-section. In these regions, the III-V nanowire and the \acs{sio2} template appear superimposed, as they are one on top of the other in the path the electron beam takes through the lamella.
 
+\begin{figure}
+    \centering
+    \tikzsetnextfilename{FFT_analysis}
+    \begin{tikzpicture}
+        \node[inner sep=0pt, label=below:{\textcolor{red}{IFFT}}] (0deg_IFFT) at (-4,0) {\includegraphics[scale=0.7]{4_Properties/Fig/0deg_IFFT.pdf}};
+        \node[inner sep=0pt, label=above:{\qty{0}{\degree} cut}, label=below:{FFT}] (0deg_FFT) at (0,0) {\includegraphics[width=0.3\textwidth]{4_Properties/Fig/0deg_FFT.pdf}};
+        \node[inner sep=0pt, label=above:{\qty{30}{\degree} cut}, label=below:{FFT}] (30deg_FFT) at (5,0) {\includegraphics[width=0.3\textwidth]{4_Properties/Fig/30deg_FFT.pdf}};
+        \node[inner sep=0pt, label=below:{\textcolor{red}{IFFT}}] (30deg_IFFT) at (9,0) {\includegraphics[scale=0.9]{4_Properties/Fig/30deg_IFFT.pdf}};
+
+        \draw [red] (-0.25,0.25) rectangle (0.25,0.75);
+        \draw [red] (4.4,0.25) rectangle (4.75,0.6);
+        \draw [red, -stealth] (-0.25, 0.5) -- (0deg_IFFT);
+        \draw [red, -stealth] (4.75, 0.35) -- (30deg_IFFT);
+    \end{tikzpicture}
+    \caption[Detail of the Fourier tranforms of sample 4 with inverse transforms.]{Detail of the Fourier tranforms of sample 4 seen in Figure~\ref{subfig:s4_HR} with inverse transforms. The two }
+    \label{fig:FFT_analysis}
+\end{figure}
+
 An evident advantage of the \qty{30}{\degree} cut in combination with the \hkl<1 1 0> wafer is that vertical \hkl{1 1 1} heterointerfaces remain perpendicular to the viewing direction. As the recipe optimised in Chapter~\ref{chap:growth} stabilises this facet family, this new viewing angle does not affect the observer's ability to evaluate the sharpness of this type of interface from \acs{stem_m} measurements.
 
 The comparison between the two wires at high resolution in Figure~\ref{subfig:s4_HR} also highlights the amount of structural information available when viewing a \hkl{1 1 0} plane (on the right) compared to a \hkl{1 1 2} plane (on the left). The presence of \acl{rtp}s (\acs{rtp}s) is evident in the \qty{30}{\degree} cross-section both in the \acs{bf}-\acs{stem_m} image and in its \acf{fft} in the insert. The \acs{rtp}s have manifested as horizontal lines in the frequency domain. In contrast, both the \hkl{1 1 2} \acs{bf}-\acs{stem_m} image and its \acf{fft} do not contain any trace of this type of defect.
