@@ -361,6 +361,94 @@ Regarding growth dynamics, the main finding from the sample in Figure~\ref{fig:s
 
 \subsection{Growth recipe for the introduction of short material segments.}
 
+% \begin{figure}
+%     \centering
+%     \subcaptionbox{
+%     Precursor sequence for sample 2 \cite{Brugnolotto2023}.
+%     \label{subfig:recipe2}
+%     }{
+%         \tikzsetnextfilename{recipe2}
+%     \begin{tikzpicture}
+%     \begin{scope}
+%     % lines
+%         \node [label={[label distance=0]180:\acs{in}}] at (0, 0) {};
+%         \draw [cb1_orange, ultra thick] (0, 0) -- (4.2, 0);
+%         \draw [cb1_dark_blue, ultra thick] (4.2, 0) -- (6.6, 0);
+%         \draw [cb1_dark_blue, ultra thick] (6.6, 0) -- (7.35, 0);
+%         \draw [cb1_orange, ultra thick] (7.35, 0) -- (8.1, 0);
+        
+%         \node [label={[label distance=0]180:\acs{ga}}] at (0, -0.5) {};
+%         \draw [cb1_orange, ultra thick] (0, -0.5) -- (4.2, -0.5cm);
+%         \draw [cb1_orange, ultra thick] (7.35, -0.5) -- (8.1, -0.5);
+        
+%         \node [label={[label distance=0]180:\acs{as}}] at (0, -1) {};
+%         \draw [cb1_orange, ultra thick] (0, -1) -- (4.2, -1);
+%         \draw [cb1_orange, ultra thick] (7.35, -1) -- (8.1, -1);
+        
+%         \node [label={[label distance=0]180:\acs{p}}] at (0, -1.5) {};
+%         \draw [cb1_dark_blue, ultra thick] (4.2, -1.5) -- (6.6, -1.5);
+%         \draw [cb1_dark_blue, ultra thick] (6.6, -1.5) -- (7.35, -1.5);
+        
+%     % labels and markers for the timescale
+%         \node [label={[label distance=0]180:Time (\second)}] at (0, -2) {};
+%         \draw [-stealth] (0, -2) -- (8.4, -2);
+%         \draw [] (0, 0.2) -- (0, -2.2) node[anchor = north] {\num{0}};
+%         \draw [] (4.2, 0.2) -- (4.2, -2.2) node[anchor = north] {\num{420}};
+%         \draw [] (6.6, 0.4) -- (6.6, -2.2) node[anchor = north] {\num{660}};
+%         \draw [] (7.35, 0.2) -- (7.35, -2.2) node[anchor = north] {\num{735}};
+%         \draw [] (8.1, 0.4) -- (8.1, -2.2) node[anchor = north] {\num{810}};
+%         \draw [stealth - stealth] (6.6, 0.3) -- (8.1, 0.3) node[midway, anchor=south] {Loop};
+%     \end{scope}
+%     \begin{scope} [shift={(9.3cm, -0.5)}]
+%         \draw [cb1_orange, ultra thick] (0, 0) -- (0.5, 0) node[anchor = west, text=black] {\acs{ingaas}};
+%         \draw [cb1_dark_blue, ultra thick] (0, -0.5) -- (0.5, -0.5) node[anchor = west, text = black] {\acs{inp}};
+%         \draw (-0.5, 0.5) -- (2.5, 0.5) -- (2.5, -1.15) -- node[midway, fill = white] {Legend} (-0.5, -1.15) -- cycle;
+%     \end{scope}
+%     \end{tikzpicture}
+%     }
+%     \subcaptionbox{
+%         \acs{sem_m} image of the lamella for sample 2.
+%         \label{subfig:FIB_cut_2}
+%     }{
+%         \tikzsetnextfilename{FIB_cut_2}
+%         \begin{tikzpicture}
+%             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = \textwidth]{3_Growth/Sample2_FIB.pdf}};
+
+%             \node [text=white,] at (0, -2.5) {\acs{sio2}};
+%             \node [text=white] at (0, 0.2) {\acs{sio2}};
+%             \node [text=white] at (-2, -0.7) {III-V};
+%             \node [text=white] at (2, -0.7) {III-V};
+%             \node [text=white] at (0, -1.3) {\acs{si}};
+%             \node [text=white] at (0, 1.5) {\ce{Pt}};
+%             \node [text=white] at (7, -1) {Void};
+%             \node [text=white] at (-7, -1) {Void};
+%             \draw [white, |-|, very thick] (-7.2, 2.8) -- (-3, 2.8) node [midway, anchor=south] {\qty{500}{\nano\metre}};
+%             \draw [red, stealth-] (-6,-2.5) -- ++ (4.5,0) node [midway, anchor=north] {\textcolor{red}{Growth direction 2}};
+%             \draw [red, stealth-] (6,-2.5) -- ++ (-4.5,0) node [midway, anchor=north] {\textcolor{red}{Growth direction 1}};
+
+%             \begin{scope}[scale=0.05, shift={(-70,50)}]
+%                 \filldraw [white] (18,-11) rectangle (40.5, 17);
+%                 \draw (20, 1) -- ++ (10, 0) -- ++ (-26.6:4.445) -- ++ (0, -6) -- ++ (4, 0) -- ++ (0, 20) -- ++ (-4, 0) -- ++ (0, -6) -- ++ (26.6:-4.445) -- ++ (-10, 0) -- cycle;
+%                 \draw[red] (33.5, 11) rectangle (38.5, 13);
+%                 \draw[red] (33.5, -7) rectangle (38.5, -5);
+%                 \draw[cb1_purple, dashed] (36, -9) -- ++ (0, 24);
+%             \end{scope}
+%         \end{tikzpicture}
+%     }
+%     \caption[Precursor sequence and \acs{sem_m}-\acs{fib} image of a cross-section of a wire from sample 2]{Growth of the second sample. \subref{subfig:recipe1} is the diagram representing the modified precursor sequence introducing the looped segment for thin layer deposition \cite{Brugnolotto2023}. Each line represents an active flow of precursor into the reactor. The colour of the horizontal lines represents the target material. \subref{subfig:FIB_cut_2} \acs{sem_m} image of the lamella during \acs{fib} thinning. The various material regions are labelled, including the \acs{si} seed, from which \num{2} III-V wires grew towards in opposite directions, highlighted by the red arrows underneath them. The vertical purple dashed line in the insert next to the scale bar shows where the cross-0section was cut.}
+%     \label{fig:sample2_growth}
+% \end{figure}
+
+A further looped deposition segment was introduced at the end of the recipe in Figure~\ref{subfig:recipe1} to study the growth of thin structures in the template. The resulting recipe is illustrated in Figure~\ref{subfig:recipe2}. The looped segment, executed twice without interruption, contains an \acs{inp} and an \acs{ingaas} deposition step. The two short deposition steps are \qty{75}{s} long. The growth temperature was kept constant at \qty{580}{\degreeCelsius}, and the III-V ratios were unchanged from those in Table~\ref{tab:sample1_ratios}.
+
+Figure~\ref{subfig:FIB_cut_2} shows an \acs{sem_m} image of a lamella being cut from one of the T-shape devices shown in Figure~\ref{subfig:enterprise_design}. The image was taken during the last stage of \acs{fib} processing; two III-V nanowires can be observed to have grown from a central \acl{si} seed, filling the template almost entirely. The areas where the two "Void" labels are placed also mark the end of the upper template \acs{sio2} layer. The protective \acl{pt} layer and buried oxide layers are also visible. Lamella thinning from the back side was ongoing, as the farther template wall was still present. The \acs{inp} regions for both wires are visible as being darker with brighter \acl{in} droplets.
+
+The shape of the \acl{si} seed surfaces is very similar to those of the previous samples (Figures~\ref{subfig:FIB_cut} and \ref{subfig:sample1_cross-sec}) with the upper \hkl{1 1 1} facet being the smaller of the two. This regularity in seed shape could be attributed to the fact that the templates in all three samples were opened during the same \acf{rie} run, as they were processed simultaneously until the \acl{si} etch back step right before growth. The two seed facets in Figure~\ref{subfig:FIB_cut_2} formed when the \acs{tmah} etch back of the sacrificial \acl{si} was stopped just before entering the "stem" of the T shape. 
+
+It is interesting to notice how the contrast of the III-V / upper \acs{sio2} layer contact interface is broken by a darker segment for the wire on the right. Even in correspondence of the void region seen in Figure~\ref{subfig:FIB_cut}, the interface appeared bright; this is likely due to the \acl{pt} deposited just before \acs{fib} cutting, creating a contact interface. This darker region could result from a void formed during \acs{mocvd} growth inside the wire itself.
+
+\subsection{\texorpdfstring{\acs{stem_m} analysis}{STEM analysis}}
+
 \begin{figure}
     \centering
     \subcaptionbox{
@@ -425,21 +513,19 @@ Regarding growth dynamics, the main finding from the sample in Figure~\ref{fig:s
             \draw [white, |-|, very thick] (-7.2, 2.8) -- (-3, 2.8) node [midway, anchor=south] {\qty{500}{\nano\metre}};
             \draw [red, stealth-] (-6,-2.5) -- ++ (4.5,0) node [midway, anchor=north] {\textcolor{red}{Growth direction 2}};
             \draw [red, stealth-] (6,-2.5) -- ++ (-4.5,0) node [midway, anchor=north] {\textcolor{red}{Growth direction 1}};
+
+            \begin{scope}[scale=0.05, shift={(-70,50)}]
+                \filldraw [white] (18,-11) rectangle (40.5, 17);
+                \draw (20, 1) -- ++ (10, 0) -- ++ (-26.6:4.445) -- ++ (0, -6) -- ++ (4, 0) -- ++ (0, 20) -- ++ (-4, 0) -- ++ (0, -6) -- ++ (26.6:-4.445) -- ++ (-10, 0) -- cycle;
+                \draw[red] (33.5, 11) rectangle (38.5, 13);
+                \draw[red] (33.5, -7) rectangle (38.5, -5);
+                \draw[cb1_purple, dashed] (36, -9) -- ++ (0, 24);
+            \end{scope}
         \end{tikzpicture}
     }
-    \caption[Precursor sequence and \acs{sem_m}-\acs{fib} image of a cross-section of a wire from sample 2]{Growth of the second sample. \subref{subfig:recipe1} is the diagram representing the modified precursor sequence introducing the looped segment for thin layer deposition \cite{Brugnolotto2023}. Each line represents an active flow of precursor into the reactor. The colour of the horizontal lines represents the target material. \subref{subfig:FIB_cut_2} \acs{sem_m} image of the lamella during \acs{fib} thinning. The various material regions are labelled, including the \acs{si} seed, from which \num{2} III-V wires grew towards in opposite directions, highlighted by the red arrows underneath them.}
+    \caption[Precursor sequence and \acs{sem_m}-\acs{fib} image of a cross-section of a wire from sample 2]{Growth of the second sample. \subref{subfig:recipe1} is the diagram representing the modified precursor sequence introducing the looped segment for thin layer deposition \cite{Brugnolotto2023}. Each line represents an active flow of precursor into the reactor. The colour of the horizontal lines represents the target material. \subref{subfig:FIB_cut_2} \acs{sem_m} image of the lamella during \acs{fib} thinning. The various material regions are labelled, including the \acs{si} seed, from which \num{2} III-V wires grew towards in opposite directions, highlighted by the red arrows underneath them. The vertical purple dashed line in the insert next to the scale bar shows where the cross-0section was cut.}
     \label{fig:sample2_growth}
 \end{figure}
-
-A further looped deposition segment was introduced at the end of the recipe in Figure~\ref{subfig:recipe1} to study the growth of thin structures in the template. The resulting recipe is illustrated in Figure~\ref{subfig:recipe2}. The looped segment, executed twice without interruption, contains an \acs{inp} and an \acs{ingaas} deposition step. The two short deposition steps are \qty{75}{s} long. The growth temperature was kept constant at \qty{580}{\degreeCelsius}, and the III-V ratios were unchanged from those in Table~\ref{tab:sample1_ratios}.
-
-Figure~\ref{subfig:FIB_cut_2} shows an \acs{sem_m} image of a lamella being cut from one of the T-shape devices shown in Figure~\ref{subfig:enterprise_design}. The image was taken during the last stage of \acs{fib} processing; two III-V nanowires can be observed to have grown from a central \acl{si} seed, filling the template almost entirely. The areas where the two "Void" labels are placed also mark the end of the upper template \acs{sio2} layer. The protective \acl{pt} layer and buried oxide layers are also visible. Lamella thinning from the back side was ongoing, as the farther template wall was still present. The \acs{inp} regions for both wires are visible as being darker with brighter \acl{in} droplets.
-
-The shape of the \acl{si} seed surfaces is very similar to those of the previous samples (Figures~\ref{subfig:FIB_cut} and \ref{subfig:sample1_cross-sec}) with the upper \hkl{1 1 1} facet being the smaller of the two. This regularity in seed shape could be attributed to the fact that the templates in all three samples were opened during the same \acf{rie} run, as they were processed simultaneously until the \acl{si} etch back step right before growth. The two seed facets in Figure~\ref{subfig:FIB_cut_2} formed when the \acs{tmah} etch back of the sacrificial \acl{si} was stopped just before entering the "stem" of the T shape. 
-
-It is interesting to notice how the contrast of the III-V / upper \acs{sio2} layer contact interface is broken by a darker segment for the wire on the right. Even in correspondence of the void region seen in Figure~\ref{subfig:FIB_cut}, the interface appeared bright; this is likely due to the \acl{pt} deposited just before \acs{fib} cutting, creating a contact interface. This darker region could result from a void formed during \acs{mocvd} growth inside the wire itself.
-
-\subsection{\texorpdfstring{\acs{stem_m} analysis}{STEM analysis}}
 
 \begin{figure}
     \centering
