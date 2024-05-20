@@ -15,23 +15,38 @@ As the previous section shows, \acs{tase} has been developing for the last decad
 
 \begin{figure}
     \centering
-    \subcaptionbox{Cross section of a multi-seeded coalesced III-V structure grown on Si.
+    \subcaptionbox{
+        Cross-section (cut marked in red in the insert showing the topd down view of the structure) of a multi-seeded coalesced III-V structure grown on Si.
         \label{subfig:SM_overview}
-        }{
-        \includegraphics[width = 0.98\textwidth]{3_Growth/2020_Merge/JEOL_BF_150k_SOU76posB_Tunnel5Overview.png
-        }
+    }{
+        \tikzsetnextfilename{SM_overview}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.98\textwidth]{3_Growth/2020_Merge/JEOL_BF_150k_SOU76posB_Tunnel5Overview.png}};
+
+            \begin{scope}[shift={(5.5,-2)}, >=stealth]
+                \filldraw [white] (-0.2, -1.3) rectangle (2, 1.066);
+                \draw (0,0) -- ++ (1, 0) -- ++ (-45:0.045255) -- ++ (0.768, 0) -- ++ (0, 0.666) -- ++ (-0.768, 0) -- ++ (-135:0.045255) -- ++ (-1, 0) -- ++ (0, -0.07) -- ++ (1, 0) -- ++ (-45:0.045255) -- ++ (-135:0.045255) -- ++ (-1, 0) -- ++ (0, -0.07) -- ++ (1, 0) -- ++ (-45:0.045255) -- ++ (-135:0.045255) -- ++ (-1, 0) -- ++ (0, -0.07) -- ++ (1, 0) -- ++ (-45:0.045255) -- ++ (-135:0.045255) -- ++ (-1, 0) -- ++ (0, -0.07) -- ++ (1, 0) -- ++ (-45:0.045255) -- ++ (-135:0.045255) -- ++ (-1, 0) -- cycle;
+                \draw [red] (1.2, 0.866) -- ++ (0, -1.1);
+                \draw [|<->|] (0.25, -1) -- ++ (1.2, 0) node [midway, anchor=south] {\qty{2}{\micro\metre}};
+            \end{scope}
+            
+            \node [white] at (0, 0) {III-V};
+            \node at (0, 1) {Template \acs{sio2}};
+            \node at (0, -1) {Buried \acs{sio2}};
+            \node [white] at (0, 2.15) {Protective \acs{pt}};
+        \end{tikzpicture}
     }
-    \subcaptionbox{Detail of twin planes and dislocations.
+    \subcaptionbox{
+        Detail of twin planes and dislocations.
         \label{subfig:SM_dislocations}
-        }{
-        \includegraphics[width = 0.48\textwidth]{3_Growth/2020_Merge/JEOL_BF_20M_SOU76posB_Tunnel5Seed1DefectMeet1.png
-        }
+    }{
+        \includegraphics[width = 0.48\textwidth]{3_Growth/2020_Merge/JEOL_BF_20M_SOU76posB_Tunnel5Seed1DefectMeet1.png}
     }
-    \subcaptionbox{Detail of a grain boundary.
+    \subcaptionbox{
+        Detail of a grain boundary.
         \label{subfig:SM_merge_position}
-        }{
-        \includegraphics[width = 0.48\textwidth]{3_Growth/2020_Merge/JEOL_BF_10_M_SOU76posB_Tunnel5_Boundary_Seeds_2_3.png
-        }
+    }{
+        \includegraphics[width = 0.48\textwidth]{3_Growth/2020_Merge/JEOL_BF_10_M_SOU76posB_Tunnel5_Boundary_Seeds_2_3.png}
     }
     \caption[\acs{bf}-\acs{stem_m} images of a cross section perpendicular to the growth direction of a \acs{tase} structure.]{\acs{bf}-\acs{stem_m} images of a cross section of a \acs{tase} structure. \subref{subfig:SM_overview} overview image of the entire platelet. Two regions can be identified in this image, with the leftmost area of the left section presenting an area with darker lines describing a "v" shape. These lines are caused by \acs{rtp}s. \subref{subfig:SM_dislocations} a pair of stair-rod dislocations \cite{Bologna2018} imaged in high-resolution. \subref{subfig:SM_merge_position} high-resolution image of the area in which the two regions in \subref{subfig:SM_overview} meet.}
     \label{fig:2020_Merge}
