@@ -186,7 +186,7 @@ Both structures in Figure~\ref{subfig:110_design2} were grown aligned to the in-
             \draw [red, dashed] (-0.2, 0, 1.3) -- (5, 0, 1.3) -- (5, 1.2, 1.99282032) -- (-0.2, 1.2, 1.99282032) -- cycle;
         \end{scope}
     \end{tikzpicture}
-    \caption[\acs{fib} cutting strategies to expose \hkl{1 1 0} facets from a \hkl(1 1 0) substrate.]{\acs{fib} cutting strategies to expose \hkl{1 1 0} facets from a \hkl[1 1 0]-oriented substrate. The red-shaded planes show how the cut planes are selected to expose the sides of the wire in correspondence to \hkl{1 1 0} facets if the template axis coincides with a \hkl<1 1 1> direction.}
+    \caption[\acs{fib} cutting strategies to expose \hkl{1 1 0} facets from a \hkl(1 1 0) substrate.]{\acs{fib} cutting strategies to expose \hkl{1 1 0} facets from a \hkl[1 1 0]-oriented substrate. The red-shaded planes show how the cut planes are selected to expose the sides of the wire in correspondence to \hkl{1 1 0} facets if the template axis coincides with a \hkl<1 1 1> direction. On the left is a plane-view cut and on the right a \qty{30}{\degree} cut.}
     \label{fig:110_FIB}
 \end{figure}
 
@@ -258,7 +258,7 @@ A compromise can be found by cutting the sample with a \qty{30}{\degree} tilt in
         \end{tikzpicture}
     }
     \subcaptionbox{
-        \acs{bf}-\acs{stem_m} overview images of two nanowires from sample 4. The wire on the left was cut with a regular cross-section, while the wire on the right was cut with a \qty{30}{\degree} cross-section.
+        \acs{bf}-\acs{stem_m} overview images of two nanowires from sample 4. The wire on the left was cut with a regular cross-section, while the wire on the right was cut with a \qty{30}{\degree} cross-section, as shown by the 3D drawings. The direction guide only refers to the drawings.
         \label{subfig:s4_OV}
     }{
         \tikzsetnextfilename{s4_OV}
@@ -266,6 +266,57 @@ A compromise can be found by cutting the sample with a \qty{30}{\degree} tilt in
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s4_OV.pdf}};
             \node[fill=white] at (-5, 2) {(l)};
             \node[fill=white] at (5, 2) {(r)};
+
+            \draw [red, stealth-] (5, -0.9) -- ++ (-4.5, 0) node [midway, anchor=south] {\hkl<-1 1 1> Growth direction};
+            \draw [red, stealth-] (-5, -0.4) -- ++ (4.5, 0) node [midway, anchor=south] {\hkl<-1 1 1> Growth direction};
+
+            \begin{scope}[shift={(-4, 3, 0)}, scale=0.4, isometric]
+                \path [fill=red!50!, fill opacity=0.3] (-0.5, -0.3, 0.5) -- (-0.5, 1.5, 0.5) -- (5.5, 1.5, 0.5) -- (5.5, -0.3, 0.5) -- cycle;
+                \path [fill=red!50!, fill opacity=0.3] (-0.5, -0.3, 1.5) -- (-0.5, 1.5, 1.5) -- (5.5, 1.5, 1.5) -- (5.5, -0.3, 1.5) -- cycle;
+            
+                \draw (0, 0, 0) -- (0, 0, 2) -- (0, 1, 2) -- (0, 1, 0) -- cycle;
+                \draw (0, 0, 0) -- (3, 0, 0) -- (3, 1, 0) -- (0, 1, 0);
+                \draw (0, 0, 2) -- (3, 0, 2) -- (3, 1, 2) -- (0, 1, 2);
+                \draw (3, 0, 0) -- (3, 0, 2);
+                \draw (3, 1, 0) -- (3, 1, 2);
+            
+                \draw (-0.2, 0, -0.2) -- (-0.2, 0, 2.2) -- (-0.2, 1.2, 2.2) -- (-0.2, 1.2, -0.2) -- cycle;
+                \draw (-0.2, 0, -0.2) -- (5, 0, -0.2) -- (5, 1.2, -0.2) -- (-0.2, 1.2, -0.2);
+                \draw (-0.2, 0, 2.2) -- (5, 0, 2.2) -- (5, 1.2, 2.2) -- (-0.2, 1.2, 2.2);
+                \draw (5, 0, -0.2) -- (5, 0, 2.2);
+                \draw (5, 1.2, -0.2) -- (5, 1.2, 2.2);
+            
+                \draw [red, dashed] (-0.2, 0, 0.5) -- (5, 0, 0.5) -- (5, 1.2, 0.5) -- (-0.2, 1.2, 0.5) -- cycle;
+                \draw [red, dashed] (-0.2, 0, 1.5) -- (5, 0, 1.5) -- (5, 1.2, 1.5) -- (-0.2, 1.2, 1.5) -- cycle;
+            \end{scope}
+
+            \begin{scope}[shift={(0, 2.5, 0)}, scale=0.7, isometric]
+                \draw [-stealth] (0, 0, 0) -- ++ (1, 0, 0) node[anchor = north west]{\hkl<-1 1 1>};
+                \draw [-stealth] (0, 0, 0) -- ++ (0, 1, 0) node[anchor = south]{\hkl<1 1 0>};
+                \draw [-stealth] (0, 0, 0) -- ++ (0, 0.5, 0.866) node[anchor = east]{\hkl<0 1 -1>};
+                \draw [-stealth] (0, 0, 0) -- ++ (0, 0.5, -0.866) node[anchor = south west]{\hkl<1 0 1>};
+                \draw [-stealth] (0, 0, 0) -- ++ (0, 0, 1) node[anchor = north east]{\hkl<-1 1 -2>};
+            \end{scope}
+
+            \begin{scope}[shift={(3, 3, 0)}, scale=0.4, isometric]
+                \draw (0, 0, 0) -- (0, 0, 2) -- (0, 1, 2) -- (0, 1, 0) -- cycle;
+                \draw (0, 0, 0) -- (3, 0, 0) -- (3, 1, 0) -- (0, 1, 0);
+                \draw (0, 0, 2) -- (3, 0, 2) -- (3, 1, 2) -- (0, 1, 2);
+                \draw (3, 0, 0) -- (3, 0, 2);
+                \draw (3, 1, 0) -- (3, 1, 2);
+            
+                \draw (-0.2, 0, -0.2) -- (-0.2, 0, 2.2) -- (-0.2, 1.2, 2.2) -- (-0.2, 1.2, -0.2) -- cycle;
+                \draw (-0.2, 0, -0.2) -- (5, 0, -0.2) -- (5, 1.2, -0.2) -- (-0.2, 1.2, -0.2);
+                \draw (-0.2, 0, 2.2) -- (5, 0, 2.2) -- (5, 1.2, 2.2) -- (-0.2, 1.2, 2.2);
+                \draw (5, 0, -0.2) -- (5, 0, 2.2);
+                \draw (5, 1.2, -0.2) -- (5, 1.2, 2.2);
+
+                \path [fill=red!50!, fill opacity=0.3] (-0.54641016, -0.3, 0.22679492) -- (-0.54641016, 1.5, 1.2660254) -- (5.57735027, 1.5, 1.2660254) -- (5.57735027, -0.3, 0.22679492) -- cycle;
+                \path [fill=red!50!, fill opacity=0.3] (-0.54641016, -0.3, 1.12679492) -- (-0.54641016, 1.5, 2.1660254) -- (5.57735027, 1.5, 2.1660254) -- (5.57735027, -0.3, 1.12679492) -- cycle;
+        
+                \draw [red, dashed] (-0.2, 0, 0.4) -- (5, 0, 0.4) -- (5, 1.2, 1.09282032) -- (-0.2, 1.2, 1.09282032) -- cycle;
+                \draw [red, dashed] (-0.2, 0, 1.3) -- (5, 0, 1.3) -- (5, 1.2, 1.99282032) -- (-0.2, 1.2, 1.99282032) -- cycle;
+            \end{scope}
         \end{tikzpicture}
     }
     \subcaptionbox{
@@ -356,14 +407,24 @@ Both the \acs{ingaas} well and \acs{inp} growth rates increase as the growth fro
     \subcaptionbox{
         III-element \acs{eds} map. Red \acs{in}, blue \acs{ga}
         \label{subfig:s4_0deg_IIImap_wells}
-        }{
-        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/s4_0deg_IIImap_wells.pdf}
+    }{
+        \tikzsetnextfilename{s4_0deg_IIImap_wells}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] at (0,0) {\includegraphics[width=0.47\textwidth]{4_Properties/Fig/s4_0deg_IIImap_wells.pdf}};
+
+            \draw [red, stealth-] (2.5, -3) -- ++ (-5, 0) node [midway, anchor=south] {Growth direction};
+        \end{tikzpicture}
     }
     \subcaptionbox{
         V-element \acs{eds} map. Red \acs{as}, blue \acs{p}
         \label{subfig:s4_0deg_Vmap_wells}
-        }{
-        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/s4_0deg_Vmap_wells.pdf}
+    }{
+        \tikzsetnextfilename{s4_0deg_Vmap_wells}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] at (0,0) {\includegraphics[width=0.47\textwidth]{4_Properties/Fig/s4_0deg_Vmap_wells.pdf}};
+
+            \draw [red, stealth-] (2.5, -3) -- ++ (-5, 0) node [midway, anchor=south] {Growth direction};
+        \end{tikzpicture}
     }
     \caption[\acs{eds} maps of the \acl{qw} region of sample 4.]{\acs{eds} maps of the \acl{qw} region of the \qty{0}{\degree} cross-section in Figure~\ref{subfig:s4_OV}. The seed is out of frame on the left of the images.}
     \label{fig:s4_0deg_EDS_maps_wells}
@@ -371,7 +432,7 @@ Both the \acs{ingaas} well and \acs{inp} growth rates increase as the growth fro
 
 Figure~\ref{fig:s4_0deg_EDS_maps_wells} shows the \acs{eds} maps. The elements \acl{ga} and \acl{p} are colour-coded in blue while \acl{in} and \acl{as} are colour-coded in red. Two \acs{ingaas} \acl{qw}s are visible on both maps, showing the same nanowire area. 
 
-The III group element map shows how \acl{ga} is well-segregated into the \acs{ingaas} layers. However, a difference between the leading and trailing edges of the \acl{qw}s is visible once more when examining the V group element map. Indeed, while the leading edge is sharp, a light red shading is present in the \acl{p} region after the trailing edge. This indicates an \acl{as} contamination in the \acs{inp} barrier layer. As the image is comparable to the one in Figure~\ref{subfig:s3_V_map_wells}, the lengthening of the \acs{p} flow step during the post \acs{ingaas} hold step had a small impact on the resulting post-well composition profile.
+The III group element map shows how \acl{ga} is well-segregated into the \acs{ingaas} layers. However, a difference between the leading and trailing edges of the \acl{qw}s is visible once more when examining the V group element map. Indeed, while the leading edge is sharp, a light red shading is present in the \acl{p} region after the trailing edge. This indicates an \acl{as} contamination in the \acs{inp} barrier layer. As the image is comparable to the one in Figure~\ref{subfig:s3_V_map_wells}, the lengthening of the \acl{p} flow step during the post \acs{ingaas} hold step had a small impact on the resulting post-well composition profile.
 
 \begin{figure}
     \centering
@@ -429,16 +490,6 @@ The III group element map shows how \acl{ga} is well-segregated into the \acs{in
     \label{fig:s4_0deg_linescans}
 \end{figure}
 
-Figure~\ref{fig:s4_0deg_linescans} shows the composition data calculated from the \acs{eds} linescan taken on the \acl{qw} region of the \qty{0}{\degree} sample in Figure~\ref{subfig:s4_OV}. The scan was taken from before the first \acl{qw}, closest to the \acs{si} seed.
-
-The III group element composition profile of Figure~\ref{subfig:s4_III_0deg_linesc} was calculated using the L\(_\alpha\) lines of \acl{in} and \acl{ga}. The graph is very noisy, with noise fluctuations reaching \qty{20}{\%}, but shows a composition close to \ce{In0_.4Ga0_.6As} in all three \acl{qw}s. Similarly to the profile in Figure~\ref{subfig:s3_III_linesc}, suggests the presence of a \acl{ga} composition gradient after the well itself. 
-
-The V group element composition profile of Figure~\ref{subfig:s4_V_0deg_linesc} was calculated using the K\(_\alpha\) lines of \acl{as} and \acl{p}. This graph has noise fluctuations of about \num{10}-\qty{15}{\%}. An \acl{as} percentage composition close to \qty{100}{\%} is present in the \acs{ingaas} \acl{qw} similarly to what was observed for sample 3 (Figure~\ref{subfig:s3_V_linesc}). The \acs{as}-rich region extends for \num{10}-\qty{15}{\nano\metre} after the end of the \acs{ingaas} \acl{qw}.
-
-As the precursor flows were not altered from those of previous samples, the V / III ratios remain as in Table~\ref{tab:sample1_ratios}. The higher concentration of \acl{ga} in the \acl{qw}s could therefore be caused by the change in the geometry of the template given by the difference in device layer thickness of the \hkl<1 1 0> \acs{soi} wafer.
-
-\subsection{Photoluminescence analysis}
-
 \begin{figure}
     \centering
     \tikzsetnextfilename{s4_pl}
@@ -462,15 +513,23 @@ As the precursor flows were not altered from those of previous samples, the V / 
     \label{fig:s4_pl}
 \end{figure}
 
+Figure~\ref{fig:s4_0deg_linescans} shows the composition data calculated from the \acs{eds} linescan taken on the \acl{qw} region of the \qty{0}{\degree} sample in Figure~\ref{subfig:s4_OV}. The scan was taken from before the first \acl{qw}, closest to the \acl{si} seed.
+
+The III group element composition profile of Figure~\ref{subfig:s4_III_0deg_linesc} was calculated using the L\(_\alpha\) lines of \acl{in} and \acl{ga}. The graph is very noisy, with noise fluctuations reaching \qty{20}{\%}, but shows a composition close to \ce{In0_.4Ga0_.6As} in all three \acl{qw}s. Similarly to the profile in Figure~\ref{subfig:s3_III_linesc}, suggests the presence of a \acl{ga} composition gradient after the well itself. 
+
+The V group element composition profile of Figure~\ref{subfig:s4_V_0deg_linesc} was calculated using the K\(_\alpha\) lines of \acl{as} and \acl{p}. This graph has noise fluctuations of about \num{10}-\qty{15}{\%}. An \acl{as} percentage composition close to \qty{100}{\%} is present in the \acs{ingaas} \acl{qw} similarly to what was observed for sample 3 (Figure~\ref{subfig:s3_V_linesc}). The \acs{as}-rich region extends for \num{10}-\qty{15}{\nano\metre} after the end of the \acs{ingaas} \acl{qw}.
+
+As the precursor flows were not altered from those of previous samples, the V / III ratios remain as in Table~\ref{tab:sample1_ratios}. The higher concentration of \acl{ga} in the \acl{qw}s could therefore be caused by the change in the geometry of the template given by the difference in device layer thickness of the \hkl<1 1 0> \acs{soi} wafer.
+
+\subsection{Photoluminescence analysis}
+
 The photoluminescence spectrum in Figure~\ref{fig:s4_pl} was recorded from one of the nanowires in sample 4. The operator selected a nanowire far from parasitic growths. The nanowire was excited with a \qty{1}{\second}-long laser pulse with a wavelength of \qty{1000}{\nano\metre} while cooled to \qty{-200}{\kelvin}. This wavelength was selected as it is higher than the absorption wavelength of \acs{inp} (\qty{920}{\nano\metre} \cite{Bachmann1981}) but lower than that of \ce{In0_.53Ga0_.47As} (\qty{1650}{\nano\metre} \cite{Takeda1976}) to selectively excite the latter material. 
 
 As the focus size of a wave is limited by both the diffraction limit and the real (therefore imperfect) optics of the setup, the illumination spot used to excite the nanowire is larger than \qty{500}{\nano\metre} and can be approximated at an order of magnitude of \qty{1}{\micro\metre} \cite{Scherrer2021}. As such, the spot size is much larger than that of even just one of the nanowires, let alone that of the single heterolayers. 
 
 One of the nanowires at the edge of one of the comb structures shown in Figure~\ref{subfig:110_design1} was chosen for measurement to minimise the influence of neighbouring wires as much as possible. The resulting spectrum of Figure~\ref{fig:s4_pl} shows a wide emission range, with an emission profile extending over the detector cutoff. As the detector used to register the emission spectra is also based on \acs{ingaas}, the exact position of the peak cannot be clearly determined. However, as the emission appears to be broad, it is unlikely to be originating from the quantum wells.
 
-The reason for this wide spectrum could lie in the large \acs{ingaas} nucleation layer, which still constitutes the bulk of \acs{ingaas} in the nanowire and grows before the facet stabilisation process mediated by the following \acs{inp} layer.
-
-As such, it becomes important to minimise the length of this nucleation layer as much as possible if the photoluminescence spectrum of the \acs{ingaas} heterostructures is to be recorded.
+The reason for this wide spectrum could lie in the large \acs{ingaas} nucleation layer, which still constitutes the bulk of \acs{ingaas} in the nanowire and grows before the facet stabilisation process mediated by the following \acs{inp} layer. As such, it becomes important to minimise the length of this nucleation layer as much as possible if the photoluminescence spectrum of the \acs{ingaas} heterostructures is to be recorded.
 
 \section{Minimisation of nucleation layer thickness}
 \label{sec:s5}
@@ -535,24 +594,39 @@ As such, it becomes important to minimise the length of this nucleation layer as
         \end{tikzpicture}
     }
     \subcaptionbox{
-    \acs{sem_m} image of nanowire array made with the design in Figure~\ref{subfig:110_design2}.
-    \label{subfig:SEM_array}
+        \acs{sem_m} image of nanowire array made with the design in Figure~\ref{subfig:110_design2}.
+        \label{subfig:SEM_array}
     }{
-    \tikzsetnextfilename{SEM_array}
-    \begin{tikzpicture}
-        \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/SEM_array.pdf}};
-        \node [white] at (5, -3) {\qty{4}{\micro\metre}};
-        \node [white, rotate=24] at (-4, 1.6) {\acs{si}};
-        \node [white, rotate=24] at (-3.1, 1.9) {III-V};
-        \node [white, rotate=-50] at (1.9, -2.5) {Template};
-        \node [white, rotate=-50] at (2.4, -2.4) {Opening};
-    \end{tikzpicture}
+        \tikzsetnextfilename{SEM_array}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/SEM_array.pdf}};
+            \node [white] at (5, -3) {\qty{4}{\micro\metre}};
+            \node [white, rotate=24] at (-4, 1.6) {\acs{si}};
+            \node [white, rotate=24] at (-3.1, 1.9) {III-V};
+            \node [white, rotate=-50] at (1.9, -2.5) {Template};
+            \node [white, rotate=-50] at (2.4, -2.4) {Opening};
+        \end{tikzpicture}
     }
     \subcaptionbox{
-    \acs{bf}-\acs{stem_m} overview image of a nanowire from sample 5.
-    \label{subfig:s5_OV}
+        \acs{bf}-\acs{stem_m} overview image of a nanowire from sample 5. The \acs{si} seed is on the left and the growth direction is highlited in red.
+        \label{subfig:s5_OV}
     }{
-    \includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s5_OV.pdf}
+        \tikzsetnextfilename{s5_OV}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s5_OV.pdf}};
+
+            \draw [red, stealth-] (4, -2) -- ++ (-5, 0) node [midway, anchor=south] {Growth direction};
+            \node at (-5, 0) {\acs{si}};
+            \node at (-5, 1) {\acs{sio2}};
+            \node at (5, -1.5) {\acs{sio2}};
+            \draw [stealth-] (-2, 0.4) -- ++ (0, 0.5) node [anchor=south] {\acs{inp}};
+            \draw [stealth-] (-0.9, 0.4) -- ++ (0, 1) node [anchor=south] {\acs{ingaas}};
+            \draw [stealth-] (0, 0.45) -- ++ (0, 0.5) node [anchor=south] {\acs{inp}};
+            \draw [stealth-] (0.9, 0.45) -- ++ (0, 1) node [anchor=south] {\acs{ingaas}};
+            \draw [stealth-] (1.85, 0.5) -- ++ (0, 0.5) node [anchor=south] {\acs{inp}};
+            \draw [stealth-] (2.8, 0.5) -- ++ (0, 1) node [anchor=south] {\acs{ingaas}};
+            \draw [stealth-] (3.8, 0.5) -- ++ (0, 0.5) node [anchor=south] {\acs{inp}};
+        \end{tikzpicture}
     }
     \caption[\acs{mocvd} recipe and growth results for sample 5.]{\acs{mocvd} recipe and growth results for sample 5. \subref{subfig:recipe5} shows the \acs{mocvd} precursor sequence. \subref{subfig:SEM_array} shows an \acs{sem_m} image of an array of nanowires. The image was recorded with the stage tilted \qty{52}{\degree}. An in-plane \hkl<1 1 0> direction runs parallel to the bottom margin of the image. \subref{subfig:s5_OV} shows a \acs{bf}-\acs{stem_m} overview images of a nanowires. The \acs{si} seed is on the left of the III-V nanowire.}
     \label{fig:s5_recipe_microscopy}
@@ -695,17 +769,24 @@ The emission peak of the \acl{qw}s is found at a wavelength lower than that of t
         \tikzsetnextfilename{SEM_merge_bulk}
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.34\textwidth]{4_Properties/Fig/SEM_merge_bulk.pdf}};
-            \draw[|-|, white] (0.3,-2) -- (2,-2)  node[midway, anchor=south, white] {\qty{500}{\nano\metre}};
+            \draw[|-|, white] (-2.3, 1.8) -- ++ (1.7, 0)  node[midway, anchor=south, white] {\qty{500}{\nano\metre}};
+            
+            \node [white, rotate=35] at (-1.5, -1.9) {\acs{si} seeds};
+            \node [white, rotate=35] at (0, -0.8) {III-V};
+            \node [white, rotate=-55] at (1.2, 1.5) {Opening};
         \end{tikzpicture}
     }
     \subcaptionbox{
-        \acs{sem_m} image of a lamella containing merge structures during \acs{fib} thinning.
+        \acs{sem_m} image of a lamella containing merge structures during \acs{fib} plane-view thinning.
         \label{subfig:SEM_merge_lamella}
     }{
         \tikzsetnextfilename{SEM_merge_lamella}
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.60\textwidth]{4_Properties/Fig/SEM_merge_lamella.pdf}};
-            \draw[|-|, white] (1.5,-2) -- (3.7,-2)  node[midway, anchor=south, white] {\qty{500}{\nano\metre}};
+            \draw[|-|, white] (1.5, -2) -- ++ (2.2, 0)  node[midway, anchor=south, white] {\qty{500}{\nano\metre}};
+            
+            \node [white, rotate=5] at (-1, 1.9) {\acs{si} seeds};
+            \node [white, rotate=5] at (-1, 0.8) {III-V};
         \end{tikzpicture}
     }
     \caption[\acs{sem_m} image of merge structures taken before and  during \acs{fib} lamella cut-out and thinning.]{\acs{sem_m} image of merge structures taken \subref{subfig:SEM_merge_bulk} before and \subref{subfig:SEM_merge_lamella} during \acs{fib} lamella cut-out and thinning.}
