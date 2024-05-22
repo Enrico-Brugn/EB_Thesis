@@ -1217,8 +1217,23 @@ Figure~\ref{subfig:s6_V_30deg_linesc}, however, shows a low \acl{as} concentrati
     \centering
     \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{4_Properties/Fig/s6_competitive_OV.pdf}};
+        
+        \draw[decorate, decoration={brace}] (-3.7, 2.9) -- ++ (4.2, 0) node[midway, anchor=south]{\acs{ingaas} wells};
+        \draw[decorate, decoration={brace}] (2.9, 2.9) -- ++ (3, 0) node[midway, anchor=south]{\acs{ingaas} wells};
+
+        \node [white] at (1.5, 0) {\acs{inp}};
+        \node [white] at (-4.5, 0) {\acs{inp}};
+        \node at (-7.2, 0) {\acs{si}};
+        \node at (-6, 3.2) {Template \acs{sio2}};
+        \node at (-0.5, -4) {Buried \acs{sio2}};
+
+        \draw [red, dashed] (4.8, -2.1) rectangle (6.2, -0.7);
+        \node (loss) at (5, -3) {\hkl{1 1 1} stabilisation loss};
+        \draw [-stealth] (5.5, -2.1) -- (loss);
+
+        \draw [red, stealth-] (2, -3.3) -- ++ (-5, 0) node [midway, anchor=south] {Growth direction};
     \end{tikzpicture}
-    \caption{\acs{bf}-\acs{stem_m} image of a nanowire from sample 6 grown in an area of the wafer with many parasitic nucleations.}
+    \caption[\acs{bf}-\acs{stem_m} image of a nanowire from sample 6 grown in an area of the wafer with many parasitic nucleations.]{\acs{bf}-\acs{stem_m} image of a nanowire from sample 6 grown in an area of the wafer with many parasitic nucleations. The wire grew from the \acs{si} seed on the left in the direction specified by the red arrow. Compared with the wire shown in Figure~\ref{subfig:s6_wire_OV} all layers are thinner, resulting in a shorter wire. A loss stabilisation of the \hkl{1 1 1} single-facet growth front occurs at the end of the wire, as revealed by the trace left by the \acs{ingaas} wells.}
     \label{fig:s6_competitive_OV}
 \end{figure}
 
