@@ -817,7 +817,6 @@ The \acs{sem_m} image in Figure~\ref{subfig:SEM_merge_lamella} shows the same st
     \begin{tikzpicture}
         \node [inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{4_Properties/Fig/merge_OV.pdf}};
 
-        
         \draw[white, decorate, decoration={brace}] (5.3, 0.5) -- ++ (0, 1.5) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas} wells}};
         \node at (6.5, 3.3) {\acs{si} seeds};
         \node [white] at (6.5, 2.3) {\acs{inp}};
@@ -844,10 +843,14 @@ It is important to note that this occurs even though the thickness of the \acs{i
     }{
         \tikzsetnextfilename{SEM_merge_structure_ov}
         \begin{tikzpicture}
-            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/merge_structure_OV.pdf}};
-            \node[anchor=south, white] at (3.4,1.1) {\num{1}};
-            \node[anchor=south, white] at (3.4,-0.5) {\num{2}};
-            \node[anchor=south, white] at (3.4,-2.2) {\num{3}};
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/merge_structure_OV.pdf}};
+            \node[white] at (3.4, 1.4) {\num{1}};
+            \node[white] at (3.4, -0.2) {\num{2}};
+            \node[white] at (3.4, -1.9) {\num{3}};
+
+            \draw[decorate, decoration={brace}] (-2.1, 2.4) -- ++ (3, 0) node[midway, anchor=south]{3x \acs{ingaas} wells};
+            \node[white] at (2, -0.2) {\acs{inp}};
+            \node at (1, -3.2) {Template \acs{sio2}};
         \end{tikzpicture}
     }
     \subcaptionbox{
@@ -860,25 +863,48 @@ It is important to note that this occurs even though the thickness of the \acs{i
         Seed 1.
         \label{subfig:STEM_merge_seed1}
     }{
-        \includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed1.pdf}
+        \tikzsetnextfilename{STEM_merge_seed1}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed1.pdf}};
+
+            \draw[decorate, decoration={brace}] (-2, -0.6) -- ++ (0, 1.7) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas}}};
+            \draw[decorate, decoration={brace}] (-2, 1.1) -- ++ (0, 0.8) node[midway, anchor=east]{\rotatebox{90}{\acs{si}}};
+            \draw[decorate, decoration={brace, mirror}] (-2, -0.6) -- ++ (0, -1.3) node[midway, anchor=east]{\rotatebox{90}{\acs{inp}}};
+        \end{tikzpicture}
     }
     \subcaptionbox{
         Seed 2.
         \label{subfig:STEM_merge_seed2}
     }{
-        \includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed2.pdf}
+        \tikzsetnextfilename{STEM_merge_seed2}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed2.pdf}};
+            
+            \draw[decorate, decoration={brace}] (-2, -1.15) -- ++ (0, 1.50) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas}}};
+            \draw[decorate, decoration={brace}] (-2, 0.35) -- ++ (0, 1.5) node[midway, anchor=east]{\rotatebox{90}{\acs{si}}};
+            \draw[decorate, decoration={brace, mirror}] (-2, -1.15) -- ++ (0, -0.75) node[midway, anchor=east]{\rotatebox{90}{\acs{inp}}};
+        \end{tikzpicture}
     }
     \subcaptionbox{
         Seed 3.
         \label{subfig:STEM_merge_seed3}
     }{
-        \includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed3.pdf}
+        \tikzsetnextfilename{STEM_merge_seed3}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed3.pdf}};
+            
+            \draw[decorate, decoration={brace}] (-2, -1.15) -- ++ (0, 1.35) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas}}};
+            \draw[decorate, decoration={brace}] (-2, 0.2) -- ++ (0, 1.7) node[midway, anchor=east]{\rotatebox{90}{\acs{si}}};
+            \draw[decorate, decoration={brace, mirror}] (-2, -1.15) -- ++ (0, -0.75) node[midway, anchor=east]{\rotatebox{90}{\acs{inp}}};
+        \end{tikzpicture}
     }
-    \caption[\acs{tem_m} and \acs{stem_m} images of the merge structures of sample 5.]{\subref{subfig:STEM_merge_structure_ov} \acs{bf}-\acs{stem_m} and \subref{subfig:TEM_merge_structure_ov} \acs{df}-\acs{tem_m} overview images of a single merge structure. \subref{subfig:STEM_merge_seed1}, \subref{subfig:STEM_merge_seed2}, and \subref{subfig:STEM_merge_seed3} are \acs{bf}-\acs{stem_m} images of the nucleation areas 1, 2, and 3 as marked in \subref{subfig:STEM_merge_structure_ov}. \subref{subfig:TEM_merge_structure_ov} was kindly recorded by Michael Stiefel. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
+    \caption[\acs{tem_m} and \acs{stem_m} images of the merge structures of sample 5.]{\subref{subfig:STEM_merge_structure_ov} \acs{bf}-\acs{stem_m} and \subref{subfig:TEM_merge_structure_ov} \acs{df}-\acs{tem_m} overview images of a single merge structure. \acs{rtp}s are more easily identifiable by the thin lines in \subref{subfig:TEM_merge_structure_ov}, but no other defects can be spotted. \subref{subfig:STEM_merge_seed1}, \subref{subfig:STEM_merge_seed2}, and \subref{subfig:STEM_merge_seed3} are \acs{bf}-\acs{stem_m} images of the nucleation areas 1, 2, and 3 as marked in \subref{subfig:STEM_merge_structure_ov}; the \acs{si} seed, \acs{ingaas} nucleation, and \acs{inp} stabilisation layers are marked. \subref{subfig:TEM_merge_structure_ov} was kindly recorded by Michael Stiefel. \subref{subfig:STEM_merge_structure_ov} was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:merge_ov_seeds}
 \end{figure}
 
 The presence of three heterolayers for each structure is reflected in the single-structure \acs{bf}-\acs{stem_m} and \acl{df} \acl{tem_m} (\acs{df}-\acs{tem_m}) overviews of Figures~\ref{subfig:STEM_merge_structure_ov} and \ref{subfig:TEM_merge_structure_ov}. The latter \acs{tem_m} image was recorded by Michael Stiefel, as was Figure~\ref{subfig:merge_region}. These three heterolayers are arsenide heterostructures, as shown by the contrast with the surrounding \acs{inp}, delimited by two single-facet \hkl{1 1 1} heterointerfaces. The similarity of these heterostructures to those seen in single nucleation nanowires, such as those in Figures~\ref{subfig:s5_OV} and \ref{subfig:s4_OV}, suggests that a highly ordered growth dynamic takes place in the template.
+
+Figure~\ref{subfig:merge_region} shows a magnified \acs{bf}-\acs{tem_m} image of the area immediately after the \acs{sio2} separation between the nucleation regions 2 and 3 marked in Figure~\ref{subfig:STEM_merge_structure_ov}. These \acs{tem_m} images make structural information readily available highlighting 1D and 2D defects better than their \acs{stem_m}-generated counterparts. This is evident in Figure~\ref{subfig:merge_region} by the presence of a series of lines delining many of the \hkl{1 1 1} planes in the III-V crystals. These lines are found in correspondence with \acs{rtp}s, which have been a common defect in all samples grown with the \hkl{1 1 1} growth front stabilisation method so far. The absence of other off-plane features in the image suggests the absence of other defects. However, a few defects could still be "hidden" because of the viewing angle.
 
 \begin{figure}
     \centering
@@ -886,19 +912,30 @@ The presence of three heterolayers for each structure is reflected in the single
         \acs{bf}-\acs{tem_m} image of a likely merging region.
         \label{subfig:merge_region}
     }{
-        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/merge_region.pdf}
+        \tikzsetnextfilename{merge_region}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.47\textwidth]{4_Properties/Fig/merge_region.pdf}};
+
+            \node [fill=white] at (2.3, -3) {Template \acs{sio2}};
+            \node [fill=white] at (-3, 3) {\acs{inp}};
+        \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{bf}-\acs{stem_m} image of a \acl{qw} \cite{Brugnolotto2023_2}.
         \label{subfig:merge_qw}
     }{
-        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/merge_qw.pdf}
+        \tikzsetnextfilename{merge_qw}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.47\textwidth]{4_Properties/Fig/merge_qw.pdf}};
+
+            \node [fill=white] at (2.8, -3) {\acs{inp}};
+            \node [fill=white] at (2.8, 0) {\acs{ingaas}};
+            \node [fill=white] at (2.8, 3) {\acs{inp}};
+        \end{tikzpicture}
     }
-    \caption[High-resolution microscopy images for the lattice analysis of the merge structures.]{High-resolution microscopy images for lattice analysis. \subref{subfig:merge_region} shows a \acs{df}-\acs{tem_m} image the region immediately after one of the spacers between the seed areas (visible in the bottom right of the image). \subref{subfig:merge_qw} shows a high-resolution \acs{bf}-\acs{tem_m} image of the first \acl{qw} (counting from the nucleation areas) in the common part of the template. \subref{subfig:merge_region} was kindly recorded by Michael Stiefel. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
+    \caption[High-resolution microscopy images for the lattice analysis of the merge structures.]{High-resolution microscopy images for lattice analysis. \subref{subfig:merge_region} shows a \acs{df}-\acs{tem_m} image the region immediately after one of the \acs{sio2} spacers between the seed areas (visible in the bottom right of the image). \subref{subfig:merge_qw} shows a high-resolution \acs{bf}-\acs{tem_m} image of the first \acl{qw} (counting from the nucleation areas) in the common part of the template. \subref{subfig:merge_region} was kindly recorded by Michael Stiefel. \subref{subfig:merge_qw} was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:merge_high-res}
 \end{figure}
-
-Figure~\ref{subfig:merge_region} shows a magnified \acs{bf}-\acs{tem_m} image of the area immediately after the \acs{sio2} separation between the nucleation regions 2 and 3 marked in Figure~\ref{subfig:STEM_merge_structure_ov}. These \acs{tem_m} images make structural information readily available highlighting 1D and 2D defects better than their \acs{stem_m}-generated counterparts. This is evident in Figure~\ref{subfig:merge_region} by the presence of a series of lines delining many of the \hkl{1 1 1} planes in the III-V crystals. These lines are found in correspondence with \acs{rtp}s, which have been a common defect in all samples grown with the \hkl{1 1 1} growth front stabilisation method so far. The absence of other off-plane features in the image suggests the absence of other defects. However, a few defects could still be "hidden" because of the viewing angle.
 
 A step-flow growth regimen can explain the absence of detectable defects on the merged regions between the three crystals \cite{Brugnolotto2023_2}. Under these growth conditions, each \acs{inp} atomic bilayer fills the width of the template before the next bilayer grows. This is the extreme result of the higher growth rates observed in \hkl<1 1 0> directions. In such a regimen, even if a crystal reached the larger template portion with the advantage of a few bilayers over the other two, its growth would support and be supported by the lattice matched \hkl{1 1 1} surfaces of the other two crystals. In this situation, as the leading crystal reaches the end of its individual seed area, diffusion of adsorbate atoms and precursors on the tightly packed \hkl{1 1 1} surface would bring precursors toward neighbouring wires. In such a configuration, the growth of shorter wires could be enhanced by the additional supply of precursors from the lead wire, up to the point where the \hkl{1 1 1} surface of the shorter wire can function as a support for the lateral expansion of the leading wire. Another option is for the leading wire to simply spill over the spacer: this situation would see the formation of non-\hkl{1 1 1} facets, which would quickly grow out, filling the neighbouring templates using the lattice-matched \acs{inp} crystals as support.
 
