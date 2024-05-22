@@ -820,6 +820,7 @@ The \acs{sem_m} image in Figure~\ref{subfig:SEM_merge_lamella} shows the same st
         \draw[white, decorate, decoration={brace}] (5.3, 0.5) -- ++ (0, 1.5) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas} wells}};
         \node at (6.5, 3.3) {\acs{si} seeds};
         \node [white] at (6.5, 2.3) {\acs{inp}};
+        \draw [red, stealth-] (1.9, -1) -- ++ (0, 4) node [midway, anchor=east] {\rotatebox{90}{Growth direction}};
     \end{tikzpicture}
     \caption[\acs{bf}-\acs{stem_m} overview image of the lamella containing five merge structures.]{\acs{bf}-\acs{stem_m} overview image of the lamella containing five merge structures. The right most structure has the important material layers labelled. The three structures on the left have seed widths of \qty{50}{\nano\metre} and the two on the right of \qty{70}{\nano\metre}. The \acs{ingaas} wells appear in the same position in all five structures, and all have heterointerfaces consisting of a single \hkl{1 1 1} facet. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:merge_ov}
@@ -909,7 +910,7 @@ Figure~\ref{subfig:merge_region} shows a magnified \acs{bf}-\acs{tem_m} image of
 \begin{figure}
     \centering
     \subcaptionbox{
-        \acs{bf}-\acs{tem_m} image of a likely merging region.
+        \acs{bf}-\acs{tem_m} image of a candidate merging region.
         \label{subfig:merge_region}
     }{
         \tikzsetnextfilename{merge_region}
@@ -931,6 +932,7 @@ Figure~\ref{subfig:merge_region} shows a magnified \acs{bf}-\acs{tem_m} image of
             \node [fill=white] at (2.8, -3) {\acs{inp}};
             \node [fill=white] at (2.8, 0) {\acs{ingaas}};
             \node [fill=white] at (2.8, 3) {\acs{inp}};
+            \draw [red, stealth-] (-2.7, -2) -- ++ (0, 4) node [fill=white, midway, anchor=east] {\rotatebox{90}{Growth direction}};
         \end{tikzpicture}
     }
     \caption[High-resolution microscopy images for the lattice analysis of the merge structures.]{High-resolution microscopy images for lattice analysis. \subref{subfig:merge_region} shows a \acs{df}-\acs{tem_m} image the region immediately after one of the \acs{sio2} spacers between the seed areas (visible in the bottom right of the image). \subref{subfig:merge_qw} shows a high-resolution \acs{bf}-\acs{tem_m} image of the first \acl{qw} (counting from the nucleation areas) in the common part of the template. \subref{subfig:merge_region} was kindly recorded by Michael Stiefel. \subref{subfig:merge_qw} was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
@@ -1035,10 +1037,11 @@ Once the single growth front is established, the growth of the crystal can conti
             \draw[white] (-7.65, -2) arc [start angle = 180, end angle = 93, radius = 0.5] node[midway, anchor=south east]{\qty{87}{\degree}};
             \draw[white] (-7.2, -1) -- ++ (-87:1);
              (3,-0.5) -- ++ (3:7.5);
-            \draw[red, -stealth] (3,-0.8) -- ++ (3:7.5);
+            \draw[red, dashed, -stealth] (3,-0.8) -- ++ (3:7.5);
+            \draw [red, stealth-] (4, -3) -- ++ (-5, 0) node [midway, anchor=south] {Growth direction};
         \end{tikzpicture}
     }
-    \caption[\acs{mocvd} precursor sequence and resulting nanowire for sample 6.]{\subref{subfig:recipe6} \acs{mocvd} precursor sequence and \subref{subfig:s6_wire_OV} resulting nanowire for sample 6.}
+    \caption[\acs{mocvd} precursor sequence and resulting nanowire for sample 6.]{\subref{subfig:recipe6} \acs{mocvd} precursor sequence and \subref{subfig:s6_wire_OV} resulting nanowire for sample 6 with \acs{eds} linescan path marked by a red dashed arrow.}
     \label{fig:s6_recipe+OV}
 \end{sidewaysfigure}
 
@@ -1049,6 +1052,10 @@ The resulting recipe is shown in Figure~\ref{subfig:recipe6}. The \acs{ingaas} n
 The \qty{30}{\degree} cross-section of a nanowire grown with this revised recipe is shown in the \acs{bf}-\acs{stem_m} image in Figure~\ref{subfig:s6_wire_OV}. The angled view given by this tilted cross-section causes the shaded top and bottom interfaces of the III-V material region. The circular shades in the image are given by indium droplets, a common residue left over from \acs{fib} lamella preparation. The III-V material, appearing darker in the centre of the image, is sandwiched between the template oxide at the top and the buried oxide layer at the bottom. The \acs{si} seed is visible on the left of the image, while the \acs{ingaas} nucleation layer is too thin to appear as more than a darker shade at the very beginning of the nanowire. Twelve vertical lines, darker compared to the \acs{inp} making up the majority of the wire, are created by a change in channelling contrast given by the presence of \acl{as} atoms, which are larger than the \acl{p} atoms that make up the majority of the V group element atoms in the wire.
 
 The seed surface consists of a single \hkl{1 1 1} facet resulting from the selective etching of \acs{si} carried out with \acs{tmah} before deposition. This surface forms a \qty{90}{\degree} angle with the wafer plane, but, as can be seen in the highlight in Figure \ref{subfig:s6_wire_OV}, the first \acl{qw}, and indeed all the others, are tilted \qty{3}{\degree} off the perpendicular to the wafer plane. A slight rotation of the growing lattice compared to the seed's lattice orientation can occur during epitaxy because it is a way for the growing crystal to compensate for some of the stress caused by lattice mismatch. Despite the \qty{3}{\degree} rotation, the stabilisation of the \hkl{1 1 1} facet is achieved during the initial \acs{inp} deposition and is maintained throughout the wire. The \num{12} \acl{qw}s range in thickness from \qty{3.7}{\nano\metre} to \qty{4.3}{\nano\metre}.
+
+\paragraph{High resolution analysis} Figure~\ref{fig:s6_HR} shows high resolution \acs{bf}-\acs{stem_m} images of two heterostructures in the nanowire seen in Figure~\ref{subfig:s6_wire_OV}. Many \acs{rtp}s are present in both images, confirming that this defect is the most common in III-V \(_B\) growth on \hkl{1 1 1}\(_B\) planes. 
+
+Figure~\ref{subfig:s6_si-IIIV_interface} shows the heterointerface between the \acl{si} seed and the \acs{ingaas} nucleation layer. \num{8} red lines were added parallel to the first visible continuous biatomic layer on the \acs{ingaas} side. A single red line was added to follow one of the \acs{si} \hkl{1 1 1} facets. By comparing the distance between the lines at the top and bottom of the image, it is clear that the two lattices are already misaligned at the nucleation interface. This region is strained by the mismatch between two lattices, and the first few \acs{ingaas} atomic layers after the \acs{si} seed surface are prone to nucleation for dislocations. The presence of this type of defect in the blurred area at the centre of the image can explain the varying distance between the two \hkl{1 1 1} atomic planes in the \acs{ingaas} and \acs{si}.
 
 \begin{figure}
     \centering
@@ -1067,23 +1074,28 @@ The seed surface consists of a single \hkl{1 1 1} facet resulting from the selec
             \draw [red] (0.61, 3.85) -- ++ (-95.3:7.7);
             \draw [red] (0.69, 3.85) -- ++ (-95.3:7.7);
             \draw [red] (0.77, 3.85) -- ++ (-95.3:7.7);
+
+            \node [white] at (-3,3) {\acs{ingaas}};
+            \node at (3,3) {\acs{si}};
         \end{tikzpicture}
     }
     \subcaptionbox{
         \acs{bf}-\acs{stem_m} image of the first \acs{ingaas} \acs{qw}.
         \label{subfig:s6_well1}
     }{
-        \includegraphics[width=0.48\textwidth]{4_Properties/Fig/s6_well1.pdf}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=0.48\textwidth]{4_Properties/Fig/s6_well1.pdf}};
+            
+            \node [fill=white] at (-3, 3) {\acs{inp}};
+            \node [fill=white] at (1.2, 3) {\acs{ingaas}};
+            \node [fill=white] at (3, 3) {\acs{inp}};
+        \end{tikzpicture}
     }
-    \caption[High-resolution \acs{bf}-\acs{stem_m} images of sample 6.]{High-resolution \acs{bf}-\acs{stem_m} images of \subref{subfig:s6_si-IIIV_interface} the nucleation area, showing the \acs{si} / \acs{ingaas} hetyerointerface, and of \subref{subfig:s6_well1} the first \acl{qw} in sample 6.}
+    \caption[High-resolution \acs{bf}-\acs{stem_m} images of sample 6.]{High-resolution \acs{bf}-\acs{stem_m} images of \subref{subfig:s6_si-IIIV_interface} the nucleation area, showing the \acs{si} / \acs{ingaas} heterointerface. The red lines highlight the \hkl{1 1 1} atomic planes in \acs{ingaas} and \acs{si}. As can be seen by comparing the distance between the lines following the atomic planes in \acs{ingaas} and in \acs{si} at the top and at the bottom of the image, there is a difference in alignment resulting in the rotation of the \hkl<1 1 1> axis highlighted in Figure~\ref{subfig:s6_wire_OV}. \subref{subfig:s6_well1} shows the first \acl{qw} in sample 6.}
     \label{fig:s6_HR}
 \end{figure}
 
-\paragraph{High resolution analysis} Figure~\ref{fig:s6_HR} shows high resolution \acs{bf}-\acs{stem_m} images of two heterostructures in the nanowire seen in Figure~\ref{subfig:s6_wire_OV}. Many \acs{rtp}s are present in both images, confirming that this defect is the most common in III-V \(_B\) growth on \hkl{1 1 1}\(_B\) planes. 
-
-Figure~\ref{subfig:s6_si-IIIV_interface} shows the heterointerface between the \acl{si} seed and the \acs{ingaas} nucleation layer. \num{8} red lines were added parallel to the first visible continuous biatomic layer on the \acs{ingaas} side. A single red line was added to follow one of the \acs{si} \hkl{1 1 1} facets. By comparing the distance between the lines at the top and bottom of the image, it is clear that the two lattices are already misaligned at the nucleation interface. This region is strained by the mismatch between two lattices, and the first few \acs{ingaas} atomic layers after the \acs{si} seed surface are prone to nucleation for dislocations. The presence of this type of defect in the blurred area at the centre of the image can explain the varying distance between the two \hkl{1 1 1} atomic planes in the \acs{ingaas} and \acs{si}.
-
-The first, counting from the \acs{si} seed, \acs{ingaas} \acl{qw} appears as the darker vertical stripe in Figure~\ref{subfig:s6_well1}. The well is well-defined thanks to the channelling contrast between the light \acl{p} atoms and the heavier \acs{as} atoms, which denotes a good segregation of the two species in the respective layers. Comparing the \acs{inp} layers at either side of the well, however, shows a darker shade on the right, in the \acs{inp} area, which grew immediately after the \acs{ingaas} heterolayer. This suggests the presence of \acl{as} contamination after the well, as observed in all previous samples.
+The first, counting from the \acl{si} seed, \acs{ingaas} \acl{qw} appears as the darker vertical stripe in Figure~\ref{subfig:s6_well1}. The well is well-defined thanks to the channelling contrast between the light \acl{p} atoms and the heavier \acs{as} atoms, which denotes a good segregation of the two species in the respective layers. Comparing the \acs{inp} layers at either side of the well, however, shows a darker shade on the right, in the \acs{inp} area, which grew immediately after the \acs{ingaas} heterolayer. This suggests the presence of \acl{as} contamination after the well, as observed in all previous samples.
 \par
 
 \begin{figure}
@@ -1130,10 +1142,6 @@ The first, counting from the \acs{si} seed, \acs{ingaas} \acl{qw} appears as the
     \caption[\acs{ingaas} and \acs{inp} material layer growth rates as a function of their distance from the \acs{si} seed surface in sample 6.]{\acs{ingaas} and \acs{inp} material layer growth rates as a function of their distance from the \acs{si} seed surface \cite{Brugnolotto2023_2}. Both x and y error bars are present but smaller than the markers, except for those on the growth rate of \acs{ingaas}. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:s6_growth_rates}
 \end{figure}
-
-\paragraph{Growth rate} Growth rates in the \acl{qw} structure were calculated by averaging seven thickness measurements of each material layer along the \hkl<1 1 1> direction and dividing them by the deposition time, which is taken from the recipe and is assumed to be error-free. Figure~\ref{fig:s6_growth_rates} shows each growth rate as a function of the distance of the first heterointerface of the respective layer from the \acs{si} seed. This metric is also calculated by averaging seven measurements and errors on the first heterointerface's position and the growth rates of each layer to express the \qty{95}{\%} confidence interval. All errors were plotted in Figure~\ref{fig:s6_growth_rates}. However, the only error bars that exceeded the size of the graph markers were those of the \acs{ingaas} \acl{qw} growth rates.
-
-Growth rates for \acs{inp} layers start at \qty[separate-uncertainty=true]{20.8 (0.5)}{\nano\metre\per\minute} and end at \qty[separate-uncertainty=true]{26.2 (0.2)}{\nano\metre\per\minute}, falling between those of samples 4 and 5. On the other hand, the growth rates of \acs{ingaas} \acl{qw}s is higher than both those of samples 4 and 5 and ranges from \qty[separate-uncertainty=true]{41 (3)}{\nano\metre\per\minute} to \qty[separate-uncertainty=true]{52 (4)} {\nano\metre\per\minute}. The increase in the growth rate values with the nearing of the growth front to the opening of the template confirms its dependence on the diffusion process of the precursors and adsorbates in the template \cite{bjork2012}. Their lower thickness gives the higher error in the growth rates of the \acs{ingaas} layers.
 
 \begin{figure}
     \centering
@@ -1192,6 +1200,10 @@ Growth rates for \acs{inp} layers start at \qty[separate-uncertainty=true]{20.8 
     \label{fig:s6_30deg_linescans}
 \end{figure}
 
+\paragraph{Growth rate} Growth rates in the \acl{qw} structure were calculated by averaging seven thickness measurements of each material layer along the \hkl<1 1 1> direction and dividing them by the deposition time, which is taken from the recipe and is assumed to be error-free. Figure~\ref{fig:s6_growth_rates} shows each growth rate as a function of the distance of the first heterointerface of the respective layer from the \acs{si} seed. This metric is also calculated by averaging seven measurements and errors on the first heterointerface's position and the growth rates of each layer to express the \qty{95}{\%} confidence interval. All errors were plotted in Figure~\ref{fig:s6_growth_rates}. However, the only error bars that exceeded the size of the graph markers were those of the \acs{ingaas} \acl{qw} growth rates.
+
+Growth rates for \acs{inp} layers start at \qty[separate-uncertainty=true]{20.8 (0.5)}{\nano\metre\per\minute} and end at \qty[separate-uncertainty=true]{26.2 (0.2)}{\nano\metre\per\minute}, falling between those of samples 4 and 5. On the other hand, the growth rates of \acs{ingaas} \acl{qw}s is higher than both those of samples 4 and 5 and ranges from \qty[separate-uncertainty=true]{41 (3)}{\nano\metre\per\minute} to \qty[separate-uncertainty=true]{52 (4)} {\nano\metre\per\minute}. The increase in the growth rate values with the nearing of the growth front to the opening of the template confirms its dependence on the diffusion process of the precursors and adsorbates in the template \cite{bjork2012}. Their lower thickness gives the higher error in the growth rates of the \acs{ingaas} layers.
+
 \paragraph{\acs{eds} analysis} An \acs{eds} linescan was carried out along the \hkl<1 1 1> vector marked in red in Figure~\ref{subfig:s6_wire_OV}, which also defines the \hkl{1 1 1} single-facet heterointerfaces, to capture the variation in composition across the last \num{6} \acs{ingaas} \acl{qw}s. Figure~\ref{subfig:s6_III_30deg_linesc} shows the concentration profile of the III group element. The noise level is around \qty{15}{\%} and the calculated atomic percentage of \acl{ga} in the \acs{ingaas} layer ranges from \qty{40}{\%} to \qty{50}{\%}. These concentrations are in line with those seen in Figure~\ref{subfig:s5_III_0deg_linesc} for sample 5.
 
 Figure~\ref{subfig:s6_V_30deg_linesc}, however, shows a low \acl{as} concentration in the \acs{ingaas} layers. Its highest value is \qty{80}{\%} in well \num{9}, while it oscillates between \qty{50}{\%} and \qty{60}{\%} in wells \num{7}, \num{8}, \num{10}, \num{11}, and \num{12}. These concentration profiles depart from the very well-segregated V group elements shown in Figure~\ref{subfig:s3_V_linesc}, \ref{subfig:s4_V_0deg_linesc}, and \ref{subfig:s5_V_0deg_linesc}. This indicates that layers under \qty{5}{\nano\metre} in thickness could be too thin to allow for a complete switch in composition from \acl{p} to \acs{as}. Other explanations involve probe size effects, which could be "smoothing" the composition profiles across the heterointerfaces, or a small angle in the lamella exposing both \acs{ingaas} and \acs{inp} to the beam. However, comparing the V group element profiles with the III group element profiles, it appears unlikely that either of these instrument-related distortions could have played a major role. Indeed, the same effects would be expected to affect the concentration profile of the III group elements, lowering the \acl{ga} concentration as a result. The fact that this has not happened makes the possibility that the thickness of the transition layer is on the order of \qty{2}{\nano\metre} more likely. 
@@ -1203,7 +1215,9 @@ Figure~\ref{subfig:s6_V_30deg_linesc}, however, shows a low \acl{as} concentrati
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{4_Properties/Fig/s6_competitive_OV.pdf}
+    \begin{tikzpicture}
+        \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{4_Properties/Fig/s6_competitive_OV.pdf}};
+    \end{tikzpicture}
     \caption{\acs{bf}-\acs{stem_m} image of a nanowire from sample 6 grown in an area of the wafer with many parasitic nucleations.}
     \label{fig:s6_competitive_OV}
 \end{figure}
