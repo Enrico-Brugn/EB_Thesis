@@ -795,7 +795,7 @@ The emission peak of the \acl{qw}s is found at a wavelength lower than that of t
             \node [white, rotate=5] at (-1, 0.8) {III-V};
         \end{tikzpicture}
     }
-    \caption[\acs{sem_m} image of merge structures taken before and  during \acs{fib} lamella cut-out and thinning.]{\acs{sem_m} image of merge structures taken \subref{subfig:SEM_merge_bulk} before and \subref{subfig:SEM_merge_lamella} during \acs{fib} lamella cut-out and thinning.}
+    \caption[\acs{sem_m} image of merge structures taken before and  during \acs{fib} lamella cut-out and thinning.]{\acs{sem_m} image of merge structures taken \subref{subfig:SEM_merge_bulk} before and \subref{subfig:SEM_merge_lamella} during \acs{fib} lamella cut-out and thinning. The three \acs{si} seeds seen on the bottom left of \subref{subfig:SEM_merge_bulk} aapear at the top of \subref{subfig:SEM_merge_lamella}, which gives a point of view from below the wafer surface now that the lamella has been thinned and the buried \acs{sio2} sputtered away.}
     \label{fig:SEM_merge}
 \end{figure}
 
@@ -813,7 +813,13 @@ The \acs{sem_m} image in Figure~\ref{subfig:SEM_merge_lamella} shows the same st
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{4_Properties/Fig/merge_OV.pdf}
+    \tikzsetnextfilename{merge_ov}
+    \begin{tikzpicture}
+        \node [inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{4_Properties/Fig/merge_OV.pdf}};
+
+        
+        \draw[white, decorate, decoration={brace, mirror}] (-4, -1) -- ++ (0, 2) node[midway, anchor=south]{\acs{ingaas} wells};
+    \end{tikzpicture}
     \caption[\acs{bf}-\acs{stem_m} overview image of the lamella containing five merge structures.]{\acs{bf}-\acs{stem_m} overview image of the lamella containing five merge structures \cite{Brugnolotto2023_2}. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:merge_ov}
 \end{figure}
