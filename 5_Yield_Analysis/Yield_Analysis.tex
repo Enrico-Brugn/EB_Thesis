@@ -15,27 +15,58 @@ The second half of the chapter focuses on using the dataset containing \num{240}
         Mask of a single array.
         \label{subfig:mask_array}
     }{
-        \includegraphics[width = 0.48\textwidth]{5_Yield_Analysis/Fig/mask_array.pdf}
+        \tikzsetnextfilename{mask_array}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.475\textwidth]{5_Yield_Analysis/Fig/mask_array.pdf}};
+
+            \node [rotate=35] (si) at (2, -2) {\acs{si} nanostructure};
+            \draw [-stealth] (si) -- (-0.2, -1.4);
+            \node [rotate=35] (open) at (-2, 2) {Template openings};
+            \draw [-stealth] (open) -- (-2, -0);
+            \draw [-stealth] (open) -- (-0.35, 1.2);
+            \draw [-stealth] (open) -- (1.3, 2.2);
+        \end{tikzpicture}
     }
     \subcaptionbox{
         Mask of a section of the chip.
         \label{subfig:mask_section}
     }{
-        \includegraphics[width = 0.48\textwidth]{5_Yield_Analysis/Fig/mask_section.pdf}
+        \tikzsetnextfilename{mask_section}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.475\textwidth]{5_Yield_Analysis/Fig/mask_section.pdf}};
+
+            \draw [red] (2.15, -1.7) rectangle (1.75, -1.3);
+            \node [red] (a) at (1, -1.5) {(A)};
+            \draw [red, -stealth] (a) -- (1.75, -1.5);
+        \end{tikzpicture}
     }
     \subcaptionbox{
         Mask of a division of the chip.
         \label{subfig:mask_division}
     }{
-        \includegraphics[width = 0.48\textwidth]{5_Yield_Analysis/Fig/mask_division.pdf}
+        \tikzsetnextfilename{mask_division}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.475\textwidth]{5_Yield_Analysis/Fig/mask_division.pdf}};
+
+            \draw [red] (-2.8, 2) rectangle (-1.3, 3.5);
+            \node [red] (a) at (-3.3, 1) {(B)};
+            \draw [red, -stealth] (a) -- (-2.5, 2);
+        \end{tikzpicture}
     }
     \subcaptionbox{
         Mask of the chip.
         \label{subfig:mask_chip}
     }{
-        \includegraphics[width = 0.48\textwidth]{5_Yield_Analysis/Fig/mask_chip.pdf}
+        \tikzsetnextfilename{mask_chip}
+        \begin{tikzpicture}
+            \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.475\textwidth]{5_Yield_Analysis/Fig/mask_chip.pdf}};
+
+            \draw [red] (-2.67, 1.9) rectangle (-1.85, 2.7);
+            \node [red] (a) at (-3.3, 1) {(C)};
+            \draw [red, -stealth] (a) -- (-2.5, 1.9);
+        \end{tikzpicture}
     }
-    \caption[Mask used for the \acs{ebl} and optical lithography exposition of \hkl(1 1 0) substrtates.]{Mask used for the \acs{ebl} and optical lithography exposition of \hkl(1 1 0) substrates. The in-plane \hkl<1 1 0> direction runs parallel to the bottom margin of the images. \subref{subfig:mask_array} shows a single array of the kind illustrated in Figure~\ref{subfig:110_design2}. \subref{subfig:mask_section} shows a section of the chip, marked by the number 11, containing \num{24} arrays, \num{6} for each template width (\qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}). \num{12} merge structures are also visible. \subref{subfig:mask_division} shows a division of the chip, containing \num{12} sections. \subref{subfig:mask_chip} shows the full mask of the chip, containing \num{49} divisions. The sample area measuring \qtyproduct{1.5 x 1.5}{\centi\metre} is highlighted in yellow.}
+    \caption[Mask used for the \acs{ebl} and optical lithography exposition of \hkl(1 1 0) substrtates.]{Mask used for the \acs{ebl} and optical lithography exposition of \hkl(1 1 0) substrates. Different colours denote different mask layers. The in-plane \hkl<1 1 0> direction runs parallel to the bottom margin of the images. \subref{subfig:mask_array} shows a single array of the kind illustrated in Figure~\ref{subfig:110_design2}. \subref{subfig:mask_section} shows a section of the chip, marked by the number 11, containing \num{24} arrays, \num{6} for each template width (\qty{70}{nm}, \qty{140}{nm}, \qty{210}{nm}, and \qty{280}{nm}). \num{12} merge structures are also visible. \subref{subfig:mask_division} shows a division of the chip, containing \num{12} sections. \subref{subfig:mask_chip} shows the full mask of the chip, containing \num{49} divisions. The sample area measuring \qtyproduct{1.5 x 1.5}{\centi\metre} is highlighted in yellow.}
     \label{fig:wafer_mask}
 \end{figure}
 
@@ -65,8 +96,12 @@ Stabilisation of a single \hkl{1 1 1} facet for the internal superlattice hetero
         \node at (3,-3.8) {(3)};
         \node[inner sep=0pt] (image) at (8,-3) {\includegraphics[width=0.48\textwidth]{5_Yield_Analysis/Fig/s7_OV4.pdf}};
         \node at (11,-3.8) {(4)};
+        \draw [red, -stealth] (2.4, -3.7) -- ++ (-3.5, 0) node [midway, anchor=north] {Growth direction};
+        \draw [red, -stealth] (10.4, -3.7) -- ++ (-3.5, 0) node [midway, anchor=north] {Growth direction};
+        \draw [red, -stealth] (2.4, -0.7) -- ++ (-3.5, 0) node [midway, anchor=north] {Growth direction};
+        \draw [red, -stealth] (10.4, -0.7) -- ++ (-3.5, 0) node [midway, anchor=north] {Growth direction};
     \end{tikzpicture}
-    \caption[Four \acs{bf}-\acs{stem_m} images of different nanowires from the lamella cut for sample 7.]{Four \acs{bf}-\acs{stem_m} images of different nanowires from the lamella cut for sample 7.}
+    \caption[Four \acs{bf}-\acs{stem_m} images of different nanowires from the lamella cut for sample 7.]{Four \acs{bf}-\acs{stem_m} images of different nanowires from the lamella cut for sample 7. They all share similar growth rates and internal structures.}
     \label{fig:s7_OVs}
 \end{figure}
 
