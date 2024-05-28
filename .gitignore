@@ -30,6 +30,7 @@ output.pdf
 *.ipynb
 *.synctex(busy)
 /figures/*
+/figures_plex/*
 /_minted-output
 ltex.dictionary.en-GB.txt
 ltex.disabledRules.en-GB.txt
