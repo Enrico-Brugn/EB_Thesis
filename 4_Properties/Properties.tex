@@ -1,15 +1,15 @@
 \chapter{Properties of TASE-grown nanowires}
 \label{chap:properties}
 
-The critical growth mechanisms and single-facet \hkl{111}\(_B\) growth front stabilisation method were explored and developed in Chapter~\ref{chap:growth}. However, the lack of in-plane \hkl{1 1 1} directions in the \hkl(0 0 1) \acf{soi} wafer on which growth was carried out complicates the analysis of growth results. The two possible \hkl{1 1 1} facets are tilted and, therefore, yield calculations and device contacting become more complex. as the process through which one of the facets is selected for stabilisation is dependent on the shape and orientation of the nucleating crystal on the \acl{si} seed.
+The critical growth mechanisms and single-facet \hkl{111}\(_B\) growth front stabilisation method were explored and developed in Chapter~\ref{chap:growth}. However, the lack of in-plane \hkl{1 1 1} directions in the \hkl(0 0 1) \acf{SOI} wafer on which growth was carried out complicates the analysis of growth results. The two possible \hkl{1 1 1} facets are tilted and, therefore, yield calculations and device contacting become more complex. as the process through which one of the facets is selected for stabilisation is dependent on the shape and orientation of the nucleating crystal on the \acl{SI} seed.
 
-This chapter expands on the research my coauthors and I published in \cite{Brugnolotto2023, Brugnolotto2023_2}. The first section provides an overview of the challenges related to fabrication on \hkl<1 1 0> wafers and how the design of the \acf{tase} structures and their characterization evolved from what was seen in the previous chapter. The first growth section compares the result of applying the same growth recipe developed on the \hkl<0 0 1> \acs{soi} wafer to the new substrate. Further optimisation of material growth follows, and the characterisation of single-crystal \acs{tase}-grown III-V microstructure developing from multiple \acl{si} seeds is shown.
+This chapter expands on the research my coauthors and I published in \cite{Brugnolotto2023, Brugnolotto2023_2}. The first section provides an overview of the challenges related to fabrication on \hkl<1 1 0> wafers and how the design of the \acf{TASE} structures and their characterization evolved from what was seen in the previous chapter. The first growth section compares the result of applying the same growth recipe developed on the \hkl<0 0 1> \acs{SOI} wafer to the new substrate. Further optimisation of material growth follows, and the characterisation of single-crystal \acs{TASE}-grown III-V microstructure developing from multiple \acl{SI} seeds is shown.
 
-A growth rate study linking the growth rates of \acf{inp} and \acf{ingaas} to the position of each respective material layer in the template, expressed as its distance from the \acl{si} seed, was carried out. The effects of growth in highly competitive environments on growth rates were explored. In the penultimate section, the materials investigated are expanded to \acf{inas}, \acf{gaas}, and \acf{gasb}. The effect of the presence of these new and strained heterolayers on growth is explored. Finally, the impact of the introduction of \acf{sn} in dopant concentrations on the growth dynamics inside the \acs{tase} template is reported.
+A growth rate study linking the growth rates of \acf{inp} and \acf{ingaas} to the position of each respective material layer in the template, expressed as its distance from the \acl{SI} seed, was carried out. The effects of growth in highly competitive environments on growth rates were explored. In the penultimate section, the materials investigated are expanded to \acf{inas}, \acf{gaas}, and \acf{gasb}. The effect of the presence of these new and strained heterolayers on growth is explored. Finally, the impact of the introduction of \acf{sn} in dopant concentrations on the growth dynamics inside the \acs{TASE} template is reported.
 
-\section{\texorpdfstring{Fabrication on \acs{si}\hkl(1 1 0) \acs{soi}}{Fabrication on Si(110) SOI}}
+\section{\texorpdfstring{Fabrication on \acs{SI}\hkl(1 1 0) \acs{SOI}}{Fabrication on Si(110) SOI}}
 
-The fabrication of templates for nanowires and microstructures on the new \hkl(1 1 0) substrate followed the same underlying methodology (see Section~\ref{chap:tase}) implemented on the same tools (see Appendix~\ref{chap:tools}) that was used for the samples in Chapter~\ref{chap:growth}. A series of lithography steps, including both \acf{ebl} and optical lithography; deposition steps, including \acf{ald} and \acf{pecvd}; and etching steps, including \acf{rie}, \acf{icp} etching and \acf{tmah} and \acf{hf} etching were employed to define the structures (seed and growth region) enclose them in the template \acs{sio2}, open the template, and finally etch back the sacrificial \acl{si} to expose the seed surface.
+The fabrication of templates for nanowires and microstructures on the new \hkl(1 1 0) substrate followed the same underlying methodology (see Section~\ref{chap:tase}) implemented on the same tools (see Appendix~\ref{chap:tools}) that was used for the samples in Chapter~\ref{chap:growth}. A series of lithography steps, including both \acf{ebl} and optical lithography; deposition steps, including \acf{ald} and \acf{pecvd}; and etching steps, including \acf{rie}, \acf{icp} etching and \acf{tmah} and \acf{hf} etching were employed to define the structures (seed and growth region) enclose them in the template \acs{sio2}, open the template, and finally etch back the sacrificial \acl{SI} to expose the seed surface.
 
 \subsection{Template design considerations}
 
@@ -40,12 +40,12 @@ The fabrication of templates for nanowires and microstructures on the new \hkl(1
         \end{tikzpicture}
     }
     \subcaptionbox{
-    \acs{si} seed area before growth.
+    \acs{SI} seed area before growth.
     \label{subfig:110_etchback}
     }{
         \tikzsetnextfilename{110_etchback}
         \begin{tikzpicture}
-            \filldraw[fill=Si_green] (2cm, 0cm) --  node[midway, anchor= north west] {\acs{si}} (2cm, 22mm) -- (4cm, 22mm) -- (4cm, 0cm) node[midway, anchor=west]{{\hkl{1 1 1}}} -- cycle;
+            \filldraw[fill=Si_green] (2cm, 0cm) --  node[midway, anchor= north west] {\acs{SI}} (2cm, 22mm) -- (4cm, 22mm) -- (4cm, 0cm) node[midway, anchor=west]{{\hkl{1 1 1}}} -- cycle;
             \filldraw[fill=SiO2_blue] (0cm, -10mm) -- (8cm, -10mm) -- (8cm, 0cm) -- (2cm, 0mm)-- (2cm, 22mm) -- (8cm, 22mm) -- (8cm, 32mm) -- (0cm, 32mm) --  node[midway, anchor=west] {\acs{sio2}} cycle; 
             \draw (3.7cm, 22mm) -- ++ (0, -3mm) node[anchor = north east]{\qty{90}{\degree}} -- ++ (3mm, 0);
             \draw[-stealth] (6cm, 7mm) node[anchor=north] {\hkl<-1 1 -2>} -- ++ (90:0.8cm) node[anchor=south] {\hkl<1 1 0>};
@@ -53,13 +53,13 @@ The fabrication of templates for nanowires and microstructures on the new \hkl(1
             \node[mark size=2pt] at (6, 7mm) {\pgfuseplotmark{o}};
         \end{tikzpicture}
     }
-    \caption[Crystalline orientations in the \hkl(1 1 0) \acs{soi} wafer.] {Crystalline orientations in the \hkl(1 1 0) \acs{soi} wafer. \subref{subfig:110wafer_directions} shows a schematic of the crystalline directions in the plane of the \acs{si} device layer, highlighting its mirror plane symmetry. \subref{subfig:110_etchback} highlights the high-symmetry directions in the \hkl{1 1 2} plane containing the chosen \hkl<1 1 1> growth direction and the \hkl[1 1 0] vector defining the wafer orientation. It highlights the vertical \hkl{1 1 1} seed facet.}
+    \caption[Crystalline orientations in the \hkl(1 1 0) \acs{SOI} wafer.] {Crystalline orientations in the \hkl(1 1 0) \acs{SOI} wafer. \subref{subfig:110wafer_directions} shows a schematic of the crystalline directions in the plane of the \acs{SI} device layer, highlighting its mirror plane symmetry. \subref{subfig:110_etchback} highlights the high-symmetry directions in the \hkl{1 1 2} plane containing the chosen \hkl<1 1 1> growth direction and the \hkl[1 1 0] vector defining the wafer orientation. It highlights the vertical \hkl{1 1 1} seed facet.}
     \label{fig:110_wafer_properties}
 \end{figure}
 
-An initial evaluation of the crystalline symmetry in the wafer plane is necessary to plan the orientation of the \acs{tase} templates on the wafer surface. Figure~\ref{subfig:110wafer_directions} shows the various in-plane crystalline directions in the top device layer of the \hkl(1 1 0) \acs{soi} wafer employed in the fabrication of all future samples. Unlike its \hkl(0 0 1) predecessor, which had a four-fold axis perpendicular to the wafer plane, this \hkl(1 1 0) wafer has a mirror plane dictating the in-plane symmetry. Therefore, the wafer's notch becomes key to orienting the \acs{tase} structures with the desired crystalline directions.
+An initial evaluation of the crystalline symmetry in the wafer plane is necessary to plan the orientation of the \acs{TASE} templates on the wafer surface. Figure~\ref{subfig:110wafer_directions} shows the various in-plane crystalline directions in the top device layer of the \hkl(1 1 0) \acs{SOI} wafer employed in the fabrication of all future samples. Unlike its \hkl(0 0 1) predecessor, which had a four-fold axis perpendicular to the wafer plane, this \hkl(1 1 0) wafer has a mirror plane dictating the in-plane symmetry. Therefore, the wafer's notch becomes key to orienting the \acs{TASE} structures with the desired crystalline directions.
 \par
-Figure~\ref{subfig:110_etchback} shows a schematic cross-section of the \acs{tase} structure before growth with colour-coded materials. The \acl{si} seed presents a \hkl{1 1 1} facet forming a \qty{90}{\degree} angle with all the template walls because of the \acs{tmah} etchant used to remove the sacrificial \acl{si}; unlike the \hkl<0 0 1> wafer samples which formed \qty{90}{\degree} angles with the sidewalls (Figure~\ref{subfig:enterprise_etchback}).
+Figure~\ref{subfig:110_etchback} shows a schematic cross-section of the \acs{TASE} structure before growth with colour-coded materials. The \acl{SI} seed presents a \hkl{1 1 1} facet forming a \qty{90}{\degree} angle with all the template walls because of the \acs{tmah} etchant used to remove the sacrificial \acl{SI}; unlike the \hkl<0 0 1> wafer samples which formed \qty{90}{\degree} angles with the sidewalls (Figure~\ref{subfig:enterprise_etchback}).
 
 \begin{sidewaysfigure}
     \centering
@@ -114,19 +114,19 @@ Figure~\ref{subfig:110_etchback} shows a schematic cross-section of the \acs{tas
             \end{scope}
         \end{tikzpicture}
     }
-    \caption[Microstructure designs for \acs{tase} growth on the \hkl(1 1 0) \acs{soi} wafer.]{Microstructure designs for \acs{tase} growth. The structures transferred to the \acs{si} device layer are represented in black and the template opening regions in red. \subref{subfig:110_design1} shows the double comb structures grown on the first \hkl[1 1 0] samples. These were always oriented to have the template axis coincide with the in-plane \hkl<1 1 1> directions. \subref{subfig:110_design2} shows the nanowire array structures used in later experiments on the \hkl[1 1 0] \acs{soi}s and the "merge wire" structures. These types of structures were grown both aligned with the in-plane \hkl[1 1 1] direction, as highlighted by the solid-line arrows, and \qty{20}{\degree} misaligned, as shown by the dashed arrows \cite{Brugnolotto2023_2}.}
+    \caption[Microstructure designs for \acs{TASE} growth on the \hkl(1 1 0) \acs{SOI} wafer.]{Microstructure designs for \acs{TASE} growth. The structures transferred to the \acs{SI} device layer are represented in black and the template opening regions in red. \subref{subfig:110_design1} shows the double comb structures grown on the first \hkl[1 1 0] samples. These were always oriented to have the template axis coincide with the in-plane \hkl<1 1 1> directions. \subref{subfig:110_design2} shows the nanowire array structures used in later experiments on the \hkl[1 1 0] \acs{SOI}s and the "merge wire" structures. These types of structures were grown both aligned with the in-plane \hkl[1 1 1] direction, as highlighted by the solid-line arrows, and \qty{20}{\degree} misaligned, as shown by the dashed arrows \cite{Brugnolotto2023_2}.}
     \label{fig:110_Template_Design}
 \end{sidewaysfigure}
 
-Figure~\ref{fig:110_Template_Design} shows the evolution of the \acs{tase} structures from those in Figure~\ref{fig:001_Templat5e_Design}. The comb structure of Figure~\ref{subfig:enterprise_design} is perfect for \acf{sem_m} analysis of multiple wires in a single image and the \acf{stem_m} survey of cross-section cuts perpendicular to the growth direction. However, cross-sections parallel to the growth direction only allow for the analysis of a single wire.
+Figure~\ref{fig:110_Template_Design} shows the evolution of the \acs{TASE} structures from those in Figure~\ref{fig:001_Templat5e_Design}. The comb structure of Figure~\ref{subfig:enterprise_design} is perfect for \acf{sem_m} analysis of multiple wires in a single image and the \acf{stem_m} survey of cross-section cuts perpendicular to the growth direction. However, cross-sections parallel to the growth direction only allow for the analysis of a single wire.
 \par
-As the analysis of heterointerfaces stacked along the growth vector is the primary goal of this work, maximising the number of wires observable from seed to final interface in a single \acf{fib} cut is a key objective of the design phase. Taking inspiration from the "T-shaped" structure in Figure~\ref{subfig:enterprise_design} the first evolution of the comb array is shown in Figure~\ref{subfig:110_design1}. A central rectangular \acl{si} backbone anchors two rows of nanowires that extend from either side, with the templates being open at the very edges of the structure (in red in Figure~\ref{subfig:110_design1}). The length of the nanowire growth area extends up to \qty{7}{\micro\metre} for this design. These long channels (in relation to their \qty{70}{\nano\metre} height) were designed to study the effect of growth in "deep" templates on resulting composition and growth rates. Unfortunately, in practice, the resulting structure could only be used with short etch-back segments. This was due to the thickness of the side walls in the final samples, which was insufficient to ensure structural integrity during \acs{tmah} etch-back, despite the selectivity of this etchant.
+As the analysis of heterointerfaces stacked along the growth vector is the primary goal of this work, maximising the number of wires observable from seed to final interface in a single \acf{fib} cut is a key objective of the design phase. Taking inspiration from the "T-shaped" structure in Figure~\ref{subfig:enterprise_design} the first evolution of the comb array is shown in Figure~\ref{subfig:110_design1}. A central rectangular \acl{SI} backbone anchors two rows of nanowires that extend from either side, with the templates being open at the very edges of the structure (in red in Figure~\ref{subfig:110_design1}). The length of the nanowire growth area extends up to \qty{7}{\micro\metre} for this design. These long channels (in relation to their \qty{70}{\nano\metre} height) were designed to study the effect of growth in "deep" templates on resulting composition and growth rates. Unfortunately, in practice, the resulting structure could only be used with short etch-back segments. This was due to the thickness of the side walls in the final samples, which was insufficient to ensure structural integrity during \acs{tmah} etch-back, despite the selectivity of this etchant.
 \par
 The difficulties encountered with the design in Figure~\ref{subfig:110_design1} together with the possibility of having more \acs{stem_m}-observable nanowires per \acs{fib} cut led to the design of the array structure in Figure~\ref{subfig:110_design2}. This allows for the \acs{stem_m} analysis of \num{6} short nanowires up to \qty{2}{\micro\metre}-long while keeping the overall length of the structure at \qty{14.5}{\micro\metre}, and therefore comparable to that of the double-comb design (\qty{13}{\micro\metre}). There are \num{4} equidistant rectangular backbone anchors, with two marking the beginning and end of the structure. The templates are open between the anchors in three areas of the structures (in red in Figure~\ref{subfig:110_design2}). Thus, once complete, one such array contains \num{66} growth sites.
 
 Wire widths of \qty{70}{\nano\metre}, \qty{140}{\nano\metre}, \qty{210}{\nano\metre}, and \qty{280}{\nano\metre} were fabricated, the Figures~\ref{subfig:110_design1} and \ref{subfig:110_design2} show the \qty{210}{\nano\metre} designs.
 
-To the bottom right of the array in Figure~\ref{subfig:110_design2} there is a "merge wire" structure. In this structure, three nucleation wires with a design width of \qty{70}{\nano\metre} all terminate in a single channel \qty{400}{\nano\metre} wide. This structure was designed to study the merging regions between the three growing crystals to observe the defects that could form from the merging of two growing crystals. In the past, it was employed to demonstrate the introduction of dislocations in \acs{tase} microstructures \cite{Mauthe2021}.
+To the bottom right of the array in Figure~\ref{subfig:110_design2} there is a "merge wire" structure. In this structure, three nucleation wires with a design width of \qty{70}{\nano\metre} all terminate in a single channel \qty{400}{\nano\metre} wide. This structure was designed to study the merging regions between the three growing crystals to observe the defects that could form from the merging of two growing crystals. In the past, it was employed to demonstrate the introduction of dislocations in \acs{TASE} microstructures \cite{Mauthe2021}.
 
 Both structures in Figure~\ref{subfig:110_design2} were grown aligned to the in-plane \hkl<1 1 1> direction but also \qty{20}{\degree} misaligned. In practice, this was done by aligning one set of structures to an in-plane \hkl<1 1 1> direction and rotating each subsequent set by \qty{90}{\degree}. Selecting this specific \qty{20}{\degree} misalignment as a basis for analysis therefore has two advantages:
 \begin{enumerate}
@@ -349,7 +349,7 @@ The most significant change concerned the post-\acs{ingaas} hold step. Here, \ac
 Figure~\ref{fig:s4_recipe_STEM} shows \acs{bf}-\acs{stem_m} images of two different wires from sample 4. The images on the left side of both Figure~\ref{subfig:s4_OV} and \ref{subfig:s4_HR} show the wire cut with a standard cross-section used in the previous chapter and schematised in Figure~\ref{subfig:FIB_cut_strategy}. In comparison, on the right side of the same figures, the images of a lamella cut with the \qty{30}{\degree} cross-section illustrated on the right of Figure~\ref{fig:110_FIB} are shown. 
 
 Both lamellae come from the same sample, with identical device layer thickness. 
-However, Figure~\ref{subfig:s4_OV} highlights how the \qty{30}{\degree} cross-section appears larger because the viewing angle is not perpendicular to the heterointerfaces that lay in the wafer plane. This distortion becomes clear when one looks at the III-V / \acs{si} interfaces at the top and bottom of the nanowires. The well-defined lines in the standard cross-section become large regions in the \qty{30}{\degree} cross-section. In these regions, the III-V nanowire and the \acs{sio2} template appear superimposed, as they are one on top of the other in the path the electron beam takes through the lamella.
+However, Figure~\ref{subfig:s4_OV} highlights how the \qty{30}{\degree} cross-section appears larger because the viewing angle is not perpendicular to the heterointerfaces that lay in the wafer plane. This distortion becomes clear when one looks at the III-V / \acs{SI} interfaces at the top and bottom of the nanowires. The well-defined lines in the standard cross-section become large regions in the \qty{30}{\degree} cross-section. In these regions, the III-V nanowire and the \acs{sio2} template appear superimposed, as they are one on top of the other in the path the electron beam takes through the lamella.
 
 \begin{figure}
     \centering
@@ -373,7 +373,7 @@ An evident advantage of the \qty{30}{\degree} cut in combination with the \hkl<1
 
 The comparison between the two wires at high resolution in Figure~\ref{subfig:s4_HR} also highlights the amount of structural information available when viewing a \hkl{1 1 0} plane (on the right) compared to a \hkl{1 1 2} plane (on the left). The presence of \acl{rtp}s (\acs{rtp}s) is evident in the \qty{30}{\degree} cross-section both in the \acs{bf}-\acs{stem_m} image and in its \acf{fft} in the insert. The \acs{rtp}s have manifested as horizontal lines in the frequency domain. In contrast, both the \hkl{1 1 2} \acs{bf}-\acs{stem_m} image and its \acf{fft} do not contain any trace of this type of defect. This can be easily confirmed by carrying out an inverse \acs{fft} of a small portion of the initial \acs{fft}. Figure~\ref{fig:FFT_analysis} shows the result of this operation for the vertical line in the \acs{fft} of the \qty{0}{\degree} cross-section on the left, and of the horizontal lines in the \qty{30}{\degree} cross-section on the right. It's clear to see that, while the former only contains intensity information, the latter shows the position of (at least some of) the \acs{rtp}s in the original \acs{bf}-\acs{stem_m} image.
 
-Both wires grew from \acl{si} seeds that in Figure~\ref{subfig:s4_OV} appear towards the centre of the image and grew out toward the margins. The initial \acs{ingaas} nucleation layer gives way to a lighter \acs{inp} layer in both lamellae, however, the length of this layer appears different. This could be due to a different shape of the \acs{ingaas} nucleus' growth front. A trace of the complexity of this interface is seen at the bottom of the first well of the \qty{30}{\degree} cross-section. The bottom of this heterostructure appears bent towards the seed, suggesting that the \acs{inp} layer did not have enough time to grow to annihilate all the non-\hkl{1 1 1} facets.
+Both wires grew from \acl{SI} seeds that in Figure~\ref{subfig:s4_OV} appear towards the centre of the image and grew out toward the margins. The initial \acs{ingaas} nucleation layer gives way to a lighter \acs{inp} layer in both lamellae, however, the length of this layer appears different. This could be due to a different shape of the \acs{ingaas} nucleus' growth front. A trace of the complexity of this interface is seen at the bottom of the first well of the \qty{30}{\degree} cross-section. The bottom of this heterostructure appears bent towards the seed, suggesting that the \acs{inp} layer did not have enough time to grow to annihilate all the non-\hkl{1 1 1} facets.
 
 \sisetup{detect-all = true}
 \begin{table}[]
@@ -492,7 +492,7 @@ The III group element map shows how \acl{ga} is well-segregated into the \acs{in
 
     \end{tikzpicture}
     }
-    \caption[Compositional data resulting from the \acs{eds} linescan across the \acl{qw}s of sample 4.]{\acs{eds} linescan compositional data (in percentage) for the \subref{subfig:s4_III_0deg_linesc} III group elements and \subref{subfig:s4_V_0deg_linesc} V group elements across all three \acl{qw}s of the \qty{0}{\degree} sample seen in Figure~\ref{subfig:s4_OV}. The origin of the x-axis is situated before the first well and is the closest point to the \acs{si} seed. Higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed.}
+    \caption[Compositional data resulting from the \acs{eds} linescan across the \acl{qw}s of sample 4.]{\acs{eds} linescan compositional data (in percentage) for the \subref{subfig:s4_III_0deg_linesc} III group elements and \subref{subfig:s4_V_0deg_linesc} V group elements across all three \acl{qw}s of the \qty{0}{\degree} sample seen in Figure~\ref{subfig:s4_OV}. The origin of the x-axis is situated before the first well and is the closest point to the \acs{SI} seed. Higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed.}
     \label{fig:s4_0deg_linescans}
 \end{figure}
 
@@ -519,13 +519,13 @@ The III group element map shows how \acl{ga} is well-segregated into the \acs{in
     \label{fig:s4_pl}
 \end{figure}
 
-Figure~\ref{fig:s4_0deg_linescans} shows the composition data calculated from the \acs{eds} linescan taken on the \acl{qw} region of the \qty{0}{\degree} sample in Figure~\ref{subfig:s4_OV}. The scan was taken from before the first \acl{qw}, closest to the \acl{si} seed.
+Figure~\ref{fig:s4_0deg_linescans} shows the composition data calculated from the \acs{eds} linescan taken on the \acl{qw} region of the \qty{0}{\degree} sample in Figure~\ref{subfig:s4_OV}. The scan was taken from before the first \acl{qw}, closest to the \acl{SI} seed.
 
 The III group element composition profile of Figure~\ref{subfig:s4_III_0deg_linesc} was calculated using the L\(_\alpha\) lines of \acl{in} and \acl{ga}. The graph is very noisy, with noise fluctuations reaching \qty{20}{\%}, but shows a composition close to \ce{In0_.4Ga0_.6As} in all three \acl{qw}s. Similarly to the profile in Figure~\ref{subfig:s3_III_linesc}, it suggests the presence of a \acl{ga} composition gradient after the well itself. 
 
 The V group element composition profile of Figure~\ref{subfig:s4_V_0deg_linesc} was calculated using the K\(_\alpha\) lines of \acl{as} and \acl{p}. This graph has noise fluctuations of about \num{10}-\qty{15}{\%}. An \acl{as} percentage composition close to \qty{100}{\%} is present in the \acs{ingaas} \acl{qw} similarly to what was observed for sample 3 (Figure~\ref{subfig:s3_V_linesc}). The \acs{as}-rich region extends for \num{10}-\qty{15}{\nano\metre} after the end of the \acs{ingaas} \acl{qw}.
 
-As the precursor flows were not altered from those of previous samples, the V / III ratios remain as in Table~\ref{tab:sample1_ratios}. The higher concentration of \acl{ga} in the \acl{qw}s could therefore be caused by the change in the geometry of the template given by the difference in device layer thickness of the \hkl<1 1 0> \acs{soi} wafer.
+As the precursor flows were not altered from those of previous samples, the V / III ratios remain as in Table~\ref{tab:sample1_ratios}. The higher concentration of \acl{ga} in the \acl{qw}s could therefore be caused by the change in the geometry of the template given by the difference in device layer thickness of the \hkl<1 1 0> \acs{SOI} wafer.
 
 \subsection{Photoluminescence analysis}
 
@@ -607,15 +607,15 @@ The reason for this wide spectrum could lie in the large \acs{ingaas} nucleation
         \begin{tikzpicture}
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/SEM_array.pdf}};
             \node [white] at (5, -3) {\qty{4}{\micro\metre}};
-            \node [rotate=24] at (-4, 1.6) {\acs{si}};
+            \node [rotate=24] at (-4, 1.6) {\acs{SI}};
             \node [rotate=24] at (-3.1, 1.9) {III-V};
             \node [rotate=-43] at (1.9, -2.5) {Template};
             \node [rotate=-43] at (2.4, -2.4) {Opening};
-            \node [white, rotate=-43] at (-3, -1) {\acs{si} backbone};
+            \node [white, rotate=-43] at (-3, -1) {\acs{SI} backbone};
         \end{tikzpicture}
     }
     \subcaptionbox{
-        \acs{bf}-\acs{stem_m} overview image of a nanowire from sample 5. The \acs{si} seed is on the left and the growth direction is highlited in red.
+        \acs{bf}-\acs{stem_m} overview image of a nanowire from sample 5. The \acs{SI} seed is on the left and the growth direction is highlited in red.
         \label{subfig:s5_OV}
     }{
         \tikzsetnextfilename{s5_OV}
@@ -623,7 +623,7 @@ The reason for this wide spectrum could lie in the large \acs{ingaas} nucleation
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.48\textwidth]{4_Properties/Fig/s5_OV.pdf}};
 
             \draw [red, stealth-] (4, -2) -- ++ (-5, 0) node [midway, anchor=south] {Growth direction};
-            \node at (-5, 0) {\acs{si}};
+            \node at (-5, 0) {\acs{SI}};
             \node at (-5, 1) {\acs{sio2}};
             \node at (5, -1.5) {\acs{sio2}};
             \draw [stealth-] (-2, 0.4) -- ++ (0, 0.5) node [anchor=south] {\acs{inp}};
@@ -635,19 +635,19 @@ The reason for this wide spectrum could lie in the large \acs{ingaas} nucleation
             \draw [stealth-] (3.8, 0.5) -- ++ (0, 0.5) node [anchor=south] {\acs{inp}};
         \end{tikzpicture}
     }
-    \caption[\acs{mocvd} recipe and growth results for sample 5.]{\acs{mocvd} recipe and growth results for sample 5. \subref{subfig:recipe5} shows the \acs{mocvd} precursor sequence. \subref{subfig:SEM_array} shows an \acs{sem_m} image of an array of nanowires. The image was recorded with the stage tilted \qty{52}{\degree}. An in-plane \hkl<1 1 0> direction runs parallel to the bottom margin of the image. \subref{subfig:s5_OV} shows a \acs{bf}-\acs{stem_m} overview images of a nanowires. The \acs{si} seed is on the left of the III-V nanowire.}
+    \caption[\acs{mocvd} recipe and growth results for sample 5.]{\acs{mocvd} recipe and growth results for sample 5. \subref{subfig:recipe5} shows the \acs{mocvd} precursor sequence. \subref{subfig:SEM_array} shows an \acs{sem_m} image of an array of nanowires. The image was recorded with the stage tilted \qty{52}{\degree}. An in-plane \hkl<1 1 0> direction runs parallel to the bottom margin of the image. \subref{subfig:s5_OV} shows a \acs{bf}-\acs{stem_m} overview images of a nanowires. The \acs{SI} seed is on the left of the III-V nanowire.}
     \label{fig:s5_recipe_microscopy}
 \end{sidewaysfigure}
 
-After examining the photoluminescence results of sample 4 (Figure~\ref{fig:s4_pl}) the recipe was adjusted to minimise the effect of the \acs{ingaas} nucleation layer. Previous experience in the research group at \acs{ibm} Research Europe - Zurich has shown that this layer, grown with a target composition of \ce{In0_.53Ga0_.47As}, has a positive effect on the nucleation yield of III-Vs on \acl{si}. However, once nucleation is achieved, it does not serve a further purpose in the experiments described in this chapter. 
+After examining the photoluminescence results of sample 4 (Figure~\ref{fig:s4_pl}) the recipe was adjusted to minimise the effect of the \acs{ingaas} nucleation layer. Previous experience in the research group at \acs{ibm} Research Europe - Zurich has shown that this layer, grown with a target composition of \ce{In0_.53Ga0_.47As}, has a positive effect on the nucleation yield of III-Vs on \acl{SI}. However, once nucleation is achieved, it does not serve a further purpose in the experiments described in this chapter. 
 
 Given its possible negative impact on the photoluminescence analysis of the samples, a new \acf{mocvd} recipe was created, shown in Figure~\ref{subfig:recipe5}. The step time for the nucleation \acs{ingaas} layer was reduced to \qty{30}{\second}. The deposition time of the \acs{inp} stabilisation layer was increased to \qty{450}{\second} to keep the \acs{ingaas} \acl{qw}s far from the nucleation layer. This was also meant to ensure the stabilisation of the single-facet \hkl{1 1 1} growth front, to avoid situations such as the one seen in the \qty{30}{\degree} cross-section of sample 4 (Figure~\ref{subfig:s4_OV}), where the first \acl{qw} followed a multi-faceted growth front. 
 
-Part of one of the nanowire arrays designed in Figure~\ref{subfig:110_design2} was imaged at a \qty{52}{\degree} angle with \acs{sem_m}. The resulting image is shown in Figure~\ref{subfig:SEM_array}. The various elements of the \acs{tase} structures are visible. Various \acl{si} seeds are anchored to each rectangular \acl{si} backbone. The III-V semiconductor nanowires appear as the brighter segments after the seeds. The empty templates follow the III-V material, ending in the opening of the template visible in the centre of the image created by the \acf{icp} etching. 
+Part of one of the nanowire arrays designed in Figure~\ref{subfig:110_design2} was imaged at a \qty{52}{\degree} angle with \acs{sem_m}. The resulting image is shown in Figure~\ref{subfig:SEM_array}. The various elements of the \acs{TASE} structures are visible. Various \acl{SI} seeds are anchored to each rectangular \acl{SI} backbone. The III-V semiconductor nanowires appear as the brighter segments after the seeds. The empty templates follow the III-V material, ending in the opening of the template visible in the centre of the image created by the \acf{icp} etching. 
 
 Already in Figure~\ref{subfig:SEM_array}, the low competitiveness of the growth process is qualitatively inferable, as the length of the nanowires in the middle of the array is not noticeably different from that of the nanowires at the edges.
 
-Figure~\ref{subfig:s5_OV} shows a \acs{bf}-\acs{stem_m} image of a nanowire from sample 5. The \acl{si} seed is on the left of the image. The variable thickness of the lamella, manifested by the decreasing height (from left to right) of the top platinum layer, leftover from \acs{fib} sample preparation, contributes to a progressive darkening of the \acs{inp} stabilisation layer towards the seed. Furthermore, the absence of a hold step after the nucleation layer makes the heterointerface between the arsenide and phosphide layer more "blurred". These factors make the now thin \acs{ingaas} layer not immediately identifiable by channelling contrast, unlike in Figure~\ref{subfig:s4_OV}.
+Figure~\ref{subfig:s5_OV} shows a \acs{bf}-\acs{stem_m} image of a nanowire from sample 5. The \acl{SI} seed is on the left of the image. The variable thickness of the lamella, manifested by the decreasing height (from left to right) of the top platinum layer, leftover from \acs{fib} sample preparation, contributes to a progressive darkening of the \acs{inp} stabilisation layer towards the seed. Furthermore, the absence of a hold step after the nucleation layer makes the heterointerface between the arsenide and phosphide layer more "blurred". These factors make the now thin \acs{ingaas} layer not immediately identifiable by channelling contrast, unlike in Figure~\ref{subfig:s4_OV}.
 
 All visible heterointerfaces, including the final facet of the nanowire exposed to the protective platinum on the right of the image, appear sharp in this image. The heterointerfaces also give the reader a snapshot of the growth front, which is composed of a single \hkl{1 1 1} facet after the \acs{inp} stabilisation layer.
 
@@ -721,7 +721,7 @@ This discrepancy in growth rate evolution for the \acs{inp} and \acs{ingaas} lay
 
     \end{tikzpicture}
     }
-    \caption[Compositional data resulting from the \acs{eds} linescan across the \acl{qw}s of sample 5.]{\acs{eds} compositional data for the \subref{subfig:s5_III_0deg_linesc} III group elements and \subref{subfig:s5_V_0deg_linesc} V group elements across all three \acl{qw} of the sample seen in Figure~\ref{subfig:s5_OV}. The origin of the x-axis is located before the first well on the side of the \acs{si} seed. As the position (in nm) grows along the x-axis, the beam moves along the \hkl<1 1 1> vector away from the seed.}
+    \caption[Compositional data resulting from the \acs{eds} linescan across the \acl{qw}s of sample 5.]{\acs{eds} compositional data for the \subref{subfig:s5_III_0deg_linesc} III group elements and \subref{subfig:s5_V_0deg_linesc} V group elements across all three \acl{qw} of the sample seen in Figure~\ref{subfig:s5_OV}. The origin of the x-axis is located before the first well on the side of the \acs{SI} seed. As the position (in nm) grows along the x-axis, the beam moves along the \hkl<1 1 1> vector away from the seed.}
     \label{fig:s5_0deg_linescans}
 \end{figure}
 
@@ -778,7 +778,7 @@ The emission peak of the \acl{qw}s is found at a wavelength lower than that of t
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.34\textwidth]{4_Properties/Fig/SEM_merge_bulk.pdf}};
             \draw[|-|, white] (-2.3, 1.8) -- ++ (1.7, 0)  node[midway, anchor=south, white] {\qty{500}{\nano\metre}};
             
-            \node [white, rotate=35] at (-1.5, -1.9) {\acs{si} seeds};
+            \node [white, rotate=35] at (-1.5, -1.9) {\acs{SI} seeds};
             \node [white, rotate=35] at (0, -0.8) {III-V};
             \node [white, rotate=-55] at (1.2, 1.5) {Opening};
         \end{tikzpicture}
@@ -792,19 +792,19 @@ The emission peak of the \acl{qw}s is found at a wavelength lower than that of t
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.60\textwidth]{4_Properties/Fig/SEM_merge_lamella.pdf}};
             \draw[|-|, white] (1.5, -2) -- ++ (2.2, 0)  node[midway, anchor=south, white] {\qty{500}{\nano\metre}};
             
-            \node [white, rotate=5] at (-1, 1.9) {\acs{si} seeds};
+            \node [white, rotate=5] at (-1, 1.9) {\acs{SI} seeds};
             \node [white, rotate=5] at (-1, 0.8) {III-V};
         \end{tikzpicture}
     }
-    \caption[\acs{sem_m} image of merge structures taken before and  during \acs{fib} lamella cut-out and thinning.]{\acs{sem_m} image of merge structures taken \subref{subfig:SEM_merge_bulk} before and \subref{subfig:SEM_merge_lamella} during \acs{fib} lamella cut-out and thinning. The three \acs{si} seeds seen on the bottom left of \subref{subfig:SEM_merge_bulk} appear at the top of \subref{subfig:SEM_merge_lamella}, which gives a point of view from below the wafer surface now that the lamella has been thinned and the buried \acs{sio2} sputtered away.}
+    \caption[\acs{sem_m} image of merge structures taken before and  during \acs{fib} lamella cut-out and thinning.]{\acs{sem_m} image of merge structures taken \subref{subfig:SEM_merge_bulk} before and \subref{subfig:SEM_merge_lamella} during \acs{fib} lamella cut-out and thinning. The three \acs{SI} seeds seen on the bottom left of \subref{subfig:SEM_merge_bulk} appear at the top of \subref{subfig:SEM_merge_lamella}, which gives a point of view from below the wafer surface now that the lamella has been thinned and the buried \acs{sio2} sputtered away.}
     \label{fig:SEM_merge}
 \end{figure}
 
 In addition to the nanowire arrays (Figure~\ref{subfig:SEM_array}), sample 5 contained the multi-seed structures shown in Figure~\ref{fig:SEM_merge}. 
 
-This structure design was already used in the past at \acs{ibm} Research Europe - Zurich. Indeed, Figure~\ref{fig:2020_Merge} showed the characterisation of a III-V \acs{tase} structure grown from \num{5} independent \acl{si} seeds. This type of structure was patented with the claim of achieving spacially controlled introduction of dislocations in semiconductors \cite{Mauthe2021}. I decided to include these structures on one of my samples to test the growth methodology developed in the previous sections in a challenging template geometry. Improvements in dislocation introduction reliability during growth with the facet stabilisation method could have opened more research avenues in their exploitations in devices. On the other hand, absence of defects in this growth regimen would set the basis for the creation of large III-V platelets similar to those seen in \acf{lart} \cite{Yan2021, Han2020} with greatly reduced dislocation and grain boundary density.
+This structure design was already used in the past at \acs{ibm} Research Europe - Zurich. Indeed, Figure~\ref{fig:2020_Merge} showed the characterisation of a III-V \acs{TASE} structure grown from \num{5} independent \acl{SI} seeds. This type of structure was patented with the claim of achieving spacially controlled introduction of dislocations in semiconductors \cite{Mauthe2021}. I decided to include these structures on one of my samples to test the growth methodology developed in the previous sections in a challenging template geometry. Improvements in dislocation introduction reliability during growth with the facet stabilisation method could have opened more research avenues in their exploitations in devices. On the other hand, absence of defects in this growth regimen would set the basis for the creation of large III-V platelets similar to those seen in \acf{lart} \cite{Yan2021, Han2020} with greatly reduced dislocation and grain boundary density.
 
-These multi-seed structures were processed (template opening, sacrificial \acl{si} etch-back, and \acs{mocvd} growth) at the same time as the arrays seen in the previous section. In these multi-seed structures, three seed regions are provided for III-V nucleation. The template design then forces the three growing crystals into a larger template area where they can come into contact with each other and merge. This type of structure is expected to introduce defects at the merging locations, even in the case of simultaneous nucleation on all three seeds \cite{Mauthe2021}.
+These multi-seed structures were processed (template opening, sacrificial \acl{SI} etch-back, and \acs{mocvd} growth) at the same time as the arrays seen in the previous section. In these multi-seed structures, three seed regions are provided for III-V nucleation. The template design then forces the three growing crystals into a larger template area where they can come into contact with each other and merge. This type of structure is expected to introduce defects at the merging locations, even in the case of simultaneous nucleation on all three seeds \cite{Mauthe2021}.
 
 Various avenues of stress relaxation in epitaxially grown III-V crystals induce alterations in their lattice, making the merging of two different crystals a prime defect-nucleating event \cite{Jacobsson2015}. The nucleation of defects is common even in situations where lattice rotations follow the symmetry rules of the crystals \cite{Rossi2023}. If a small (\qty{1}{\degree} to \qty{5}{\degree}) tilt of the III-V crystalline axis from the \hkl<1 1 1> axis occurs to relax stress, as will be seen in sample 6 (Figure~\ref{subfig:s6_wire_OV}) it is expected to lead to a similar defect-nucleating situation. In contrast, under optimised growth conditions, the merging of two different crystals can result in defect-free material \cite{Imanishi2012}, leading to improvements in the crystalline quality of large-area III-V semiconductor films \cite{Imade2014}.
 
@@ -819,7 +819,7 @@ The \acs{sem_m} image in Figure~\ref{subfig:SEM_merge_lamella} shows the same st
         \node [inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{4_Properties/Fig/merge_OV.pdf}};
 
         \draw[white, decorate, decoration={brace}] (5.3, 0.5) -- ++ (0, 1.5) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas} wells}};
-        \node at (6.5, 3.3) {\acs{si} seeds};
+        \node at (6.5, 3.3) {\acs{SI} seeds};
         \node [white] at (6.5, 2.3) {\acs{inp}};
         \draw [red, stealth-] (1.9, -1) -- ++ (0, 4) node [midway, anchor=east] {\rotatebox{90}{Growth direction}};
     \end{tikzpicture}
@@ -827,11 +827,11 @@ The \acs{sem_m} image in Figure~\ref{subfig:SEM_merge_lamella} shows the same st
     \label{fig:merge_ov}
 \end{figure}
 
-In Figure~\ref{fig:merge_ov}, each structure's three \acl{si} seeds appear at the top of the lamella. The (comparatively) electron transparent \acs{sio2} template outlines each of the five III-V structures. The \acs{fib} thinning partially damaged the leftmost structure, as too much material was removed from the seed area at the top left most of the lamella. The varying thickness of the lamella can be inferred by the darkness of the platinum layer between the III-V structure. Despite the best efforts made during \acs{fib} lamella preparation, the lamella is slightly thicker towards the bottom of the image, but this does not affect the quality of the image in the structure area, at this magnification level.
+In Figure~\ref{fig:merge_ov}, each structure's three \acl{SI} seeds appear at the top of the lamella. The (comparatively) electron transparent \acs{sio2} template outlines each of the five III-V structures. The \acs{fib} thinning partially damaged the leftmost structure, as too much material was removed from the seed area at the top left most of the lamella. The varying thickness of the lamella can be inferred by the darkness of the platinum layer between the III-V structure. Despite the best efforts made during \acs{fib} lamella preparation, the lamella is slightly thicker towards the bottom of the image, but this does not affect the quality of the image in the structure area, at this magnification level.
 
-The first three structures have \qty{50}{\nano\metre} wide seed areas, while the two on the right have \qty{70}{\nano\metre} wide seeds. This small structural difference does not result in any appreciable change in the final III-V crystals, which all follow the template shape. The three lines corresponding to the arsenide layers are better visible in this \acs{bf}-\acs{stem_m} image, and all appear at the same distance from the \acl{si} seed.
+The first three structures have \qty{50}{\nano\metre} wide seed areas, while the two on the right have \qty{70}{\nano\metre} wide seeds. This small structural difference does not result in any appreciable change in the final III-V crystals, which all follow the template shape. The three lines corresponding to the arsenide layers are better visible in this \acs{bf}-\acs{stem_m} image, and all appear at the same distance from the \acl{SI} seed.
 
-The nucleation areas of this structure are shown in high-resolution \acs{bf}-\acs{stem_m} images in Figures~\ref{subfig:STEM_merge_seed1}, \ref{subfig:STEM_merge_seed2}, and \ref{subfig:STEM_merge_seed3}. The \acl{si} seed is visible at the top of the images. The \acs{si} / III-V interface is well defined, showing the epitaxial relationship between the two lattices. The crystal appears to have nucleated towards the centre of the \acl{si} seed surface at all three nucleation sites. The \acs{ingaas} nucleation layer appears lighter in correspondence to the corners of the seed surface, likely due to a smaller amount of material in that area. As the crystal grows, it fills the \qty{50}{\nano\metre} wide template within the first 25 atomic bilayers.
+The nucleation areas of this structure are shown in high-resolution \acs{bf}-\acs{stem_m} images in Figures~\ref{subfig:STEM_merge_seed1}, \ref{subfig:STEM_merge_seed2}, and \ref{subfig:STEM_merge_seed3}. The \acl{SI} seed is visible at the top of the images. The \acs{SI} / III-V interface is well defined, showing the epitaxial relationship between the two lattices. The crystal appears to have nucleated towards the centre of the \acl{SI} seed surface at all three nucleation sites. The \acs{ingaas} nucleation layer appears lighter in correspondence to the corners of the seed surface, likely due to a smaller amount of material in that area. As the crystal grows, it fills the \qty{50}{\nano\metre} wide template within the first 25 atomic bilayers.
 
 The presence of an initial \acs{ingaas} followed by the \acs{inp} stabilisation layer within all three nucleation areas confirms that the simultaneous nucleation of three crystals has occurred for each structure. Once they have grown out of the \acs{sio2} separators, these three crystals must merge into one in the following template region. As seen in both Figures~\ref{subfig:STEM_merge_structure_ov} and \ref{subfig:TEM_merge_structure_ov}, the template is completely filled with III-V material, which has grown into the shape of the template. This excludes the formation of voids in this growth regime; however, the nucleation of point, line, and plane defects is still possible in the areas where the three crystals have come into contact with each other. 
 
@@ -870,7 +870,7 @@ It is important to note that this occurs even though the thickness of the \acs{i
             \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed1.pdf}};
 
             \draw[decorate, decoration={brace}] (-2, -0.6) -- ++ (0, 1.7) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas}}};
-            \draw[decorate, decoration={brace}] (-2, 1.1) -- ++ (0, 0.8) node[midway, anchor=east]{\rotatebox{90}{\acs{si}}};
+            \draw[decorate, decoration={brace}] (-2, 1.1) -- ++ (0, 0.8) node[midway, anchor=east]{\rotatebox{90}{\acs{SI}}};
             \draw[decorate, decoration={brace, mirror}] (-2, -0.6) -- ++ (0, -1.3) node[midway, anchor=east]{\rotatebox{90}{\acs{inp}}};
         \end{tikzpicture}
     }
@@ -883,7 +883,7 @@ It is important to note that this occurs even though the thickness of the \acs{i
             \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed2.pdf}};
             
             \draw[decorate, decoration={brace}] (-2, -1.15) -- ++ (0, 1.50) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas}}};
-            \draw[decorate, decoration={brace}] (-2, 0.35) -- ++ (0, 1.5) node[midway, anchor=east]{\rotatebox{90}{\acs{si}}};
+            \draw[decorate, decoration={brace}] (-2, 0.35) -- ++ (0, 1.5) node[midway, anchor=east]{\rotatebox{90}{\acs{SI}}};
             \draw[decorate, decoration={brace, mirror}] (-2, -1.15) -- ++ (0, -0.75) node[midway, anchor=east]{\rotatebox{90}{\acs{inp}}};
         \end{tikzpicture}
     }
@@ -896,11 +896,11 @@ It is important to note that this occurs even though the thickness of the \acs{i
             \node[inner sep=0pt] (image) at (0, 0) {\includegraphics[width=0.24\textwidth]{4_Properties/Fig/STEM_merge_seed3.pdf}};
             
             \draw[decorate, decoration={brace}] (-2, -1.15) -- ++ (0, 1.35) node[midway, anchor=east]{\rotatebox{90}{\acs{ingaas}}};
-            \draw[decorate, decoration={brace}] (-2, 0.2) -- ++ (0, 1.7) node[midway, anchor=east]{\rotatebox{90}{\acs{si}}};
+            \draw[decorate, decoration={brace}] (-2, 0.2) -- ++ (0, 1.7) node[midway, anchor=east]{\rotatebox{90}{\acs{SI}}};
             \draw[decorate, decoration={brace, mirror}] (-2, -1.15) -- ++ (0, -0.75) node[midway, anchor=east]{\rotatebox{90}{\acs{inp}}};
         \end{tikzpicture}
     }
-    \caption[\acs{tem_m} and \acs{stem_m} images of the merge structures of sample 5.]{\subref{subfig:STEM_merge_structure_ov} \acs{bf}-\acs{stem_m} and \subref{subfig:TEM_merge_structure_ov} \acs{df}-\acs{tem_m} overview images of a single merge structure. \acs{rtp}s are more easily identifiable by the thin lines in \subref{subfig:TEM_merge_structure_ov}, but no other defects can be spotted. \subref{subfig:STEM_merge_seed1}, \subref{subfig:STEM_merge_seed2}, and \subref{subfig:STEM_merge_seed3} are \acs{bf}-\acs{stem_m} images of the nucleation areas 1, 2, and 3 as marked in \subref{subfig:STEM_merge_structure_ov}; the \acs{si} seed, \acs{ingaas} nucleation, and \acs{inp} stabilisation layers are marked. \subref{subfig:TEM_merge_structure_ov} was kindly recorded by Michael Stiefel. \subref{subfig:STEM_merge_structure_ov} was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
+    \caption[\acs{tem_m} and \acs{stem_m} images of the merge structures of sample 5.]{\subref{subfig:STEM_merge_structure_ov} \acs{bf}-\acs{stem_m} and \subref{subfig:TEM_merge_structure_ov} \acs{df}-\acs{tem_m} overview images of a single merge structure. \acs{rtp}s are more easily identifiable by the thin lines in \subref{subfig:TEM_merge_structure_ov}, but no other defects can be spotted. \subref{subfig:STEM_merge_seed1}, \subref{subfig:STEM_merge_seed2}, and \subref{subfig:STEM_merge_seed3} are \acs{bf}-\acs{stem_m} images of the nucleation areas 1, 2, and 3 as marked in \subref{subfig:STEM_merge_structure_ov}; the \acs{SI} seed, \acs{ingaas} nucleation, and \acs{inp} stabilisation layers are marked. \subref{subfig:TEM_merge_structure_ov} was kindly recorded by Michael Stiefel. \subref{subfig:STEM_merge_structure_ov} was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:merge_ov_seeds}
 \end{figure}
 
@@ -1030,7 +1030,7 @@ Once the single growth front is established, the growth of the crystal can conti
             \node[white] at (-11.5, 1.7) {\acs{sio2}};
             \draw[white, decorate, decoration={brace, mirror}] (-1.8, 1.1) -- (-7.4, 1.1) node[midway, anchor=south]{\num{6}x \acs{ingaas} \acl{qw}s};
             \draw[white, decorate, decoration={brace, mirror}] (10, 1.1) -- (3.4, 1.1) node[midway, anchor=south]{\num{6}x \acs{ingaas} \acl{qw}s};
-            \node[white] at (-11.5, -0.5) {\acs{si}};
+            \node[white] at (-11.5, -0.5) {\acs{SI}};
             \node[white] at (0, -0.5) {\acs{inp}};
             \node[white] at (-11.5, -2.5) {\acs{sio2}};
             \draw[white] (-7.14, -2) -- (-10.85, -2) -- (-10.85, -1);
@@ -1050,18 +1050,18 @@ A modified growth recipe was built based on the results of sample 5. The main ob
 
 The resulting recipe is shown in Figure~\ref{subfig:recipe6}. The \acs{ingaas} nucleation layer's deposition time was decreased from \qty{30}{\second} to \qty{10}{\second}. As there had been no nucleation issues with the \qty{30}{\second} deposition time in sample 5, a lower step time was tested for this sample to minimise the amount of \acs{ingaas} outside the \acl{qw}s. The recipe segments and loops following the nucleation layer were run twice. The deposition of the \acs{ingaas}/\acs{inp} superlattice took place after \qty{450}{\second} of \acs{inp} growth. The step time for \acs{ingaas} was reduced from \qty{10}{\second} to \qty{5}{\second}, and the post-\acs{ingaas} \acl{as} hold step shortened from \qty{10}{\second} to \qty{7}{\second}. The deposition times of the barrier layers were also shortened from \qty{200}{\second} to \qty{100}{\second}. The number of repetitions of the \acl{qw} loop was doubled from \num{3} to \num{6}. The cumulative changes were meant to double the number of \acl{qw}s present in the same length of nanowires that contained the superlattice in sample 5, while repeating the entire recipe twice was meant to result in a longer overall nanowire to highlight differences in growth rate based on the depth of each material layer in the template.
 
-The \qty{30}{\degree} cross-section of a nanowire grown with this revised recipe is shown in the \acs{bf}-\acs{stem_m} image in Figure~\ref{subfig:s6_wire_OV}. The angled view given by this tilted cross-section causes the shaded top and bottom interfaces of the III-V material region. The circular shades in the image are given by indium droplets, a common residue left over from \acs{fib} lamella preparation. The III-V material, appearing darker in the centre of the image, is sandwiched between the template oxide at the top and the buried oxide layer at the bottom. The \acl{si} seed is visible on the left of the image, while the \acs{ingaas} nucleation layer is too thin to appear as more than a darker shade at the very beginning of the nanowire. Twelve vertical lines, darker compared to the \acs{inp} making up the majority of the wire, are created by a change in channelling contrast given by the presence of \acl{as} atoms, which are larger than the \acl{p} atoms that make up the majority of the V group atoms in the wire.
+The \qty{30}{\degree} cross-section of a nanowire grown with this revised recipe is shown in the \acs{bf}-\acs{stem_m} image in Figure~\ref{subfig:s6_wire_OV}. The angled view given by this tilted cross-section causes the shaded top and bottom interfaces of the III-V material region. The circular shades in the image are given by indium droplets, a common residue left over from \acs{fib} lamella preparation. The III-V material, appearing darker in the centre of the image, is sandwiched between the template oxide at the top and the buried oxide layer at the bottom. The \acl{SI} seed is visible on the left of the image, while the \acs{ingaas} nucleation layer is too thin to appear as more than a darker shade at the very beginning of the nanowire. Twelve vertical lines, darker compared to the \acs{inp} making up the majority of the wire, are created by a change in channelling contrast given by the presence of \acl{as} atoms, which are larger than the \acl{p} atoms that make up the majority of the V group atoms in the wire.
 
-The seed surface consists of a single \hkl{1 1 1} facet resulting from the selective etching of \acl{si} carried out with \acs{tmah} before deposition. This surface forms a \qty{90}{\degree} angle with the wafer plane, but, as can be seen in the highlight in Figure \ref{subfig:s6_wire_OV}, the first \acl{qw}, and indeed all the others, are tilted \qty{3}{\degree} off the perpendicular to the wafer plane. A slight rotation of the growing lattice compared to the seed's lattice orientation can occur during epitaxy because it is a way for the growing crystal to compensate for some of the stress caused by lattice mismatch. Despite the \qty{3}{\degree} rotation, the stabilisation of the \hkl{1 1 1} facet is achieved during the initial \acs{inp} deposition and is maintained throughout the wire. The \num{12} \acl{qw}s range in thickness from \qty{3.7}{\nano\metre} to \qty{4.3}{\nano\metre}.
+The seed surface consists of a single \hkl{1 1 1} facet resulting from the selective etching of \acl{SI} carried out with \acs{tmah} before deposition. This surface forms a \qty{90}{\degree} angle with the wafer plane, but, as can be seen in the highlight in Figure \ref{subfig:s6_wire_OV}, the first \acl{qw}, and indeed all the others, are tilted \qty{3}{\degree} off the perpendicular to the wafer plane. A slight rotation of the growing lattice compared to the seed's lattice orientation can occur during epitaxy because it is a way for the growing crystal to compensate for some of the stress caused by lattice mismatch. Despite the \qty{3}{\degree} rotation, the stabilisation of the \hkl{1 1 1} facet is achieved during the initial \acs{inp} deposition and is maintained throughout the wire. The \num{12} \acl{qw}s range in thickness from \qty{3.7}{\nano\metre} to \qty{4.3}{\nano\metre}.
 
 \paragraph{High resolution analysis} Figure~\ref{fig:s6_HR} shows high resolution \acs{bf}-\acs{stem_m} images of two heterostructures in the nanowire seen in Figure~\ref{subfig:s6_wire_OV}. Many \acs{rtp}s are present in both images, confirming that this defect is the most common in III-V \(_B\) growth on \hkl{1 1 1}\(_B\) planes. 
 
-Figure~\ref{subfig:s6_si-IIIV_interface} shows the heterointerface between the \acl{si} seed and the \acs{ingaas} nucleation layer. \num{8} red lines were added parallel to the first visible continuous biatomic layer on the \acs{ingaas} side. A single red line was added to follow one of the \acs{si} \hkl{1 1 1} facets. By comparing the distance between the lines at the top and bottom of the image, it is clear that the two lattices are already misaligned at the nucleation interface. This region is strained by the mismatch between two lattices, and the first few \acs{ingaas} atomic layers after the \acl{si} seed surface are prone to nucleation for dislocations. The presence of this type of defect in the blurred area at the centre of the image can explain the varying distance between the two \hkl{1 1 1} atomic planes in the \acs{ingaas} and \acl{si}.
+Figure~\ref{subfig:s6_si-IIIV_interface} shows the heterointerface between the \acl{SI} seed and the \acs{ingaas} nucleation layer. \num{8} red lines were added parallel to the first visible continuous biatomic layer on the \acs{ingaas} side. A single red line was added to follow one of the \acs{SI} \hkl{1 1 1} facets. By comparing the distance between the lines at the top and bottom of the image, it is clear that the two lattices are already misaligned at the nucleation interface. This region is strained by the mismatch between two lattices, and the first few \acs{ingaas} atomic layers after the \acl{SI} seed surface are prone to nucleation for dislocations. The presence of this type of defect in the blurred area at the centre of the image can explain the varying distance between the two \hkl{1 1 1} atomic planes in the \acs{ingaas} and \acl{SI}.
 
 \begin{figure}
     \centering
     \subcaptionbox{
-        \acs{bf}-\acs{stem_m} image of the \acs{si} / III-V interface.
+        \acs{bf}-\acs{stem_m} image of the \acs{SI} / III-V interface.
         \label{subfig:s6_si-IIIV_interface}
     }{
         \tikzsetnextfilename{s6_si-IIIV_interface}
@@ -1077,7 +1077,7 @@ Figure~\ref{subfig:s6_si-IIIV_interface} shows the heterointerface between the \
             \draw [red] (0.77, 3.85) -- ++ (-95.3:7.7);
 
             \node [white] at (-3,3) {\acs{ingaas}};
-            \node at (3,3) {\acs{si}};
+            \node at (3,3) {\acs{SI}};
         \end{tikzpicture}
     }
     \subcaptionbox{
@@ -1092,11 +1092,11 @@ Figure~\ref{subfig:s6_si-IIIV_interface} shows the heterointerface between the \
             \node [fill=white] at (3, 3) {\acs{inp}};
         \end{tikzpicture}
     }
-    \caption[High-resolution \acs{bf}-\acs{stem_m} images of sample 6.]{High-resolution \acs{bf}-\acs{stem_m} images of \subref{subfig:s6_si-IIIV_interface} the nucleation area, showing the \acs{si} / \acs{ingaas} heterointerface. The red lines highlight the \hkl{1 1 1} atomic planes in \acs{ingaas} and \acs{si}. As can be seen by comparing the distance between the lines following the atomic planes in \acs{ingaas} and in \acs{si} at the top and at the bottom of the image, there is a difference in alignment resulting in the rotation of the \hkl<1 1 1> axis highlighted in Figure~\ref{subfig:s6_wire_OV}. \subref{subfig:s6_well1} shows the first \acl{qw} in sample 6, various \acs{rtp}s are visible.}
+    \caption[High-resolution \acs{bf}-\acs{stem_m} images of sample 6.]{High-resolution \acs{bf}-\acs{stem_m} images of \subref{subfig:s6_si-IIIV_interface} the nucleation area, showing the \acs{SI} / \acs{ingaas} heterointerface. The red lines highlight the \hkl{1 1 1} atomic planes in \acs{ingaas} and \acs{SI}. As can be seen by comparing the distance between the lines following the atomic planes in \acs{ingaas} and in \acs{SI} at the top and at the bottom of the image, there is a difference in alignment resulting in the rotation of the \hkl<1 1 1> axis highlighted in Figure~\ref{subfig:s6_wire_OV}. \subref{subfig:s6_well1} shows the first \acl{qw} in sample 6, various \acs{rtp}s are visible.}
     \label{fig:s6_HR}
 \end{figure}
 
-The first, counting from the \acl{si} seed, \acs{ingaas} \acl{qw} appears as the darker vertical stripe in Figure~\ref{subfig:s6_well1}. The well is well-defined thanks to the channelling contrast between the light \acl{p} atoms and the heavier \acs{as} atoms, which denotes a good segregation of the two species in the respective layers. Comparing the \acs{inp} layers at either side of the well, however, shows a darker shade on the right, in the \acs{inp} area, which grew immediately after the \acs{ingaas} heterolayer. This suggests the presence of \acl{as} contamination after the well, as observed in all previous samples.
+The first, counting from the \acl{SI} seed, \acs{ingaas} \acl{qw} appears as the darker vertical stripe in Figure~\ref{subfig:s6_well1}. The well is well-defined thanks to the channelling contrast between the light \acl{p} atoms and the heavier \acs{as} atoms, which denotes a good segregation of the two species in the respective layers. Comparing the \acs{inp} layers at either side of the well, however, shows a darker shade on the right, in the \acs{inp} area, which grew immediately after the \acs{ingaas} heterolayer. This suggests the presence of \acl{as} contamination after the well, as observed in all previous samples.
 \par
 
 \begin{figure}
@@ -1140,7 +1140,7 @@ The first, counting from the \acl{si} seed, \acs{ingaas} \acl{qw} appears as the
         \end{axis}
 
     \end{tikzpicture}
-    \caption[\acs{ingaas} and \acs{inp} material layer growth rates as a function of their distance from the \acs{si} seed surface in sample 6.]{\acs{ingaas} and \acs{inp} material layer growth rates as a function of their distance from the \acs{si} seed surface \cite{Brugnolotto2023_2}. Both x and y error bars are present but smaller than the markers, except for those on the growth rate of \acs{ingaas}. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
+    \caption[\acs{ingaas} and \acs{inp} material layer growth rates as a function of their distance from the \acs{SI} seed surface in sample 6.]{\acs{ingaas} and \acs{inp} material layer growth rates as a function of their distance from the \acs{SI} seed surface \cite{Brugnolotto2023_2}. Both x and y error bars are present but smaller than the markers, except for those on the growth rate of \acs{ingaas}. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:s6_growth_rates}
 \end{figure}
 
@@ -1197,11 +1197,11 @@ The first, counting from the \acl{si} seed, \acs{ingaas} \acl{qw} appears as the
     \end{tikzpicture}
     }
     \caption[Compositional data resulting from an \acs{eds} linescan across the last 6 \acl{qw} of sample 6.]{\acs{eds} linescan compositional data (in percentage) for the \subref{subfig:s6_III_30deg_linesc} III group elements and \subref{subfig:s6_V_30deg_linesc} V group elements 
-    across the last \num{6} \acl{qw}s of sample 6 (Figure~\ref{subfig:s6_wire_OV}). The origin of the x-axis is situated before the first well and is the closest point to the \acs{si} seed. Higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
+    across the last \num{6} \acl{qw}s of sample 6 (Figure~\ref{subfig:s6_wire_OV}). The origin of the x-axis is situated before the first well and is the closest point to the \acs{SI} seed. Higher position numbers (in nm) represent the scan moving along the \hkl{1 1 1} vector perpendicular to the growth front away from the seed. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:s6_30deg_linescans}
 \end{figure}
 
-\paragraph{Growth rate} Growth rates in the \acl{qw} structure were calculated by averaging seven thickness measurements of each material layer along the \hkl<1 1 1> direction and dividing them by the deposition time, which is taken from the recipe and is assumed to be error-free. Figure~\ref{fig:s6_growth_rates} shows each growth rate as a function of the distance of the first heterointerface of the respective layer from the \acl{si} seed. This metric is also calculated by averaging seven measurements and errors on the first heterointerface's position and the growth rates of each layer to express the \qty{95}{\%} confidence interval. All errors were plotted in Figure~\ref{fig:s6_growth_rates}. However, the only error bars that exceeded the size of the graph markers were those of the \acs{ingaas} \acl{qw} growth rates.
+\paragraph{Growth rate} Growth rates in the \acl{qw} structure were calculated by averaging seven thickness measurements of each material layer along the \hkl<1 1 1> direction and dividing them by the deposition time, which is taken from the recipe and is assumed to be error-free. Figure~\ref{fig:s6_growth_rates} shows each growth rate as a function of the distance of the first heterointerface of the respective layer from the \acl{SI} seed. This metric is also calculated by averaging seven measurements and errors on the first heterointerface's position and the growth rates of each layer to express the \qty{95}{\%} confidence interval. All errors were plotted in Figure~\ref{fig:s6_growth_rates}. However, the only error bars that exceeded the size of the graph markers were those of the \acs{ingaas} \acl{qw} growth rates.
 
 Growth rates for \acs{inp} layers start at \qty[separate-uncertainty=true]{20.8 (0.5)}{\nano\metre\per\minute} and end at \qty[separate-uncertainty=true]{26.2 (0.2)}{\nano\metre\per\minute}, falling between those of samples 4 and 5. On the other hand, the growth rates of \acs{ingaas} \acl{qw}s is higher than both those of samples 4 and 5 and ranges from \qty[separate-uncertainty=true]{41 (3)}{\nano\metre\per\minute} to \qty[separate-uncertainty=true]{52 (4)} {\nano\metre\per\minute}. The increase in the growth rate values with the nearing of the growth front to the opening of the template confirms its dependence on the diffusion process of the precursors and adsorbates in the template \cite{bjork2012}. Their lower thickness gives the higher error in the growth rates of the \acs{ingaas} layers.
 
@@ -1224,7 +1224,7 @@ Figure~\ref{subfig:s6_V_30deg_linesc}, however, shows a low \acl{as} concentrati
 
         \node [white] at (1.5, 0) {\acs{inp}};
         \node [white] at (-4.5, 0) {\acs{inp}};
-        \node at (-7.2, 0) {\acs{si}};
+        \node at (-7.2, 0) {\acs{SI}};
         \node at (-6, 3.2) {Template \acs{sio2}};
         \node at (-0.5, -4) {Buried \acs{sio2}};
 
@@ -1234,7 +1234,7 @@ Figure~\ref{subfig:s6_V_30deg_linesc}, however, shows a low \acl{as} concentrati
 
         \draw [red, stealth-] (2, -3.3) -- ++ (-5, 0) node [midway, anchor=south] {Growth direction};
     \end{tikzpicture}
-    \caption[\acs{bf}-\acs{stem_m} image of a nanowire from sample 6 grown in an area of the wafer with many parasitic nucleations.]{\acs{bf}-\acs{stem_m} image of a nanowire from sample 6 grown in an area of the wafer with many parasitic nucleations. The wire grew from the \acs{si} seed on the left in the direction specified by the red arrow. Compared with the wire shown in Figure~\ref{subfig:s6_wire_OV} all layers are thinner, resulting in a shorter wire. A loss stabilisation of the \hkl{1 1 1} single-facet growth front occurs at the end of the wire, as revealed by the trace left by the \acs{ingaas} wells.}
+    \caption[\acs{bf}-\acs{stem_m} image of a nanowire from sample 6 grown in an area of the wafer with many parasitic nucleations.]{\acs{bf}-\acs{stem_m} image of a nanowire from sample 6 grown in an area of the wafer with many parasitic nucleations. The wire grew from the \acs{SI} seed on the left in the direction specified by the red arrow. Compared with the wire shown in Figure~\ref{subfig:s6_wire_OV} all layers are thinner, resulting in a shorter wire. A loss stabilisation of the \hkl{1 1 1} single-facet growth front occurs at the end of the wire, as revealed by the trace left by the \acs{ingaas} wells.}
     \label{fig:s6_competitive_OV}
 \end{figure}
 
@@ -1242,9 +1242,9 @@ As seen in the \acs{sem_m} image in Figure~\ref{subfig:SEM_array}, competition b
 
 Figure~\ref{fig:s6_competitive_OV} shows a nanowire grown in an area of the wafer with many parasitic crystals. This can happen because of leftover contaminants on the wafer surface. In this case, the contaminants were likely deposited by vacuum-driven evaporation of a small droplet left on the surface of the chip after manipulation with wet tweezers. The contaminants act as additional nucleation centres for the III-V precursors. This is similar to the procedure used to create a self-assembled distribution of nanocrystals. The resulting \qty{100}{\nano\metre}-wide crystals created a much more competitive growth environment compared to the rest of the chip that was unaffected by this issue and from which the wire in Figure~\ref{subfig:s6_wire_OV} was cut.
 
-As a result, the wire in Figure~\ref{fig:s6_competitive_OV} is considerably shorter than the wire in Figure~\ref{subfig:s6_wire_OV}. The \acs{ingaas} nucleation step resulted in a nanocrystal visible by channelling contrast in the lower left portion of the \acs{si} / III-V interface. The \num{12} \acs{ingaas} \acl{qw}s are still visible in the \acs{inp} matrix and provide a snapshot of the evolution of the growth front. Counterintuitively, the growth rates of the various heterolayers appear to decrease as the wire grows towards the opening of the template, as demonstrated by the shorter \acs{inp} segments in the last part of the wire. 
+As a result, the wire in Figure~\ref{fig:s6_competitive_OV} is considerably shorter than the wire in Figure~\ref{subfig:s6_wire_OV}. The \acs{ingaas} nucleation step resulted in a nanocrystal visible by channelling contrast in the lower left portion of the \acs{SI} / III-V interface. The \num{12} \acs{ingaas} \acl{qw}s are still visible in the \acs{inp} matrix and provide a snapshot of the evolution of the growth front. Counterintuitively, the growth rates of the various heterolayers appear to decrease as the wire grows towards the opening of the template, as demonstrated by the shorter \acs{inp} segments in the last part of the wire. 
 
-As parasitic crystals grow, so does their ability to capture precursors. As a result of the template oxide restricting the gas phase diffusion of the precursors to a smaller solid angle and lengthening the surface diffusion distance the adsorbates have to travel to reach the growing nanowire, the precursor capturing power of the parasitic crystals increases more rapidly than that of the \acs{tase} nanowires. This competition mechanism explains the decrease in the growth rate of the nanowire. Further, the last \acs{ingaas} \acl{qw} of the wire in Figure~\ref{fig:s6_competitive_OV} is shorter than the others, with a multi-facet growth front forming in the previous \acs{inp} barrier layer. This indicates that the effective V / III ratios in the template are beginning to be affected by the competitivity of the parasitic crystals in precursor capture.
+As parasitic crystals grow, so does their ability to capture precursors. As a result of the template oxide restricting the gas phase diffusion of the precursors to a smaller solid angle and lengthening the surface diffusion distance the adsorbates have to travel to reach the growing nanowire, the precursor capturing power of the parasitic crystals increases more rapidly than that of the \acs{TASE} nanowires. This competition mechanism explains the decrease in the growth rate of the nanowire. Further, the last \acs{ingaas} \acl{qw} of the wire in Figure~\ref{fig:s6_competitive_OV} is shorter than the others, with a multi-facet growth front forming in the previous \acs{inp} barrier layer. This indicates that the effective V / III ratios in the template are beginning to be affected by the competitivity of the parasitic crystals in precursor capture.
 
 If the deposition of densely packed III-V structures is planned, the effect of this competition during \acs{mocvd} growth should be taken into account to ensure that the desired material properties are obtained.
 
@@ -1375,7 +1375,7 @@ The complexity of the precursor switches varies in the \acl{qw} deposition loop.
     \begin{tikzpicture}
         \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width=\textwidth]{4_Properties/Fig/s7_OV.pdf}};
 
-        \node at (-7.5, 0.5) {\acs{si}};
+        \node at (-7.5, 0.5) {\acs{SI}};
         \node [white] at (-4.5, 0.5) {\acs{inp}};
 
         \draw [stealth-] (-2.3, -0.7) -- ++ (0, -0.5) node [anchor=north] {\acs{inas}};
@@ -1392,11 +1392,11 @@ The complexity of the precursor switches varies in the \acl{qw} deposition loop.
         
         \draw [red, stealth-] (3, -2.7) -- ++ (-5, 0) node [midway, anchor=south] {Growth direction};
     \end{tikzpicture}
-    \caption[\acs{bf}-\acs{stem_m} image of a nanowire from sample 7.]{\acs{bf}-\acs{stem_m} image of a nanowire from sample 7. The \acs{si} seed is on the left of the image, followed by the \acs{ingaas} nucleation layer and \acs{inp} stabilisation layer. Of the \num{9} \acl{qw}s, the thickest are composed of \acs{inas}, then the \acs{ingaas} \acl{qw}s, and finally the \acs{gaas} \acl{qw}s are the thinnest, assuming the intended material layers have been deposited. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
+    \caption[\acs{bf}-\acs{stem_m} image of a nanowire from sample 7.]{\acs{bf}-\acs{stem_m} image of a nanowire from sample 7. The \acs{SI} seed is on the left of the image, followed by the \acs{ingaas} nucleation layer and \acs{inp} stabilisation layer. Of the \num{9} \acl{qw}s, the thickest are composed of \acs{inas}, then the \acs{ingaas} \acl{qw}s, and finally the \acs{gaas} \acl{qw}s are the thinnest, assuming the intended material layers have been deposited. This Figure was adapted from the work of Brugnolotto \textit{et al.} \cite{Brugnolotto2023_2} under the terms of the CC BY 4.0 licence \cite{CCBY40}.}
     \label{fig:s7_OV}
 \end{figure}
 
-Figure~\ref{fig:s7_OV} shows a \acs{bf}-\acs{stem_m} image of a lamella cut with the \qty{30}{\degree} method out of a nanowire array grown with the recipe in Figure~\ref{subfig:recipe7}. The \acl{si} seed is on the left of the image, and the nanowire grew toward the right. \num{3} groups of \num{3} \acl{qw}s of different size are visible after the  initial \acs{inp} stabilisation layer.
+Figure~\ref{fig:s7_OV} shows a \acs{bf}-\acs{stem_m} image of a lamella cut with the \qty{30}{\degree} method out of a nanowire array grown with the recipe in Figure~\ref{subfig:recipe7}. The \acl{SI} seed is on the left of the image, and the nanowire grew toward the right. \num{3} groups of \num{3} \acl{qw}s of different size are visible after the  initial \acs{inp} stabilisation layer.
 
 The evolution of the growth front morphology during \acs{mocvd} growth is captured by the heterolayers embedded in the \acs{inp} matrix. All arsenide layers form parallel lines and are enclosed by \hkl{1 1 1} heterointerfaces. Any eventual strain introduced in the nanowire lattice does not destabilise the \hkl{111}\(_B\) growth regimen.
 
@@ -1701,7 +1701,7 @@ Due to project-related time constraints, further optimisation of the growth cond
         \end{tikzpicture}
     }
     \subcaptionbox{
-        \acs{bf}-\acs{stem_m} image of a lamella cut from a nanowire grown with recipe 9 with labelled material layers. The wire grew from the \acs{si} seed in the direction marked by the red arrow.
+        \acs{bf}-\acs{stem_m} image of a lamella cut from a nanowire grown with recipe 9 with labelled material layers. The wire grew from the \acs{SI} seed in the direction marked by the red arrow.
         \label{subfig:s9_OV}
     }{
         \tikzsetnextfilename{s9_OV}
@@ -1709,7 +1709,7 @@ Due to project-related time constraints, further optimisation of the growth cond
             \node[inner sep=0pt] (image) at (0,0) {\includegraphics[width = 0.64\textwidth]{4_Properties/Fig/s9_OV.pdf}};
             
             \draw[decorate, decoration={brace, mirror}] (-2.05, -0.6) -- ++ (9, 0) node[midway, anchor=north]{\acs{ingaas} wells \& \acs{sn}-doped \acs{inp} barriers};
-            \node at (-7.2, 0.5) {\acs{si}};
+            \node at (-7.2, 0.5) {\acs{SI}};
             \node [white] at (-4, 0.5) {\acs{inp}};
 
             \draw [red, stealth-] (2.4, -2) -- ++ (-3.5, 0) node [midway, anchor=north] {Growth direction};
@@ -1736,9 +1736,9 @@ Due to project-related time constraints, further optimisation of the growth cond
 
 The study of the effect of dopants on the \hkl{1 1 1} growth regime is an important aspect to consider when bridging the gap between pure growth studies and device integration. Although an active component can incorporate \acl{qw}s or not, the reliable stabilisation of a single-faceted growth front also helps with contacting devices with a plain intrinsic region. However, as the last sentence suggests, active photonic devices are usually doped, often in a \textit{p} - \textit{i} - \textit{n} configuration. The impact on the growth mechanism of introducing dopants in the lattice and the reaction atmosphere, although in low quantities compared to the precursors of the main species, should, therefore, be studied.
 
-\Acl{sn} is a \textit{n} dopant \cite{Vedel2023} that has previously been used in the \acs{inp} layer of successful \acs{tase}-grown devices \cite{Wen2022}. Its metal-organic precursor, \acf{tesn}, was available in the \acs{mocvd} system, and therefore a growth run was carried out. The deposition recipe is shown in Figure~\ref{subfig:recipe9}, and features a standard step sequence, consisting of a \qty{15}{\second} long step for the \acs{ingaas} nucleation layer, followed by a \qty{450}{\second}-long \textit{i} \acs{inp} stabilisation layer. The following superlattice deposition loop contained a \qty{15}{\second}-long \acs{ingaas} well deposition step followed by the \qty{7}{\second} \acs{tbas} / \qty{10}{\second} \acs{tbp} hold step. The barrier \textit{n}-\acs{inp} deposition step was \qty{100}{\second} in duration and was followed by a \qty{20}{\second} \acs{tbp} hold step.
+\Acl{sn} is a \textit{n} dopant \cite{Vedel2023} that has previously been used in the \acs{inp} layer of successful \acs{TASE}-grown devices \cite{Wen2022}. Its metal-organic precursor, \acf{tesn}, was available in the \acs{mocvd} system, and therefore a growth run was carried out. The deposition recipe is shown in Figure~\ref{subfig:recipe9}, and features a standard step sequence, consisting of a \qty{15}{\second} long step for the \acs{ingaas} nucleation layer, followed by a \qty{450}{\second}-long \textit{i} \acs{inp} stabilisation layer. The following superlattice deposition loop contained a \qty{15}{\second}-long \acs{ingaas} well deposition step followed by the \qty{7}{\second} \acs{tbas} / \qty{10}{\second} \acs{tbp} hold step. The barrier \textit{n}-\acs{inp} deposition step was \qty{100}{\second} in duration and was followed by a \qty{20}{\second} \acs{tbp} hold step.
 
-Figure~\ref{subfig:s9_OV} shows the \acs{bf}-\acs{stem_m} image of a \qty{30}{\degree} \acs{fib} cross-section of a nanowire grown with the recipe shown in Figure~\ref{subfig:recipe9}. The \acl{si} seed is on the left of the image, and the III-V material is at its centre enclosed by the top \acs{sio2} template and the bottom buried oxide layer. Its surface appears to be formed by a \hkl{1 1 1} facet at the top and another, likely high-indexed, facet at the bottom. Despite this defect, initial nucleation was successful and the \textit{n}-\acs{inp} stabilisation layer formed a single \hkl{1 1 1} growth front, reflected in its evolution by the shape of the \acs{ingaas} \acl{qw}s.
+Figure~\ref{subfig:s9_OV} shows the \acs{bf}-\acs{stem_m} image of a \qty{30}{\degree} \acs{fib} cross-section of a nanowire grown with the recipe shown in Figure~\ref{subfig:recipe9}. The \acl{SI} seed is on the left of the image, and the III-V material is at its centre enclosed by the top \acs{sio2} template and the bottom buried oxide layer. Its surface appears to be formed by a \hkl{1 1 1} facet at the top and another, likely high-indexed, facet at the bottom. Despite this defect, initial nucleation was successful and the \textit{n}-\acs{inp} stabilisation layer formed a single \hkl{1 1 1} growth front, reflected in its evolution by the shape of the \acs{ingaas} \acl{qw}s.
 
 Figure~\ref{subfig:s9_well1} shows a high-resolution \acs{bf}-\acs{stem_m} image of the first \acl{qw}. The image does not show any particular difference from those seen for previous samples. \Acl{rtp}s are present throughout the whole sample, including the \qty{10}{\nano\metre}-thick quantum wells.
 
@@ -1802,15 +1802,15 @@ The III group element composition graph of Figure~\ref{subfig:s9_III_30deg_lines
     \label{fig:s9_30deg_linescans}
 \end{figure}
 
-However, this finding does show that it is not only a pure phosphide layer that can stabilise a single \hkl{1 1 1} growth front within a \acs{tase} template, but also phosphide arsenides. This result shows that \acl{sn} has no negative effect on growth with a single-facet growth front, making it a good dopant for device applications.
+However, this finding does show that it is not only a pure phosphide layer that can stabilise a single \hkl{1 1 1} growth front within a \acs{TASE} template, but also phosphide arsenides. This result shows that \acl{sn} has no negative effect on growth with a single-facet growth front, making it a good dopant for device applications.
 
 \section{Discussion and future developments}
 
-This chapter explored a variety of \acs{mocvd}-grown \acs{tase} structures with various layer thicknesses and semiconductor materials. The \hkl{1 1 1} single growth front stabilisation growth regimen was confirmed to be an attractive methodology for controlling defects and material composition. Initially limited to a high V-III ratio \acs{inp}, it was shown that a high V-III ratio \ce{InAsP} can also provide the same \hkl{1 1 1} stabilisation effect. 
+This chapter explored a variety of \acs{mocvd}-grown \acs{TASE} structures with various layer thicknesses and semiconductor materials. The \hkl{1 1 1} single growth front stabilisation growth regimen was confirmed to be an attractive methodology for controlling defects and material composition. Initially limited to a high V-III ratio \acs{inp}, it was shown that a high V-III ratio \ce{InAsP} can also provide the same \hkl{1 1 1} stabilisation effect. 
 
-This growth methodology was easy to apply to the new substrate, the growth rates on the \hkl<1 1 0> substrate differed from those recorded for the \hkl{0 0 1} \acs{soi} wafer but remained comparable. Small fluctuations in growth rate were observed from one sample to the other but remained within the same value ranges within both \acs{inp} and \acs{ingaas}. 
+This growth methodology was easy to apply to the new substrate, the growth rates on the \hkl<1 1 0> substrate differed from those recorded for the \hkl{0 0 1} \acs{SOI} wafer but remained comparable. Small fluctuations in growth rate were observed from one sample to the other but remained within the same value ranges within both \acs{inp} and \acs{ingaas}. 
 
-The most significant impact on growth rates was observed in samples grown in a competitive environment. The presence of many parasitic crystals deeply affected the growth of \acs{tase} nanowires and the growth regimen within the template. The effective V / III ratio alteration in this environment was enough to cause the wire to lose its single-faceted growth front. This effect should be considered when attempting dense integration of \acs{tase} structure, especially if they differ in shape and size.
+The most significant impact on growth rates was observed in samples grown in a competitive environment. The presence of many parasitic crystals deeply affected the growth of \acs{TASE} nanowires and the growth regimen within the template. The effective V / III ratio alteration in this environment was enough to cause the wire to lose its single-faceted growth front. This effect should be considered when attempting dense integration of \acs{TASE} structure, especially if they differ in shape and size.
 
 As expected, the photoluminescence analysis of the \acs{ingaas} \acs{qw}s showed dependence on their size and composition. Importantly, it was shown that the signal originating from \hkl{1 1 1} single-facet heterointerface quantum wells was sharper than that of a sample with a large multi-faceted \acs{ingaas} nucleation layer.
 

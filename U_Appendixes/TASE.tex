@@ -1,9 +1,9 @@
-\section{\texorpdfstring{Implementation of the \acs{tase} process}{Implementation of the TASE process}}
+\section{\texorpdfstring{Implementation of the \acs{TASE} process}{Implementation of the TASE process}}
 \label{chap:tase}
 
-The concept of \acs{tase} is relatively simple, consisting in the growth of III-V material in an enclosed \acs{sio2} template from a \acl{si} seed \cite{Schmid2015, borgTASEp2018}. However, its experimental implementation to achieve a finished sample is lengthy. Thirty-five process steps (three of which are \acf{ebl} steps and one of which is an optical lithography step) involving 13 tools, four characterisation methods, and around 30 different chemicals are required to transform a \acf{soi} wafer into a chip with III-V \acs{tase}-grown nanostructures ready for further study or contacting. 
+The concept of \acs{TASE} is relatively simple, consisting in the growth of III-V material in an enclosed \acs{sio2} template from a \acl{SI} seed \cite{Schmid2015, borgTASEp2018}. However, its experimental implementation to achieve a finished sample is lengthy. Thirty-five process steps (three of which are \acf{ebl} steps and one of which is an optical lithography step) involving 13 tools, four characterisation methods, and around 30 different chemicals are required to transform a \acf{SOI} wafer into a chip with III-V \acs{TASE}-grown nanostructures ready for further study or contacting. 
 
-I used this fabrication process, starting from the pristine \acs{soi} wafer and ending with III-V structures ready for analysis, except for steps where otherwise stated. My main contributions to the \acs{tase} process involved optimising the \acs{mocvd} recipe and the design of the \acs{ebl} masks.
+I used this fabrication process, starting from the pristine \acs{SOI} wafer and ending with III-V structures ready for analysis, except for steps where otherwise stated. My main contributions to the \acs{TASE} process involved optimising the \acs{mocvd} recipe and the design of the \acs{ebl} masks.
 
 \subsection{Substrate and preprocessing}
 \label{sec:substrate_preprocessing}
@@ -57,14 +57,14 @@ I used this fabrication process, starting from the pristine \acs{soi} wafer and 
         \draw (22.5cm, -10cm) -- (23.5cm, -10cm);
         \draw (23cm, -10cm) -- (23cm, 10cm) node[midway, anchor=north] {\qty{200}{\mm}};
     \end{tikzpicture}
-    \caption[In-plane and perpendicular directions; and dimensions for the two \acs{soi} wafers employed in this thesis.]{In-plane and perpendicular directions; and dimensions for the two \acs{soi} wafers employed in this thesis. \qtyproduct{6.5 x 6.5}{\cm} and \qtyproduct{6 x 6}{\cm} dicing is shown in black and the following \qtyproduct{2 x 2}{\cm} cuts in red.}
+    \caption[In-plane and perpendicular directions; and dimensions for the two \acs{SOI} wafers employed in this thesis.]{In-plane and perpendicular directions; and dimensions for the two \acs{SOI} wafers employed in this thesis. \qtyproduct{6.5 x 6.5}{\cm} and \qtyproduct{6 x 6}{\cm} dicing is shown in black and the following \qtyproduct{2 x 2}{\cm} cuts in red.}
     \label{fig:8in_wafers}
 \end{figure}
 
-\Acs{tase} uses the \acs{soi} wafer as its starting substrate: this is a \acs{si}/\acs{sio2}/\acs{si} wafer in which a thick \acl{si} backplate supports a thin buried \acl{sio2} layer and an even thinner \acl{si} device layer (Figure~\ref{fig:wafer_thicknesses}). Two different 8-inch wafers (Figure \ref{fig:8in_wafers}) were used in this work:
+\Acs{TASE} uses the \acs{SOI} wafer as its starting substrate: this is a \acs{SI}/\acs{sio2}/\acs{SI} wafer in which a thick \acl{SI} backplate supports a thin buried \acl{sio2} layer and an even thinner \acl{SI} device layer (Figure~\ref{fig:wafer_thicknesses}). Two different 8-inch wafers (Figure \ref{fig:8in_wafers}) were used in this work:
 \begin{enumerate}
-    \item the \hkl(0 0 1) wafer: Figure~\ref{001} shows the \qty{2}{\um} thick buried oxide and \qty{220}{\nm} thick \hkl<0 0 1> oriented \acl{si} device layer. Figure~\ref{fig:8in_wafers}(top) shows how this wafer was diced in four \qtyproduct{6.5 x 6.5}{cm} dices, plus edge pieces, and that there are no in-plane \hkl<1 1 1> directions in this wafer.
-    \item the \hkl(1 1 0) wafer: Figure~\ref{110} shows the \qty{150}{\nm} thick buried oxide and \qty{70}{\nm} thick \hkl<1 1 0> oriented \acl{si} device layer. Figure~\ref{fig:8in_wafers}(bottom) shows how this wafer was diced in four \qtyproduct{6 x 6}{cm} dices, plus edge pieces.
+    \item the \hkl(0 0 1) wafer: Figure~\ref{001} shows the \qty{2}{\um} thick buried oxide and \qty{220}{\nm} thick \hkl<0 0 1> oriented \acl{SI} device layer. Figure~\ref{fig:8in_wafers}(top) shows how this wafer was diced in four \qtyproduct{6.5 x 6.5}{cm} dices, plus edge pieces, and that there are no in-plane \hkl<1 1 1> directions in this wafer.
+    \item the \hkl(1 1 0) wafer: Figure~\ref{110} shows the \qty{150}{\nm} thick buried oxide and \qty{70}{\nm} thick \hkl<1 1 0> oriented \acl{SI} device layer. Figure~\ref{fig:8in_wafers}(bottom) shows how this wafer was diced in four \qtyproduct{6 x 6}{cm} dices, plus edge pieces.
 \end{enumerate}
 
 \begin{figure}
@@ -123,13 +123,13 @@ I used this fabrication process, starting from the pristine \acs{soi} wafer and 
 
         \end{tikzpicture}
     }
-    \caption[Drawing of the layer stack of the two \acs{soi} wafers showing different layer thicknesses.]{Drawing of the layer stack of the two \acs{soi} wafers showing different layer thicknesses, \acs{si} is represented in green and \acs{sio2} in light blue. The cross-section of the \hkl<0 0 1> wafer is shown in \subref{001} with a magnified insert showing the \qty{220}{\nm} - thick \acs{si} device layer. The layer thicknesses in \subref{110} are proportional to the ones in \subref{001} highlighting how thin the \acs{sio2} (\qty{150}{\nm}) and \acs{si} (\qty{70}{\nm}) layers are in comparison.}
+    \caption[Drawing of the layer stack of the two \acs{SOI} wafers showing different layer thicknesses.]{Drawing of the layer stack of the two \acs{SOI} wafers showing different layer thicknesses, \acs{SI} is represented in green and \acs{sio2} in light blue. The cross-section of the \hkl<0 0 1> wafer is shown in \subref{001} with a magnified insert showing the \qty{220}{\nm} - thick \acs{SI} device layer. The layer thicknesses in \subref{110} are proportional to the ones in \subref{001} highlighting how thin the \acs{sio2} (\qty{150}{\nm}) and \acs{SI} (\qty{70}{\nm}) layers are in comparison.}
     \label{fig:wafer_thicknesses}
 \end{figure}
 
 The tool responsible carried out the dicing cuts at a wafer dicing machine. Every dice is designed to be further divided into nine identical \qtyproduct{2 x 2}{cm} smaller dice that, in turn, contain the \acs{ebl} write regions. This means that every large dice produces nine smaller sample dice that all include the same nanostructure designs but can be grown separately: this considers the possibility of error or damage to some of the smaller dice during processing. The first wafer was cut in \qtyproduct{6.5 x 6.5}{cm} dice for ease of handling at the \acs{ebl} machine. However, it was found that this presented issues with other tools at later steps. Therefore the dice dimensions were reduced to \qtyproduct{6 x 6}{cm} for the second wafer. Figures \ref{fig:markers}, \ref{fig:litho1}, and \ref{fig:litho2} show schematic drawings of the primary process steps as they appear when applied to the \hkl<1 1 0> wafer, but the process steps are the same on the \hkl<0 0 1> wafer.
  \par 
-The device layer defines the shape of the \acl{si} seeds and III-V nanostructures. To do so, two lithography steps are needed, one defining the geometry of the wires and one opening the template oxide that encases them. The alignment between these two steps is critical. Much like the definition of the nanostructures themselves, it requires an accuracy of the order of the nanometre on a dice size of \qty{2}{cm}. This resolution is only available with \acf{ebl} in a research environment. A third \acs{ebl} step is introduced to ensure correct alignment. Markers that the \acs{ebl} machine will use to determine the position of the sample with the necessary accuracy are defined in this process step. While I created the mask designs and provided the substrate ready for exposure, given its high degree of complexity, automation, and workload, the machine was loaded and operated by the tool responsible.
+The device layer defines the shape of the \acl{SI} seeds and III-V nanostructures. To do so, two lithography steps are needed, one defining the geometry of the wires and one opening the template oxide that encases them. The alignment between these two steps is critical. Much like the definition of the nanostructures themselves, it requires an accuracy of the order of the nanometre on a dice size of \qty{2}{cm}. This resolution is only available with \acf{ebl} in a research environment. A third \acs{ebl} step is introduced to ensure correct alignment. Markers that the \acs{ebl} machine will use to determine the position of the sample with the necessary accuracy are defined in this process step. While I created the mask designs and provided the substrate ready for exposure, given its high degree of complexity, automation, and workload, the machine was loaded and operated by the tool responsible.
 \par
 The creation of the alignment markers constitutes an important pre-processing step. A \qty{10}{nm} thick \acs{sio2} protective layer is deposited on top of the device layer using \acf{pecvd} before sputtering a \qty{100}{\nm} \acf{w} layer on top of the wafer (Figure \ref{W_deposition}). The sputtering tool was operated by the responsible for the tool. \Acl{w} is used to achieve high contrast in the electron microscopy image that the \acs{ebl} machine uses to orient itself on the sample. A negative photoresist is spun before submitting the wafer for the first \acs{ebl} run. During this step, the \acs{ebl} markers are defined in the resist, which, after development, acts as a mask that protects only certain areas of the \acl{w} layer. \Acf{rie} is used to remove the unprotected \acl{w}: this leaves well-defined markers on the wafer (Figure \ref{W_markers}).  
 
@@ -188,9 +188,9 @@ The creation of the alignment markers constitutes an important pre-processing st
 \end{figure}
 
 \par
-The alignment markers are then protected from the next aggressive etching steps that follow in the \acs{tase} process by depositing a \qty{300}{\nm} thick \acl{sio2} layer on the entire wafer with \acs{pecvd}. This protective layer is then annealed at \qty{750}{\degreeCelsius} for \qty{300}{s} to improve its resistance to etching (Figure \ref{marker_protection_layer}). This cover shields both the alignment markers and the device layer. However, the device layer must be accessible to define the nanostructures that will form the base of the \acs{tase} process. Optical lithography is used to pattern openings in a positive optical resist, leaving only the areas of the \acs{sio2} film above the \acl{w} markers masked (Figure \ref{mp_optolitho}). After development, the \acl{sio2} layer can be removed in correspondence with these openings using a diluted \acf{hf} solution (Figure \ref{mp_completed}), uncovering most of the device \acl{si} layer. Reflectometry can ascertain the presence and thickness of the device \acl{si} layer, thereby evaluating the health of the wafer after the pre-processing steps.
+The alignment markers are then protected from the next aggressive etching steps that follow in the \acs{TASE} process by depositing a \qty{300}{\nm} thick \acl{sio2} layer on the entire wafer with \acs{pecvd}. This protective layer is then annealed at \qty{750}{\degreeCelsius} for \qty{300}{s} to improve its resistance to etching (Figure \ref{marker_protection_layer}). This cover shields both the alignment markers and the device layer. However, the device layer must be accessible to define the nanostructures that will form the base of the \acs{TASE} process. Optical lithography is used to pattern openings in a positive optical resist, leaving only the areas of the \acs{sio2} film above the \acl{w} markers masked (Figure \ref{mp_optolitho}). After development, the \acl{sio2} layer can be removed in correspondence with these openings using a diluted \acf{hf} solution (Figure \ref{mp_completed}), uncovering most of the device \acl{SI} layer. Reflectometry can ascertain the presence and thickness of the device \acl{SI} layer, thereby evaluating the health of the wafer after the pre-processing steps.
 \par
-This concludes the initial steps that prepare the wafer to go through the \acs{tase} process. In the following illustrations (Figures \ref{fig:litho1} and \ref{fig:litho2}), the \acl{w} markers and their oxide protection are omitted as they will not be affected by the following process steps in a process-relevant manner. Still, they are not removed and are the basis for alignment in the next lithography steps.
+This concludes the initial steps that prepare the wafer to go through the \acs{TASE} process. In the following illustrations (Figures \ref{fig:litho1} and \ref{fig:litho2}), the \acl{w} markers and their oxide protection are omitted as they will not be affected by the following process steps in a process-relevant manner. Still, they are not removed and are the basis for alignment in the next lithography steps.
 
 
 \subsection{Nanostructure definition and template deposition}
@@ -207,7 +207,7 @@ This concludes the initial steps that prepare the wafer to go through the \acs{t
         \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (10cm, 0cm);
     \end{tikzpicture}
     }
-    \subcaptionbox{Nanostructure geometry transferred onto the \acs{si} device layer.\label{L1_nanostructure}}{
+    \subcaptionbox{Nanostructure geometry transferred onto the \acs{SI} device layer.\label{L1_nanostructure}}{
         \tikzsetnextfilename{L1_nanostructure}
     \begin{tikzpicture}
         \filldraw[fill=SiO2_blue] (3cm, 7mm) rectangle (7cm, 9mm);
@@ -215,7 +215,7 @@ This concludes the initial steps that prepare the wafer to go through the \acs{t
         \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (10cm, 0cm);
     \end{tikzpicture}
     }
-    \subcaptionbox{\acs{si} nanostructures encased in the template oxide.\label{L1_template}}{
+    \subcaptionbox{\acs{SI} nanostructures encased in the template oxide.\label{L1_template}}{
         \tikzsetnextfilename{L1_template}
     \begin{tikzpicture}
         \filldraw[fill=SiO2_blue] (0cm, 0mm) -- (10cm, 0mm) -- (10cm, 10mm) -- (8cm, 10mm) -- (8cm, 17mm) -- (7cm, 17mm) -- (7cm, 19mm) -- (3cm, 19mm) -- (3cm, 17mm) -- (2cm, 17mm) -- (2cm, 10mm) -- (0cm, 10mm) -- cycle;
@@ -223,13 +223,13 @@ This concludes the initial steps that prepare the wafer to go through the \acs{t
         \filldraw[fill=SiO2_blue] (0cm, -15mm) rectangle (10cm, 0cm);
     \end{tikzpicture}
     }
-    \caption[Drawings showing the fabrication process of the \acs{si} nanostructures and \acs{tase} template.]{Drawings showing \subref{L1_exposed_resist} the \acs{hsq} layer after exposure (red unexposed, blue exposed), \subref{L1_nanostructure} the nanostructures as defined in the device \acs{si} layer, and \subref{L1_template} the nanostructures encased in the template oxide.}
+    \caption[Drawings showing the fabrication process of the \acs{SI} nanostructures and \acs{TASE} template.]{Drawings showing \subref{L1_exposed_resist} the \acs{hsq} layer after exposure (red unexposed, blue exposed), \subref{L1_nanostructure} the nanostructures as defined in the device \acs{SI} layer, and \subref{L1_template} the nanostructures encased in the template oxide.}
     \label{fig:litho1}
 \end{figure}
 
-The first step of the \acs{tase} process is to define the geometry of the seed and the nanostructure. An \acs{ebl} mask is designed using mask design software, such as L-Edit, and has to be then transferred onto the device \acl{si} layer: practically, this is accomplished using \acf{hsq} as a resist. This negative electron-sensitive resist allows for very high-precision pattern transfer through \acs{ebl}. After development, \acs{hsq} leaves a thin layer of \acl{sio2} covering the area corresponding to the nanostructures that will be fabricated (Figure \ref{L1_exposed_resist}). The unprotected device layer \acl{si} is removed using \acf{hbr}-based \acf{icp} etching. The resulting \acl{si} nanostructures reflect the geometry of both the \acl{si} seed and the III-V wire that will be grown (Figure \ref{L1_nanostructure}). 
+The first step of the \acs{TASE} process is to define the geometry of the seed and the nanostructure. An \acs{ebl} mask is designed using mask design software, such as L-Edit, and has to be then transferred onto the device \acl{SI} layer: practically, this is accomplished using \acf{hsq} as a resist. This negative electron-sensitive resist allows for very high-precision pattern transfer through \acs{ebl}. After development, \acs{hsq} leaves a thin layer of \acl{sio2} covering the area corresponding to the nanostructures that will be fabricated (Figure \ref{L1_exposed_resist}). The unprotected device layer \acl{SI} is removed using \acf{hbr}-based \acf{icp} etching. The resulting \acl{SI} nanostructures reflect the geometry of both the \acl{SI} seed and the III-V wire that will be grown (Figure \ref{L1_nanostructure}). 
 \par
-The template \acl{sio2} is then deposited and encases the \acl{si} nanostructures as illustrated in Figure \ref{L1_template}. The template deposition step is particularly delicate as the template oxide must closely follow the geometry of the \acl{si} nanostructures. \Acf{ald} enables this level of precision. With this method, the template oxide grows in steps: first, a complete layer of \acl{o} atoms is deposited, followed by an entire layer of \acl{si} atoms, and so on. Although time-consuming, this growth allows the template oxide to closely follow the geometry of the silicon nanostructures and grow in an ordered manner, resulting in strong etch resistance. 
+The template \acl{sio2} is then deposited and encases the \acl{SI} nanostructures as illustrated in Figure \ref{L1_template}. The template deposition step is particularly delicate as the template oxide must closely follow the geometry of the \acl{SI} nanostructures. \Acf{ald} enables this level of precision. With this method, the template oxide grows in steps: first, a complete layer of \acl{o} atoms is deposited, followed by an entire layer of \acl{SI} atoms, and so on. Although time-consuming, this growth allows the template oxide to closely follow the geometry of the silicon nanostructures and grow in an ordered manner, resulting in strong etch resistance. 
 
 
 
@@ -248,7 +248,7 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
             \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
         \end{tikzpicture}
     }
-    \subcaptionbox{Etch down of the template \acs{sio2} and device \acs{si} to reach the buried oxide layer.
+    \subcaptionbox{Etch down of the template \acs{sio2} and device \acs{SI} to reach the buried oxide layer.
     \label{L2_open}}{
         \tikzsetnextfilename{L2_open}
         \begin{tikzpicture}
@@ -258,7 +258,7 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
             \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
         \end{tikzpicture}
     }
-    \subcaptionbox{Etch back of the \acs{si} to create the seed.
+    \subcaptionbox{Etch back of the \acs{SI} to create the seed.
     \label{L2_etchback}}{
         \tikzsetnextfilename{L2_etchback}
         \begin{tikzpicture}
@@ -268,7 +268,7 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
             \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
         \end{tikzpicture}
     }
-    \subcaptionbox{A III-V crystal (orange) was grown from the \acs{si} seed.
+    \subcaptionbox{A III-V crystal (orange) was grown from the \acs{SI} seed.
     \label{L2_growth}}{
         \tikzsetnextfilename{L2_growth}
         \begin{tikzpicture}
@@ -279,17 +279,17 @@ The template \acl{sio2} is then deposited and encases the \acl{si} nanostructure
             \filldraw[fill=SiO2_blue] (0cm, -14mm) rectangle (10cm, 0cm);
         \end{tikzpicture}
     }
-    \caption[Drawings showing the last steps of the \acs{tase} process.]{Drawings showing the last steps of the \acs{tase} process. A positive resist layer is patterned \subref{L2_resist} and used as a mask for the \acs{rie} etch-down of holes in the template \acs{sio2}, exposing a vertical and flat \acs{si} surface \subref{L2_open}. \acs{tmah} etch-back \subref{L2_etchback} and \acs{mocvd} growth follow, creating a III-V nanostructure (orange) in the place previously occupied by \acs{si} \subref{L2_growth}.}
+    \caption[Drawings showing the last steps of the \acs{TASE} process.]{Drawings showing the last steps of the \acs{TASE} process. A positive resist layer is patterned \subref{L2_resist} and used as a mask for the \acs{rie} etch-down of holes in the template \acs{sio2}, exposing a vertical and flat \acs{SI} surface \subref{L2_open}. \acs{tmah} etch-back \subref{L2_etchback} and \acs{mocvd} growth follow, creating a III-V nanostructure (orange) in the place previously occupied by \acs{SI} \subref{L2_growth}.}
     \label{fig:litho2}
 \end{figure}
 
-The last lithography step involves defining the opening areas in the template oxide through which the etch back and growth occur. Holes are defined in a positive resist layer (Figure \ref{L2_resist}). After \acs{ebl} exposure and development, \acs{rie} is used to etch the template oxide and the device \acl{si} underneath through these holes, with good vertical selectivity (Figure \ref{L2_open}). After opening the template, each \qtyproduct{6.5 x 6.5}{\cm} or \qtyproduct{6 x 6}{\cm} dice is further cut into smaller \qtyproduct{2 x 2}{cm} dice that will then be etched back and grown singularly as described in the following paragraphs.
+The last lithography step involves defining the opening areas in the template oxide through which the etch back and growth occur. Holes are defined in a positive resist layer (Figure \ref{L2_resist}). After \acs{ebl} exposure and development, \acs{rie} is used to etch the template oxide and the device \acl{SI} underneath through these holes, with good vertical selectivity (Figure \ref{L2_open}). After opening the template, each \qtyproduct{6.5 x 6.5}{\cm} or \qtyproduct{6 x 6}{\cm} dice is further cut into smaller \qtyproduct{2 x 2}{cm} dice that will then be etched back and grown singularly as described in the following paragraphs.
 \par
-Excess \acl{si} to be substituted with III-V material is removed using a \qty{2.5}{\%_{V\per\V}} \acf{tmah} / \acf{h2o} solution heated at \qty{80}{\degreeCelsius}. This solution has a reliable etch-back speed of \qty{60}{\nm\per\minute}.  The etch back proceeds from the template openings to leave only the seed area inside an empty \acl{sio2} template where the III-V crystal will grow (Figure \ref{L2_etchback}). \Acs{tmah} is specifically chosen because it has good selectivity to \acl{si}, therefore leaving the \acs{sio2} template mostly unaffected. A small amount of template etching still takes place and must be considered when etching multiple micrometres of \acl{si} by depositing a thicker template oxide in previous fabrication steps. Another advantage of \acs{tmah} etching is that it results in \acl{si} seeds terminated by \hkl{1 1 1} facets that avoid antiphase boundary formation during \acf{mocvd} \cite{Kunert2018}. After etching, the chip is ready for III-V material growth, pre-growth surface treatment steps include a dip in a 2:1 \acf{h2so4} / \acf{h2o2} solution to remove organic contaminants and a further \qty{10}{s} dip in a diluted \acs{hf} solution to remove the native oxide layer. 
+Excess \acl{SI} to be substituted with III-V material is removed using a \qty{2.5}{\%_{V\per\V}} \acf{tmah} / \acf{h2o} solution heated at \qty{80}{\degreeCelsius}. This solution has a reliable etch-back speed of \qty{60}{\nm\per\minute}.  The etch back proceeds from the template openings to leave only the seed area inside an empty \acl{sio2} template where the III-V crystal will grow (Figure \ref{L2_etchback}). \Acs{tmah} is specifically chosen because it has good selectivity to \acl{SI}, therefore leaving the \acs{sio2} template mostly unaffected. A small amount of template etching still takes place and must be considered when etching multiple micrometres of \acl{SI} by depositing a thicker template oxide in previous fabrication steps. Another advantage of \acs{tmah} etching is that it results in \acl{SI} seeds terminated by \hkl{1 1 1} facets that avoid antiphase boundary formation during \acf{mocvd} \cite{Kunert2018}. After etching, the chip is ready for III-V material growth, pre-growth surface treatment steps include a dip in a 2:1 \acf{h2so4} / \acf{h2o2} solution to remove organic contaminants and a further \qty{10}{s} dip in a diluted \acs{hf} solution to remove the native oxide layer. 
 \par
-Before growth and in the chamber, the chip is also thermally treated at \qty{750}{\degreeCelsius} for \qty{3}{\minute} in an \acs{as} atmosphere to facilitate \acl{o} desorption from the \acl{si} seed. The nucleation of the III-V material is selective to the \acl{si} seeds. This means that the growth of the III-V nanostructures is limited to the areas defined in the previous lithography steps (Figure \ref{L2_growth}). At the beginning of this project, the DESIGN-EID consortium chose to investigate the growth and properties of \acf{ingaas} / \acf{inp} material systems.
+Before growth and in the chamber, the chip is also thermally treated at \qty{750}{\degreeCelsius} for \qty{3}{\minute} in an \acs{as} atmosphere to facilitate \acl{o} desorption from the \acl{SI} seed. The nucleation of the III-V material is selective to the \acl{SI} seeds. This means that the growth of the III-V nanostructures is limited to the areas defined in the previous lithography steps (Figure \ref{L2_growth}). At the beginning of this project, the DESIGN-EID consortium chose to investigate the growth and properties of \acf{ingaas} / \acf{inp} material systems.
 
-\paragraph{Growth} \Acs{mocvd} growth took place in a showerhead type reactor, operating at a pressure of \qty{60}{Torr} (\qty{0.08}{bar}). A rotating susceptor capable of holding up to three \qty{2}{in} wafers was used to accommodate \qtyproduct{2 x 2}{\centi\metre} chips containing the \acs{tase} structures. Two different lines were used for III and V precursors, which were stored in bubblers and transported to the reactor using a hydrogen flow. The precursors used in the growth of III-V material are:
+\paragraph{Growth} \Acs{mocvd} growth took place in a showerhead type reactor, operating at a pressure of \qty{60}{Torr} (\qty{0.08}{bar}). A rotating susceptor capable of holding up to three \qty{2}{in} wafers was used to accommodate \qtyproduct{2 x 2}{\centi\metre} chips containing the \acs{TASE} structures. Two different lines were used for III and V precursors, which were stored in bubblers and transported to the reactor using a hydrogen flow. The precursors used in the growth of III-V material are:
 \begin{itemize}
     \item \acf{tmin},
     \item \acf{tmga},
