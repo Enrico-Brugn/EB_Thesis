@@ -8,10 +8,6 @@ Controlling the morphology of the growth front is essential for several reasons.
 This chapter expands on the research published by my co-authors and me in \cite{Brugnolotto2023}. The most common crystalline defects observed in \acs{stem_m} images of \acs{TASE} grown structures will be discussed to complement this chapter's compositional and morphological introduction. An in-depth exposition of the nanowire design and growth recipes and their analysis, explaining the evolution of the methodology from a simple thick lateral heterostructure to a multi-\acl{qw} architecture with single facet heterointerfaces, follows. When discussing the order of appearance of the wire's internal structure in this thesis, the reference point is set at the \acf{SI} seed interface, regardless of its position in the image.
 
 \section{Initial measurements on pre-existing samples}
-As the previous section shows, \acs{TASE} has been developing for the last decade \cite{Borg2014}. As such, when I started working on the project, an initial study was conducted to determine the crystalline quality of \acs{TASE}-grown structures from other ongoing projects. 
-
-\subsection{\texorpdfstring{Defects in \acs{TASE} samples}{Defects in TASE samples}}
-\label{subsec:pre-existing_samples}
 
 \begin{figure}
     \centering
@@ -52,6 +48,11 @@ As the previous section shows, \acs{TASE} has been developing for the last decad
     \label{fig:2020_Merge}
 \end{figure}
 
+As the previous section shows, \acs{TASE} has been developing for the last decade \cite{Borg2014}. As such, when I started working on the project, an initial study was conducted to determine the crystalline quality of \acs{TASE}-grown structures from other ongoing projects. 
+
+\subsection{\texorpdfstring{Defects in \acs{TASE} samples}{Defects in TASE samples}}
+\label{subsec:pre-existing_samples}
+
 \Acl{rtp}s (\acs{rtp}s) were found to be the most common crystalline defect from the characterisation conducted on \acs{TASE}-grown samples throughout the project. A widespread presence of micro twins was found in all samples \cite{Brugnolotto2023, Brugnolotto2023_2}, even those dating to before the start of the project \cite{Staudinger2018}. Only one of the structures, created by merging different nanowires into a larger platelet, had dislocations (Figure~\ref{subfig:SM_dislocations}). 
 
 The sample in Figure~\ref{fig:2020_Merge} was grown by Svenja Mauthe before the beginning of my stay at \acs{ibm} Research Europe - Zurich as part of her study on the controlled introduction of dislocation at the merging point of two growing crystals \cite{Mauthe2021}. A cross-section of a structure deriving from one such experiment is shown in Figure~\ref{subfig:SM_overview}. This lamella was cut in the area of the device where the wires had already merged. Two areas of the structure stand out particularly: on the left side of the image, a series of "v-shaped" parallel lines denote the presence of two-fold \acf{rtp}s in orthogonal \hkl{111} planes. In this region, Figure~\ref{subfig:SM_dislocations} shows the two stair-rod dislocations forming where two twin planes intersect or when one is annihilated and the other changes direction. This type of defect was the subject of an in-depth study by Bologna et al. \cite{Bologna2018}, but it will not make another appearance in any of the other \acf{stem_m} images recorded during my studies. However, it should be noted that the vast majority of cross-sections imaged from this point on were cut along the growth axis instead of perpendicularly to it as this one was. Figure~\ref{subfig:SM_merge_position} shows the interface between the light grey and dark grey segments that comprise the III-V crystal in Figure~\ref{subfig:SM_overview}. 
@@ -59,6 +60,8 @@ The sample in Figure~\ref{fig:2020_Merge} was grown by Svenja Mauthe before the 
 As made clear by the definition with which the atomic columns are visible on the left-hand side of Figure~\ref{subfig:SM_merge_position} the sample was orientated to achieve the channelling condition of the \acs{stem_m} electron beam in the corresponding crystal. The crystal's lattice on the right-hand side of the same image does not appear as clearly defined: a slight rotation at the time of nucleation might have happened for one of the two seeds pictured. Of course, since the platelet originated from five different seeds, an empirical assumption can be made about two of them prevailing over the other three. This hypothesis is further supported by the presence of \acs{rtp}s on the leftmost portion of the crystalline slice in Figure~\ref{subfig:SM_overview}. At the same time, the area to its immediate right does not show signs of \acs{rtp}s, hinting at the possibility of growth developing in two different directions. 
 
 \section{\texorpdfstring{Fabrication on \acs{SI}\hkl(0 0 1) \acs{SOI}}{Fabrication on Si(001) SOI}}
+
+Nanofabrication was carried out with the \acs{TASE} process (see Section~\ref{chap:tase} for details) and, together with the later sample characterisation, took place in highly controlled environments such as a cleanroom and noise-free lab (see \autoref{chap:tools}). Firstly, the shape of the ensemble of nucleation seed and nanostructure is transferred to the \acl{SI} device layer of the \acs{SOI} wafer through a series of lithographic and etching steps. The template, composed of \acs{sio2}, is then deposited on top of the resulting microstructures. Finally, the template is opened in one or more positions before the etch-back of the sacrificial \acl{SI} volume and the introduction of \acf{mocvd} grown III-V semiconductor in its place \cite{Schmid2015, borgTASEp2018}.
 
 \begin{figure}
     \centering
@@ -121,8 +124,6 @@ As made clear by the definition with which the atomic columns are visible on the
     \caption[\hkl(0 0 1) \acs{SOI} wafer symmetry and microstructure design.]{Wafer symmetry and microstructure design. \subref{subfig:001wafer_directions} shows the in-plane low-index crystalline directions in a \hkl(0 0 1) wafer, using a \qty{90}{\degree} arc centred around the notch that indicates the in-plane \hkl[1 1 0] direction. The rest of the directions can be deduced by the symmetry defined by the four-fold axis perpendicular to the wafer plane. \subref{subfig:enterprise_design} illustrates two different microstructure designs, comb arrays and T-shaped structures, complemented by a scale bar and an in-plane orientation guide. The black designs were transferred to the device \acs{SI} layer of the \acs{SOI} wafer, while the red designs marked the position of the template openings. \subref{subfig:enterprise_etchback} is a drawing of the \acs{SI} seed area showing its configuration after etch-back for a structure orientated along an in-plane \hkl<1 1 0> direction.}
     \label{fig:001_Templat5e_Design}
 \end{figure}
-
-Nanofabrication was carried out with the \acs{TASE} process (see Section~\ref{chap:tase} for details) and, together with the later sample characterisation, took place in highly controlled environments such as a cleanroom and noise-free lab (see \autoref{chap:tools}). Firstly, the shape of the ensemble of nucleation seed and nanostructure is transferred to the \acl{SI} device layer of the \acs{SOI} wafer through a series of lithographic and etching steps. The template, composed of \acs{sio2}, is then deposited on top of the resulting microstructures. Finally, the template is opened in one or more positions before the etch-back of the sacrificial \acl{SI} volume and the introduction of \acf{mocvd} grown III-V semiconductor in its place \cite{Schmid2015, borgTASEp2018}.
 
 Initial growth experiments focussed on nanowires, one of the simplest geometries. The relative simplicity of the nanowires allows for the study of the impact of even minor modifications of the growth recipes on the final crystal, both in terms of structure and composition.
 
@@ -355,6 +356,8 @@ Regarding growth dynamics, the main finding from the sample in Figure~\ref{fig:s
 
 \subsection{Growth recipe for the introduction of short material segments.}
 
+A further looped deposition segment was introduced at the end of the recipe in Figure~\ref{subfig:recipe1} to study the growth of thin structures in the template. The resulting recipe is illustrated in Figure~\ref{subfig:recipe2}. The looped segment, executed twice without interruption, contains an \acs{inp} and an \acs{ingaas} deposition step. The two short deposition steps are \qty{75}{s} long. The growth temperature was kept constant at \qty{580}{\degreeCelsius}, and the III-V ratios were unchanged from those in Table~\ref{tab:sample1_ratios}.
+
 \begin{figure}
     \centering
     \subcaptionbox{
@@ -432,8 +435,6 @@ Regarding growth dynamics, the main finding from the sample in Figure~\ref{fig:s
     \caption[Precursor sequence and \acs{sem_m}-\acs{fib} image of a cross-section of a wire from sample 2]{Growth of the second sample. \subref{subfig:recipe1} is the diagram representing the modified precursor sequence introducing the looped segment for thin layer deposition \cite{Brugnolotto2023}. Each line represents an active flow of precursor into the reactor. The colour of the horizontal lines represents the target material. \subref{subfig:FIB_cut_2} \acs{sem_m} image of the lamella during \acs{fib} thinning. The various material regions are labelled, including the \acs{SI} seed, from which \num{2} III-V wires grew towards in opposite directions, highlighted by the red arrows underneath them. The vertical purple dashed line in the insert next to the scale bar shows where the cross-section was cut.}
     \label{fig:sample2_growth}
 \end{figure}
-
-A further looped deposition segment was introduced at the end of the recipe in Figure~\ref{subfig:recipe1} to study the growth of thin structures in the template. The resulting recipe is illustrated in Figure~\ref{subfig:recipe2}. The looped segment, executed twice without interruption, contains an \acs{inp} and an \acs{ingaas} deposition step. The two short deposition steps are \qty{75}{s} long. The growth temperature was kept constant at \qty{580}{\degreeCelsius}, and the III-V ratios were unchanged from those in Table~\ref{tab:sample1_ratios}.
 
 Figure~\ref{subfig:FIB_cut_2} shows an \acs{sem_m} image of a lamella being cut from one of the T-shape devices shown in Figure~\ref{subfig:enterprise_design}. The image was taken during the last stage of \acs{fib} processing; two III-V nanowires can be observed to have grown from a central \acl{SI} seed, filling the template almost entirely. The areas where the two "Void" labels are placed also mark the end of the upper template \acs{sio2} layer. The protective \acl{pt} layer and buried oxide layers are also visible. Lamella thinning from the back side was ongoing. As such, the farther template wall was still present. The \acs{inp} regions for both wires are visible as being darker with brighter \acl{in} droplets.
 

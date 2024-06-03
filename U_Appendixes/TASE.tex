@@ -196,6 +196,10 @@ This concludes the initial steps that prepare the wafer to go through the \acs{T
 \subsection{Nanostructure definition and template deposition}
 \label{sec:nanostructure-def_template-dep}
 
+The first step of the \acs{TASE} process is to define the geometry of the seed and the nanostructure. An \acs{ebl} mask is designed using mask design software, such as L-Edit, and has to be then transferred onto the device \acl{SI} layer: practically, this is accomplished using \acf{hsq} as a resist. This negative electron-sensitive resist allows for very high-precision pattern transfer through \acs{ebl}. After development, \acs{hsq} leaves a thin layer of \acl{sio2} covering the area corresponding to the nanostructures that will be fabricated (Figure \ref{L1_exposed_resist}). The unprotected device layer \acl{SI} is removed using \acf{hbr}-based \acf{icp} etching. The resulting \acl{SI} nanostructures reflect the geometry of both the \acl{SI} seed and the III-V wire that will be grown (Figure \ref{L1_nanostructure}). 
+
+The template \acl{sio2} is then deposited and encases the \acl{SI} nanostructures as illustrated in Figure \ref{L1_template}. The template deposition step is particularly delicate as the template oxide must closely follow the geometry of the \acl{SI} nanostructures. \Acf{ald} enables this level of precision. With this method, the template oxide grows in steps: first, a complete layer of \acl{o} atoms is deposited, followed by an entire layer of \acl{SI} atoms, and so on. Although time-consuming, this growth allows the template oxide to closely follow the geometry of the silicon nanostructures and grow in an ordered manner, resulting in strong etch resistance. 
+
 \begin{figure}
     \centering
     \subcaptionbox{\acs{hsq} layer on top of the wafer after exposure.\label{L1_exposed_resist}}{
@@ -227,13 +231,8 @@ This concludes the initial steps that prepare the wafer to go through the \acs{T
     \label{fig:litho1}
 \end{figure}
 
-The first step of the \acs{TASE} process is to define the geometry of the seed and the nanostructure. An \acs{ebl} mask is designed using mask design software, such as L-Edit, and has to be then transferred onto the device \acl{SI} layer: practically, this is accomplished using \acf{hsq} as a resist. This negative electron-sensitive resist allows for very high-precision pattern transfer through \acs{ebl}. After development, \acs{hsq} leaves a thin layer of \acl{sio2} covering the area corresponding to the nanostructures that will be fabricated (Figure \ref{L1_exposed_resist}). The unprotected device layer \acl{SI} is removed using \acf{hbr}-based \acf{icp} etching. The resulting \acl{SI} nanostructures reflect the geometry of both the \acl{SI} seed and the III-V wire that will be grown (Figure \ref{L1_nanostructure}). 
-\par
-The template \acl{sio2} is then deposited and encases the \acl{SI} nanostructures as illustrated in Figure \ref{L1_template}. The template deposition step is particularly delicate as the template oxide must closely follow the geometry of the \acl{SI} nanostructures. \Acf{ald} enables this level of precision. With this method, the template oxide grows in steps: first, a complete layer of \acl{o} atoms is deposited, followed by an entire layer of \acl{SI} atoms, and so on. Although time-consuming, this growth allows the template oxide to closely follow the geometry of the silicon nanostructures and grow in an ordered manner, resulting in strong etch resistance. 
-
-
-
 \subsection{Etch-back and growth}
+
 \label{etch_growth}
 \begin{figure}
     \centering
